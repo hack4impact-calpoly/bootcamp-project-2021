@@ -1,0 +1,39 @@
+body{
+    background-color: aliceblue;
+}
+header{
+    background-color:azure;
+    display: flex;
+    flex-direction: row;
+    /*align-items: baseline;*/
+    justify-content: space-between;
+}
+
+#name{
+    color: rgb(146, 11, 11);
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    /*align-items: baseline;*/
+    padding: 5px 10px;
+}
+
+#home{
+    color:rgb(red, green, blue);
+    font-size: 15px;
+    text-align: right;
+    margin: 5px;
+}
+
+#about{
+    color:rgb(red, green, blue);
+    font-size: 15px;
+    text-align: right;
+    margin: 5px;
+}
