@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Roboto:wght@500&family=Sacramento&family=Satisfy&display=swap');
+
+body {
+    margin: auto;
+    padding: auto;
+    font-family: 'Lato', sans-serif;
+    background-color: #F3F1F5;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
+}
+
+/* ----- intro section ----- */
+
+header {
+    text-align: center;
+    background-color: #eae1eb;
+    padding: 2em;
+    border-radius: 10em;
+    margin: 2em;
+
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: -5px;
+}
+
+header p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* ----- nav ----- */
+
+nav {
+    padding: 0 4em;
+    justify-content: space-between;
+    display: flex;
+    background-color: #28252e;
+    color: rgb(216, 216, 216);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav h1 {
+    font-size: large;
+}
+
+/* ----- recipe cards ----- */
+
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe {
+    /* border: 10px solid black; */
+    flex-grow: 1;
+    min-width: 22em;
+    max-width: 25%;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    padding: 60px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.grow { 
+    transition: all .3s ease-in-out; 
+}
+
+.grow:hover { 
+    transform: scale(1.02); 
+}
+
+#recipes a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* ----- general ----- */
+
+img {
+    max-width: 14em;
+}
+
+div {
+    margin: 1em;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+#ingredients ul {
+    list-style: circle;
+}
+
+#overview img {
+    max-width: 14em;
+    border-radius: 0px;
+}
+
+#about {
+    display: flex;
+}
