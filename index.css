@@ -1,0 +1,58 @@
+.body-background {
+    background-color: lightgray;
+}
+
+.header-background {
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    border: 3px solid black;
+}
+
+.content {
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 20px;
+}
+
+.navbar {
+
+}
+
+.intro {
+    margin-left: 20px;
+}
+
+.recipe {
+     
+}
+
+.recipe-title {
+    background-color: lightblue;
+    border: 3px solid black;
+    padding-left: 12px;
+}
+
+.recipe-content {
+    display: flex;
+    padding: 12px;
+}
+
+.recipe-display-picture {
+    border: 3px solid black;
+    width:150px;
+    height:150px;
+}
+
+.recipe-description {
+    padding-left: 15px;
+}
+
+.recipe-page-description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
