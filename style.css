@@ -1,17 +1,18 @@
 body{
     background-color: aliceblue;
+    margin: 0;
 }
 header{
-    background-color:azure;
+    background-color:rgb(113, 36, 151);
     display: flex;
     flex-direction: row;
-    /*align-items: baseline;*/
     justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 #name{
-    color: rgb(146, 11, 11);
-    font-weight: bold;
+    color: rgb(236, 236, 236);
+    font-weight: bolder;
     text-align: left;
     font-size: 30px;
     padding-left: 10px;
@@ -20,20 +21,21 @@ header{
 nav {
     display: flex;
     flex-direction: row;
-    /*align-items: baseline;*/
+    text-decoration: none; /*Removes text underline*/
     padding: 5px 10px;
 }
 
-#home{
-    color:rgb(red, green, blue);
+#home, #about{
+    color: rgb(236, 236, 236);
     font-size: 15px;
     text-align: right;
-    margin: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none; /*Removes text underline*/
 }
 
-#about{
-    color:rgb(red, green, blue);
-    font-size: 15px;
-    text-align: right;
-    margin: 5px;
+#home:hover, #home:active, #about:hover, #about:active{
+    color: gray;
+    border-color: white;
+    border-bottom-style: solid;
 }
