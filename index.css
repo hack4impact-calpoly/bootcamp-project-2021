@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    background-color: rgb(249, 254, 255);
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+header {
+    background-color : rgb(49, 221, 150);
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+}
+.topnav {
+    text-align: center;
+    width: 700px;
+    margin-left: 5%;
+    padding : 50px;
+}
+.topnav a {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topnav a:link {
+    color : white;
+}
+
+.topnav a:visited {
+    color : white;
+}
+
+.topnav a:hover {
+    color:rgb(178, 165, 182);
+}
+
+#heading {
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    margin-left : 10px;
+    font-size: 50px;
+    color: white;
+}
+
+.banner {
+    padding: 40px;
+    text-align: center;
+}
+
+hr {
+    border: 3px dashed rgb(49, 221, 150);
+    width : 80%;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-image {
+    width: 100px;
+    border: 2px solid;
+    text-align: center;  
+    padding: 15px;  
+    border: 3px solid red;  
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
