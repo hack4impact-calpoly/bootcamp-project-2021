@@ -1,6 +1,7 @@
 body{
     background-color: aliceblue;
     margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 header{
     background-color:rgb(113, 36, 151);
@@ -38,4 +39,47 @@ nav {
     color: gray;
     border-color: white;
     border-bottom-style: solid;
+}
+
+/*------------Recipe Section Styling------------------*/
+.recipes{
+    border: 1px solid black;
+    background-color: bisque;
+    margin-top: 2px;
+    padding: 15px;
+    padding-top: 5px;
+}
+#snacks{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.carbonara, .spaghetti, .pestoPasta{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#carbonaraImg, #spaghettiImg, #pestoPastaImg{
+    margin: 7px;
+}
+
+#carbonara, #spaghetti, #pestoPasta{
+    display: flex;
+    background-color:rgb(113, 36, 151);
+    color: rgb(236, 236, 236);
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none; /*Removes text underline*/
+    align-items: center;
+}
+#carbonara:hover, #spaghetti:hover, #pestoPasta:hover, #carbonara:active, #spaghetti:active, #pestoPasta:active{
+    color: gray;
+    border-color: white;
+    border-bottom-style: solid;
+}
+
+#carbonaraDesc, #spaghettiDesc, #pestoPastaDec{
+    padding-left: 10px;
 }
