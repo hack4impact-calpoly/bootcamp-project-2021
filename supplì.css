@@ -1,4 +1,63 @@
+body {
+  background-color: lightcyan;
+}
+
 h1 {
-    color: mediumorchid;
-  }
-  
+  margin-left: 10px;
+  color: black;
+  background-color: beige;
+}
+
+h2 {
+  background-color: beige;
+  color: darkolivegreen;
+}
+
+.MyCookbook {
+  color: darkolivegreen;
+  margin-left: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  border: 2px solid black;
+}
+
+.linkDiv {
+  align-self: center;
+  margin-right: 20px;
+  font-size: large;
+}
+
+.homeLink {
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: row wrap;
+  /*justify-content: space-between;*/
+  padding-top: 20px;
+}
+
+.side {
+  flex: 10%;
+  padding: 10px;
+  background-color: beige;
+}
+
+.main {
+  /*background-color: beige; White background color */
+  flex: 80%;
+  padding-left: 5px;
+  padding-right: 5%;
+}
+
+.image_size {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}

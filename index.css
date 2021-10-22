@@ -1,4 +1,62 @@
 h1 {
-  color: mediumseagreen;
-  border: 2px solid black;
+  color: darkolivegreen;
+  margin-left: 15px;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  border: 2px solid darkolivegreen;
+  /*margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
+  position: relative;*/
+}
+
+.aboutLink {
+  align-self: center;
+  margin-right: 20px;
+  font-size: large;
+  color: darkolivegreen;
+}
+
+.recipeLink {
+  font-size: larger;
+  color: darkolivegreen;
+  margin-left: 5px;
+}
+
+.foodHeader {
+  display: flex;
+  background-color: beige;
+}
+
+.row {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.side {
+  flex: 12%;
+  background-color: white; /* Grey background color */
+  padding: 0px;
+}
+
+.main {
+  flex: 88%;
+  background-color: beige; /* White background color */
+  padding-left: 20px;
+  padding-right: 44%;
+}
+
+.image_size {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
 }
