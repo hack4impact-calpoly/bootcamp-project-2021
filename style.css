@@ -95,7 +95,7 @@ nav {
 }
 
 /*------------About Me Page Styling------------------*/
-#aboutMePicture{
+#aboutMePicture, #carbonaraPic, #spaghettiPic, #pestoPic {
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -103,6 +103,7 @@ nav {
     width: 60%;
     border: 2px solid black;
 }
+
 #aboutMe{
     align-self: top;
     margin: 0px;
@@ -127,3 +128,10 @@ nav {
 
 
 /*------------Recipe Page Styling------------------*/
+#carbonaraIngredients, #spaghettiIngredients, #pestoPastaIngredients{
+    font-size: 15px;
+}
+
+#carbonaraMethod, #spaghettiMethod, #pestoPastaMethod{
+    font-size: 15px;
+}
