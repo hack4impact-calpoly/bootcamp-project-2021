@@ -59,13 +59,13 @@ font-family: -apple-system, BlinkMacSystemFont;
     color: var(--cg-peach);
   }
   
-  h3 {
+h3 {
     background-color: var(--colorGray);
     padding: 8px 8px;
     display: flexbox;
     justify-content: left;
 
-  }
+}
   
   main {
     padding: 0 20px 40px 20px;
@@ -97,9 +97,11 @@ font-family: -apple-system, BlinkMacSystemFont;
     overflow: hidden;
   }
   
-  .pic-of-me:hover {
-    width: 500px;
-    height: 500px;
+  .myPicture:hover {
+    display: flex;
+    justify-content: right;
+    /* width: 500px;
+    height: 500px; */
   }
   
   .flex-container {
