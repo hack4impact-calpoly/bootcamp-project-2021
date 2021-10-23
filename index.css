@@ -47,7 +47,7 @@ header {
 }
 
 .banner {
-    padding: 40px;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -55,6 +55,7 @@ hr {
     border: 3px dashed rgb(49, 221, 150);
     width : 80%;
     text-align: center;
+    margin: 5%;
 }
 
 h1 {
@@ -81,6 +82,7 @@ a:visited {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 1000px;
 }
 
 .menu-image {
@@ -114,4 +116,15 @@ img {
 #about-me {
     margin-top: 5%;
     margin-left: 10%;
+}
+
+.recipe {
+    margin-top: 5%;
+    margin-left: 10%;
+    max-width: 80%;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
 }
