@@ -12,8 +12,7 @@
 
 h1 {
   font-family: -apple-system, BlinkMacSystemFont;
-  margin: 75;
-  
+  margin: 75; 
 }
 
 nav {
@@ -36,34 +35,30 @@ nav {
   justify-content: center;
 }
 
-
-
 body {
-  background: linear-gradient(135deg, var(--cg-peach), var(--cg-yellow));
-background-repeat: no-repeat;
-background-attachment: fixed;
+  background: var(--colorWhite);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
-padding: 0;
-margin: 0;
-font-family: -apple-system, BlinkMacSystemFont;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont;
 }
   
-  header a, h3 a {
-    color: var(--cg-yellow);
-    margin: 0 12px;
-  }
-  header a:hover, h3 a:hover {
-    color: var(--cg-orange);
-  }
-  header a:active, h3 a:active {
-    color: var(--cg-peach);
-  }
+header a, h3 a {
+  color: var(--colorWhite);
+  margin: 0 12px;
+}
+header a:hover, h3 a:hover {
+  color: black;
+}
   
 h3 {
     background-color: var(--colorGray);
     padding: 8px 8px;
     display: flexbox;
     justify-content: left;
+    color: var(--colorWhite);
 
 }
   
@@ -76,6 +71,7 @@ h3 {
     display: flex;
     flex-wrap:wrap;
     max-width: 1000px;
+    margin-right: 20px;
 
   }
   
@@ -97,20 +93,25 @@ h3 {
     overflow: hidden;
   }
   
-  .myPicture:hover {
+  .myPicture {
     display: flex;
-    justify-content: right;
+    align-items: center;
     /* width: 500px;
     height: 500px; */
   }
-  
-  .flex-container {
+
+  .right{
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
+    justify-content: right;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .flex-image {
+.flex-image {
     border: 2px solid black;
     max-width: 350px;
     max-height: 350px;
@@ -118,15 +119,15 @@ h3 {
     justify-content: end;
     flex-basis: 50px;
     flex-grow: 1;
-  }
+}
   
-  .flex-header {
+.flex-header {
     flex-basis: 50px;
     padding-right: 20px;
     flex-grow: 1;
     margin: 0px;
     line-height: 1.5;
     overflow: hidden;
-  }
+}
   
   
