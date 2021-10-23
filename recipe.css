@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px 100px;
+  margin: 0;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(223, 245, 252);
+}
+
+.navbar {
+  display: block;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 40px;
+  color: #82aa77;
+}
+
+.navbar a:hover {
+  color: rgb(69, 95, 48);
+  transition: ease-in-out 0.25s;
+}
+a {
+  text-decoration: none;
+}
+
+#title {
+  color: rgb(148, 125, 106);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 45px;
+  color: #dff8f8;
+}
+
+#ingredients {
+  padding: 60px;
+}
+
+#ingredients h2, #steps h2{
+  color: #def1f8;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: rgb(133, 169, 190)
+}
+
+li {
+  font-size: 1.1rem;
+  color: #6e8b91;
+  /* display: inline; */
+}
+
+ul,
+ol {
+  float: left;
+  padding-bottom: 40px;
+}
+
+section {
+  contain: content;
+  display: block;
+  padding: 50px;
+  background-color: lightblue;
+
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 80px 100px;
+  background-color: #70b0b0;
+}
+
+.item {
+  margin: 50px;
+}
+
+img {
+  float: right;
+  margin: 20px;
+  max-width: 400px;
+  max-height: auto;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+

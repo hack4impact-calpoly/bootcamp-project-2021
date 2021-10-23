@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px 100px;
+  margin: 0;
+}
+
+#title {
+  color: rgb(148, 125, 106);
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(128, 106, 89);
+}
+
+.navbar {
+  display: block;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 40px;
+  color: #82aa77;
+}
+
+.navbar a:hover {
+  color: rgb(69, 95, 48);
+  transition: ease-in-out 0.25s;
+}
+
+.intro {
+  display: block;
+  justify-content: left;
+  flex-wrap: wrap;
+  padding: 170px 100px;
+  background-color: #c46363;
+  contain: content;
+  /* border: 6px solid lightblue; */
+}
+
+#brek {
+  float: right;
+  margin-top: -50px;
+  max-width: 400px;
+  max-height: auto;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+.intro h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(255, 241, 224);
+}
+
+.intro p {
+  float: left;
+  color: rgb(255, 241, 224);
+  /* border: 3px solid lightblue; */
+  max-width: 600px;
+  margin-bottom: 80px;
+}
+
+.recipe {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  /* border: 6px solid #d0a47d; */
+}
+
+.recipe-container {
+  padding: 100px;
+  background-color: rgb(245, 169, 98);
+}
+
+.recipe img {
+  max-width: 150px;
+  max-height: auto;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+.recipe-container a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(253, 244, 227);
+  margin-bottom: 20px;
+}
+
+.recipe-container a:hover {
+  color: rgb(177, 124, 44);
+  transition: all 0.25s ease-in-out;
+}
+
+.recipe p {
+  color: rgb(255, 242, 219);
+  height: 150px;
+  flex-basis: 50px;
+  flex-grow: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: hidden;
+}
