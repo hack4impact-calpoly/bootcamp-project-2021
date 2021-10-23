@@ -7,7 +7,7 @@
     --cg-orange: rgb(145, 112, 110);
     --colorWhite: white;
     --colorGray: gray;
-  }
+}
 
 h1 {
   font-family: -apple-system, BlinkMacSystemFont;
@@ -58,12 +58,10 @@ h3 {
     display: flexbox;
     justify-content: left;
     color: var(--colorWhite);
-
 }
   
 main {
   padding: 0 20px 40px 20px;
-
 }
 
 .search-container {
@@ -95,8 +93,6 @@ main {
 .myPicture {
   display: flex;
   align-items: center;
-  /* width: 500px;
-  height: 500px; */
 }
 
 .right{
