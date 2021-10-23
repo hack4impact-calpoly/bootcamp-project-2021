@@ -26,14 +26,17 @@ header {
 }
 .topnav a:link {
     color : white;
+    font-size: 25px;
 }
 
 .topnav a:visited {
     color : white;
+    font-size: 25px;
 }
 
 .topnav a:hover {
     color:rgb(178, 165, 182);
+    font-size: 25px;
 }
 
 #heading {
@@ -54,17 +57,26 @@ hr {
     text-align: center;
 }
 
-h2 {
+h1 {
     text-align: center;
 }
 
 a:link {
+    color:rgb(45, 199, 135);
+    font-size: 30px;
     text-decoration: none;
+}
+
+a:hover {
+    color:rgb(45, 199, 135);
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 a:visited {
     text-decoration: none;
-    color: blue;
+    color:rgb(45, 199, 135);
+    font-size: 30px;
 }
 
 p {
@@ -72,11 +84,14 @@ p {
 }
 
 .menu-image {
-    width: 100px;
-    border: 2px solid;
-    text-align: center;  
-    padding: 15px;  
-    border: 3px solid red;  
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 1%;  
+    border: 5px solid rgb(49, 221, 150);  
+    
 }
 img {
     max-width: 100%;
@@ -87,4 +102,11 @@ img {
 #menu {
     display: flex;
     flex-direction: row;
+}
+
+.item {
+    margin: 5%;
+    margin-top: 1%;
+    width: 33%;
+    text-align: center;
 }
