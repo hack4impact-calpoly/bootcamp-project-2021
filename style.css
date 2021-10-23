@@ -1,0 +1,108 @@
+:root {
+    --light-pink: #edafb8ff;
+    --champagne-pink: #f7e1d7ff;
+    --timberwolf: #dedbd2ff;
+    --cambridge-blue: #b0c4b1ff;
+    --deep-space-sparkle: #4a5759ff;
+}
+
+html {
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--timberwolf);
+}
+
+main {
+    padding: 0px 40px 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--deep-space-sparkle);
+}
+
+#title-container {
+    text-decoration: none;
+}
+
+.title {
+    color: var(--timberwolf);
+}
+
+.nav-item {
+    margin: 0px 10px;
+    color: var(--timberwolf);
+}
+
+.card {
+    background-color: var(--champagne-pink);
+    padding: 10px 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+}
+
+h2 {
+    background-color: var(--cambridge-blue);
+    padding: 10px;
+}
+
+h2 a {
+    color: black;
+}
+
+h2 a:hover {
+    color: var(--deep-space-sparkle);
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    padding: 0px 20px;
+    flex-basis: 50px;
+    flex-grow: 1;
+}
+
+.img-small {
+    width: 200px;
+    border: 5px solid;
+    border-color: var(--deep-space-sparkle);
+    border-radius: 10px;
+}
+
+/* ----------- recipe pages --------------- */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.flex-image {
+    width: 300px;
+    margin-right: 40px;
+    border: 5px solid;
+    border-color: var(--deep-space-sparkle);
+    border-radius: 20px;
+}
+
+.flex-content {
+    flex-basis: 320px;
+    flex-grow: 1;
+}
+
+ol li {
+    margin: 10px 0px;
+}
