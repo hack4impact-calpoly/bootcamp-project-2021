@@ -1,5 +1,5 @@
-
 # Getting Started With your Project
+
 2021 bootcamp project
 
 This repo will serve as a place to "turn in" your work. More info about bootcamp can be found on the [Developer Bootcamp Notion Page](https://www.notion.so/h4i/Developer-Bootcamp-7c97523fb0814ac39e5706b0795abda8).
