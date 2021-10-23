@@ -7,7 +7,6 @@
     --cg-orange: rgb(145, 112, 110);
     --colorWhite: white;
     --colorGray: gray;
-    
   }
 
 h1 {
@@ -62,72 +61,72 @@ h3 {
 
 }
   
-  main {
-    padding: 0 20px 40px 20px;
+main {
+  padding: 0 20px 40px 20px;
 
-  }
-  
-  .search-container {
-    display: flex;
-    flex-wrap:wrap;
-    max-width: 1000px;
-    margin-right: 20px;
+}
 
-  }
-  
-  .search-item {
-    border: 1px solid rgba(0, 0, 0, 0);
-    max-width: 200px;
-    max-height: 250px;
-    flex-basis: 50px;
-    flex-grow: 1;
-  }
-  
-  .search-item-2 {
-    height: 150px;
-    flex-basis: 50px;
-    flex-grow: 1;
-    padding: 0 20px;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: hidden;
-  }
-  
-  .myPicture {
-    display: flex;
-    align-items: center;
-    /* width: 500px;
-    height: 500px; */
-  }
+.search-container {
+  display: flex;
+  flex-wrap:wrap;
+  max-width: 1000px;
+  margin-right: 20px;
 
-  .right{
-    display: flex;
-    justify-content: right;
-  }
+}
 
-  .box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.search-item {
+  border: 1px solid rgba(0, 0, 0, 0);
+  max-width: 200px;
+  max-height: 250px;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+.search-item-2 {
+  height: 150px;
+  flex-basis: 50px;
+  flex-grow: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.myPicture {
+  display: flex;
+  align-items: center;
+  /* width: 500px;
+  height: 500px; */
+}
+
+.right{
+  display: flex;
+  justify-content: right;
+}
+
+.box {
+display: flex;
+align-items: center;
+justify-content: center;
+}
   
 .flex-image {
-    border: 2px solid black;
-    max-width: 350px;
-    max-height: 350px;
-    align-items: flex-end;
-    justify-content: end;
-    flex-basis: 50px;
-    flex-grow: 1;
+  border: none;
+  max-width: 350px;
+  max-height: 350px;
+  align-items: flex-end;
+  justify-content: end;
+  flex-basis: 50px;
+  flex-grow: 1;
 }
   
 .flex-header {
-    flex-basis: 50px;
-    padding-right: 20px;
-    flex-grow: 1;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: hidden;
+  flex-basis: 50px;
+  padding-right: 20px;
+  flex-grow: 1;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: hidden;
 }
   
   
