@@ -1,0 +1,128 @@
+header{
+    text-align: center;
+    background-color: rgb(220, 127, 53);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: xx-large;
+    background-image: -webkit-radial-gradient(rgb(238, 193, 38),rgb(220, 127, 53));
+    font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.topMenu{
+    background-color: pink;
+    text-align-last: center;
+    font-size: 25px;
+    border-spacing: 50px;
+    padding: 10px;
+}
+
+.menuOption{
+    border-spacing: 100px;
+    color: blue ;
+    padding-left: 30px;
+}
+
+img{
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.orderedList{
+    float: left;
+    width: 35%;
+    margin: 10px;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.recipeBox{
+    width: 43%;
+    height: 180px;
+    background-color: cyan;
+    border-color: darkblue;
+    border-radius: 50px;
+    border-width: 8px;
+    border-style: solid;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.topRight{
+    position: absolute;
+    right: 10px;
+}
+
+.topLeft{
+    position: absolute;
+    left: 10px;
+    background-color: pink;
+
+}
+
+.bottomLeft{
+    position: absolute;
+    left: 10px;
+    top: 500px;
+    background-color: rgb(231, 231, 116);
+
+}
+
+.bottomRight{
+    position: absolute;
+    right: 10px;
+    top: 500px;
+    background-color: lightgreen;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}
+
+.description{
+    width: 25%;
+    font-size: large;
+    border-color: darkblue;
+    border-width: medium;
+    border-style: solid;
+    padding: 20px;
+    margin: 15px;
+    background-color: white;
+}
+
+.boxes{
+    width: 95%;
+    font-size: large;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.recipe{
+    width: 35%;
+    font-size: large;
+    border-color: darkred;
+    border-width: medium;
+    border-style: solid;
+    padding: 20px;
+    margin: 15px;
+    background-color: white;
+}
+
+.ingredients{
+    width: 15%;
+    font-size: large;
+    border-color: darkgreen;
+    border-width: medium;
+    border-style: solid;
+    padding: 20px;
+    margin: 15px; 
+    background-color: white;
+}
