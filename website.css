@@ -1,12 +1,6 @@
 :root {
-    --cg-blue: rgb(248, 248, 248);
-    --cg-light-blue: #00afb9ff; 
-    --cg-green: #6b9c81;
-    --cg-yellow: #fdfcdcff;
-    --cg-peach: rgb(255, 255, 255);
-    --cg-orange: rgb(145, 112, 110);
-    --colorWhite: white;
-    --colorGray: gray;
+  --colorWhite: white;
+  --colorGray: gray;
 }
 
 h1 {
@@ -53,11 +47,11 @@ header a:hover, h3 a:hover {
 }
   
 h3 {
-    background-color: var(--colorGray);
-    padding: 8px 8px;
-    display: flexbox;
-    justify-content: left;
-    color: var(--colorWhite);
+  background-color: var(--colorGray);
+  padding: 8px 8px;
+  display: flexbox;
+  justify-content: left;
+  color: var(--colorWhite);
 }
   
 main {
