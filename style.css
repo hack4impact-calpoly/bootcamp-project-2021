@@ -30,7 +30,7 @@ main {
     background-color: var(--deep-space-sparkle);
 }
 
-#title-container {
+#titleContainer {
     text-decoration: none;
 }
 
@@ -84,6 +84,11 @@ h2 a:hover {
 
 /* ----------- recipe pages --------------- */
 
+#preFormatter {
+    margin: 0px;
+    height: 0px;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -103,6 +108,50 @@ h2 a:hover {
     flex-grow: 1;
 }
 
+li:hover {
+    color: red;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 ol li {
     margin: 10px 0px;
+}
+
+.form-group {
+    border: 3px var(--deep-space-sparkle) solid;
+    border-radius: 20px;
+    padding: 0px 20px 20px;
+}
+
+.form-button {
+    background-color: var(--light-pink);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #FAB9C3;
+}
+
+.form-button:active {
+    background-color: #D49DA5;
+    transition: none;
+}
+
+/* ----------- about page --------------- */
+
+.thumbs-up {
+    display: inline-block;
+    transition: 0.5s ease;
+    font-size: 400px;
+}
+
+.thumbs-up:hover {
+    font-size: 600px;
+    transform: rotate(540deg);
 }

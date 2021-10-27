@@ -6,63 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hu's Chews</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="index.html" id="title-container"><h1 class="title">Hu's Chews</h1></a>
+        <a href="index.html" id="titleContainer"><h1 class="title">Hu's Chews</h1></a>
         <nav>
             <a class="nav-item" href="index.html">Home</a>
             <a class="nav-item" href="about.html">About Me</a>
         </nav>
     </header>
     <main>
+        <pre id="preFormatter"><code id="json"></code></pre>
         <div class="flex-container">
-            <div><img class="flex-image" src="https://thewoksoflife.com/wp-content/uploads/2017/03/beef-noodle-soup-16.jpg" alt="braised beef noodle soup"></div>
+            <div><img id="recipeImg" class="flex-image" src="https://thewoksoflife.com/wp-content/uploads/2017/03/beef-noodle-soup-16.jpg" alt="braised beef noodle soup"></div>
             <div class="flex-content">
-                <h1>Braised Beef Noodle Soup</h1>
-                <p>This braised beef noodle soup used Chinese dry aromatics and beef with marbled fat making a delicious rich beef noodle soup!</p>
+                <h1 id="recipeName">Braised Beef Noodle Soup</h1>
+                <button class="form-button" onclick="recipeToJSON()">Convert Recipe to JSON</button>
+                <p id="recipeDesc">This braised beef noodle soup used Chinese dry aromatics and beef with marbled fat making a delicious rich beef noodle soup!</p>
                 <h2>Ingredients</h2>
-                <ul>
-                    <li>2 small pieces Chinese (cassia) cinnamon</li>
-                    <li>2 black cardamom pods</li>
-                    <li>½ tablespoon fennel seeds</li>
-                    <li>4 star anise pods</li>
-                    <li>10 cloves</li>
-                    <li>1 dried tangerine peel</li>
-                    <li>6 bay leaves</li>
-                    <li>½ tablespoon whole white peppercorns</li>
-                    <li>4 slices licorice root</li>
-                    <li>2 pieces sand ginger</li>
-                    <li>10 pieces dried amomum white cardamom</li>
-                    <li>3 pounds beef chuck (cut into large chunks)</li>
-                    <li>16 cups water</li>
-                    <li>5 slices ginger</li>
-                    <li>3 tablespoons oil</li>
-                    <li>15 grams rock sugar</li>
-                    <li>5 scallions (with the white and green parts separated)</li>
-                    <li>1 whole head of garlic (cloves peeled but kept whole)</li>
-                    <li>1 pound daikon (cut into ¼-inch thick slices, with each slice quartered)</li>
-                    <li>¼ cup Shaoxing wine</li>
-                    <li>1 tablespoon dark soy sauce</li>
-                    <li>¼ cup light soy sauce</li>
-                    <li>Salt (to taste)</li>
-                    <li>Noodle of your choice</li>
-                    <li>Leafy greens of your choice (spinach, romaine lettuce, choy sum, and bok choy are all good)</li>
-                    <li>Handful of chopped cilantro (optional)</li>
+                <ul id="ingredients">
+                    <li onclick="deleteItem(this)">2 small pieces Chinese (cassia) cinnamon</li>
+                    <li onclick="deleteItem(this)">2 black cardamom pods</li>
+                    <li onclick="deleteItem(this)">½ tablespoon fennel seeds</li>
+                    <li onclick="deleteItem(this)">4 star anise pods</li>
+                    <li onclick="deleteItem(this)">10 cloves</li>
+                    <li onclick="deleteItem(this)">1 dried tangerine peel</li>
+                    <li onclick="deleteItem(this)">6 bay leaves</li>
+                    <li onclick="deleteItem(this)">½ tablespoon whole white peppercorns</li>
+                    <li onclick="deleteItem(this)">4 slices licorice root</li>
+                    <li onclick="deleteItem(this)">2 pieces sand ginger</li>
+                    <li onclick="deleteItem(this)">10 pieces dried amomum white cardamom</li>
+                    <li onclick="deleteItem(this)">3 pounds beef chuck (cut into large chunks)</li>
+                    <li onclick="deleteItem(this)">16 cups water</li>
+                    <li onclick="deleteItem(this)">5 slices ginger</li>
+                    <li onclick="deleteItem(this)">3 tablespoons oil</li>
+                    <li onclick="deleteItem(this)">15 grams rock sugar</li>
+                    <li onclick="deleteItem(this)">5 scallions (with the white and green parts separated)</li>
+                    <li onclick="deleteItem(this)">1 whole head of garlic (cloves peeled but kept whole)</li>
+                    <li onclick="deleteItem(this)">1 pound daikon (cut into ¼-inch thick slices, with each slice quartered)</li>
+                    <li onclick="deleteItem(this)">¼ cup Shaoxing wine</li>
+                    <li onclick="deleteItem(this)">1 tablespoon dark soy sauce</li>
+                    <li onclick="deleteItem(this)">¼ cup light soy sauce</li>
+                    <li onclick="deleteItem(this)">Salt (to taste)</li>
+                    <li onclick="deleteItem(this)">Noodle of your choice</li>
+                    <li onclick="deleteItem(this)">Leafy greens of your choice (spinach, romaine lettuce, choy sum, and bok choy are all good)</li>
+                    <li onclick="deleteItem(this)">Handful of chopped cilantro (optional)</li>
                 </ul>
+                <div class="form-group">
+                    <h3>Add an Ingredient</h3>
+                    <label for="newIngredient">Ingredient:</label>
+                    <input type="text" id="newIngredient" placeholder="2 cups of spinach">
+                    <label for="ingredientPos">Position:</label>
+                    <input type="text" id="ingredientPos" placeholder="1 (leave blank to add to end)">
+                    <br>
+                    <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+                </div>
             </div>
         </div>
         <h2>Preparation</h2>
-            <ol>
-                <li>First place the aromatics in a piece of cheesecloth tied tightly with kitchen string or disposable/fillable tea filter bags. That’s the cinnamon, black cardamom, fennel seeds, star anise, cloves, tangerine peel, bay leaves, white peppercorns, licorice slices, sand ginger, and amomum white cardamon.</li>
-                <li>Next, rinse off the beef under cold running water. In a soup pot, add 16 cups of water, the ginger, and beef. Bring to a boil and cook for a few more minutes until you see some foam floating on the top of the water. Skim the foam off. You don’t want these impurities from the beef making your soup cloudy. Turn off the heat, fish out the pieces of beef, and strain the resulting broth through a fine-meshed strainer, into a heatproof bowl or other pot. Set aside, along with the ginger pieces.</li>
-                <li>In another large, thick-bottomed soup pot, heat the oil over medium heat. Add the rock sugar, the white parts of the scallion, and the garlic. Cook for a few minutes until the scallions are lightly seared. Add the beef, turn up the heat, and mix everything well.</li>
-                <li>Cook for about 5 minutes, and stir once or twice in between. Now add the Shaoxing wine, dark soy sauce, and light soy sauce, and stir everything together well so that the beef is coated in the soy sauce.</li>
-                <li>Now add the aromatics, plus the daikon, and the broth and ginger pieces that you boiled the beef in. Bring everything to a boil and immediately turn the heat down to medium. Simmer for 90 minutes. The broth should be steadily simmering where you can see water moving in the pot, but not at a rolling boil.</li>
-                <li>After 90 minutes, turn off the heat and let it stand (with the lid on) for another hour. Now your soup base is ready. Reheat, remove the aromatics, and add salt to taste before serving. Just remember, adding salt too early will dry out the beef.</li>
-                <li>Cook the noodles according to the package instructions, strain, and transfer to a large serving bowl. Blanch a handful of your leafy greens of choice in the noodle water, and add it to the noodles. Then, ladle in the beef and the soup. Top with the chopped green parts of the scallions you set aside earlier and some chopped cilantro (optional). And if you really can’t resist a bit of spice, add a spoonful of chili oil.</li>
-                <li>Enjoy!</li>
-            </ol>
+        <ol id="instructions">
+            <li onclick="deleteItem(this)">First place the aromatics in a piece of cheesecloth tied tightly with kitchen string or disposable/fillable tea filter bags. That’s the cinnamon, black cardamom, fennel seeds, star anise, cloves, tangerine peel, bay leaves, white peppercorns, licorice slices, sand ginger, and amomum white cardamon.</li>
+            <li onclick="deleteItem(this)">Next, rinse off the beef under cold running water. In a soup pot, add 16 cups of water, the ginger, and beef. Bring to a boil and cook for a few more minutes until you see some foam floating on the top of the water. Skim the foam off. You don’t want these impurities from the beef making your soup cloudy. Turn off the heat, fish out the pieces of beef, and strain the resulting broth through a fine-meshed strainer, into a heatproof bowl or other pot. Set aside, along with the ginger pieces.</li>
+            <li onclick="deleteItem(this)">In another large, thick-bottomed soup pot, heat the oil over medium heat. Add the rock sugar, the white parts of the scallion, and the garlic. Cook for a few minutes until the scallions are lightly seared. Add the beef, turn up the heat, and mix everything well.</li>
+            <li onclick="deleteItem(this)">Cook for about 5 minutes, and stir once or twice in between. Now add the Shaoxing wine, dark soy sauce, and light soy sauce, and stir everything together well so that the beef is coated in the soy sauce.</li>
+            <li onclick="deleteItem(this)">Now add the aromatics, plus the daikon, and the broth and ginger pieces that you boiled the beef in. Bring everything to a boil and immediately turn the heat down to medium. Simmer for 90 minutes. The broth should be steadily simmering where you can see water moving in the pot, but not at a rolling boil.</li>
+            <li onclick="deleteItem(this)">After 90 minutes, turn off the heat and let it stand (with the lid on) for another hour. Now your soup base is ready. Reheat, remove the aromatics, and add salt to taste before serving. Just remember, adding salt too early will dry out the beef.</li>
+            <li onclick="deleteItem(this)">Cook the noodles according to the package instructions, strain, and transfer to a large serving bowl. Blanch a handful of your leafy greens of choice in the noodle water, and add it to the noodles. Then, ladle in the beef and the soup. Top with the chopped green parts of the scallions you set aside earlier and some chopped cilantro (optional). And if you really can’t resist a bit of spice, add a spoonful of chili oil.</li>
+            <li onclick="deleteItem(this)">Enjoy!</li>
+        </ol>
+        <div class="form-group">
+            <h3>Add an Instruction</h3>
+            <label for="newInstruction">Instruction:</label>
+            <input type="text" id="newInstruction" placeholder="Pour and Serve!">
+            <label for="instructionPos">Position:</label>
+            <input type="text" id="instructionPos" placeholder="1 (leave blank to add to end)">
+            <br>
+            <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+        </div>
     </main>
 </body>
 </html>
