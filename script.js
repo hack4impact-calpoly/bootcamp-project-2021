@@ -22,7 +22,7 @@ const recipeToJSON = () => {
     document.getElementById("preFormatter").style.borderTop = "5px solid black";
 }
 
-const addIngredients = () => {
+const addIngredient = () => {
     let ul = document.getElementById("ingredients");
     let li = document.createElement("li");
     let ingredient = document.getElementById("newIngredient").value.trim();
@@ -35,7 +35,7 @@ const addIngredients = () => {
             ul.appendChild(li);
         }
         document.getElementById("newIngredient").value = "";
-        document.getElementById("ingredientPost").value = "";
+        document.getElementById("ingredientPos").value = "";
     }
 }
 
