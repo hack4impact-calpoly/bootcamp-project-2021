@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="amatriciana.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
-    <script src="index.js"></script>
     <div class="header">
       <h1 class="MyCookbook">Sam's Italian Recipebook</h1>
       <div class="linkDiv">
@@ -19,33 +19,38 @@
     <!--Description section-->
     <div class="row">
       <div class="main">
-        <h2>Spaghetti all'Amatriciana</h2>
-        <p>
+        <h2 id="dishName">Spaghetti all'Amatriciana</h2>
+        <p id="dishDesc">
           Spaghetti all'Amatriciana is a classic Italian dsh from the Lazio
           region, and with all its history comes a lot of disagreement about
           what makes up a true Amatriciana sauce. People argue whether it is
           made with onions, garlic, or neither, whether you use bacon or
           guanciale, and whether you eat it with spaghetti or bucatini.
-        </p>
-        <br />
-        <p>
+          <br />
+          <br />
           In this recipe, we will desribe how to make Spaghetti all'Amatriciana
           with the classic guanciale (cured pork cheek) along with a fresh chili
           pepper to add a depth of flavor!
         </p>
+        <button onclick="jsonConvertor()">Convert to JSON</button>
       </div>
       <div class="side">
         <img
           src="https://www.petitchef.it/imgupl/recipe/bucatini-all-amatriciana-ricetta-rivisitata--452020p699744.jpg"
           alt="Amatriciana"
           class="image_size"
+          id="dishPhoto"
         />
       </div>
+    </div>
+    <div class="codeHere">
+      <h3 id="codeDesc"></h3>
+      <pre id="preCode"><code id="json"></code></pre>
     </div>
     <!--Ingredients section-->
     <div>
       <h2>Ingredients</h2>
-      <ul>
+      <ul id="ingredients">
         <li>0.7 lb Spaghetti</li>
         <li>0.9 lb Peeled tomatoes</li>
         <li>5 oz Guanciale</li>
@@ -55,11 +60,19 @@
         <li>1 Fresh chili pepper</li>
         <li>1/4 cup White wine</li>
       </ul>
+
+      <label> Add ingredient</label> <br />
+      <input
+        id="newIngredient"
+        placeholder="Type your ingredient here!"
+        value=""
+      />
+      <button onclick="addIngredient()">Add ingredient to list</button>
     </div>
     <!--Preparation section-->
     <div>
       <h2>Preparation</h2>
-      <ol>
+      <ol id="instructions">
         <li>
           Boil water to cook the spaghetti in, then add salt + pasta when it
           comes to a boil. Cook the spaghetti al dente.
@@ -106,6 +119,13 @@
         <li>To finish, top your pasta with grated Pecorino Romano cheese.</li>
         <li>Enjoy your tasty Spaghetti all'Amatriciana!</li>
       </ol>
+      <label> Add Instruction!</label> <br />
+      <input
+        id="newInstruction"
+        placeholder="Type your instruction here!"
+        value=""
+      />
+      <button onclick="addInstruction()">Add your Instruction!</button>
     </div>
   </body>
 </html>

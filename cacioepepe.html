@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="cacioepepe.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
-    <script src="index.js"></script>
     <div class="header">
       <h1 class="MyCookbook">Sam's Italian Recipebook</h1>
       <div class="linkDiv">
@@ -19,8 +19,8 @@
     <!--Description section-->
     <div class="row">
       <div class="main">
-        <h2>Cacio e Pepe</h2>
-        <p>
+        <h2 id="dishName">Cacio e Pepe</h2>
+        <p id="dishDesc">
           Spaghetti Cacio e Pepe is a classic Italian pasta dish and one of my
           personal favorites. It's easy to understand why when you mix two of
           the best things in the world, cheese and pepper. The secret to this
@@ -30,29 +30,43 @@
           the cream so that we absorb all the flavor of the powerful pecorino
           cheese.
         </p>
+        <button onclick="jsonConvertor()">Convert to JSON</button>
       </div>
       <div class="side">
         <img
           src="https://www.servirebencaldo.com/wp-content/uploads/2020/02/spaghetti-cacio-e-pepe2.jpg"
           alt="Cacio e Pepe"
           class="image_size"
+          id="dishPhoto"
         />
       </div>
+    </div>
+    <div class="codeHere">
+      <h3 id="codeDesc"></h3>
+      <pre id="preCode"><code id="json"></code></pre>
     </div>
     <!--Ingredients section-->
     <div>
       <h2>Ingredients</h2>
-      <ul>
+      <ul id="ingredients">
         <li>0.7 lb spaghetti</li>
         <li>Black pepper corns, to taste (make sure you have a good amount)</li>
         <li>7 oz Pecorino Romano cheese (to be grated)</li>
         <li>Salt, to taste</li>
       </ul>
+
+      <label> Add ingredient</label> <br />
+      <input
+        id="newIngredient"
+        placeholder="Type your ingredient here!"
+        value=""
+      />
+      <button onclick="addIngredient()">Add ingredient to list</button>
     </div>
     <!--Preparation section-->
     <div>
       <h2>Preparation</h2>
-      <ol>
+      <ol id="instructions">
         <li>Grate the pecorino cheese and move to the side for later.</li>
         <li>
           Boil water in a pan, half as much water as you would usually use to
@@ -105,8 +119,17 @@
           that you put aside from earlier.
         </li>
         <li>Stir and sauté the pasta again, then move it to a plate.</li>
+        <li>Top with grated Pecorino cheese and pepper.</li>
         <li>Enjoy your creamy and peppery Cacio e Pepe!</li>
       </ol>
+
+      <label> Add Instruction!</label> <br />
+      <input
+        id="newInstruction"
+        placeholder="Type your instruction here!"
+        value=""
+      />
+      <button onclick="addInstruction()">Add your Instruction!</button>
     </div>
   </body>
 </html>

@@ -61,3 +61,20 @@ h2 {
   max-width: 400px;
   max-height: 400px;
 }
+
+.codeHere {
+  background-color: beige;
+}
+
+#json {
+  background-color: beige;
+}
+
+button {
+  background-color: darkolivegreen;
+  color: beige;
+}
+
+button:hover {
+  border-color: bisque;
+}
