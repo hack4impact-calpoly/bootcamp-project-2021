@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script type="text/javascript" src="index.js"></script>
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
@@ -10,7 +11,7 @@
 
     </style>
     <body>
-    
+        
         <title>
             Veggie Breakfast Burrito
         </title>
@@ -27,7 +28,7 @@
             alt="veggieBurrito" style="float:right">
 
         <h2>Here are the Ingredients:</h2>
-        <ul>
+        <ul id= ingredients>
             <li>1 Flour Burrito Sized Tortilla</li>
             <li>2 Eggs</li>
             <li>1 Potato</li>
@@ -37,6 +38,9 @@
             <li>Paprika</li>
             <li>Onion/Garlic powder</li>
         </ul>
+        <h3>Add an ingredient!</h3>
+        <input id= "newIngredient" placeholder="Input Ingredient Here" value=""/>
+        <button onclick= "addIngredient()"> Add! </button>
         <h2>Here are the Instructions:</h2>
         <ol>
             <li>First begin by cutting up your potatoes and put them in the air fryer at 370 degrees for 10 minutes. </li>
