@@ -1,0 +1,112 @@
+:root { /* add variables to your css! */
+    --cg-blue: rgb(9, 113, 145);
+    --cg-light-blue: #00afb9ff; 
+    --cg-light-yellow: #6a0000;
+    --cg-red: rgb(255, 216, 182);
+    --cg-teal: rgb(155, 215, 240);
+    --cg-orange: #f07167ff;
+    --cg-whitesmoke: whitesmoke;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+      background: linear-gradient(135deg, var(--cg-teal), var(--cg-red));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+      height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  .header-background{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: var(--cg-blue);
+    color: var(--cg-whitesmoke);
+    padding: 0 20px;
+  }
+  
+  header a, h3 a {
+    color: var(--cg-red);
+    margin: 0 12px;
+  }
+  header a:hover, h3 a:hover {
+    color: var(--cg-orange);
+  }
+  header a:active, h3 a:active {
+    color: var(--cg-teal);
+  }
+  
+  h3 {
+    background-color: var(--cg-light-yellow);
+    padding: 8px 8px;
+  }
+  
+  main {
+    padding: 0 20px 40px 20px;
+  }
+  
+  .joke {
+    margin-left: 20px;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+  
+  .search-item {
+    border: 2px solid rgb(86, 222, 124);
+    max-width: 150px;
+    max-height: 150px;
+    flex-basis: 50px;
+    flex-grow: 1;
+  }
+  
+  .search-item-2 {
+    height: 150px;
+    flex-basis: 50px;
+    flex-grow: 1;
+    padding: 0 20px;
+    margin: 0px;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+  
+  .pic-of-me:hover {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  
+  .flex-image {
+    border: 2px solid black;
+    max-width: 350px;
+    max-height: 350px;
+    align-items: flex-end;
+    justify-content: end;
+    flex-basis: 50px;
+    flex-grow: 1;
+  }
+  
+  .flex-header {
+    flex-basis: 50px;
+    padding-right: 20px;
+    flex-grow: 1;
+    margin: 0px;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+  
