@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
   	<title>Jonathan's Indonesian Specialties</title> <!--Title here-->
-
+    <script type="text/javascript" src="recipe-page.js"></script>
   	<link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -19,22 +19,26 @@
         <a href="about-me.html">About Me</a>
       </nav>
     </header>
+    <pre id="JSON-section">
+      <button onclick="recipeToJSON()" id="styled-button">Convert to JSON</button>
+      <code id="json"></code>
+    </pre>
     <div class="recipe">
-      <h2>Nasi Goreng</h2>
+      <h2 id="recipeName">Nasi Goreng</h2>
       <h3>Description</h3>
       <div class="description">
-        <p>
+        <p  id="recipe-description">
           Nasi Goreng is Indonesian fried rice. It's not your typical fried rice from the local Chinese restaurant.
         You can put anything you want as toppings but this recipe only includes my favorites. This recipe was inspired by
          my dad's recipe. Hope you enjoy!
         </p>
-        <div class="menu-image"><img src="https://ohmydish.com/wp-content/uploads/2016/01/Indonesian-nasi-goreng.jpg" /></div>        
+        <div class="menu-image"><img src="https://ohmydish.com/wp-content/uploads/2016/01/Indonesian-nasi-goreng.jpg" id="recipe-img"/></div>        
       </div>
       <hr>
       <h3>Ingredients</h3>
       <p>
         <p>Note: There are no measurements on purpose. All ingredients are to the cook's discretion and a lot of taste testing!</p>
-        <ul>
+        <ul id="ingredients-list">
           <li>White rice</li>
           <li>Indonesian Kecap Manis</li>
           <li>White Pepper</li>
@@ -44,11 +48,20 @@
           <li>Carrots</li>
           <li>Green Onions</li>
         </ul>
+        <div id="form">
+          <h4>Add an Ingredient</h4>
+          <label>Ingredient: </label>
+          <input id="new-ingredient" placeholder="Bok Choi" value=""/>
+          <br>
+          <br>
+          <br>
+          <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
       </p>
       <hr>
       <h3>Instructions</h3>
       <p>
-        <ol>
+        <ol id="instructions-list">
           <li>Cook desired amount of rice. Use about 20% less water than usual.</li>
           <li>Once rice is done cooking, let it sit for four hours.</li>
           <li>Cut carrots and green onions to small pieces.</li>
@@ -64,6 +77,16 @@
         </ol>
       </p>
       <br>
+      <div id="form">
+        <h4>Add an Instruction</h4>
+        <label>Instruction</label>
+        <textarea id="new-instruction" placeholder="Plate and serve" value=""></textarea>
+        <br>
+        <br>
+        <br>
+        <button onclick="addInstruction()">Add Instruction</button>
+      </div>
     </div>
+    <br>
   </body>
 </html>

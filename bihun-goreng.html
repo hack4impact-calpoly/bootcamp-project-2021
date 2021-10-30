@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
   	<title>Jonathan's Indonesian Specialties</title> <!--Title here-->
-
+    <script type="text/javascript" src="recipe-page.js"></script>
   	<link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -19,21 +19,25 @@
         <a href="about-me.html">About Me</a>
       </nav>
     </header>
+    <pre id="JSON-section">
+      <button onclick="recipeToJSON()" id="styled-button">Convert to JSON</button>
+      <code id="json"></code>
+    </pre>
     <div class="recipe">
-      <h2>Bihun Goreng</h2>
+      <h2 id="recipeName">Bihun Goreng</h2>
       <h3>Description</h3>
       <div class="description">
-        <p>
+        <p id="recipe-description">
           Bihun goreng is the Indonesian version of chow mian. It features thin rice noodles along with a blend
          of vegetable and meat toppings. This dish is great for dinner and lunch!
         </p>
-        <div class="menu-image"><img src="https://christieathome.com/wp-content/uploads/2020/12/Indonesian-Bihun-Goreng-4-scaled.jpg" /></div>
+        <div class="menu-image"><img src="https://christieathome.com/wp-content/uploads/2020/12/Indonesian-Bihun-Goreng-4-scaled.jpg" id="recipe-img"/></div>
       </div>
       <hr>
       <h3>Ingredients</h3>
       <p>Note: There are no measurements on purpose. All ingredients are to the cook's discretion and a lot of taste testing!</p>
       <p>
-        <ul>
+        <ul id="ingredients-list">
           <li>Cooking oil</li>
           <li>Sliced Chicken Thigh</li>
           <li>Eggs</li>
@@ -46,11 +50,20 @@
           <li>Sugar</li>
           <li>Indonesian Kecap Manis</li>
         </ul>
+        <div id="form">
+          <h4>Add an Ingredient</h4>
+          <label>Ingredient: </label>
+          <input id="new-ingredient" placeholder="Bok Choi" value=""/>
+          <br>
+          <br>
+          <br>
+          <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
       </p>
       <hr>
       <h3>Instructions</h3>
       <p>
-        <ol>
+        <ol id="instructions-list">
           <li>Marinate chicken with one teaspoon of soy sauce, sesame oil, and sugar each.</li>
           <li>Boil water and boil rice vermicelli for one minute. Strain</li>
           <li>Add cooking oil to a sauce pan and cook chicken until 70% cooked.</li>
@@ -62,6 +75,16 @@
         </ol>
       </p>
       <br>
+      <div id="form">
+        <h4>Add an Instruction</h4>
+        <label>Instruction</label>
+        <textarea id="new-instruction" placeholder="Plate and serve" value=""></textarea>
+        <br>
+        <br>
+        <br>
+        <button onclick="addInstruction()">Add Instruction</button>
+      </div>
     </div>
+    <br>
   </body>
 </html>
