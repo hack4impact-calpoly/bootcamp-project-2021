@@ -2,6 +2,7 @@
   <head>
     <title> Ishaan's Kitchen </title>
     <link rel="stylesheet" href="../website.css">
+    <script type="text/javascript" src="recipeJS.js"></script>
   </head>
   <body>
     <header class="header-background">
@@ -12,11 +13,14 @@
       </nav>
     </header>
     <main>
+      <pre id="format"><code id="json"></code></pre>
       <section>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>Traditional Grilled Cheese Sandwhich</h2>
-            <p>As stated by <a href="https://en.wikipedia.org/wiki/Grilled_cheese">Wikipedia Grilled Cheese</a>, the dish is a 
+            <br /> <br />
+            <button role="button" onClick="convertJSON()"> Convert recipe into JSON</button>
+            <h2 id="recipe">Traditional Grilled Cheese Sandwhich</h2>
+            <p id="info">As stated by <a href="https://en.wikipedia.org/wiki/Grilled_cheese">Wikipedia Grilled Cheese</a>, the dish is a 
                 toasted sandwich, grilled cheese sandwich, cheese toastie, or grilled cheese is a hot sandwich (toastie) 
                 made with one or more varieties of cheese (a cheese sandwich) on bread. It is typically 
                 prepared by heating one or more slices of cheese between slices of bread, with a cooking fat 
@@ -25,7 +29,7 @@
                 as the latter is the main focus.</p>
           </div>
           <div class="box">
-            <img class="flex-image" src="../images/grilledCheese.jpeg">
+            <img id ="image" class="flex-image" src="../images/grilledCheese.jpeg">
         </div>
       </div>
         </section>
@@ -34,15 +38,19 @@
       <article>
           <section >
               <h3>Ingredients</h3>
-              <ul>
+              <ul id="ingredients">
                   <li>4 slices of white bread</li>
                   <li>3 tablespoons of butter</li>
                   <li>2 slices of Cheddar cheese</li>
               </ul>
+              <h4> Add an Ingredient: </h4>
+                <label>Ingredient: </label>
+                <input id="addIngredient" placeholder="Enter here" value="" /> <br /> <br />
+              <button class="form-button" onclick="addIngredient()">Add</button>
           </section>
           <section>
               <h3>Preparation</h3>
-              <ol>
+              <ol id="instructions">
                   <li>Preheat the pan to medium heat</li>
                   <li>Butter one side of a slice of bread</li>
                   <li>Place bread butter-side-down onto the pan bottom and add 1 slice of cheese</li>
@@ -51,6 +59,10 @@
                   <li>Repeat process with remaining 2 slices of bread, butter, and cheese</li>
                   <li>After that, the meal is ready!</li>
               </ol>
+              <h4> Add an Instruction: </h4>
+                <label for="addInstruction">Ingredient: </label>
+                <input id="addInstruction" placeholder="Enter here" value="" /> <br /> <br />
+              <button class="form-button" onclick="addInstruction()">Add</button>
           </section>
       </article>
     </main>
