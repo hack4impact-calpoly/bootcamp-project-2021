@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Noah's Nibbles</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="recipes.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -16,20 +17,28 @@
       </nav>
     </header>
     <main>
+      <pre id="recipeJSONFormat" style="padding: 10px"></pre>
       <div class="indiv-container">
         <div class="indiv-header">
-          <h2>Spaghetti and Meatballs</h2>
-          <p>
+          <button class="convert-btn" onclick="recipeJSON()">
+            Convert Recipe to JSON
+          </button>
+          <h2 id="recipeName">Spaghetti and Meatballs</h2>
+          <p id="recipeDescription">
             Making your sauce is always better—it's cheaper and so much more
             flavorful. This one comes together in about 15 minutes and is the
             perfect accompaniment to the big garlicky meatballs.
           </p>
         </div>
-        <img class="indiv-img" src="../imgs/spaghetti-and-meatballs.png" />
+        <img
+          class="indiv-img"
+          src="../imgs/spaghetti-and-meatballs.png"
+          id="recipeImage"
+        />
       </div>
       <h4 class="sub-heading">Ingredients</h4>
       <p>Yields 4 Servings</p>
-      <ul>
+      <ul id="ingredientList">
         <li>1 lb. spaghetti</li>
         <li>1 lb. ground beef</li>
         <li>1/3 c. bread crumbs</li>
@@ -45,8 +54,16 @@
         <li>1 bay leaf</li>
         <li>Freshly ground black pepper</li>
       </ul>
+      <div class="input-container">
+        <h4>Add an Ingredient</h4>
+        <input id="ingredientInput" />
+        <br />
+        <button onclick="addIngredient()" class="add-btn">
+          Add Ingredient
+        </button>
+      </div>
       <h4 class="sub-heading">Directions</h4>
-      <ol>
+      <ol id="directionsList">
         <li>
           In a large pot of boiling salted water, cook spaghetti according to
           package instructions. Drain.
@@ -72,6 +89,12 @@
           Parmesan before serving.
         </li>
       </ol>
+      <div class="input-container">
+        <h4>Add a Direction</h4>
+        <textarea id="directionsInput"></textarea>
+        <br />
+        <button onclick="addDirection()" class="add-btn">Add Direction</button>
+      </div>
     </main>
   </body>
 </html>

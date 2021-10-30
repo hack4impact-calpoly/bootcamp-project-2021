@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Noah's Nibbles</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="recipes.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -16,20 +17,24 @@
       </nav>
     </header>
     <main>
+      <pre id="recipeJSONFormat" style="padding: 10px"></pre>
       <div class="indiv-container">
         <div class="indiv-header">
-          <h2>Spiced Beef & Bucatini Pasta</h2>
-          <p>
+          <button class="convert-btn" onclick="recipeJSON()">
+            Convert Recipe to JSON
+          </button>
+          <h2 id="recipeName">Spiced Beef & Bucatini Pasta</h2>
+          <p id="recipeDescription">
             To add exciting contrast of flavor to this comforting pasta, you’ll
             cook ground beef with plump, sweet currants and briny capers in a
             bright sauce flavored with the quatre épices spice blend.
           </p>
         </div>
-        <img class="indiv-img" src="../imgs/pasta.png" />
+        <img class="indiv-img" src="../imgs/pasta.png" id="recipeImage" />
       </div>
       <h4 class="sub-heading">Ingredients</h4>
       <p>Yields 4 Servings</p>
-      <ul>
+      <ul id="ingredientList">
         <li>1 1/8 lbs Ground Beef</li>
         <li>3/4 lb Bucatini Pasta</li>
         <li>1 Yellow Onion</li>
@@ -45,8 +50,16 @@
         <li>2 Tbsps Butter</li>
         <li>1 tsp Quatre Épices (White Pepper, Nutmeg, Ginger & Cloves)</li>
       </ul>
+      <div class="input-container">
+        <h4>Add an Ingredient</h4>
+        <input id="ingredientInput" />
+        <br />
+        <button onclick="addIngredient()" class="add-btn">
+          Add Ingredient
+        </button>
+      </div>
       <h4 class="sub-heading">Directions</h4>
-      <ol>
+      <ol id="directionsList">
         <li>
           Fill a large pot 3/4 of the way up with salted water; cover and heat
           to boiling on high. Wash and dry the fresh produce. Medium dice the
@@ -91,6 +104,12 @@
           if desired. Serve the finished pasta garnished with the cheese. Enjoy!
         </li>
       </ol>
+      <div class="input-container">
+        <h4>Add a Direction</h4>
+        <textarea id="directionsInput"></textarea>
+        <br />
+        <button onclick="addDirection()" class="add-btn">Add Direction</button>
+      </div>
     </main>
   </body>
 </html>

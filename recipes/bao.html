@@ -17,12 +17,18 @@
       </nav>
     </header>
     <main>
-      <pre id="recipeJSONFormat" style="padding: 10px;"></pre>
+      <pre id="recipeJSONFormat" style="padding: 10px"></pre>
       <div class="indiv-container">
         <div class="indiv-header">
-          <button class="convert" onClick="recipeJSON()">Convert Recipe to JSON</button>
+          <button class="convert-btn" onclick="recipeJSON()">
+            Convert Recipe to JSON
+          </button>
           <h2 id="recipeName">Steamed Bao Buns</h2>
-          <p id="recipeDescription">The bao buns themselves are soft and puffy. Stuffed with zesty marinated tempeh, avocado, and lots of fresh fixings, they become mini explosions of texture and flavor.</p>
+          <p id="recipeDescription">
+            The bao buns themselves are soft and puffy. Stuffed with zesty
+            marinated tempeh, avocado, and lots of fresh fixings, they become
+            mini explosions of texture and flavor.
+          </p>
         </div>
         <img class="indiv-img" src="../imgs/bao.png" id="recipeImage" />
       </div>
@@ -50,15 +56,65 @@
         <li>Diced Thai chiles</li>
         <li>Lime wedges, for serving</li>
       </ul>
+      <div class="input-container">
+        <h4>Add an Ingredient</h4>
+        <input id="ingredientInput" />
+        <br />
+        <button onclick="addIngredient()" class="add-btn">
+          Add Ingredient
+        </button>
+      </div>
       <h4 class="sub-heading">Directions</h4>
       <ol id="directionsList">
-        <li>Make the Bao Buns. In a small bowl, combine the yeast, sugar, and water and stir. Set aside for 5 minutes, or until the yeast is foamy.</li>
-        <li>In a large bowl, combine the flour, baking powder, baking soda, and salt. Add the avocado oil and the yeast mixture and mix to form a rough ball, adding 1 to 2 tablespoons more water if the dough is too dry. Transfer to a lightly floured surface, shape into a ball, and vigorously knead it until it’s smooth and elastic, about 5 minutes.</li>
-        <li>Brush the inside of a bowl with a little oil and place the dough inside. Cover and set it aside in a warm place for 45 minutes. (Note: it won’t rise as much as other traditional yeasted doughs.)</li>
-        <li>Make the tempeh filling. Preheat the oven to 425°F and line a baking sheet with parchment paper. In a small bowl, whisk together the hoisin sauce, sriracha, ginger, and lime zest. Reserve half of the sauce for serving and toss the remaining half with the tempeh slices and set aside for 20 minutes to marinate. Place the tempeh on the baking sheet and bake for 10 to 12 minutes or until browned around the edges.</li>
-        <li>Finish the buns. Cut twelve 4-inch squares of parchment paper and place them on a large baking sheet. Transfer the dough to a clean work surface and roll out evenly to ¼ inch thickness. Use a 3-inch glass to cut out circles of dough and place them on the paper squares. Brush the tops with a little oil, then fold each circle in half and gently press down, flattening just a bit so that the halves stick together but you still have a puffy bun shape. Cover with plastic wrap and let rest for 1 hour, until puffed. Transfer to a bamboo steamer set over a pan with 1-inch water. Bring the water to a simmer, cover, and steam until puffed, 9 to 11 minutes. Work in batches.</li>
-        <li>Assemble. Squeeze a little lime juice over the avocado, cucumber, and carrot. Assemble each bun with the tempeh, spooning a little sauce over each tempeh piece, the avocado, veggies, herbs, and chiles. Serve with remaining sauce on the side and lime slices for squeezing.</li>
+        <li>
+          Make the Bao Buns. In a small bowl, combine the yeast, sugar, and
+          water and stir. Set aside for 5 minutes, or until the yeast is foamy.
+        </li>
+        <li>
+          In a large bowl, combine the flour, baking powder, baking soda, and
+          salt. Add the avocado oil and the yeast mixture and mix to form a
+          rough ball, adding 1 to 2 tablespoons more water if the dough is too
+          dry. Transfer to a lightly floured surface, shape into a ball, and
+          vigorously knead it until it’s smooth and elastic, about 5 minutes.
+        </li>
+        <li>
+          Brush the inside of a bowl with a little oil and place the dough
+          inside. Cover and set it aside in a warm place for 45 minutes. (Note:
+          it won’t rise as much as other traditional yeasted doughs.)
+        </li>
+        <li>
+          Make the tempeh filling. Preheat the oven to 425°F and line a baking
+          sheet with parchment paper. In a small bowl, whisk together the hoisin
+          sauce, sriracha, ginger, and lime zest. Reserve half of the sauce for
+          serving and toss the remaining half with the tempeh slices and set
+          aside for 20 minutes to marinate. Place the tempeh on the baking sheet
+          and bake for 10 to 12 minutes or until browned around the edges.
+        </li>
+        <li>
+          Finish the buns. Cut twelve 4-inch squares of parchment paper and
+          place them on a large baking sheet. Transfer the dough to a clean work
+          surface and roll out evenly to ¼ inch thickness. Use a 3-inch glass to
+          cut out circles of dough and place them on the paper squares. Brush
+          the tops with a little oil, then fold each circle in half and gently
+          press down, flattening just a bit so that the halves stick together
+          but you still have a puffy bun shape. Cover with plastic wrap and let
+          rest for 1 hour, until puffed. Transfer to a bamboo steamer set over a
+          pan with 1-inch water. Bring the water to a simmer, cover, and steam
+          until puffed, 9 to 11 minutes. Work in batches.
+        </li>
+        <li>
+          Assemble. Squeeze a little lime juice over the avocado, cucumber, and
+          carrot. Assemble each bun with the tempeh, spooning a little sauce
+          over each tempeh piece, the avocado, veggies, herbs, and chiles. Serve
+          with remaining sauce on the side and lime slices for squeezing.
+        </li>
       </ol>
+      <div class="input-container">
+        <h4>Add a Direction</h4>
+        <textarea id="directionsInput"></textarea>
+        <br />
+        <button onclick="addDirection()" class="add-btn">Add Direction</button>
+      </div>
     </main>
   </body>
 </html>
