@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Page</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class ="navBar">
-            <a href="index.html">Jin's egg-cellent recipes</a>
-            <a href="index.html">Home</a>
-            <a href="about_me.html">About Me</a>
-        </div>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="functions.js"></script>
+</head>
+
+<body>
+    <div class="navBar">
+        <a href="index.html">Jin's egg-cellent recipes</a>
+        <a href="index.html">Home</a>
+        <a href="about_me.html">About Me</a>
+    </div>
+    <div>
+        <h1 id="name">Boiled Eggs!!!</h1>
+    </div>
+    <p id="json"></p>
+    <button id="json_button" onclick="recipeToJSON()">Convert to JSON</button>
+    <div class="recipe-content">
+        <img id="image" class="pic"
+            src="https://www.mommyhatescooking.com/wp-content/uploads/2020/01/ninja-foodi-hard-boiled-eggs-3-720x720.jpg">
         <div>
-            <h1>Boiled Eggs!!!</h1>
+            <p id="description">Boiled eggs are among one of the best foods to make and eat. They are super easy and
+                super delicious</p>
         </div>
-        <div class="recipe-content">
-            <img class="pic" src="https://www.mommyhatescooking.com/wp-content/uploads/2020/01/ninja-foodi-hard-boiled-eggs-3-720x720.jpg">
-            <div>
-                <p>Boiled eggs are among one of the best foods to make and eat. They are super easy and super delicious</p>
-            </div>
+    </div>
+    <div class="Ingredients_Steps">
+        <div class="ingredients">
+            <h1>Ingredients</h1>
+            <ul id="ingredient_list">
+                <li>Eggs (Exactly 4)</li>
+                <li>1 quart Pot</li>
+                <li>1 Gallon of water</li>
+                <li>Ice (9 cubes)</li>
+                <li>Bowl (any size will do)</li>
+            </ul>
+            <input id="ingredient_input">
+            <button id="add_ingredient" onclick="addIngredient()">Click to add ingredient!</button>
         </div>
-        <div class = "Ingredients_Steps">
-            <div class="ingredients">
-                <h1>Ingredients</h1>
-                <ul>
-                    <li>Eggs (Exactly 4)</li>
-                    <li>1 quart Pot</li>
-                    <li>1 Gallon of water</li>
-                    <li>Ice (9 cubes)</li>
-                    <li>Bowl (any size will do)</li>
-                </ul>
-            </div>
-            <div class="steps">
-                <h1>Steps</h1>
-                <ol>
-                    <li>Grab pot and fill with water</li>
-                    <li>Place pot on stove</li>
-                    <li>Place the 4 eggs in the pot</li>
-                    <li>Turn on stove at high heat for 8 minutes</li>
-                    <li>Place Ice and water in Bowl</li>
-                    <li>Place Eggs in Ice bowl</li>
-                    <li>Enjoy your eggs!</li>
-                </ol>
-            </div>
+        <div class="steps">
+            <h1>Steps</h1>
+            <ol id="step_list">
+                <li>Grab pot and fill with water</li>
+                <li>Place pot on stove</li>
+                <li>Place the 4 eggs in the pot</li>
+                <li>Turn on stove at high heat for 8 minutes</li>
+                <li>Place Ice and water in Bowl</li>
+                <li>Place Eggs in Ice bowl</li>
+                <li>Enjoy your eggs!</li>
+            </ol>
+            <input id="step_input">
+            <button id="add_step_button" onclick="addStep()">Click to add step!</button>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
