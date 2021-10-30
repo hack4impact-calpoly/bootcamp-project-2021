@@ -26,6 +26,12 @@ section.recipes {
     justify-content: space-around
 }
 
+section.json {
+    background-color: white;
+    margin: 20px;
+
+}
+
 .top {
     display: flex;
     justify-content: space-between;
@@ -54,7 +60,7 @@ h1.home {
     margin-bottom: 0;
 }
 
-#dish-size {
+.dish-size {
     display: flex;
     justify-content: center;
     margin-left: 0;
@@ -123,7 +129,7 @@ h1.home {
     padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 565px;
+    min-height: 565px;
 }
 
 .ingredients2 {
@@ -160,4 +166,35 @@ a:visited {
 
 a:hover {
     color: grey;
+}
+
+.form-group {
+    border: 2px solid rgb(182, 98, 80);
+    border-radius: 10px;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 10px;
+}
+
+#flex-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px; 
+}
+
+.cool-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(182, 98, 80);
+    border: 2px solid #111;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    height: 48px;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
 }

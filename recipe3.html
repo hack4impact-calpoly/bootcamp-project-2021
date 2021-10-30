@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Grandma's Lazy Susan</title>
-        <link rel="stylesheet" href="milestone1.css"
+        <link rel="stylesheet" href="milestone1.css">
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
         <header class="top">
@@ -18,12 +19,12 @@
         </header>
         <section>
             <div class="flex-container">
-                <img src="https://thewoksoflife.com/wp-content/uploads/2015/03/cantonese-roast-pork-belly-10.jpg" class="flex-image">
+                <img id="recipeImage" class="flex-image" src="https://thewoksoflife.com/wp-content/uploads/2015/03/cantonese-roast-pork-belly-10.jpg">
                 <div class="flex-header">
                     <div class="ingredients">
-                        <h1 id="dish-size">Signature Crispy Pork Belly</h1>
+                        <h1 class="dish-size" id="recipeName">Signature Crispy Pork Belly</h1>
                         <h2>Ingredients</h2>
-                        <ul>
+                        <ul id="ingredientList">
                             <li>3 lb slab of pork belly</li>
                             <li>2 teaspoons Shaoxing wine</li>
                             <li>2 teaspoons salt</li>
@@ -33,6 +34,11 @@
                             <li>1 1/2 teaspoons rice wine vinegar</li>
                             <li>1/2 cup coarse sea salt</li>
                         </ul>
+                        <div class="form-group">
+                            <h4>Add Ingredient</h4>
+                            <input id="newIngredient" placeholder="New ingredient!" value=""/>
+                            <button onClick="addIngredient()">Add ingredient to list</button>  <!--add onclick-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,7 +47,7 @@
             <div class="flex-header2">
                 <div class="ingredients2">
                     <h2>Preparation</h2>
-                    <ol>
+                    <ol id="instructionList">
                         <li>Rinse the pork belly and pat dry. Place it skin-side down on a tray, and rub the Shaoxing wine into the meat (not the skin). 
                             Mix together the salt, sugar, five spice powder and white pepper. Thoroughly rub this spice mixture into the meat as well. 
                             Flip the meat over so it’s skin-side up.</li>
@@ -59,8 +65,19 @@
                             pork as far away from the heat source as possible.</li>
                         <li>When the skin has puffed up and gotten crispy, remove from the oven. Let it rest for about 15 minutes and then slice.</li>
                     </ol>
+                    <div class="form-group">
+                        <h4>Add Instruction</h4>
+                        <textarea id="newInstruction" placeholder="New instruction!" value=""></textarea>
+                        <button onClick="addInstruction()">Add instruction to list</button> <!--add onclick-->
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="flex-button">
+            <button class="cool-button" role="button" onClick="recipeToJSON()">Convert Recipe into JSON!</button>
+        </div>
+        <section class="json">
+            <pre id="pre-formatter"><code id="json"></code></pre>
         </section>
     </body>
 </html>

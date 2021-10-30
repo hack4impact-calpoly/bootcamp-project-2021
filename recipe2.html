@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Grandma's Lazy Susan</title>
-        <link rel="stylesheet" href="milestone1.css"
+        <link rel="stylesheet" href="milestone1.css">
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
         <header class="top">
@@ -18,12 +19,12 @@
         </header>
         <section>
             <div class="flex-container">
-                <img src="https://i.pinimg.com/736x/6e/38/1b/6e381b87e015118fdf84d45e1a1d6325.jpg" class="flex-image">
+                <img id="recipeImage" class="flex-image" src="https://i.pinimg.com/736x/6e/38/1b/6e381b87e015118fdf84d45e1a1d6325.jpg">
                 <div class="flex-header">
                     <div class="ingredients">
-                        <h1 id="dish-size">Pork Siu Mai</h1>
+                        <h1 class="dish-size" id=recipeName>Pork Siu Mai</h1>
                         <h2>Ingredients</h2>
-                        <ul>
+                        <ul id="ingredientList">
                             <li>3/4 lb pork</li>
                             <li>10 jumbo shrimps  - 1/2 minced, 1/2 chopped roughly</li>
                             <li>2 T light soy</li>
@@ -36,6 +37,11 @@
                             <li>2tsp sugar</li>
                             <li>Round gyoza wrappers</li>
                         </ul>
+                        <div class="form-group">
+                            <h4>Add Ingredient</h4>
+                            <input id="newIngredient" placeholder="New ingredient!" value=""/>
+                            <button onClick="addIngredient()">Add ingredient to list</button>  <!--add onclick-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,14 +50,25 @@
             <div class="flex-header2">
                 <div class="ingredients2">
                     <h2>Preparation</h2>
-                    <ol>
+                    <ol id="instructionList">
                         <li>Combine all of above except roughly chopped shrimp.</li>
                         <li>Mix thoroughly, kneeding pork mixture  in between fingers for 5 mins until smooth and sticky.  Add roughly chopped shrimp last.</li>
                         <li>Form with round gyoza wrappers between pointer finger and thumb.</li>
                         <li>Steam on medium heat for 10 mins</li>
                     </ol>
+                    <div class="form-group">
+                        <h4>Add Instruction</h4>
+                        <textarea id="newInstruction" placeholder="New instruction!" value=""></textarea>
+                        <button onClick="addInstruction()">Add instruction to list</button> <!--add onclick-->
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="flex-button">
+            <button class="cool-button" role="button" onClick="recipeToJSON()">Convert Recipe into JSON!</button>
+        </div>
+        <section class="json">
+            <pre id="pre-formatter"><code id="json"></code></pre>
         </section>
     </body>
 </html>

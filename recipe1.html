@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Grandma's Lazy Susan</title>
-        <link rel="stylesheet" href="milestone1.css"
+        <link rel="stylesheet" href="milestone1.css">
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
         <header class="top">
@@ -18,12 +19,12 @@
         </header>
         <section>
             <div class="flex-container">
-                <img src="https://thewoksoflife.com/wp-content/uploads/2015/04/cabbage-stir-fry-7.jpg" class="flex-image">
+                <img id="recipeImage" src="https://thewoksoflife.com/wp-content/uploads/2015/04/cabbage-stir-fry-7.jpg" class="flex-image">
                 <div class="flex-header">
                     <div class="ingredients">
-                        <h1 id="dish-size">Chinese Cabbage and Pork Belly Stir Fry</h1>
+                        <h1 id=recipeName class="dish-size">Chinese Cabbage and Pork Belly Stir Fry</h1>
                         <h2>Ingredients</h2>
-                        <ul>
+                        <ul id="ingredientList">
                             <li>2 tablespoons oil</li>
                             <li>6 oz. pork belly (our recommendation), pork loin, or chicken, thinly sliced</li>
                             <li>5 cloves garlic, smashed and cut in half</li>
@@ -37,6 +38,11 @@
                             <li>1/2 teaspoon Chinese black vinegar</li>
                             <li>2 scallions, cut into 2-inch lengths</li>
                         </ul>
+                        <div class="form-group">
+                            <h4>Add Ingredient</h4>
+                            <input id="newIngredient" placeholder="New ingredient!" value=""/>
+                            <button onClick="addIngredient()">Add ingredient to list</button>  <!--add onclick-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,15 +51,26 @@
             <div class="flex-header2">
                 <div class="ingredients2">
                     <h2>Preparation</h2>
-                    <ol>
+                    <ol id="instructionList">
                         <li>In a wok over high heat, add the oil. Sear the meat until caramelized. Add the garlic and chili, 
                             turn down the heat to medium, and stir-fry for a minute, taking care not to burn the garlic.</li>
                         <li>Add the cabbage, wine, soy sauce, sugar, and water.</li>
                         <li>Turn up the heat to high, cover the lid and let the cabbage cook for 1-2 minutes.</li>
                         <li>Uncover the lid, and stir in the black vinegar, scallions, and salt to taste. The cabbage should be wilted, but still slightly crunchy and caramelized.</li>
                     </ol>
+                    <div class="form-group">
+                        <h4>Add Instruction</h4>
+                        <textarea id="newInstruction" placeholder="New instruction!" value=""></textarea>
+                        <button onClick="addInstruction()">Add instruction to list</button> <!--add onclick-->
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="flex-button">
+            <button class="cool-button" role="button" onClick="recipeToJSON()">Convert Recipe into JSON!</button>
+        </div>
+        <section class="json">
+            <pre id="pre-formatter"><code id="json"></code></pre>
         </section>
     </body>
 </html>
