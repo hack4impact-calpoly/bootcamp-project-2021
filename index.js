@@ -5,7 +5,8 @@ let addInst = () => {
     let newIng = document.createElement("li");
     let inputIng = document.getElementById("newInstruction").value;
     newIng.appendChild(document.createTextNode(inputIng));
-    let ingListLen = document.querySelectorAll("#instructionList li").length;
+    let ingListLen = document.getElementById("instructionList").getElementsByTagName("li");
+    // let ingListLen = document.querySelectorAll("#instructionList li").length;
     console.log("document.querySelectorAll" + document.querySelectorAll("#instructionList li"));
 
     let inputPos = document.getElementById("addPosition").value;
@@ -49,29 +50,28 @@ let convertToJSON = () => {
     // ingredients
     let ingList = document.getElementById("ingredientList").getElementsByTagName("li");
     let ingredients = [];
-    for (var i in ingList) {
-        // console.log(ingList[i].innerHTML);
+    for (let i = 0; i < ingList.length; i++) {
         ingredients.push(ingList[i].innerHTML);
     }
 
-    // ingredients
+    // instructions
     let instList = document.getElementById("instructionList").getElementsByTagName("li");
+    console.log(instList);
     let instructions = [];
-    for (var i in instList) {
-        // console.log(ingList[i].innerHTML);
+    for (let i = 0; i < instList.length; i++) {
+        console.log(instList[i].innerHTML);
         instructions.push(instList[i].innerHTML);
     }
 
-    const recipeInfo = {
+    let recipeInfo = {
         recipeName: name,
         recipeDescription: description,
         recipeImage: image,
         ingredientList: ingredients,
         instructionList: instructions
     };
-    const myJSON = JSON.stringify(recipeInfo);
     let outerDiv = document.getElementById("overview");
-    let convertedText = document.createElement("p");
-    convertedText.innerHTML = myJSON;
+    let convertedText = document.getElementById("convertedText");
+    convertedText.innerHTML = JSON.stringify(recipeInfo);
     outerDiv.appendChild(convertedText);
 }
