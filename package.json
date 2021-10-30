@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/scallait/bootcamp-project-2021/issues"
   },
-  "homepage": "https://github.com/scallait/bootcamp-project-2021#readme"
+  "homepage": "https://github.com/scallait/bootcamp-project-2021#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
 }
