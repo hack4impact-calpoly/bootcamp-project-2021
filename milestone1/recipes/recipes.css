@@ -58,3 +58,28 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.section_form {
+    border: 2px solid var(--cg-dark-blue);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form_element {
+    width: 98%;
+}
+
+.section_button {
+    background-color: var(--cg-dark-blue);
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.conv_button {
+    align-items: center;
+    background-color: var(--cg-dark-blue);
+    border-radius: 10px;
+    color: whitesmoke;
+    justify-content: center;
+    margin: auto;
+}

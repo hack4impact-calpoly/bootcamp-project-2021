@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>Vermicelli Noodle Bowl</title>
     <link rel="stylesheet" href="recipes.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
     <!--Navigation Bar-->
     <div class="nav_bar">
         <h1 class="nav_title">Bites with Jacqueline</h1>
-        <a class="nav_link" href="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/milestone.html">Home</a>
-        <a class="nav_link" href="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/about_me.html">About Me</a>
+        <a class="nav_link" href="../milestone.html">Home</a>
+        <a class="nav_link" href="../about_me.html">About Me</a>
     </div>
     
     <!--Picture & Ingredients-->
     <main class="body_content">
-        <h2>Vermicelli Noodle Bowl</h2>
+        <pre id="pre-formatter"><code id="json"></code></pre>
+        <h2 id="recipe_name">Vermicelli Noodle Bowl</h2>
         <div>
-            <img class="recipe_pic" src="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/images/vermicelli_bowl.jpeg"/>
-            <p><b>Credit: </b><a href="https://frommybowl.com/vermicelli-noodle-bowls-vegan/" 
-                target="_blank">Vermicelli Noodle Bowl Recipe by Caitlin Shoemaker</a></p>
-            <p><b>Prep Time: </b>20 min | <b>Cook Time: </b>5 min</p>
-            <p><b>Total Time: </b>25 min</p>
-            <p><b>Servings: </b>3 to 4 servings</p>
+            <img id="recipe_image" class="recipe_pic" src="../images/vermicelli_bowl.jpeg"/>
+            <div style="text-align: center;">
+                <br />
+                <button class="conv_button" role="button" onClick="conv_to_JSON()"> Convert Recipe into JSON</button>
+            </div>
+            <h3 class="section_title">Details</h3>
+            <p id="recipe_credit"><b>Credit: </b><a href="https://frommybowl.com/vermicelli-noodle-bowls-vegan/" target="_blank">Vermicelli Noodle Bowl Recipe by Caitlin Shoemaker</a></p>
+            <p id="recipe_time"><b>Prep Time: </b>20 min | <b>Cook Time: </b>5 min | <b>Total Time: </b>25 min | <b>Servings: </b>3 to 4 servings
+            </p>
             <h3 class="section_title">Ingredients</h3>
-            <h4>Main</h4>
-            <ul>
+            <ul id="ingredient_list">
                 <li>1 batch of tofu</li>
                 <li>4 oz of vermicelli noodles</li>
                 <li>1/4 leafy green lettuce head (chopped)</li>
@@ -35,35 +39,39 @@
                 <li>1 cup of bean sprouts</li>
                 <li>1/2 cup of chopped fresh herbs (cilantro, mint, basil, and/or perilla)</li>
                 <li>1/4 cup of dry roasted peanuts</li>
-            </ul>
-            <h4>Dressing</h4>
-            <ul>
+                <br />
                 <li>1/4 cup of unseasoned rice vinegar</li>
                 <li>Juice of 1/2 lime</li>
                 <li>2 tbsp of soy sauce</li>
                 <li>1/4 cup of sweet chili sauce</li>
                 <li>1 clove of garlic (finely minced or grated)</li>
                 <li>1-2 tbsp of water (to thin if necessary)</li>
+                <br />
             </ul>
+            <div class="section_form">
+                <h4>Add an Ingredient</h4>
+                <input id="new_ingredient" class="form_element" placeholder="ingredient" value="" />
+                <br />
+                <br />
+                <button class="section_button" onclick="add_ingredient()">Add Ingredient</button>
+            </div>
         </div>
         <!--Instructions-->
         <div>
             <h3 class="section_title">Instructions</h3>
-            <ol>
-                <li>Make the dressing: add the vinegar, lime juice, soy sauce, sweet 
-                    chili sauce, and garlic to a jar with a tight-fitting lid and 
-                    shake well to combine. If the dressing is thicker than preferred, 
-                    add 1 to 2 tbsp of water to thin. Set aside.</li>
-                <li>Soak the noodles: bring 3 cups of water to a boil. Place the 
-                    vermicelli noodles in a wide-bottom bowl, then carefully pour the 
-                    water over them. Let soak for 3 to 5 minutes, or until the noodles 
-                    are tender. Drain and set aside.</li>
-                <li>Assemble: place the noodles and lettuce in the bottom of each 
-                    serving bowl, then top with tofu, carrot, cucumber, bell pepper, 
-                    bean sprouts, fresh herbs, and peanuts.</li>
-                <li>Serve: drizzle each bowl with dressing, then serve as desired. 
-                    Leftovers will keep in the fridge for up to 3 days.</li>
+            <ol id="instruction_list">
+                <li>Make the dressing: add the vinegar, lime juice, soy sauce, sweet chili sauce, and garlic to a jar with a tight-fitting lid and shake well to combine. If the dressing is thicker than preferred, add 1 to 2 tbsp of water to thin. Set aside.</li>
+                <li>Soak the noodles: bring 3 cups of water to a boil. Place the vermicelli noodles in a wide-bottom bowl, then carefully pour the water over them. Let soak for 3 to 5 minutes, or until the noodles are tender. Drain and set aside.</li>
+                <li>Assemble: place the noodles and lettuce in the bottom of each serving bowl, then top with tofu, carrot, cucumber, bell pepper, bean sprouts, fresh herbs, and peanuts.</li>
+                <li>Serve: drizzle each bowl with dressing, then serve as desired. Leftovers will keep in the fridge for up to 3 days.</li>
             </ol>
+            <div class="section_form">
+                <h4>Add an Instruction</h4>
+                <textarea id="new_instruction" class="form_element" placeholder="instruction" value="" rows="3"></textarea>
+                <br />
+                <br />
+                <button class="section_button" onclick="add_instruction()">Add Instruction</button>
+            </div>
         </div>
     </main>
   </body>

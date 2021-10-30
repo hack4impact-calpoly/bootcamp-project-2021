@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <title>Kimchi Fried Rice</title>
     <link rel="stylesheet" href="recipes.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
     <!--Navigation Bar-->
     <div class="nav_bar">
         <h1 class="nav_title">Bites with Jacqueline</h1>
-        <a class="nav_link" href="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/milestone.html">Home</a>
-        <a class="nav_link" href="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/about_me.html">About Me</a>
+        <a class="nav_link" href="../milestone.html">Home</a>
+        <a class="nav_link" href="../about_me.html">About Me</a>
     </div>
     
     <!--Picture & Ingredients-->
     <main class="body_content">
-        <h2>Kimchi Fried Rice</h2>
+        <pre id="pre-formatter"><code id="json"></code></pre>
+        <h2 id="recipe_name">Kimchi Fried Rice</h2>
         <div>
-            <img class="recipe_pic" src="/Users/mba/VSCode-workspace/H4I_Bootcamp_1/milestone1/images/kimchi_fried_rice.jpeg">
+            <img id="recipe_image" class="recipe_pic" src="../images/kimchi_fried_rice.jpeg">
+            <div style="text-align: center;">
+                <br />
+                <button class="conv_button" role="button" onClick="conv_to_JSON()"> Convert Recipe into JSON</button>
+            </div>
             <h3 class="section_title">Details</h3>
-            <p><b>Credit: </b><a href="https://omnivorescookbook.com/kimchi-fried-rice/" 
-                target="_blank">Kimchi Fried Rice Recipe by Maggie Zhu</a></p>
-            <p><b>Prep Time: </b>10 min | <b>Cook Time: </b>5 min</p>
-            <p><b>Total Time: </b>15 min</p>
-            <p><b>Servings: </b>2 to 4 servings</p>
+            <p id="recipe_credit"><b>Credit: </b><a href="https://omnivorescookbook.com/kimchi-fried-rice/" target="_blank">Kimchi Fried Rice Recipe by Maggie Zhu</a></p>
+            <p id="recipe_time"><b>Prep Time: </b>10 min | <b>Cook Time: </b>5 min | <b>Total Time: </b>15 min | <b>Servings: </b>2 to 4 servings
+            </p>
             <h3 class="section_title">Ingredients</h3>
-            <h4>Main</h4>
-            <ul>
+            <ul id="ingredient_list">
                 <li>1 tbsp of vegetable oil (divided)</li>
                 <li>1 cup of kimchi (chopped)</li>
                 <li>1/2 of a yellow onion (largely diced)</li>
@@ -36,36 +39,39 @@
                 <li>1 tsp of sesame oil</li>
                 <li>Fried egg (optional)</li>
                 <li>Shredded crispy seaweed sheet (optional)</li>
-            </ul>
-            <h4>Sauce</h4>
-            <ul>
+                <br/>
                 <li>1/4 cup of kimchi juice</li>
                 <li>1 tbsp of gochujang</li>
                 <li>2 tsp of sesame oil</li>
                 <li>1/2 tsp of soy sauce</li>
+                <br/>
             </ul>
+            <div class="section_form">
+                <h4>Add an Ingredient</h4>
+                <input id="new_ingredient" class="form_element" placeholder="ingredient" value="" />
+                <br />
+                <br />
+                <button class="section_button" onclick="add_ingredient()">Add Ingredient</button>
+            </div>
         </div>
         <!--Instructions-->
         <div>
             <h3 class="section_title">Instructions</h3>
-            <ol>
-                <li>Before chopping the kimchi, pour 1/4 cup of kimchi juice 
-                    in a separate bowl.</li>
-                <li>Combine the rest of the sauce ingredients in the bowl with 
-                    the kimchi juice. Mix until the gochujang is incorporated by 
-                    mashing it against the bowl to break it up.</li>
-                <li>Heat a large skillet over medium-high heat and add 2 tsp of 
-                    vegetable oil. Add the kimchi and white onions. Stir fry for 30 
-                    seconds to release the fragrance.</li>
-                <li>Add the rice to the pan. Drizzle the remaining amount of 
-                    vegetable oil. Cook and stir until the rice begins to crackle 
-                    (about 1 to 2 minutes).</li>
-                <li>Add the vegetables and sauce. Stir to incorporate the sauce 
-                    so that all of the rice grains are coated. Let the rice cook 
-                    for another minute to crisp up the bottom.</li>
-                <li>Turn off the heat and add sesame oil and green onions. Toss to 
-                    mix well. Serve hot with optional toppings.</li>
+            <ol id="instruction_list">
+                <li>Before chopping the kimchi, pour 1/4 cup of kimchi juice in a separate bowl.</li>
+                <li>Combine the rest of the sauce ingredients in the bowl with the kimchi juice. Mix until the gochujang is incorporated by mashing it against the bowl to break it up.</li>
+                <li>Heat a large skillet over medium-high heat and add 2 tsp of vegetable oil. Add the kimchi and white onions. Stir fry for 30 seconds to release the fragrance.</li>
+                <li>Add the rice to the pan. Drizzle the remaining amount of vegetable oil. Cook and stir until the rice begins to crackle (about 1 to 2 minutes).</li>
+                <li>Add the vegetables and sauce. Stir to incorporate the sauce so that all of the rice grains are coated. Let the rice cook for another minute to crisp up the bottom.</li>
+                <li>Turn off the heat and add sesame oil and green onions. Toss to mix well. Serve hot with optional toppings.</li>
             </ol>
+            <div class="section_form">
+                <h4>Add an Instruction</h4>
+                <textarea id="new_instruction" class="form_element" placeholder="instruction" value="" rows="3"></textarea>
+                <br />
+                <br />
+                <button class="section_button" onclick="add_instruction()">Add Instruction</button>
+            </div>
         </div>
     </main>
   </body>
