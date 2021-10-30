@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/noahyuen/bootcamp-project-2021/issues"
   },
-  "homepage": "https://github.com/noahyuen/bootcamp-project-2021#readme"
+  "homepage": "https://github.com/noahyuen/bootcamp-project-2021#readme",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
 }
