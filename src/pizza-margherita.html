@@ -19,18 +19,20 @@
         </header>
         <!--Main Section-->
         <main class="main">
-            <!--Fill Out Later!-->
+            <pre id="pre-format"><code id="conversion"></code></pre>
+            <hr>
             <section class="introduction">
                 <div>
-                    <h1>Pizza Margherita (di Napoli)</h1>
+                    <button id="convert-button" onclick="convertToJSON()">Convert Recipe To JSON</button>
+                    <h1 id="recipe-name">Pizza Margherita (di Napoli)</h1>
                     <br>
-                    <p class="description">While I love me some Domino's Pizza at 3 in the morning, nothing in the US can compare to the pizza I've had in Italy. 
+                    <p class="description" id="recipe-description">While I love me some Domino's Pizza at 3 in the morning, nothing in the US can compare to the pizza I've had in Italy. 
                         Although pizza margherita is extremely simple in it's ingredients, when cooked correctly, the flavor is out of this world. </p>
                     <br>
                     <p class="description">The prep time for this dish is a few hours if you include the time needed to allow the dough to rise, but the actual preparation 
                         and cook time is pretty quick. Make this meal for yourself on a chilly Saturday night or when you have friends over! I assure you it'll be a hit.</p>
                 </div>
-                <img src="imgs/pizza-margherita.jpeg" alt="Pizza Margherita image here" width=400 height=300 class="image">
+                <img src="imgs/pizza-margherita.jpeg" id="recipe-image" alt="Pizza Margherita image here" width=400 height=300 class="image">
             </section>
             <!--Ingredients, Method Section-->
             <section>
