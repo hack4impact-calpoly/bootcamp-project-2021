@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <title>BLT</title>
+    <title>blt</title>
+    <script type="text/javascript" src="blt.js"></script>
     <link rel="stylesheet" href="index.css">
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
 </head>
 <div class="box">
     <div class="recipe_page_title">
-        <h1>Mac and Cheese</h1>
+        <h1>BLT</h1>
     </div>
     <div class="image_text">
         <div class="welcome">
@@ -21,26 +22,36 @@
         <img id="mac_page_img" src="blt.jpg" alt="mac" width="400">
     </div>
 
+    <button onclick="jsonify()">Convert Recipe to JSON!!</button>
+    <div id="jsondiv"></div>
+
     <div class="ingrediants_title">
         <h2>Ingrediants:</h2>
     </div>
-    <uli class="ingrediants_list">
+    <uli class="ingrediants_list" id="ingr">
         <li>4 slices bacon </li>
         <li>2 leaves lettuce </li>
         <li>2 slices tomato </li>
         <li>2 slices bread, toasted </li>
         <li>1 tablespoon mayonnaise </li>
     </uli>
+    <label> Add Ingrediant</label><br />
+    <input id="newIngr" placeholder="New Ingrediant" value=""/>
+    <button onclick="addIngr()">Add Ingrediant to List</button>
 
     <div class="ingrediants_title">
         <h2>Directions:</h2>
     </div>
-    <oli class="instructions_list">
+    <oli class="instructions_list" id="inst">
         <li>Cook the bacon in a large, deep skillet over medium-high heat until evenly browned,<br>about 10 minutes. Drain the bacon slices on a paper towel-lined plate.</li>
         <br>
         <li>Arrange the cooked bacon, lettuce, and tomato slices on one slice of bread. Spread<br>one side of remaining bread slice with the mayonnaise. Bring the two pieces together<br>to make a sandwich.</li>
         <br>
     </oli>
+    <label> Add Instruction</label><br />
+    <input id="newInst" placeholder="New Instruction" value=""/>
+    <button onclick="addInst()">Add Instruction to List</button>
+    
 
     <ul class="nav_bar">
         <a>Click On These Helpful Links ====></a>

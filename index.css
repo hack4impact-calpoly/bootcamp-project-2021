@@ -138,3 +138,11 @@ body {
 img {
     border: 5px solid green;
 }
+
+button {
+    width: 25%;
+}
+
+input {
+    width: 25%;
+}

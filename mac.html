@@ -4,6 +4,7 @@
 <head>
     <title>mac and cheese</title>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="mac.js"></script>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
 </head>
@@ -22,11 +23,13 @@
         </div>
         <img id="mac_page_img" src="mac and cheese.jpg" alt="mac" width="400">
     </div>
+    <button onclick="jsonify()">Convert Recipe to JSON!!</button>
+    <div id="jsondiv"></div>
 
     <div class="ingrediants_title">
         <h2>Ingrediants:</h2>
     </div>
-    <uli class="ingrediants_list">
+    <uli class="ingrediants_list" id="ingr">
         <li>1 (8 ounce) box elbow macaroni</li>
         <li>1/4 cup butter</li>
         <li>1/4 cup all-purpose flour</li>
@@ -35,11 +38,14 @@
         <li>2 cups milk</li>
         <li>2 cups shredded Cheddar cheese</li>
     </uli>
+    <label> Add Ingrediant</label><br />
+    <input id="newIngr" placeholder="New Ingrediant" value=""/>
+    <button onclick="addIngr()">Add Ingrediant to List</button>
 
     <div class="ingrediants_title">
         <h2>Directions:</h2>
     </div>
-    <oli class="instructions_list">
+    <oli class="instructions_list" id="inst">
         <li>Bring a large pot of lightly salted water to a boil. Cook elbow macaroni in the boiling<br> water, stirring occasionally until cooked trhough but form to the bite, 8 minues, Drain.</li>
         <br>
         <li>Melt butter in a saucepan over medium heat; stir in flour, salt, and pepper until<br>smooth, about 5 minutes. Slowly pour milk into butter-flour mixture while<br>continuously stirring until mixture is smooth and bubbling, about 5 minutes. Add
@@ -47,6 +53,10 @@
         <br>
         <li>Fold macaroni into cheese sauce until coated.</li>
     </oli>
+    <label> Add Instruction</label><br />
+    <input id="newInst" placeholder="New Instruction" value=""/>
+    <button onclick="addInst()">Add Instruction to List</button>
+
 
     <ul class="nav_bar">
         <a>Click On These Helpful Links ====></a>

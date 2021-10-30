@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>shrimp</title>
+    <title>shrimp scampi</title>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="shrimp.js"></script>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
 </head>
@@ -22,21 +23,27 @@
         <img id="mac_page_img" src="shrimp_scampi.jpg" alt="shrimp" width="400">
     </div>
 
+    <button onclick="jsonify()">Convert Recipe to JSON!!</button>
+    <div id="jsondiv"></div>
+
     <div class="ingrediants_title">
         <h2>Ingrediants:</h2>
     </div>
-    <uli class="ingrediants_list">
+    <uli class="ingrediants_list" id="ingr">
         <li>10 large shrimp, heads off and unpeeled </li>
         <li>1 tablespoon olive oil </li>
         <li>3 cloves garlic, minced </li>
         <li>4 tablespoons butter</li>
         <li>½ teaspoon dried oregano</li>
     </uli>
+    <label> Add Ingrediant</label><br />
+    <input id="newIngr" placeholder="New Ingrediant" value=""/>
+    <button onclick="addIngr()">Add Ingrediant to List</button>
 
     <div class="ingrediants_title">
         <h2>Directions:</h2>
     </div>
-    <oli class="instructions_list">
+    <oli class="instructions_list" id="inst">
         <li>With a sharp knife, cut shrimp in half so that the meat is exposed in the shell.</li>
         <br>
         <li>In a small saucepan, heat olive oil and lightly fry the garlic until just softened. Add<br>butter and Oregano. Heat until butter has melted.</li>
@@ -45,6 +52,10 @@
         <br>
         <li>Lay shrimp out on a tray and brush generously with the butter mixture. Grill shrimp until lightly golden.</li>
     </oli>
+
+        <label> Add Instruction</label><br />
+        <input id="newInst" placeholder="New Instruction" value=""/>
+        <button onclick="addInst()">Add Instruction to List</button>
 
     <ul class="nav_bar">
         <a>Click On These Helpful Links ====></a>
