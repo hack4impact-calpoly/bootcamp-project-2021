@@ -5,33 +5,37 @@ let addInst = () => {
     let newIng = document.createElement("li");
     let inputIng = document.getElementById("newInstruction").value;
     newIng.appendChild(document.createTextNode(inputIng));
-    let ingListLen = document.getElementById("instructionList").getElementsByTagName("li");
-    // let ingListLen = document.querySelectorAll("#instructionList li").length;
-    console.log("document.querySelectorAll" + document.querySelectorAll("#instructionList li"));
-
+    let ingListLen = document.getElementById("instructionList").getElementsByTagName("li").length;
     let inputPos = document.getElementById("addPosition").value;
-    // console.log("ingList: " + ingList);
-    // console.log("ingList length: " + ingListLen);
+
+    console.log("before, ingList length: " + ingListLen);
+
     if (inputPos > 0 && inputPos <= (ingListLen + 1)) {
-        console.log("ingListLen: " + ingListLen);
+        // beginning
         if (inputPos == 1) {
+            console.log("in here 1");
             ingList.insertBefore(newIng, ingList.childNodes[inputPos]);
         }
-        else if (inputPos < ingListLen) {
-            console.log("in here 2");
-            ingList.insertBefore(newIng, ingList.childNodes[inputPos - 1].nextSibling);
-        }
-        else if (inputPos == ingListLen) {
-            console.log("in here 3");
-            ingList.insertBefore(newIng, ingList.childNodes[inputPos].nextSibling);
-        }
+        // expand list
         else if (inputPos == ingListLen + 1) {
+            console.log("in here 2");
+            ingList.appendChild(newIng);
+        }
+        // last item
+        else if (inputPos == ingListLen) {
             console.log("in here 3");
             ingList.insertBefore(newIng, ingList.childNodes[inputPos].nextSibling.nextSibling);
         }
+        // somewhere in the middle
+        else {
+            console.log("in here 4");
+            ingList.insertBefore(newIng, ingList.childNodes[inputPos - 1].nextSibling.nextSibling);
+        }
         ingListLen++
     }
-    console.log("ingListLen: " + ingListLen);
+    // console.log("ingListLen: " + ingListLen);
+
+    console.log("after, ingList length: " + ingListLen);
 }
 
 let deleteInst = () => {

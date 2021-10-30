@@ -1,11 +1,14 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
     <title>Raspberry Coconut Smoothie</title>
 </head>
+
 <body>
     <nav>
         <h1><a href="/index.html">Adelle's Smoothies</a></h1>
@@ -16,34 +19,49 @@
     </nav>
 
     <div id="overview">
-        <img src="images/raspberry-coconut.jpg" alt="strawberry-banana">
-        <h1>Raspberry Coconut Smoothie</h1>
-        <p>
-            <i>[Recipe from <a href="https://www.twopeasandtheirpod.com/raspberry-coconut-smoothie/"> Two Peas & Their Pod</a>]</i>
-            <br><br>
-            This easy smoothie recipe only has five ingredients and will transport you to a tropical island.
-        </p>
-        <hr>
+        <img id="recipeImage" src="images/raspberry-coconut.jpg" alt="strawberry-banana">
+        <h1 id="recipeName">Raspberry Coconut Smoothie</h1>
+        <i>[Recipe from <a href="https://www.twopeasandtheirpod.com/raspberry-coconut-smoothie/"> Two Peas & Their
+                Pod</a>]</i><br>
+        <p id="recipeDescription">This easy smoothie recipe only has five ingredients and will transport you to a
+            tropical island.</p>
+        <button onclick="convertToJSON()">Convert recipe to JSON</button>
+        <p id="convertedText"></p>
     </div>
 
     <div id="ingredients">
-        <h1>Ingredients</h1>
-        <ul>
+        <hr>
+        <h2>Ingredients</h2>
+        <ul id="ingredientList">
             <li>1 cup Almond Breeze Unsweetened Almond Milk</li>
             <li>1 cup raspberries fresh or frozen</li>
             <li>1/2 medium banana</li>
-            <li>1/2 cup spinach</li> 
+            <li>1/2 cup spinach</li>
             <li>2 tablespoons coconut for garnish</li>
         </ul>
     </div>
 
     <div id="preparation">
-        <h1>Preparation</h1>
-        <ol>
+        <h2>Preparation</h2>
+        <ol id="instructionList">
             <li> Place the milk, raspberries, banana, and spinach in the blender and blend until smooth. </li>
             <li> Pour into a glass and garnish with coconut. Serve immediately. </li>
-            <li> Note-if I use fresh raspberries I like to throw in a few ice cubes to get a thicker/colder smoothie. </li>
+            <li> Note-if I use fresh raspberries I like to throw in a few ice cubes to get a thicker/colder smoothie.
+            </li>
         </ol>
+
+        <!-- new list item -->
+        <p><b>Add step</b></p>
+        <input id="newInstruction" placeholder="New step" value="" />
+        <input id="addPosition" placeholder="Insert position" value="" />
+        <button onclick="addInst()">Add</button>
+        <br>
+
+        <!-- delete list item -->
+        <p><b>Remove step (Enter step #)</b></p>
+        <input id="deleteInstruction" placeholder="Step to remove (e.g. 3)" value="" />
+        <button onclick="deleteInst()">Remove</button>
     </div>
 </body>
+
 </html>
