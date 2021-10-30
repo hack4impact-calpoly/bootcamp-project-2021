@@ -5,6 +5,7 @@
         <title>Noah's Go-To Eats</title>
         <!--Link to css file-->
         <link rel="stylesheet" href="recipes.css" />
+        <script type="text/javascript" src="recipes.js"></script>
     </head>
     <body>
         <!--Header Section-->
@@ -40,7 +41,7 @@
                     <section class="text-description">
                         <p style="font-weight: bold;">Serving Size: 2 People</p>
                         <br>
-                        <ul>
+                        <ul id="ingredient-list">
                             <li>1 kg Italian "00" flour</li>
                             <li>30g fresh yeast</li>
                             <li>500 ml water</li>
@@ -52,11 +53,22 @@
                             <li>salt</li>
                         </ul>
                     </section>
+                    <section class="ingredient-input">
+                        <!--Add Ingredient Input Section-->
+                            <h4>Add Ingredient</h4>
+                            <br>
+                            <section class="input-form">
+                                <label>Ingredient: </label>
+                                <input class="input-box" id="new-ingredient" placeholder="Measurement+Ingredient">
+                            </section>
+                            <br>
+                            <button class="add-button" onclick="addIngredient()">Add Ingredient</button>
+                        </section>
                 </div>
                 <div>
                     <h2 class="recipe-header">Method</h2>
                     <section class="text-description">
-                        <ol>
+                        <ol id="instruction-list">
                             <li>Combine the yeast, salt, warm water in a bowl</li>
                             <li>Knead the dough</li>
                             <li>Let the dough rise for 3 hours</li>
@@ -68,6 +80,18 @@
                         </ol>
                         <br>
                     </section>
+                    <section class="ingredient-input">
+                    <!--Add Instruction Input Section-->
+                        <h4>Add Instruction</h4>
+                        <br>
+                        <section class="input-form">
+                            <label>Instruction: </label>
+                            <input class="input-box" id="new-instruction" placeholder="Instruction">
+                        </section>
+                        <br>
+                        <button class="add-button" onclick="addInstruction()">Add Ingredient</button>
+                    </section>
+                    <br>
                 </div>
             </section>
         </main>
