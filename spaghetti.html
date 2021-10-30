@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="javascript\spaghetti.js"></script>
     <title>Sebastien's Snacks</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -19,10 +20,10 @@
 
     <div class="aboutMeBox">
       <div class="aboutMeDesc">
-        <h1 id="aboutMe">Sapghetti Bolognese:</h1>
+        <h1 id="spaghettiTitle">Sapghetti Bolognese:</h1>
         <h2 id="ingredients">Ingredients</h2>
         <div class="spaghettiIngredients">
-            <ul>
+            <ul id="spaghettiIngredientList">
                 <li>1 tbsp olive oil</li>
                 <li>4 rashers smoked streaky bacon, finely chopped</li>
                 <li>2 medium onions, finely chopped</li>
@@ -36,10 +37,13 @@
                 <li>400g spaghetti</li>
                 <li><span style="font-weight:bold">Optional:</span> lightly toasted bread (or garlic bread)</li>
             </ul>
+            <h4>Add an Ingredient:</h4>
+            <input id="newSpaghettiIngredeient" placeholder="Ingredient" value=""/>
+            <button onclick="addIngredient()">Add ingredient to list</button>
         </div>
-        <h2 id="method">Method</h2>
+        <h2 id="method">Instruction</h2>
         <div class="spaghettiMethod">
-            <ol>
+            <ol id="spaghettiInstructionList">
                 <li>STEP 1: Put a large saucepan on a medium heat and add 1 tbsp olive oil.</li>
                 <li>STEP 2: Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.</li>
                 <li>STEP 3: Reduce the heat and add the 2 onions, 2 carrots, 2 celery sticks, 2 garlic cloves and the leaves from 2-3 sprigs rosemary, all finely chopped, then fry for 10 mins. Stir the veg often until it softens.                </li>
@@ -50,6 +54,10 @@
                 <li>STEP 8: When the bolognese is nearly finished, cook 400g spaghetti following the pack instructions.</li>
                 <li>STEP 9: Drain the spaghetti and either stir into the bolognese sauce, or serve the sauce on top. Serve with more grated parmesan, the remaining basil leaves and crusty bread, if you like.</li>
             </ol>
+            <h4>Add an Instruction:</h4>
+            <input id="newSpaghettiInstruction" placeholder="Instruction" value=""/>
+            <button onclick="addInstruction()">Add instruction to list</button>
+            <button onclick="convertToJSON()">Convert to JSON</button>
         </div>
       </div>
       <img id="spaghettiPic" src="spaghetti.jpg" alt="Spaghetti Picture">

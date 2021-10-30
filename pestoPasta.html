@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="javascript\pestoPasta.js"></script>
     <title>Sebastien's Snacks</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -19,10 +20,10 @@
 
     <div class="aboutMeBox">
       <div class="aboutMeDesc">
-        <h1 id="aboutMe">Carbonara:</h1>
+        <h1 id="pestoPastaTitle">Carbonara:</h1>
         <h2 id="ingredients">Ingredients</h2>
         <div class="pestoPastaIngredients">
-            <ul>
+            <ul id="pestoPastaIngredientList">
                 <li>Kroger Spinach</li>
                 <li>Simple Truth Organic Basil</li>
                 <li>Pistachios</li>
@@ -32,6 +33,9 @@
                 <li>Salt and pepper</li>
                 <li>Olive oil</li>
             </ul>
+            <h4>Add an Ingredient:</h4>
+            <input id="newPestoPastaIngredient" placeholder="Ingredient" value=""/>
+            <button onclick="addIngredient()">Add ingredient to list</button>
         </div>
         <h2 id="method">Method</h2>
         <div class="pestoPastaMethod">
@@ -42,6 +46,10 @@
                 <li>STEP 4: Drain the pasta. Put the hot pasta in a large bowl. Add the pesto (start with half of the recipe) and ¼ cup of the pasta water to the pasta and stir until pasta is well coated. Add additional pesto and pasta water, if necessary, until desired consistency and flavor is reached.</li>
                 <li>STEP 5: Season with salt and pepper, to taste. Garnish with crushed red pepper flakes and parmesan cheese, if desired. Serve warm.</li>
             </ol>
+            <h4>Add an Instruction:</h4>
+            <input id="newPestoPastaInstruction" placeholder="Instruction" value=""/>
+            <button onclick="addInstruction()">Add instruction to list</button>
+            <button onclick="convertToJSON()">Convert to JSON</button>
         </div>
       </div>
       <img id="pestoPic" src="pestoPasta.jpg" alt="Pesto Pasta Picture">
