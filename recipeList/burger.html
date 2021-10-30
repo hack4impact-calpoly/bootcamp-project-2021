@@ -2,6 +2,7 @@
   <head>
     <title> Ishaan's Kitchen </title>
     <link rel="stylesheet" href="../website.css">
+    <script type="text/javascript" src="recipeJS.js"></script>
   </head>
   <body>
     <header class="header-background">
@@ -12,17 +13,20 @@
       </nav>
     </header>
     <main>
+      <pre id="format"><code id="json"></code></pre>
       <section>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>The Classic Chicken Burger</h2>
-            <p>As stated by <a href="https://en.m.wikipedia.org/wiki/Chicken_sandwich">Wikipedia Chicken Sandwhich</a>, a chicken sandwich is a 
+            <br /> <br />
+            <button class="mybutton" role="button" onClick="convertJSON()"> Convert recipe into JSON</button>
+            <h2 id="recipe">The Classic Chicken Burger</h2>
+            <p id="info">As stated by <a href="https://en.m.wikipedia.org/wiki/Chicken_sandwich">Wikipedia Chicken Sandwhich</a>, a chicken sandwich is a 
                 sandwich that typically consists of boneless, skinless chicken breast served between slices of bread, on a bun, or 
                 on a roll. Variations on the "chicken sandwich" include the chicken burger or chicken on a bun, hot chicken, and 
                 chicken salad sandwich.</p>
           </div>
           <div class="box">
-            <img class="flex-image" src="../images/chickenBurger.jpg">
+            <img id="image" class="flex-image" src="../images/chickenBurger.jpg">
         </div>
       </div>
         </section>
@@ -32,7 +36,7 @@
           <section >
               <h3>Ingredients</h3>
               <p>Making the Patty from Scratch:</p>
-              <ul>
+              <ul id="ingredients">
                   <li>1 pound extra-lean ground chicken</li>
                   <li>1/2 cup Italian-seasoned bread crubms</li>
                   <li>1/2 small onion that is finely grated</li>
@@ -41,10 +45,14 @@
                   <li>salt and ground black pepper</li>
                   <li>2 teaspoons of olive oil</li>
               </ul>
+              <h4> Add an Ingredient: </h4>
+                <label>Ingredient: </label>
+                <input id="addIngredient" placeholder="Enter here" value="" /> <br /> <br />
+              <button class="form-button" onclick="addIngredient()">Add</button>
           </section>
           <section>
               <h3>Preparation</h3>
-              <ol>
+              <ol id="instructions">
                 <li>Mix ground chicken, 1/4 cup bread crumbs, onion, egg, garlic, salt, and black pepper in a bowl</li>
                 <li>Moisten hands and shape chicken mixture, 2 tablespoons at a time, into flat, oval-shaped patties</li>
                 <li>Spread remaining 1/4 cup bread crumbs into a shallow dish</li>
@@ -54,6 +62,10 @@
                 <li>Turn patties and cook until other side is browned, 3 to 4 minutes more</li>
                 <li>Add other vegetables and add ons such as ketchup, tomatoes, lettuce, onions, etc.!</li>
               </ol>
+              <h4> Add an Instruction: </h4>
+                <label for="addInstruction">Ingredient: </label>
+                <input id="addInstruction" placeholder="Enter here" value="" /> <br /> <br />
+              <button class="form-button" onclick="addInstruction()">Add</button>
           </section>
       </article>
     </main>
