@@ -20,17 +20,19 @@
         <!--Main Section-->
         <main class="main">
             <!--Fill Out Later!-->
+            <pre id="pre-format"><code id="conversion"></code></pre>
             <section class="introduction">
                 <div>
-                    <h1>Carbonara (Roma)</h1>
+                    <button id="convert-button" onclick="convertToJSON()">Convert Recipe To JSON</button>
+                    <h1 id="recipe-name">Carbonara (Roma)</h1>
                     <br>
                     <p class="description">You're going to thank me for introducing you to the TASTIEST meal you will ever have the pleasure of experiencing.</p>
                     <br>
-                    <p class="description">During my short time in Rome, I've been blessed to experience some of the best Italian food around. And thus far, 
+                    <p class="description" id="recipe-description">During my short time in Rome, I've been blessed to experience some of the best Italian food around. And thus far, 
                         Carbonara holds the crown. A simple recipe, Carbonara is a combination of pasta, egg, cheese and pancetta. I know! So Simple! 
                         Yet soooo tasty. While I'm only an expert in eating carbonara, I'll outline the recommended way to make this delicious meal at home.</p>
                 </div>
-                <img src="imgs/carbonara.jpeg" alt="Carbonara image here" width=400 height=300 class="image">
+                <img src="imgs/carbonara.jpeg" alt="Carbonara image here" width=400 height=300 class="image" id="recipe-image">
             </section>
             <!--Ingredients, Method Section-->
             <section>

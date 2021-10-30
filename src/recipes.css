@@ -108,5 +108,12 @@ li {
     color: #F4F5F0;
 }
 
+#convert-button {
+    background-color:#CD212A;
+    color:#F4F5F0;
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
 
 
