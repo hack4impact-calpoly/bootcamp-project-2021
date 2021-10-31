@@ -15,23 +15,34 @@ let addInstruction = () => {
     listElement.appendChild(document.createTextNode(newInstruction));
     instructionList.appendChild(listElement)
 }
+let extractArray = (ListType) => {
+    let Array = [];
+    let ListElements = document.getElementById(ListType).getElementsByTagName("li");
+    let i = 0;
+    while (i < (ListElements.length)){
+        Array.push(ListElements[i].innerHTML)
+        i++;
+    }
+    console.log(Array);
+    return Array;
+}
 
 let getRecipeInfo = () => {
     let recipeInfo = {
         name: document.getElementById("pestoPastaTitle").innerHTML,
-        description: document.getElementById(""), //.innerHTML,  //Need to add description to recipe pages.
-        image: document.getElementById("pestoPastaPic").innerHTML,
-        ingredientArray: [document.getElementById("pestoPastaIngredientList").innerHTML], //Need to check whether this returns an array
-        instructionArray: [document.getElementById("pestoPastaInstructionList").innerHTML]
+        description: document.getElementById("pestoPastaDesc").innerHTML,
+        image: document.getElementById("pestoPic").innerHTML,
+        ingredientArray: [... extractArray("pestoPastaIngredientList")], //Need to check whether this returns an array
+        instructionArray: [... extractArray("pestoPastaInstructionList")]
     }
     console.log("Scraped Recipe Info");
-    console.log(recipeInfo);
     return recipeInfo;
 }
 
 let convertToJSON = () => {
     let recipeJSON = JSON.stringify(getRecipeInfo());
+    let JSONText = document.getElementById("JSONCode");
     console.log(recipeJSON);
+    JSONText.append(document.createTextNode(recipeJSON));
     return recipeJSON;
-
 } //Check how to implement the JSON into the page

@@ -20,7 +20,10 @@
 
     <div class="aboutMeBox">
       <div class="aboutMeDesc">
-        <h1 id="spaghettiTitle">Sapghetti Bolognese:</h1>
+        <h1 id="spaghettiTitle">Spaghetti Bolognese:</h1>
+        <button onclick="convertToJSON()">Convert Page to JSON</button>
+        <pre id="JSONPre"><code id="JSONCode"></code></pre>
+        <h4 id="spaghettiDesc">Spaghetti bolognese is an Italian pasta dish from Bologna. It consists of spaghetti (long strings of pasta) with an Italian ragù (meat sauce) made with minced beef, pancetta and tomatoes, served with Parmesan cheese. Spaghetti bolognese is one of the most popular pasta dishes eaten outside of Italy.</h4>
         <h2 id="ingredients">Ingredients</h2>
         <div class="spaghettiIngredients">
             <ul id="spaghettiIngredientList">
@@ -57,7 +60,6 @@
             <h4>Add an Instruction:</h4>
             <input id="newSpaghettiInstruction" placeholder="Instruction" value=""/>
             <button onclick="addInstruction()">Add instruction to list</button>
-            <button onclick="convertToJSON()">Convert to JSON</button>
         </div>
       </div>
       <img id="spaghettiPic" src="spaghetti.jpg" alt="Spaghetti Picture">
