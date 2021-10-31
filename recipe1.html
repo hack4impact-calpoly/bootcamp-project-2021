@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+
+    </script>
     <title>Chicken 65 Recipe</title>
   </head>
   <body>
@@ -14,18 +17,20 @@
       </nav>
     </header>
     <main>
-      <h2>Chicken 65</h2>
+      <p id = "json-text"></p>
+      <button class="button" role="button" onclick="recipeConvert()"> Convert this recipe to JSON  </button>
+      <h2 id = "rname">Chicken 65</h2>
       <div class="intro">
-        <p class="intro-body">
+        <p class="intro-body" id="desc">
           An immensely popular dish hailing from India features spicy fried chicken cooked with curry leaves, garlic, and chilli peppers. There are different recipes for this dish with varying levels of complexity. This recipe includes all the staple flavors
         </p>
-        <img class="rec-img" src="https://1.bp.blogspot.com/-yJBQwqQcUOs/X5gtEJXEoCI/AAAAAAAAY94/gut_UssF__8lT0P2kl9patf4FY-U4YCtQCLcBGAsYHQ/w1200-h630-p-k-no-nu/chicken%2B65%2B4.JPG" alt="image of chicken 65 dish">
+        <img id = "recipeImg" class="rec-img" src="https://1.bp.blogspot.com/-yJBQwqQcUOs/X5gtEJXEoCI/AAAAAAAAY94/gut_UssF__8lT0P2kl9patf4FY-U4YCtQCLcBGAsYHQ/w1200-h630-p-k-no-nu/chicken%2B65%2B4.JPG" alt="image of chicken 65 dish">
       </div>
 
       <div class="ingredients">
         <h3>Ingredients</h3>
         <p class="ingredient-list">
-          <ul>
+          <ul id="ingredientList">
             <li>1 lb chicken breasts, cut into pieces (your preference in size)</li>
             <li>1 egg</li>
             <li>2 tablespoons cornstarch</li>
@@ -42,20 +47,32 @@
             <li>1 tablespoon chile-garlic paste</li>
             <li>red food coloring (optional)</li>
           </ul>
+          <div class="ingredient-add">
+            <h4>Add an ingredient</h4>
+              <label for="addIngredient">Add Ingredient:</label>
+              <input id="addIngredient" class="form-element" value="" /> <br> <br>
+            <button class="button" onclick="newIngredient()">Add Ingredient</button>
+          </div>
         </p>
       </div>
 
       <div class="preperation">
         <h3>Cooking Intructions</h3>
         <p class="prep-method">
-          <ol>
+          <ol id="instructionList">
             <li>Add chicken to a bowl along with the egg, cornstarch, garlic, salt, and pepper. Mix until the chicken is coated and everything is well incorporated. You can choose to mariante the chicken in this micture before frying but it is not required.</li>
             <li>Heat some of the vegatable oil in a deep pan or skillet and fry the chicken pieces for about 10 minutes or until fully coocked through.</li>
             <li>On another skillet add 2 tablespoons of oil and add the cumin seeds. Cook thill they crackle.</li>
             <li>Add the remaining garlic, ginger, cumin, chile powder, pepper, salt, curry leaves, chile-garlic paste, ginger paste, and coloring. Stir well as you add each ingredient. Then add water to thin the paste</li>
-            <li>Add the fried chicken to the skillet with all the ingredients and cover the chicken completely</li>
+            <li>Add the fried chick en to the skillet with all the ingredients and cover the chicken completely</li>
             <li>All Done! Now you can serve it with some lime if you would like and enjoy!</li>
           </ol>
+          <div class="ingredient-add">
+            <h4>Add an Instructions</h4>
+              <label for="addInstruction">Add Instruction:</label>
+              <textarea id="addInstruction" class="form-element" value="" rows="3"></textarea>
+            <button class="button" onclick="newInstruction()">Add Ingredient</button>
+          </div>
         </p>
       </div>
     </main>

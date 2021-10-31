@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+
     <title>Spam Musubi Recipe</title>
   </head>
   <body>
@@ -14,18 +16,21 @@
       </nav>
     </header>
     <main>
-      <h2>Spam Musubi</h2>
+      <p id = "json-text"></p>
+      <button class="button" role="button" onclick="recipeConvert()"> Convert this recipe to JSON  </button>
+
+      <h2 id="rname">Spam Musubi</h2>
       <div class="intro">
-        <p class="intro-body">
+        <p class="intro-body" id = "desc">
           An authentic Hawaiin dish comprised of grilled spam layed atop a block of rice and warpped with nori.
         </p>
-        <img class="rec-img" src="https://sylviawakana.com/wp-content/uploads/2020/07/Spam-Musubi-2.jpg" alt="image of spam musubi">
+        <img id="recipeImg" class="rec-img" src="https://sylviawakana.com/wp-content/uploads/2020/07/Spam-Musubi-2.jpg" alt="image of spam musubi">
       </div>
 
       <div class="ingredients">
         <h3>Ingredients</h3>
         <p class="ingredient-list">
-          <ul>
+          <ul id="ingredientList">
             <li>1 can of spam</li>
             <li>Oyster sauce</li>
             <li>soy sauce</li>
@@ -33,13 +38,19 @@
             <li>Nori -> roasted seaweed used for sushi</li>
             <li>Cooked sushi rice</li>
           </ul>
+          <div class="ingredient-add">
+            <h4>Add an ingredient</h4>
+              <label for="addIngredient">Add Ingredient:</label>
+              <input id="addIngredient" class="form-element" value="" /> <br> <br>
+            <button class="button" onclick="newIngredient()">Add Ingredient</button>
+          </div>
         </p>
       </div>
 
       <div class="preperation">
         <h3>Cooking Intrucitons</h3>
         <p class="prep-method">
-          <ol>
+          <ol id="instructionList">
             <li>Mix equal parts Oyster sauce and soy sauce into a boil along with some sugar.</li>
             <li>Slice desired amount of spam slices.</li>
             <li>Marinate spam in the micture just created.</li>
@@ -48,6 +59,12 @@
             <li>Add the spam slice on top and then wrap the nori around the top and use a little water to seal it if necesarry.</li>
             <li>Enjoy!</li>
           </ol>
+          <div class="instruction-add">
+            <h4>Add an Instructions</h4>
+              <label for="addInstruction">Add Instruction:</label>
+              <textarea id="addInstruction" class="form-element" value="" rows="3"></textarea>
+            <button class="button" onclick="newInstruction()">Add Ingredient</button>
+          </div>
         </p>
       </div>
     </main>

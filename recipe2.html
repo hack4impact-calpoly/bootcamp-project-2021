@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+
     <title>Strawberry Milk Recipe</title>
   </head>
   <body>
@@ -14,35 +16,49 @@
       </nav>
     </header>
     <main>
-      <h2>Strawberry Milk</h2>
+      <p id = "json-text"></p>
+      <button class="button" role="button" onclick="recipeConvert()"> Convert this recipe to JSON  </button>
       <div class="intro">
-        <p class="intro-body">
+        <h2 id="rname">Strawberry Milk</h2>
+        <p class="intro-body" id="desc">
           Who hasn't heard of strawberry milk before? A perfect combination of sweet tasting strawberrie combined with milk to make a sweet tasting drink anyone can enjoy.
         </p>
-        <img class="rec-img" src="https://milkandpop.com/wp-content/uploads/2020/10/korean-strawberry-milk-1-2-720x720.jpg" alt="image of strawberry milk">
+        <img id = "recipeImg" src="https://milkandpop.com/wp-content/uploads/2020/10/korean-strawberry-milk-1-2-720x720.jpg" alt="image of strawberry milk">
       </div>
 
       <div class="ingredients">
         <h3>Ingredients</h3>
         <p class="ingredient-list">
-          <ul>
+          <ul id="ingredientList">
             <li>14 strawberries</li>
             <li>60g of sugar</li>
             <li>1/2 liter of milk</li>
           </ul>
+          <div class="ingredient-add">
+            <h4>Add an ingredient</h4>
+              <label for="addIngredient">Add Ingredient:</label>
+              <input id="addIngredient" class="form-element" value="" /> <br> <br>
+            <button class="button" onclick="newIngredient()">Add Ingredient</button>
+          </div>
         </p>
       </div>
 
       <div class="preperation">
         <h3>Cooking Intrucitons</h3>
         <p class="prep-method">
-          <ol>
+          <ol id="instructionList">
             <li>Wash the strawberries and crush 6 of them.</li>
             <li>Take the crushed strawberries into a bot and mix it with sugar. Heat the pot at medium heat</li>
             <li>Let the strawberries boil for 2-3 minutes before letting them cool.</li>
             <li>With the remaining strawberries, dice them and add to your bottle.</li>
             <li>Add the syrup created by the boiled strawberries and milk to the bottle and stir well to enjoy!.</li>
           </ol>
+          <div class="instruction-add">
+            <h4>Add an Instructions</h4>
+              <label for="addInstruction">Add Instruction:</label>
+              <textarea id="addInstruction" class="form-element" value="" rows="3"></textarea>
+            <button class="button" onclick="newInstruction()">Add Ingredient</button>
+          </div>
         </p>
       </div>
     </main>
