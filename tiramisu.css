@@ -52,7 +52,7 @@ li {
   font-family: Helvetica;
 }
 
-.description {
+#description {
   font-size: 18px;
   padding-left: 20px;
   padding-right: 30px;
@@ -62,8 +62,7 @@ li {
 .container {
   display: flex;
   background-color: rgb(255, 217, 177);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 10px 10px 10px;
 }
 
 .header {

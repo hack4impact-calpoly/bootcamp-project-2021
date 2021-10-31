@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>melon pan 🍈</title>
     <link rel="stylesheet" href="melonpan.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
     <header class="header">
-      <h1>melon pan 🍈</h1>
+      <h1 id="name">melon pan 🍈</h1>
       <nav class="nav">
         <p><a href="index.html">home</a></p>
         <p><a href="about.html">about me</a></p>
       </nav>
     </header>
     <div class="desc-container">
-      <img src="melonpan.jpeg" />
-      <p class="description">
+      <img src="melonpan.jpeg" id="image" />
+      <p id="description">
         melon pan is a sweet Japanese bread with a cookie crust on top. its name
         comes from its resemblance to a melon. it has a soft inside and a
         crunchy outside, and is also just really cute!
@@ -27,7 +28,7 @@
     <div class="container">
       <div>
         <h4>cookie dough</h4>
-        <ul>
+        <ul id="ingredients">
           <li>300 g baker's flour</li>
           <li>40 g butter chopped</li>
           <li>25 g sugar</li>
@@ -36,6 +37,9 @@
           <li>1 extra large egg</li>
           <li>3 g dry yeast</li>
         </ul>
+        <h4>add ingredient</h4>
+        <input id="newIngredient" placeholder="30 marshmallows" value="" />
+        <button onclick="addIngredient()">add ingredient to list</button>
       </div>
       <div>
         <h4>bread dough</h4>
@@ -52,7 +56,7 @@
     </div>
 
     <h3>instructions</h3>
-    <ol>
+    <ol id="instructions">
       <li>
         Make the cookie dough by placing the butter and sugar in a large bowl
         and beat until light and creamy.
@@ -103,6 +107,13 @@
       </li>
       <li>Preheat oven to 356 f and bake for 15 minutes.</li>
     </ol>
+    <textarea
+      id="newInstruction"
+      placeholder="share with your dog"
+      value=""
+    ></textarea>
+    <br />
+    <button onclick="addInstruction()">add instruction to list</button>
     <p>
       <a
         href="https://www.chopstickchronicles.com/japanese-melon-bread/"
@@ -110,5 +121,8 @@
         >source if you're interested</a
       >
     </p>
+    <div id="jsonConverter">
+      <button onclick="convertToJSON()">make page into JSON</button>
+    </div>
   </body>
 </html>

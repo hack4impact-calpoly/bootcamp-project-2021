@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>tiramisu ☕</title>
     <link rel="stylesheet" href="tiramisu.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
     <header class="header">
-      <h1>tiramisu ☕</h1>
+      <h1 id="name">tiramisu ☕</h1>
       <nav class="nav">
         <p><a href="index.html">home</a></p>
         <p><a href="about.html">about me</a></p>
       </nav>
     </header>
     <div class="desc-container">
-      <img src="tiramisu.jpeg" />
-      <p class="description">
+      <img src="tiramisu.jpeg" id="image" />
+      <p id="description">
         tiramisu is a coffee flavored Italian dessert that has a soft texture!
         it goes well with tea. i love to get tiramisu because I like the
         slightly bitter taste as compared to an overwhelmingly sweet dessert.
@@ -27,12 +28,15 @@
     <div class="container">
       <div>
         <h4>cream</h4>
-        <ul>
+        <ul id="ingredients">
           <li>4 large egg yolks</li>
           <li>1/2 cups of granulated sugar, divided</li>
           <li>3/4 cup heavy cream</li>
           <li>1 cup mascarpone</li>
         </ul>
+        <h4>add ingredient</h4>
+        <input id="newIngredient" placeholder="45ml caramel sauce" value="" />
+        <button onclick="addIngredient()">add ingredient to list</button>
       </div>
       <div>
         <h4>cake</h4>
@@ -47,7 +51,7 @@
     </div>
 
     <h3>instructions</h3>
-    <ol>
+    <ol id="instructions">
       <li>
         Using an electric mixer in a medium bowl, whip together egg yolks and
         1/4 cup sugar until very pale yellow and about tripled in volume. A
@@ -87,6 +91,13 @@
         scooping to serve.
       </li>
     </ol>
+    <textarea
+      id="newInstruction"
+      placeholder="eat only on wednesdays"
+      value=""
+    ></textarea>
+    <br />
+    <button onclick="addInstruction()">add instruction to list</button>
     <p>
       <a
         href="https://cooking.nytimes.com/recipes/1018684-classic-tiramisu"
@@ -94,5 +105,8 @@
         >recipe is from here btw</a
       >
     </p>
+    <div id="jsonConverter">
+      <button onclick="convertToJSON()">make page into JSON</button>
+    </div>
   </body>
 </html>

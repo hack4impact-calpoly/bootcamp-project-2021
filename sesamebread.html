@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>sesame mochi bread 🥚</title>
     <link rel="stylesheet" href="sesamebread.css" />
+    <script type="text/javascript" src="recipes.js"></script>
   </head>
   <body>
     <header class="header">
-      <h1>sesame mochi bread 🥚</h1>
+      <h1 id="name">sesame mochi bread 🥚</h1>
       <nav class="nav">
         <p><a href="index.html">home</a></p>
         <p><a href="about.html">about me</a></p>
       </nav>
     </header>
     <div class="desc-container">
-      <img src="sesamebread.jpeg" />
-      <p class="description">
+      <img src="sesamebread.jpeg" id="image" />
+      <p id="description">
         sesame mochi bread is a Korean bread with a mild taste and chewy
         texture. they are sometimes called dino eggs because of their speckled
         appearance. these are my favorite snack breads when I go to a Korean
@@ -26,21 +27,26 @@
     </div>
     <h3>ingredients</h3>
     <div class="container">
-      <ul>
-        <li>2/3 cup milk</li>
-        <li>2 Tablespoon unsalted butter</li>
-        <li>3 Tablespoon granulated sugar</li>
-        <li>1/4 teaspoon Kosher salt</li>
-        <li>1/2 teaspoon vanilla extract</li>
-        <li>35 grams all-purpose flour</li>
-        <li>130 grams tapioca flour</li>
-        <li>1 large egg, beaten</li>
-        <li>1 1/2 Tablespoon black sesame seed, toasted</li>
-      </ul>
+      <div>
+        <ul id="ingredients">
+          <li>2/3 cup milk</li>
+          <li>2 Tablespoon unsalted butter</li>
+          <li>3 Tablespoon granulated sugar</li>
+          <li>1/4 teaspoon Kosher salt</li>
+          <li>1/2 teaspoon vanilla extract</li>
+          <li>35 grams all-purpose flour</li>
+          <li>130 grams tapioca flour</li>
+          <li>1 large egg, beaten</li>
+          <li>1 1/2 Tablespoon black sesame seed, toasted</li>
+        </ul>
+        <h4>add ingredient</h4>
+        <input id="newIngredient" placeholder="62 chocolate chips" value="" />
+        <button onclick="addIngredient()">add ingredient to list</button>
+      </div>
     </div>
 
     <h3>instructions</h3>
-    <ol>
+    <ol id="instructions">
       <li>
         Preheat the oven to 350°F and prepare a sheet pan lined with parchment
         paper.
@@ -86,10 +92,21 @@
         slightly golden brown. Let cool for a few minutes and enjoy!
       </li>
     </ol>
+    <h4>add instruction</h4>
+    <textarea
+      id="newInstruction"
+      placeholder="bake at 71093 degrees"
+      value=""
+    ></textarea>
+    <br />
+    <button onclick="addInstruction()">add instruction to list</button>
     <p>
       <a href="https://twoplaidaprons.com/korean-mochi-bread/" target="_blank"
         >oh and i got that from here</a
       >
     </p>
+    <div id="jsonConverter">
+      <button onclick="convertToJSON()">make page into JSON</button>
+    </div>
   </body>
 </html>
