@@ -18,11 +18,11 @@ let addInstruction = () => {
 
 let getRecipeInfo = () => {
     let recipeInfo = {
-        name: document.getElementById("pestoPastaTitle").value,
-        description: document.getElementById("").value,  //Need to add description to recipe pages.
-        image: document.getElementById("pestoPastaPic").value,
-        ingredientArray: [document.getElementById("pestoPastaIngredientList").value], //Need to check whether this returns an array
-        instructionArray: [document.getElementById("pestoPastaInstructionList").value]
+        name: document.getElementById("pestoPastaTitle").innerHTML,
+        description: document.getElementById(""), //.innerHTML,  //Need to add description to recipe pages.
+        image: document.getElementById("pestoPastaPic").innerHTML,
+        ingredientArray: [document.getElementById("pestoPastaIngredientList").innerHTML], //Need to check whether this returns an array
+        instructionArray: [document.getElementById("pestoPastaInstructionList").innerHTML]
     }
     console.log("Scraped Recipe Info");
     console.log(recipeInfo);

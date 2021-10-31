@@ -18,16 +18,14 @@ let addInstruction = () => {
 
 let getRecipeInfo = () => {
     let recipeInfo = {
-        name: document.getElementById("carbonaraTitle").value,
-        description: document.getElementById("").value,  //Need to add description to recipe pages.
-        image: document.getElementById("carbonaraPic").value,
-        ingredientArray: [document.getElementById("carbonaraIngredientList").value], //Need to check whether this returns an array
-        instructionArray: [document.getElementById("carbonaraInstructionList").value]
+        name: document.getElementById("carbonaraTitle").innerHTML,
+        description: document.getElementById(""), //.innerHTML,  //Need to add description to recipe pages.
+        image: document.getElementById("carbonaraPic").innerHTML,
+        ingredientArray: [document.getElementById("carbonaraIngredientList").innerHTML], //Need to check whether this returns an array
+        instructionArray: [document.getElementById("carbonaraInstructionList").innerHTML]
     }
     console.log("Scraped Recipe Info");
-    console.log(document.getElementById("carbonaraTitle").value);
-    console.log(recipeInfo.description);
-    console.log(recipeInfo.image);
+    console.log(recipeInfo);
     return recipeInfo;
 }
 

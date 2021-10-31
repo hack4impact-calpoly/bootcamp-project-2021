@@ -18,11 +18,11 @@ let addInstruction = () => {
 
 let getRecipeInfo = () => {
     let recipeInfo = {
-        name: document.getElementById("spaghettiTitle").value,
-        description: document.getElementById("").value,  //Need to add description to recipe pages.
-        image: document.getElementById("spaghettiPic").value,
-        ingredientArray: [document.getElementById("spaghettiIngredientList").value], //Need to check whether this returns an array
-        instructionArray: [document.getElementById("spaghettiInstructionList").value]
+        name: document.getElementById("spaghettiTitle").innerHTML,
+        description: document.getElementById(""), //.innerHTML,  //Need to add description to recipe pages.
+        image: document.getElementById("spaghettiPic").innerHTML,
+        ingredientArray: [document.getElementById("spaghettiIngredientList").innerHTML], //Need to check whether this returns an array
+        instructionArray: [document.getElementById("spaghettiInstructionList").innerHTML]
     }
     console.log("Scraped Recipe Info");
     console.log(recipeInfo);
