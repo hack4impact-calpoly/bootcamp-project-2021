@@ -128,9 +128,10 @@ nav {
 
 
 /*------------Recipe Page Styling------------------*/
-#carbonaraIngredients, #spaghettiIngredients, #pestoPastaIngredients{
+#carbonaraIngredients, #spaghettiIngredients, #pestoPastaIngredients, #JSONButton{
     font-size: 15px;
 }
+
 
 #carbonaraMethod, #spaghettiMethod, #pestoPastaMethod{
     font-size: 15px;
@@ -138,5 +139,5 @@ nav {
 
 #carbonaraTitle, #spaghettiTitle, #pestoPastaTitle{
     align-self: top;
-    margin: 0px;
+    margin: 0px 0px 4px 0px;
 }
