@@ -1,12 +1,9 @@
 header{
     text-align: center;
     background-color: rgb(220, 127, 53);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    font-size: xx-large;
+    border: solid black 5px;
+    font: xx-large bold;
     background-image: -webkit-radial-gradient(rgb(238, 193, 38),rgb(220, 127, 53));
-    font-weight: bold;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -41,15 +38,11 @@ img{
     width: 43%;
     height: 180px;
     background-color: cyan;
-    border-color: darkblue;
-    border-radius: 50px;
-    border-width: 8px;
-    border-style: solid;
+    border: darkblue 50px 8px solid;
     margin: 10px;
     text-align: center;
     padding: 20px;
-    font-size: 80px;
-    font-weight: bold;
+    font: 80px bold;
 }
 
 .topRight{
@@ -61,6 +54,7 @@ img{
     position: absolute;
     left: 10px;
     background-color: pink;
+    text-align: center;
 
 }
 
@@ -69,7 +63,6 @@ img{
     left: 10px;
     top: 500px;
     background-color: rgb(231, 231, 116);
-
 }
 
 .bottomRight{
@@ -80,8 +73,7 @@ img{
 }
 
 .title{
-    font-size: 60px;
-    font-weight: bold;
+    font: 60px bold;
     text-align: center;
     margin: 0px;
 }
@@ -89,9 +81,7 @@ img{
 .description{
     width: 25%;
     font-size: large;
-    border-color: darkblue;
-    border-width: medium;
-    border-style: solid;
+    border: darkblue medium solid;
     padding: 20px;
     margin: 15px;
     background-color: white;
@@ -108,9 +98,7 @@ img{
 .recipe{
     width: 35%;
     font-size: large;
-    border-color: darkred;
-    border-width: medium;
-    border-style: solid;
+    border: darkred medium solid;
     padding: 20px;
     margin: 15px;
     background-color: white;
@@ -119,10 +107,40 @@ img{
 .ingredients{
     width: 15%;
     font-size: large;
-    border-color: darkgreen;
-    border-width: medium;
-    border-style: solid;
+    border: darkgreen medium solid;
     padding: 20px;
     margin: 15px; 
     background-color: white;
+}
+
+.button{
+    background: darkorange;
+    border-radius: 2px solid;
+}
+
+.addField{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 5px;
+    background: lightslategrey;
+    border-radius: 20px;
+    color: white;
+}
+
+#JSONbutton{
+    margin-left: 37%;
+    margin-right: 37%;
+    width: 26%;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+}
+
+#pre-formatter{
+    font-size: large;
+    border: indianred medium solid;
+    padding: 20px;
+    margin: 15px; 
+    background-color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rachel J Show</title>
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <header>
@@ -16,7 +17,8 @@
     </div>
 </header>
 
-<body style="background-image: url('https://www.piesandtacos.com/wp-content/uploads/2018/05/Challah-Bread-18.jpg'); background-size: 10%;">
+<body id="bgimage"
+    style="background-image: url('https://www.piesandtacos.com/wp-content/uploads/2018/05/Challah-Bread-18.jpg'); background-size: 10%;">
     <script src="index.js"></script>
     <div class="topMenu">
         <a class="menuOption" href="main.html"> Homepage</a>
@@ -24,25 +26,26 @@
         <a class="menuOption" href="allRecipes.html"> Browse All Recipes</a>
     </div>
     <br>
-
     <div>
-        <p class="title" style="background-color: black; color:white;">CHALLAH!</p>
+        <p id="recipeName" class="title"
+            style="background-color: lightslategrey; color:white; border: 2px solid black;">CHALLAH!</p>
     </div>
     <div class="boxes">
         <div class="description">
             <a style="font-size: x-large;font-weight: bold;"> Description/History </a>
             <br>
-            <a>Challah is a special bread of Ashkenazi Jewish origin, usually braided and typically eaten
+            <a id="description">Challah is a special bread of Ashkenazi Jewish origin, usually braided and typically
+                eaten
                 on ceremonial occasions such as Shabbat and major Jewish holidays (other than Passover).
                 For the past year or so my family has gotten into the tradition of baking challah each Friday.
                 Our system is I would make the dough in the early afternoon and hire my sisters to braid and bake it
                 so it is ready for dinner!</a>
-            <img src="challah.jpeg" alt="alternatetext" width="80%">
+            <img id="personalImage" src="challah.jpeg" alt="alternatetext" width="80%">
         </div>
         <div class="ingredients">
             <a style="font-size: x-large;font-weight: bold;"> Ingredients </a>
             <br>
-            <ul>
+            <ul id="list">
                 <li>1 ½ packages active dry yeast (about 3 1/2 teaspoons)</li>
                 <li> 1 tablespoon plus 1/2 cup sugar</li>
                 <li> ½ cup vegetable oil, more for greasing bowl</li>
@@ -51,12 +54,19 @@
                 <li> 8 to 8 ½ cups all-purpose flour</li>
                 <li> Poppy or sesame seeds for sprinkling</li>
             </ul>
+            <div class="addField">
+                <label> Add an ingredient! </label> <br />
+                <input id="newIngredient" placeholder="ex: chocolate chips" value="" />
+                <button onclick="addToList()" class="button"> Add </button>
+            </div>
         </div>
         <div class="recipe">
             <a style="font-size: x-large;font-weight: bold;"> Recipe </a>
-            <a style="font-size: x-large;font-weight: bold;" href="https://cooking.nytimes.com/recipes/7199-my-favorite-challah" target="_blank"> (courtesy of New York Times) </a>
+            <a id="url" style="font-size: x-large;font-weight: bold;"
+                href="https://cooking.nytimes.com/recipes/7199-my-favorite-challah" target="_blank"> (courtesy of New
+                York Times) </a>
             <br>
-            <ol>
+            <ol id="instructionList">
                 <li> In a large bowl, dissolve yeast and 1 tablespoon sugar in 1 3/4 cups lukewarm water.</li>
                 <li> Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. Gradually
                     add flour. When dough holds together, it is ready for kneading. (You can also use a mixer with a
@@ -80,14 +90,15 @@
                     seeds and then onto a mound of bread. Continue until bread is decorated with seeds.</li>
                 <li> Bake in middle of oven for 35 to 40 minutes, or until golden. Cool loaves on a rack.</li>
             </ol>
+            <div class="addField">
+                <label> Add an instruction! </label> <br />
+                <input id="newInstruction" placeholder="ex: try it!" value="" />
+                <button onclick="addToListInstruction()" class="button"> Add </button>
+            </div>
         </div>
     </div>
+    <button id="JSONbutton" role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+    <pre id="pre-formatter"><code id="json"></code></pre>
 </body>
 
 </html>
-
-
-
-
-
-
