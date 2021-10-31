@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Caprese Salad</title>
+    <script type="text/javascript" src="Recipes.js"></script>
   <link rel="stylesheet" href="index.css"/> 
 </head>
 
 <header class="header">
     <h1>Caprese Salad </h1>
 </header>
+
+<body>
+    <main>
+  
 <div class="totalPage">
 <div class="intro-box">
   <h1 id="title-text">Simple Caprese Salad</h1>
@@ -17,7 +22,7 @@
   <img id="recipe-pic" src="https://milestone-1.netlify.app/images/caprese.jpeg" </img>
 </div>
 
-<div class="Ingredients">
+<div id="ingredients">
   <p>Serves 2 people</p> 
   <li>10 cherry tomatoes, sliced in half</li>
   <li>3 oz fresh mozzarella, cut to size to match cherry tomatoes</li>
@@ -28,7 +33,11 @@
   <li>6-8 grinds of pepper, or to taste</li>
 </div>
 
-<div class="Preperation">
+<label> Add ingredient</label> <br />
+<input id="newIngredient" placeholder="I am an input" value=""/>
+<button onclick="addIngredient()">Add ingredient to list</button>  
+
+<div id="instructions">
    <ol type = "1" >
   <li>Pepare the tomatoes, mozzarella and basil as specified, and place in a medium-sized bowl.</li>
   <li>Season with salt and pepper.</li>
@@ -38,8 +47,12 @@
   </ol>
 </div>
 
+<label> Add Instruction</label> <br />
+<input id="newInstruction" placeholder="I am an input" value=""/>
+<button onclick="addInstruction()">Add ingredient to list</button>  <!--add onclick-->
 
-</div>
+    </main>
+</body>
 
 </html>
 

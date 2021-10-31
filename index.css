@@ -5,6 +5,11 @@
     color:rgba(255, 0, 0, 0.753);
 }
 
+body{
+    margin: 0px; 
+    padding: 0px;
+}
+
 .totalPage {
     background-color: bisque;
 
