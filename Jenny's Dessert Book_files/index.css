@@ -1,0 +1,28 @@
+#title {
+    color: white;
+    font-size: 30px;
+    margin-left:20px;
+}
+
+.top-links {
+    float: right;
+    margin-right:20px;
+}
+
+#header{
+    background-color: rgb(138, 138, 218);
+  
+}
+
+.recipe-title {
+    font-size: 23px;
+    background-color: rgb(138, 138, 218);
+    color: white;
+    margin-left:20px;
+}
+
+.description
+    {
+        font-size: 18px;
+        font-family: monospace;
+    }
