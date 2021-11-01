@@ -9,21 +9,24 @@
     </head>
         
     <body>
+        <pre><code id="json"></code></pre>
+
         <div class="header">
-            <a class="title">Banana Bread Recipe</a>
+            <a id="title">Banana Bread Recipe</a>
             <a class="top-links" href="file:///Users/jenny/Downloads/bootcamp-project-2021/Jenny's%20Dessert%20Book.html" target="_blank">Home Page</a>
             <a class="top-links" href="ffile:///Users/jenny/Downloads/bootcamp-project-2021/aboutMe.html" target="_blank">About Me</a>
         </div>
 
         <div class="recipe">
-            <img src="https://sweetcayenne.com/wp-content/uploads/2020/01/magnolia-banana-bread-21-scaled.jpg" alt="Banana Bread Image" width="200" height="210/">
-            <p class="description">This banana is easy to serve and are a smaller portion size than that of typical banana bread. The more bananas that you use, the more moist the bread will be and the bananas used should have lots of brown spots. Although yellow bananas can be used, this recipe tastes best with overripe bananas.</p>
+            <img id="image" src="https://sweetcayenne.com/wp-content/uploads/2020/01/magnolia-banana-bread-21-scaled.jpg" alt="Banana Bread Image" width="200" height="210/">
+            <button onClick="convertJSON()">Convert Recipe into JSON</button>
+            <p id="recipeDescription">This banana is easy to serve and are a smaller portion size than that of typical banana bread. The more bananas that you use, the more moist the bread will be and the bananas used should have lots of brown spots. Although yellow bananas can be used, this recipe tastes best with overripe bananas.</p>
             <br>
         </div>
 
         <div>
             <p class="recipe-title">Ingredients</p>
-            <ul>
+            <ul id="unordered">
                 <li class="description">1 1/2 cups all-purpose flour</li>
                 <li class="description">1 teaspoon baking soda</li>
                 <li class="description">1/2 teaspoon kosher salt</li>
@@ -34,12 +37,14 @@
                 <li class="description">1 teaspoon pure vanilla extract</li>
             </ul>
         </div>
-        <div class="header"> 
-            <p></p>
+        <div class="input">
+            <h3> Add an Ingredient</h3>
+            <input id="newIngredient" placeholder="anything you want" value="">
+            <button onClick="addIngredient()">Add Ingredient</button>
         </div>
         <div>
             <p class="recipe-title">Directions</p>
-            <ol>
+            <ol id="ordered">
                 <li class="description">Preheat oven to 350 F Degrees</li>
                 <li class="description">Combine all dry ingredients except the brown sugar</li>
                 <li class="description">In a seperate bowl cream butter and sugar together</li>
@@ -50,6 +55,13 @@
                 <li class="description">enjoy!</li>
             </ol>
         </div>
+        <div class="input">
+            <h3> Add Additional Directions</h3>
+            <input id="newDirections" placeholder="anything you want" value="">
+            <button class="button" onClick="addDirections()"> Add Directions</button>
+        </div>
     </body>
+    
+    <script src="file:///Users/jenny/Downloads/bootcamp-project-2021/addingInput.js"></script>
  
 </html>

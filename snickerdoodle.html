@@ -9,19 +9,22 @@
     </head>
         
     <body>
+        <pre><code id="json"></code></pre>
+
         <div class="header">
-            <a class="title">Snickerdoodle Recipe</a>
+            <a id="title">Snickerdoodle Recipe</a>
             <a class="top-links" href="file:///Users/jenny/Downloads/bootcamp-project-2021/Jenny's%20Dessert%20Book.html" target="_blank">Home Page</a>
             <a class="top-links" href="file:///Users/jenny/Downloads/bootcamp-project-2021/aboutMe.html" target="_blank">About Me</a>
         </div>
         <div class="recipe">
-             <img src="https://www.cookingclassy.com/wp-content/uploads/2017/06/snickerdoodles-40.jpg" alt="Snickerdoodle Image" width="200" height="210/">
-             <p class="description">This snickerdoodle recipe uses a lot of ingredients but the assembly process is very easy. Rolling the dough makes this recipe kid friendly and a nice baking activity with friends. Cream of tartar is typically always used in snickerdoodle recipes, however, if that it the only ingredient you're missing, the recipe will taste very similar without it. This recipe yields around 45 cookies so ratio the ingredients accordingly or if you find yourself with lots of extra batter storing in the freezer is perfect.</p>
+             <img id="image" src="https://www.cookingclassy.com/wp-content/uploads/2017/06/snickerdoodles-40.jpg" alt="Snickerdoodle Image" width="200" height="210/">
+             <button onClick="convertJSON()">Convert Recipe into JSON</button>
+             <p id="recipeDescription">This snickerdoodle recipe uses a lot of ingredients but the assembly process is very easy. Rolling the dough makes this recipe kid friendly and a nice baking activity with friends. Cream of tartar is typically always used in snickerdoodle recipes, however, if that it the only ingredient you're missing, the recipe will taste very similar without it. This recipe yields around 45 cookies so ratio the ingredients accordingly or if you find yourself with lots of extra batter storing in the freezer is perfect.</p>
              <br>
         </div>
         <div>
             <p class="recipe-title">Ingredients</p>
-            <ul>
+            <ul id="unordered">
                 <li class="description">½ cup butter, softened</li>
                 <li class="description">½ cup shortening</li>
                 <li class="description">1 ½ cups white sugar</li>
@@ -35,9 +38,15 @@
                 <li class="description">2 teaspoons ground cinnamon</li>
             </ul>
         </div>
+        <div class="input">
+            <h3> Add an Ingredient</h3>
+            <input id="newIngredient" placeholder="anything you want" value="">
+            <button class="button" onClick="addIngredient()"> Add Ingredient
+            </button>
+        </div>
         <div>
             <p class="recipe-title">Directions</p>
-            <ol>
+            <ol id="ordered">
                 <li class="description">Preheat oven to 400 F Degrees</li>
                 <li class="description">Combine wet ingredients in a bowl</li>
                 <li class="description">Slowly add all the dry ingredients to the same bowl</li>
@@ -49,7 +58,15 @@
                 <li class="description">Serve and Enjoy!</li>
             </ol>
         </div>
-       
+        <div class="input">
+            <h3> Add Additional Directions</h3>
+            <input id="newDirections" placeholder="anything you want" value="">
+            <button class="button" onClick="addDirections()"> Add Directions
+            </button>
+        </div>
     </body>
+    <script src="file:///Users/jenny/Downloads/bootcamp-project-2021/addingInput.js"></script>
 
-    </html>
+</html>
+
+   

@@ -9,20 +9,23 @@
     </head>
         
     <body>
+        <pre><code id="json"></code></pre>
+
         <div class="header">
-            <a class="title">Vanilla Ice Cream Recipe</a>
+            <a id="title">Vanilla Ice Cream Recipe</a>
             <a class="top-links" href="file:///Users/jenny/Downloads/bootcamp-project-2021/Jenny's%20Dessert%20Book.html" target="_blank">Home Page</a>
             <a class="top-links" href="file:///Users/jenny/Downloads/bootcamp-project-2021/aboutMe.html" target="_blank">About Me</a>
         </div>
         <div class="recipe">
-             <img src="https://www.yourhomebasedmom.com/wp-content/uploads/2017/07/vanilla-ice-cream-recipe-squarejpg-500x500.jpg" alt="Ice Cream Image" width="200" height="210/">
-             <p class="description">This vanilla ice cream recipe can be modified to whatever flavor you like. Just replace the vanilla extract with other flavored extracts. To step it up a notch, mix in fresh sliced fruit after the ice cream is complete. This ice cream recipe works best with an ice cream maker that can churn the chilled mixture. Although, this is a great arm exercise for those who don't own an ice cream machine. Stay tuned for other ice cream recipes that don't use an ice cream machine. </p>
+             <img id="image" src="https://www.yourhomebasedmom.com/wp-content/uploads/2017/07/vanilla-ice-cream-recipe-squarejpg-500x500.jpg" alt="Ice Cream Image" width="200" height="210/">
+             <button onClick="convertJSON()">Convert Recipe into JSON</button>
+             <p id="recipeDescription">This vanilla ice cream recipe can be modified to whatever flavor you like. Just replace the vanilla extract with other flavored extracts. To step it up a notch, mix in fresh sliced fruit after the ice cream is complete. This ice cream recipe works best with an ice cream maker that can churn the chilled mixture. Although, this is a great arm exercise for those who don't own an ice cream machine. Stay tuned for other ice cream recipes that don't use an ice cream machine. </p>
              <br>
         </div>
         
         <div>
             <p class="recipe-title">Ingredients</p>
-            <ul>
+            <ul id="unordered">
                 <li class="description">1¾ cups heavy cream</li>
                 <li class="description">1¼ cup whole milk</li>
                 <li class="description">¾ cup sugar</li>
@@ -30,9 +33,14 @@
                 <li class="description">1 tablespoon vanilla extract</li>
             </ul>
         </div>
+        <div class="input">
+            <h3> Add an Ingredient</h3>
+            <input id="newIngredient" placeholder="anything you want" value="">
+            <button class="button" onClick="addIngredient()"> Add Ingredient</button>
+        </div>
         <div>
             <p class="recipe-title">Directions</p>
-            <ol>
+            <ol id="ordered">
                 <li class="description">In a saucepan, add 1 cup of heavy cream and add sugar, salt, and vanilla</li>
                 <li class="description">Put saucepan over meadium heat until the sugar dissolves</li>
                 <li class="description">Put in fridge until chilled</li>
@@ -40,6 +48,12 @@
                 <li class="description">Serve and Enjoy!</li>
             </ol>
         </div>
+        <div class="input">
+            <h3> Add Additional Directions</h3>
+            <input id="newDirections" placeholder="anything you want" value="">
+            <button class="button" onClick="addDirections()"> Add Directions</button>
+        </div>
     </body>
+    <script src="file:///Users/jenny/Downloads/bootcamp-project-2021/addingInput.js"></script>
 
     </html>

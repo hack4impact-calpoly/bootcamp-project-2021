@@ -1,4 +1,4 @@
-.title {
+#title {
     color: white;
     font-size: 30px;
     margin-left:20px;
@@ -21,6 +21,29 @@
 }
 
 .description
+    {
+        font-size: 18px;
+        font-family: monospace;
+    }
+.input
+    {
+        font-size: 15px;
+        border-radius: 3px;
+        border-color: rgb(138, 138, 218);
+
+    }
+#recipeDirections
+{ 
+    font-size: 18px;
+    font-family: monospace;
+}
+#newIngredient
+    {
+        font-size: 18px;
+        font-family: monospace;
+
+    }
+#newDirections
     {
         font-size: 18px;
         font-family: monospace;
