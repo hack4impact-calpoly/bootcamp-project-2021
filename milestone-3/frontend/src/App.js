@@ -2,6 +2,12 @@ import './App.css';
 import Navbar from './components/navbar.jsx';
 import RecipePreview from './components/recipePreview';
 import recipes from './recipeData';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 function App() {
   return (
