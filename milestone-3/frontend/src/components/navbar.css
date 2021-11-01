@@ -7,7 +7,7 @@ header {
 }
 
 nav {
-    margin: 30px;
+    margin: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

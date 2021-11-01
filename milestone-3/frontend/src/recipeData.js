@@ -15,5 +15,5 @@ const recipes = [
       "imageSrc": "https://food-images.files.bbci.co.uk/food/recipes/seafoodrisotto_5522_16x9.jpg",
     }
   ]
-  
-  export default recipes;
+
+export default recipes;

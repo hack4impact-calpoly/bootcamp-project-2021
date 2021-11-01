@@ -1,7 +1,10 @@
 import './App.css';
 import Navbar from './components/navbar.jsx';
 import RecipePreview from './components/recipePreview';
+import RecipePage from './components/recipePage';
+import About from './components/aboutMe';
 import recipes from './recipeData';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,10 +12,10 @@ import {
   Link
 } from 'react-router-dom';
 
-function App() {
+const Home = () => {
   return (
-    <div className="App">
-      <Navbar />
+    <div>
+      {/* Add in Welcome description here?*/}
       {recipes.map(recipe =>
         <RecipePreview 
           recipeName={recipe.name} 
@@ -21,6 +24,24 @@ function App() {
         />
       )};
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+     </div>
+     <Switch>
+       <Route exact path="/">
+         <Home />
+       </Route>
+       <Route exact path="/aboutme">
+         <About />
+       </Route>
+     </Switch>
+    </Router>
   );
 }
 
