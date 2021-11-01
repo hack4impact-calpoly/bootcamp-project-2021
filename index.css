@@ -1,4 +1,4 @@
-#title {
+.title {
     color: white;
     font-size: 30px;
     margin-left:20px;
@@ -9,9 +9,8 @@
     margin-right:20px;
 }
 
-#header{
+.header{
     background-color: rgb(138, 138, 218);
-  
 }
 
 .recipe-title {
