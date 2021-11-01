@@ -1,6 +1,7 @@
 <html lang="en-US">
   <head>
-    <title> Cole's Concotions </title>
+    <title> Megan's Liquid Meals</title>
+    <script type="text/javascript" src="meals.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -23,7 +24,7 @@
           <section>
               <h3>Ingredients</h3>
               <p>Serves 1 Person</p>
-              <ul>
+              <ul id= "igList">
                   <li>1 banana</li>
                   <li>2 cups of your choice of milk</li>
                   <li>2 tbsp peanut butter</li>
@@ -34,15 +35,29 @@
                 <li>protein powder - great for an afterworkout smoothie!</li>
                 <li>greek yogurt - if you want a creamier smoothie!</li>
             </ul>
+            <div class="form-group"> 
+              <h4> Add an Ingredient</h4>
+                <label for="newIngredient">Ingredient: </label>
+                <input id="newIngredient" class="form-element" placeholder="yummy stuff" value="" /> <br /> <br />
+                <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+             </div>
           </section>
           <section>
               <h3>Preparation</h3>
               <p>Prep Time: < 5 minutes</p>
-              <ol>
+              <ol id = "prep">
                   <li>Turn on the blender.</li>
                   <li>Throw everything into the blender.</li>
                   <li>Blend!</li>
               </ol>
+              <div class="form-group"> 
+                <h4> Add an Instruction</h4>
+                  <div class="vertical-align">
+                    <label for="newInstruction">Instruction: </label>
+                    <input id="newInstruction" class="form-element" placeholder="Eat" value="" rows="3"/> <br /> <br />
+                    <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+                  </div>
+              </div>
           </section>
       </article>
     </main>

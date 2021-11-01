@@ -1,7 +1,8 @@
 <html lang="en-US">
   <head>
-    <title> Cole's Concotions </title>
+    <title> Megan's Liquid Meals </title>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="meals.js"></script>
   </head>
   <body>
     <header class="header-background">
@@ -11,8 +12,8 @@
       <section>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>Avocado Almond Butter Smoothie</h2>
-            <p>A healthy smoothie that tastes like a milkshake and is high in nutrition!</p>
+            <h2>Creamy Tomato Basil Soup</h2>
+            <p>A warm, creamy soup that is easy and cheap to make!</p>
           </div>
           <img class="flex-image" src="imgs/tomato-soup.jpg">
       </div>
@@ -35,6 +36,12 @@
                   <li>ground pepper</li>
                   <li>parmesan cheese</li>
               </ul>
+              <div class="form-group"> 
+                <h4> Add an Ingredient</h4>
+                  <label for="newIngredient">Ingredient: </label>
+                  <input id="newIngredient" class="form-element" placeholder="yummy stuff" value="" /> <br /> <br />
+                  <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+               </div>
           </section>
           <section>
               <h3>Preparation</h3>
@@ -48,6 +55,14 @@
                  <li>Simmer for about 15 minutes.</li>
                  <li>Serve!</li>
               </ol>
+              <div class="form-group"> 
+                <h4> Add an Instruction</h4>
+                  <div class="vertical-align">
+                    <label for="newInstruction">Instruction: </label>
+                    <input id="newInstruction" class="form-element" placeholder="Eat" value="" rows="3"/> <br /> <br />
+                    <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+                  </div>
+              </div>
           </section>
       </article>
     </main>
