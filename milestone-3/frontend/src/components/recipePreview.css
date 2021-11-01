@@ -1,0 +1,30 @@
+.recipePreview {
+    background-color: #008C45;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #F4F5F0;
+    padding: 20px;
+    color: #F4F5F0;
+}
+
+.recipeHeader {
+    text-align: left;   
+    background-color: #CD212A;
+    padding: 15px; 
+    border: 2px solid #F4F5F0;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+}
+
+.textDescription {
+    max-width: 600px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.recipeImage {
+    border: 3px solid #F4F5F0;
+}

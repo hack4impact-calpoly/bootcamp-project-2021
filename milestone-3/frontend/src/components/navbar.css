@@ -1,0 +1,24 @@
+header {
+    background-color: #CD212A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #F4F5F0;
+}
+
+nav {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+#home-link {
+    margin-right: 16px;
+}
