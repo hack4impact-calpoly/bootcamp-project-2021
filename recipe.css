@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: lightblue;
 }
 
 header {
@@ -12,7 +13,13 @@ header {
   margin: 0;
 }
 
-p {
+a {
+  text-decoration: none;
+}
+
+p{
+  display: flex;
+  justify-content: flex-start;
   font-size: 1.1rem;
   font-weight: 300;
   color: rgb(223, 245, 252);
@@ -34,9 +41,7 @@ p {
   color: rgb(69, 95, 48);
   transition: ease-in-out 0.25s;
 }
-a {
-  text-decoration: none;
-}
+
 
 #title {
   color: rgb(148, 125, 106);
@@ -52,17 +57,27 @@ h1 {
   padding: 60px;
 }
 
-#ingredients h2, #steps h2{
+.heading {
   color: #def1f8;
   border-radius: 25px;
   padding: 15px;
-  background-color: rgb(133, 169, 190)
+  background-color: rgb(133, 169, 190);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.05);
 }
 
-li {
+ .form h2{
+  /* color: rgb(88, 119, 138); */
+  color: #fff;
+}
+
+li{
   font-size: 1.1rem;
   color: #6e8b91;
   /* display: inline; */
+}
+
+label {
+  color: #fff;
 }
 
 ul,
@@ -76,15 +91,27 @@ section {
   display: block;
   padding: 50px;
   background-color: lightblue;
-
 }
 
-.intro {
+div {
+  display: block;
+}
+
+.intro-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  padding: 80px 100px;
+  padding: 100px;
   background-color: #70b0b0;
+  contain: content;
+}
+
+.intro-header {
+  flex-basis: 50px;
+    padding-right: 20px;
+    flex-grow: 1;
+    margin: 0px;
+    line-height: 1.5;
+    overflow: hidden;
 }
 
 .item {
@@ -93,11 +120,60 @@ section {
 
 img {
   float: right;
-  margin: 20px;
-  max-width: 400px;
-  max-height: auto;
+  margin: 0px 20px;
+  max-width: 350px;
+  height: 450px;
   flex-basis: 50px;
+  align-items: flex-end;
+  justify-content: end;
   flex-grow: 1;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
 }
 
+.form {
+  margin: -30px 50px 50px 50px;
+  margin-left: 100px;
+  border-radius: 50px;
+  padding: 15px 100px 30px 100px;
+  background-color: rgb(88, 119, 138);
+  max-width: 280px;
+}
 
+input {
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding:10px 100px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  padding: 6px;
+  margin-left: 10px;
+}
+
+button {
+  border-radius: 30px;
+  border: none;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  float: bottom;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(223, 245, 252);
+  background-color: #7cb3bb;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #66959c;
+  transition: ease-in-out 0.1s;
+}
+
+#json-button {
+  background-color: #406a83;
+}
+
+#json-button:hover {
+  cursor: pointer;
+  background-color: #345669;
+  transition: ease-in-out 0.1s;
+}

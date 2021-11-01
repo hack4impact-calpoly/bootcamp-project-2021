@@ -62,6 +62,7 @@ p {
   font-size: 40px;
   font-weight: 700;
   color: rgb(255, 241, 224);
+  
 }
 
 .intro p {
@@ -90,6 +91,7 @@ p {
   max-height: auto;
   flex-basis: 50px;
   flex-grow: 1;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
 }
 
 .recipe-container a {

@@ -22,25 +22,27 @@
         <a href="about-me.html">About Me</a>
       </nav>
     </header>
-
-    <div class="intro">
-      <h1>Lemon Garlic Salmon</h1>
-      <p>
-        If you love salmon, you will love this easy and delicious baked salmon
-        recipe. Very easy to make with just a few ingredients you most likely
-        have handy. It is gluten-free, dairy-free, low carb, and keto-friendly.
-        The marinade is made of lemon juice, lemon zest, freshly grated garlic,
-        olive oil, salt, and pepper. This lemon garlic salmon will work well for
-        a quick weeknight dinner or a salad topper for added protein. Also, if
-        you like to meal prep your meals, serve this easy baked salmon with some
-        sweet potatoes and a side of veggies.
-      </p>
-      <img src="images/salmon.jpeg" />
+    <div class="intro-container">
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <div class='intro-header'>
+        <button id='json-button' onclick="convertToJSON()">Convert Recipe Into JSON!</button>
+        <h1 id="recipeName">Lemon Garlic Salmon</h1>
+        <p id="text">
+          If you love salmon, you will love this easy and delicious baked salmon
+          recipe. Very easy to make with just a few ingredients you most likely
+          have handy. It is gluten-free, dairy-free, low carb, and keto-friendly.
+          The marinade is made of lemon juice, lemon zest, freshly grated garlic,
+          olive oil, salt, and pepper. This lemon garlic salmon will work well for
+          a quick weeknight dinner or a salad topper for added protein. Also, if
+          you like to meal prep your meals, serve this easy baked salmon with some
+          sweet potatoes and a side of veggies.
+        </p>
+      </div>
+      <img id='image' src="images/salmon.jpeg" />
     </div>
-
     <section id="ingredients">
-      <h2>Ingredients You'll Need</h2>
-      <ul>
+      <h2 class='heading'>Ingredients You'll Need</h2>
+      <ul id='ingredient-list'>
         <li>1.25 pounds salmon filets</li>
         <li>3 medium lemons, 2 squeezed & 1 sliced</li>
         <li>2 tsp lemon zest</li>
@@ -52,9 +54,17 @@
       </ul>
       <img id="prep" src="images/salmon-prep.jpeg" />
     </section>
+    <section class='form'>
+      <h2>Make It Your Own!</h2>
+      <label>Ingredient: </label>
+      <input id='newIngredient' placeholder='Ex: 2 cups spinach'type="text">
+      <br>
+      <br>
+      <button onclick="addIngredient()">Add Ingredient</button>
+    </section>
     <section id="steps">
-      <h2>How To Make</h2>
-      <ol>
+      <h2 class="heading">How To Make</h2>
+      <ol id='steps-list'>
         <li>
           First, preheat the oven: Preheat the oven to 400°F and grease a baking
           dish that can fit all pieces of salmon with some oil.
@@ -85,5 +95,14 @@
         <li>Finally, remove from the oven, garnish with parsley and serve.</li>
       </ol>
     </section>
+    <section class='form'>
+      <h2>Make It Your Own!</h2>
+      <label>Instruction: </label>
+      <input id='newStep' placeholder='Ex: Preheat Oven'type="text">
+      <br>
+      <br>
+      <button onclick="addStep()">Add Instruction</button>
+    </section>
   </body>
+  <script type="text/javascript" src="recipe.js"></script>
 </html>

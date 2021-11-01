@@ -20,9 +20,12 @@
       </nav>
     </header>
 
-    <div class="intro">
-      <h1>Blueberry Muffins</h1>
-      <p>
+    <div class="intro-container">
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <div class='intro-header'>
+        <button id='json-button' onclick="convertToJSON()">Convert Recipe Into JSON!</button>
+        <h1 id="recipeName">Blueberry Muffins</h1>
+      <p id='text'>
         These blueberry oatmeal muffins are packed with flavor, loaded with
         fresh blueberries, and made with oat flour, maple syrup, and no butter.
         They come out fluffy and so tasty. Hard to believe that they are made
@@ -31,12 +34,13 @@
         will love these healthy blueberry oatmeal muffins which can be enjoyed
         as a quick on-the-go breakfast, a snack, or a healthy dessert option.
       </p>
-      <img src="images/muffins.jpeg" />
+      </div>
+      <img id ="image" src="images/muffins.jpeg" />
     </div>
 
     <section id="ingredients">
-      <h2>Ingredients You'll Need</h2>
-      <ul>
+      <h2 class="heading">Ingredients You'll Need</h2>
+      <ul id="ingredient-list">
         <li>1 1/2 cups oat flour</li>
         <li>1/4 cup old-fashioned rolled oats</li>
         <li>1 tbsp baking powder</li>
@@ -51,9 +55,17 @@
       </ul>
       <img id="prep" src="images/muffin-prep.jpeg" />
       </section>
+      <section class='form'>
+        <h2>Make It Your Own!</h2>
+        <label>Ingredient: </label>
+        <input id='newIngredient' placeholder='Ex: 2 cups spinach'type="text">
+        <br>
+        <br>
+        <button onclick="addIngredient()">Add Ingredient</button>
+      </section>
       <section id="steps">
-        <h2>How To Make</h2>
-         <ol>
+        <h2 class="heading">How To Make</h2>
+        <ol id='steps-list'>
             <li>
               Preheat the oven to 375 F and line a muffin tin with 12 cup liners.
             </li>
@@ -77,6 +89,15 @@
             <li>Let the muffins cool for at least 5 minutes before serving.</li>
           </ol>
       </section>
+      <section class='form'>
+        <h2>Make It Your Own!</h2>
+        <label>Instruction: </label>
+        <input id='newStep' placeholder='Ex: Preheat Oven'type="text">
+        <br>
+        <br>
+        <button onclick="addStep()">Add Instruction</button>
+      </section>
     </div>
   </body>
+  <script type="text/javascript" src="recipe.js"></script>
 </html>

@@ -23,9 +23,13 @@
       </nav>
     </header>
 
-    <div class="intro">
-      <h1>Grilled Beef Shawarma Bowl</h1>
-      <p>
+
+    <div class="intro-container">
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <div class='intro-header'>
+        <button id='json-button' onclick="convertToJSON()">Convert Recipe Into JSON!</button>
+        <h1 id="recipeName">Grilled Beef Shawarma Bowl</h1>
+      <p id='text'>
         Beef shawarma is one of my favorite go-to Middle Eastern recipes that’s
         usually on every middle eastern restaurant menu and famous street food
         around the world. It is one of those recipes that can easily be
@@ -33,12 +37,13 @@
         with salad, rice, or a sandwich. The result will be a juicy, tangy beef
         over rice with some of your favorite veggies of choice.
       </p>
-      <img src="images/beef.jpeg" />
+      </div>
+      <img id='image' src="images/beef.jpeg" />
     </div>
 
     <section id="ingredients">
-      <h2>Ingredients You'll Need</h2>
-      <ul>
+      <h2 class="heading">Ingredients You'll Need</h2>
+      <ul id="ingredient-list">
         <li>Ground cumin</li>
         <li>Ground coriander</li>
         <li>Smoked paprika</li>
@@ -55,9 +60,17 @@
       </ul>
       <img id="prep" src="images/beef-prep.jpeg" />
     </section>
+    <section class='form'>
+      <h2>Make It Your Own!</h2>
+      <label>Ingredient: </label>
+      <input id='newIngredient' placeholder='Ex: 2 cups spinach'type="text">
+      <br>
+      <br>
+      <button onclick="addIngredient()">Add Ingredient</button>
+    </section>
     <section id="steps">
-      <h2>How To Make</h2>
-      <ol>
+      <h2 class="heading">How To Make</h2>
+      <ol id='steps-list'>
         <li>Combine all the spices in a small bowl and mix well.</li>
         <li>
           Place the beef steak in a shallow dish and sprinkle with the seasoning
@@ -81,5 +94,14 @@
         </li>
       </ol>
     </section>
+    <section class='form'>
+      <h2>Make It Your Own!</h2>
+      <label>Instruction: </label>
+      <input id='newStep' placeholder='Ex: Preheat Oven'type="text">
+      <br>
+      <br>
+      <button onclick="addStep()">Add Instruction</button>
+    </section>
   </body>
+  <script type="text/javascript" src="recipe.js"></script>
 </html>
