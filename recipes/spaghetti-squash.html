@@ -1,59 +1,60 @@
+
+
 <html lang="en-US">
   <head>
-    <title> Sameera's Secrets </title>
+    <title> Sameera's Cravings </title>
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
-    <header class="header-background">
-      <h1 class="main-text">Sameera's Secrets</h1>
+    <header class="main-header">
+      <h1 class="main-text">Sameera's Cravings </h1>
       <nav class="navbar">
-        <a href="../index.html">Home</a>
+        <a href="../index.html" >Home</a>
         <a href="../about.html">About Me</a>
+        <script src="script.js"></script>
       </nav>
     </header>
     <main>
-      <section>
+    <pre id="recipeJSONConvert" style="padding: 10px"></pre>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>Spaghetti Squash</h2>
-            <p>A spin on the standard <a href="https://en.wikipedia.org/wiki/Pasta">pasta</a>.</p>
-            <p>Spaghetti Squash is a great alternative to using regular pasta. 
+          <button class="change-btn" onclick="recipeJSON()"> Convert recipe to JSON!</button>
+            <h2 id="recipeName">Spaghetti Squash</h2>
+            <p id="recipeDescription">A spin on the standard <a href="https://en.wikipedia.org/wiki/Pasta">pasta</a>.<br /><br />
+              Spaghetti Squash is a great alternative to using regular pasta. 
           While there is only one way to actually cook the squash, the dishes you can make with the cooked "pasta" are endless. 
-          A perfect meal on a busy night!
+          A perfect meal on a busy night!<br /><br />
+               The recipe below is supposed to act as a template, please feel free to add/remove ingredients as you'd like! 
             </p>
-            <p>
-              The recipe below is supposed to act as a template, please feel free to add/remove ingredients as you'd like! 
-              </p>
           </div>
-          <img class="flex-image" src="../images/squash.jpg">
-      </div>
-        </section>
-      <section>
-      </section>
-      <article>
-          <section >
-              <h3>Ingredients</h3>
-              <p>Serves 1 person</p>
-              <ul>
-                  <li>1 spaghetti squash</li>
-                  <li>4 Tbsp. extra virgin olive oil</li>
-                  <li>Sea salt and freshly ground black pepper</li>
-              </ul>
-          </section>
-          <section>
-              <h3>Preparation</h3>
-              <ol>
-                  <li>Preheat the oven to 400 degrees Farenheit.</li>
-                  <li>Slice the spaghetti squash in half lengthwise and scoop out seeds and ribbings.</li>
-                  <li>Drizzle the inside of the squash with olive oil and sprinkle with salt and pepper.</li>
-                  <li>Place the spaghetti squash cut side down on the baking sheet and use a fork to poke holes. Roast for 30 to 40 minutes or until lightly browned on the outside, fork tender, but still a litte bit firm. </li>
-                  <li>Remove from the oven and flip the squash so that it’s cut side up. When cool to the touch, use a fork to scrape and fluff the strands from the sides of the squash.</li>
-                  <li>Mix in your favorite pasta sauce or eat as it is!</li>
-                  <li>Enjoy! I hope you like it!</li>
-              </ol>
-          </section>
-      </article>
+          <img class="flex-image" src="../images/squash.jpg" id="recipeImage">
+        </div>
+        <h2>Ingredients</h2>
+        <ul id="ingredientList">
+         <li>1 spaghetti squash</li>
+        <li>4 Tbsp. extra virgin olive oil</li>
+        <li>Sea salt and freshly ground black pepper</li>
+        </ul>
+        <div class="console-box">
+        <h3>Add an Ingredient</h3>
+        <input id="addIngredient" /> <br />
+        <button onclick="addIngredient()" class="contribute-btn"> Add an Ingredient </button>
+        </div>
+        <h2>Instructions</h2>
+        <ol id="instructionList">
+           <li>Preheat the oven to 400 degrees Farenheit.</li>
+           <li>Slice the spaghetti squash in half lengthwise and scoop out seeds and ribbings.</li>
+           <li>Drizzle the inside of the squash with olive oil and sprinkle with salt and pepper.</li>
+           <li>Place the spaghetti squash cut side down on the baking sheet and use a fork to poke holes. Roast for 30 to 40 minutes or until lightly browned on the outside, fork tender, but still a litte bit firm. </li>
+           <li>Remove from the oven and flip the squash so that it’s cut side up. When cool to the touch, use a fork to scrape and fluff the strands from the sides of the squash.</li>
+           <li>Mix in your favorite pasta sauce or eat as it is!</li>
+           <li>Enjoy! I hope you like it!</li>
+        </ol>
+        <div class="console-box">
+        <h3>Add an Instruction</h3>
+        <input id="addInstruction" /> <br />
+        <button onclick="addInstruction()" class="contribute-btn"> Add an Instruction </button>
+        </div> 
     </main>
   </body>
-
 </html>
