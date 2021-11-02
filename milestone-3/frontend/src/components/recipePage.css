@@ -1,4 +1,34 @@
 .recipeDescription {
     color: #F4F5F0;
     background-color: #008C45;
+    display: flex;
+    flex-direction: row;
+}
+
+.recipeText {
+    margin-left: 30px;
+}
+
+.recipeImage {
+    margin: 20px;
+}
+
+.ingredients {
+    background-color: #008C45;
+    color: #F4F5F0;
+    padding: 10px;
+}
+
+.title {
+    background-color: #CD212A;
+    padding: 10px;
+    border: 3px solid #F4F5F0;
+}
+
+.header {
+    margin: 20px;
+}
+
+.contents {
+    
 }

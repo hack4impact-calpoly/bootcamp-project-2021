@@ -1,31 +1,15 @@
 import './App.css';
 import Navbar from './components/navbar.jsx';
-import RecipePreview from './components/recipePreview';
+import Home from './components/home';
 import RecipePage from './components/recipePage';
-import About from './components/aboutMe';
 import recipes from './recipeData';
+import About from './components/aboutMe';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
-
-const Home = () => {
-  return (
-    <div>
-      {/* Add in Welcome description here?*/}
-      {recipes.map(recipe =>
-        <RecipePreview 
-          recipeName={recipe.name} 
-          recipeDesc={recipe.description}
-          imageSrc={recipe.imageSrc}
-        />
-      )};
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -40,6 +24,18 @@ function App() {
        <Route exact path="/aboutme">
          <About />
        </Route>
+       {recipes.map(recipe =>
+        <Route exact path={"/recipes/"+recipe.name}>
+          <RecipePage 
+            recipeName={recipe.name} 
+            recipeDesc={recipe.description}
+            imageSrc={recipe.imageSrc}
+            ingredients={recipe.ingredients}
+            servingSize={recipe.servingSize}
+            instructions={recipe.instructions}
+          />
+        </Route>
+       )};
      </Switch>
     </Router>
   );
