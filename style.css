@@ -23,7 +23,7 @@
     padding: 0px 40px 10px;
   }
   
-  .header-background{
+  .main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,28 +45,28 @@
   }
 
 
-  .items{
+  .recipe-heading{
     background-color: var(--light-pink);
     padding: 10px 20px;
     margin: 10px 0px;
     border-radius: 30px;
   }
 
-  .items-cont
+  .recipe-cont
   {
     padding: 5px 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
   }
 
-  .items-text
+  .recipe-desc
   {
     padding: 5px 10px;
     flex-basis: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
-  .image-lil
+  .recipe-img
   {
     display: block;
     margin-left: auto;
@@ -86,6 +86,16 @@
     padding:10px;
    
   }
+
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+  }
+
+  
 
   
   .flex-container {
@@ -114,59 +124,5 @@
     overflow: hidden;
   }
 
-  .form-button
-  {
-    background-color: var(--light);
-    border:none;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.4s ease;
-    cursor: pointer;
-  }
-
-  .form-group
-  {
-    border: var(--dark-blue);
-    border-radius: 15px;
-    padding: 0px 20px 20px;
-  }
   
-  .form-button:hover,
-  .form-button:focus {
-    background-color: var(--light);
-  }
-  
-  
-  .form-button:after {
-    background-color: #111;
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 48px;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
-  }
-  
-  .form-button:hover:after {
-    transform: translate(0, 0);
-  }
-  
-  .form-button:active {
-    background-color: var(--cg-light-blue);
-    outline: 0;
-  }
-  
-  .form-button:hover {
-    outline: 0;
-  }
-  
-  @media (min-width: 768px) {
-    .form-button {
-      padding: 0 40px;
-    } */
   
