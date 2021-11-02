@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>BMW M3</title>
+    <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" href="index.css"/> 
+</head>
+
+<header class="header">
+    <h1>BMW M3 </h1>
+</header>
+
+<body>
+    <main>
+
+  <button onclick="displayJSON()">Display BMW M3 JSON Information</button>
+  
+  <div class="totalPage">
+  <div class="intro-box">
+    <h1 id="Car_Name">2021 BMW M3</h1>
+    <p id="Brief_Description">The 2021 BMW M3 may have an ugly grill, but that doesn't mean she isn't mean on the track! </p>  
+      <img id="Vehicle_Picture" src="https://images.hgmsites.net/hug/2021-bmw-3-series_100762312_h.jpg" </img>
+  </div>
+
+
+  <div id="Car_Specs">
+    <p id="listTitles">Here are some specs of the 2021 BMW M3 </p>
+    <li>0-60 mph in 3.5 seconds</li>
+    <li>8 speed automatic transmission or 6 speed manual :)</li>
+    <li>4 door cars</li>
+    <li>3.0 L 6-cylinder with 473 to 503 hp</li>  
+  </div>
+
+  <label>Add a Spec!</label> <br />
+  <input id="newCarSpec" placeholder="I am an input" value=""/>
+  <button onclick="addCarSpec()">Add Information</button>
+
+  <div id="Car_Facts">
+    <ol type = "1" >
+    <p id="listTitles">Here are some interesting facts of the 2021 BMW M3</p>
+    <li>One of the few BMWs to come with a manual option</li>
+  </div>
+
+  <label>Add a Fact!</label> <br />
+  <input id="newCarFact" placeholder="I am an input" value=""/>
+  <button onclick="addCarFact()">Add Information</button>
+
+  </main>
+</body>
+ 
+</html>
+
+

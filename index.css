@@ -1,38 +1,43 @@
 .header {
-    background-color: aqua;
+    background-color: rgb(255, 0, 0);
     padding:10px;
     font-size: 20px;
-    color:rgba(255, 0, 0, 0.753);
+    color:rgba(255, 255, 255, 0.753);
 }
 
 body{
     margin: 0px; 
     padding: 0px;
-}
-
-.totalPage {
     background-color: bisque;
 
 }
 
-#title-text {
+#Car_Name {
     font-weight: bold;
     font-size:25px;
-    
 }
 
 .intro-box {
-    border:rgba(194, 21, 116, 0.753);
-    padding-bottom: 100px;
+    font-size: large;
 }
 
-#recipe-pic {
+#listTitles{
+    font-weight: bold;
+}
+
+#Vehicle_Picture {
     width: 300px;
     height: 300px;
 }
 
-#recipe-link {
+#Home_Picture {
+    width: 100%;
+    height: 300px;
+}
+
+
+#pageLink {
     font-size: 20px;
     text-decoration: underline;
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.014);
 }

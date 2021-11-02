@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>BMW M5</title>
+    <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" href="index.css"/> 
+</head>
+
+<header class="header">
+    <h1>BMW M5 </h1>
+</header>
+
+<body>
+    <main>
+
+  <button onclick="displayJSON()">Display BMW M5 JSON Information</button>
+  
+  <div class="totalPage">
+  <div class="intro-box">
+    <h1 id="Car_Name">2018 BMW M5 - One of the best cars ever made </h1>
+    <p id="Brief_Description">The 2018 BMW M5 has a range of special features and trims that make it arguably one of the best cars in the market. One of my dream cars and some of these specs, especially for a production 4 door car, should blow your mind! </p>  
+      <img id="Vehicle_Picture" src="https://cdn1.mecum.com/auctions/fl0120/fl0120-397316/images/1-1570457461398@2x.jpg?1576795854000" </img>
+  </div>
+
+
+  <div id="Car_Specs">
+    <p id="listTitles">Here are some specs of the 2018 BMW M5 </p>
+    <li>0-60 mph in 3.2 seconds</li>
+    <li>8 speed automatic transmission</li>
+    <li>4 door cars</li>
+    <li>4.4L twin-turbo DOHC 32-valve V-8/600 hp @ 6,600 rpm and 553 lb-ft @5,700 rpm</li>  
+  </div>
+
+  <label>Add a Spec!</label> <br />
+  <input id="newCarSpec" placeholder="I am an input" value=""/>
+  <button onclick="addCarSpec()">Add Information</button>
+
+  <div id="Car_Facts">
+    <ol type = "1" >
+    <p id="listTitles">Here are some interesting facts of the 2018 BMW M5</p>
+    <li>Customers can opt for the M Driver's package which allows drivers to take car from 250 km/h to 305 km/h</li>
+  </div>
+
+  <label>Add a Fact!</label> <br />
+  <input id="newCarFact" placeholder="I am an input" value=""/>
+  <button onclick="addCarFact()">Add Information</button>
+
+  </main>
+</body>
+ 
+</html>
+
+
