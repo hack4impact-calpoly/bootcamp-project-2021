@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="javascript\spaghetti.js"></script>
+    <script type="text/javascript" src="javascript\recipe.js"></script>
     <title>Sebastien's Snacks</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -21,7 +21,7 @@
     <div class="aboutMeBox">
       <div class="aboutMeDesc">
         <h1 id="spaghettiTitle">Spaghetti Bolognese:</h1>
-        <button onclick="convertToJSON()">Convert Page to JSON</button>
+        <button onclick="convertToJSON('spaghettiTitle', 'spaghettiDesc', 'spaghettiPic', 'spaghettiIngredientList', 'spaghettiInstructionList')">Convert Page to JSON</button>
         <pre id="JSONPre"><code id="JSONCode"></code></pre>
         <h4 id="spaghettiDesc">Spaghetti bolognese is an Italian pasta dish from Bologna. It consists of spaghetti (long strings of pasta) with an Italian ragù (meat sauce) made with minced beef, pancetta and tomatoes, served with Parmesan cheese. Spaghetti bolognese is one of the most popular pasta dishes eaten outside of Italy.</h4>
         <h2 id="ingredients">Ingredients</h2>
@@ -42,7 +42,7 @@
             </ul>
             <h4>Add an Ingredient:</h4>
             <input id="newSpaghettiIngredient" placeholder="Ingredient" value=""/>
-            <button onclick="addIngredient()">Add ingredient to list</button>
+            <button onclick="addIngredient('spaghettiIngredientList', 'newSpaghettiIngredient')">Add ingredient to list</button>
         </div>
         <h2 id="method">Instruction</h2>
         <div class="spaghettiMethod">
@@ -59,7 +59,7 @@
             </ol>
             <h4>Add an Instruction:</h4>
             <input id="newSpaghettiInstruction" placeholder="Instruction" value=""/>
-            <button onclick="addInstruction()">Add instruction to list</button>
+            <button onclick="addInstruction('spaghettiInstructionList', 'newSpaghettiInstruction')">Add instruction to list</button>
         </div>
       </div>
       <img id="spaghettiPic" src="spaghetti.jpg" alt="Spaghetti Picture">
