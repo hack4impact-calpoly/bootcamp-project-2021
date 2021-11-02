@@ -4,6 +4,8 @@
     --dark-navy: #5f6a65;
     --magenta: rgb(173, 162, 177);
     --white: rgb(255, 255, 255);
+    --light: rgb(242, 241, 241);
+    --dark-blue: #083e25;
   }
   
   html {
@@ -84,6 +86,7 @@
     padding:10px;
    
   }
+
   
   .flex-container {
     display: flex;
@@ -111,65 +114,30 @@
     overflow: hidden;
   }
 
-  /* .form-group {
-    border: 2px solid #6b9c81;
+  .form-button
+  {
+    background-color: var(--light);
+    border:none;
+    padding: 10px;
     border-radius: 10px;
-    padding: 0 20px 20px 20px;
+    transition: 0.4s ease;
+    cursor: pointer;
+  }
+
+  .form-group
+  {
+    border: var(--dark-blue);
+    border-radius: 15px;
+    padding: 0px 20px 20px;
   }
   
-  .vertical-align * {
-    vertical-align: middle;
-  }
-  
-  .servings {
-    display: flex;
-    flex-direction: row;
-    height: 21px;
-  }
-  
-  .height {
-    margin-top: 0;
-  }
-  
-  .form-element {
-    width: 400px;
-  }
-  
-  .form-button {
-    background-color: var(--cg-blue);
-    border-radius: 8px;
-    border-style: none;
-    color: #FFFFFF;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 4px 12px;
-  }
   .form-button:hover,
   .form-button:focus {
-    background-color: var(--cg-light-blue);
+    background-color: var(--light);
   }
   
-  .cool-button {
-    align-items: center;
-    background-color: var(--cg-blue);
-    border: 2px solid #111;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: var(--cg-whitesmoke);
-    cursor: pointer;
-    display: flex;
-    font-family: Inter,sans-serif;
-    font-size: 16px;
-    height: 48px;
-    justify-content: center;
-    line-height: 24px;
-    max-width: 100%;
-    padding: 0 25px;
-    position: relative;
   
-  }
-  
-  .cool-button:after {
+  .form-button:after {
     background-color: #111;
     border-radius: 8px;
     content: "";
@@ -184,21 +152,21 @@
     z-index: -1;
   }
   
-  .cool-button:hover:after {
+  .form-button:hover:after {
     transform: translate(0, 0);
   }
   
-  .cool-button:active {
+  .form-button:active {
     background-color: var(--cg-light-blue);
     outline: 0;
   }
   
-  .cool-button:hover {
+  .form-button:hover {
     outline: 0;
   }
   
   @media (min-width: 768px) {
-    .cool-button {
+    .form-button {
       padding: 0 40px;
-    } */ */
+    } */
   
