@@ -1,11 +1,9 @@
 :root { /* add variables to your css! */
-    --cg-blue: rgb(9, 113, 145);
-    --cg-light-blue: #00afb9ff; 
-    --cg-light-yellow: #6a0000;
-    --cg-red: rgb(255, 216, 182);
-    --cg-teal: rgb(155, 215, 240);
-    --cg-orange: #f07167ff;
-    --cg-whitesmoke: whitesmoke;
+    --light-blue: rgb(235, 213, 202);
+    --light-pink: rgb(205, 141, 122); 
+    --dark-navy: #5f6a65;
+    --magenta: rgb(173, 162, 177);
+    --white: rgb(255, 255, 255);
   }
   
   html {
@@ -13,86 +11,89 @@
   }
   
   body {
-      background: linear-gradient(135deg, var(--cg-teal), var(--cg-red));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-      height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: Tahoma, sans-serif;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--light-blue);
+  }
+
+  main{
+    padding: 0px 40px 10px;
   }
   
   .header-background{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
-    background-color: var(--cg-blue);
+    background-color: var(--dark-navy);
     color: var(--cg-whitesmoke);
-    padding: 0 20px;
+    padding: 10px 20px;
   }
-  
-  header a, h3 a {
-    color: var(--cg-red);
-    margin: 0 12px;
+
+  .navbar{
+    margin: 0px 10px;
+    color: var(--white);
   }
-  header a:hover, h3 a:hover {
-    color: var(--cg-orange);
+
+  .header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px
   }
-  header a:active, h3 a:active {
-    color: var(--cg-teal);
+
+
+  .items{
+    background-color: var(--light-pink);
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border-radius: 30px;
   }
-  
-  h3 {
-    background-color: var(--cg-light-yellow);
-    padding: 8px 8px;
+
+  .items-cont
+  {
+    padding: 5px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
   }
-  
-  main {
-    padding: 0 20px 40px 20px;
+
+  .items-text
+  {
+    padding: 5px 10px;
+    flex-basis: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  
-  .joke {
-    margin-left: 20px;
+
+  .image-lil
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border: 2px lightgray solid;
   }
-  
-  .search-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px;
+
+  h2{
+    font-family: cursive;
+    background-color: var(--light-pink);
+    padding: 10px;
   }
-  
-  .search-item {
-    border: 2px solid rgb(86, 222, 124);
-    max-width: 150px;
-    max-height: 150px;
-    flex-basis: 50px;
-    flex-grow: 1;
-  }
-  
-  .search-item-2 {
-    height: 150px;
-    flex-basis: 50px;
-    flex-grow: 1;
-    padding: 0 20px;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: hidden;
-  }
-  
-  .pic-of-me:hover {
-    width: 500px;
-    height: 500px;
+
+  a{
+    background-color: var(--light-blue);
+    padding:10px;
+   
   }
   
   .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
+    margin-top: 20px;
   }
   
   .flex-image {
-    border: 2px solid black;
+    border: 2px solid rgb(255, 253, 253);
+    padding: 20px;
     max-width: 350px;
     max-height: 350px;
     align-items: flex-end;
@@ -110,7 +111,7 @@
     overflow: hidden;
   }
 
-  .form-group {
+  /* .form-group {
     border: 2px solid #6b9c81;
     border-radius: 10px;
     padding: 0 20px 20px 20px;
@@ -199,5 +200,5 @@
   @media (min-width: 768px) {
     .cool-button {
       padding: 0 40px;
-    }
+    } */ */
   
