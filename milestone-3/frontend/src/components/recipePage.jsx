@@ -17,11 +17,29 @@ export default function RecipePage({recipeName, recipeDesc, imageSrc, ingredient
           <h1 className='header title'>Ingredients</h1>
           <h2 className='header contents'>Serving Size: {servingSize}</h2>
           <IngredientsList ingredients={ingredients} className='contents'/>
+          {/* Ingredients Input Form Here */}
+          <div class="inputForm">
+            <h4 class="inputFormHeader">Add Ingredient</h4>
+            <div class="inputFormInput">
+              <label>Ingredient:</label>
+              <input class="inputBox" placeholder="Measurement+Ingredient"/>
+            </div>
+            <button class="inputButton">Add Ingredient</button>
+          </div>
         </div>
         {/* Instruction Section */}
         <div class='ingredients'>
           <h1 class='header title'>Instructions</h1>
           <InstructionsList instructions={instructions} className='contents' />
+          {/* Instruction Input Form Here */}
+          <div class="inputForm">
+            <h4 class="inputFormHeader">Add Instruction</h4>
+            <div class="inputFormInput">
+              <label>Instruction:</label>
+              <input class="inputBox" placeholder="Instruction"/>
+            </div>
+            <button class="inputButton">Add Instruction</button>
+          </div>
         </div>
     </div>
   );

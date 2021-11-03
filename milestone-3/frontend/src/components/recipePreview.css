@@ -3,8 +3,6 @@
     background-color: #008C45;
     display: flex;
     flex-direction: column;
-    border: 3px solid #F4F5F0;
-    padding: 20px;
     color: #F4F5F0;
 }
 
@@ -13,6 +11,8 @@
     background-color: #CD212A;
     padding: 15px; 
     border: 2px solid #F4F5F0;
+    margin: 30px;
+    margin-bottom: 0px;
 }
 
 .display {
@@ -22,7 +22,7 @@
 
 .textDescription {
     max-width: 600px;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: left;
 }
 
