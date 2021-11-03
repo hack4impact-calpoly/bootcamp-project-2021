@@ -40,7 +40,7 @@ function addIngredient()
 
 function addInstruction()
 {
-    const ol = document.getElementsById("instructionList");
+    const ol = document.getElementById("instructionList");
     const instruction = document.getElementById("addInstruction").value;
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(instruction)); //appends to li block
