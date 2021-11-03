@@ -1,7 +1,36 @@
 import React from 'react';
 import './recipePage.css'
+import IngredientsList from './ingredientsList';
+import InstructionsList from './instructionsList';
+import InputForm from './inputForm';
 
 export default function RecipePage({recipeName, recipeDesc, imageSrc, ingredients, servingSize, instructions}) {
+
+  const [ingredientsList, addIngredient] = React.useState(ingredients);
+  const [ingredient, setIngredient] = React.useState('');
+  const [instructionsList, addInstruction] = React.useState(instructions);
+  const [instruction, setInstruction] = React.useState('');
+
+  function handleIngredientChange(event) {
+    setIngredient(event.target.value);
+  }
+
+  function handleIngredientAdd() {
+    const newIngredientsList = ingredientsList.concat(ingredient);
+    addIngredient(newIngredientsList);
+    setIngredient('');
+  }
+
+  function handleInstructionChange(event) {
+    setInstruction(event.target.value);
+  }
+
+  function handleInstructionAdd() {
+    const newInstructionsList = instructionsList.concat(instruction);
+    addInstruction(newInstructionsList);
+    setInstruction('');
+  }
+
   return (
     <div>
         {/* Introduction Section */}
@@ -16,49 +45,17 @@ export default function RecipePage({recipeName, recipeDesc, imageSrc, ingredient
         <div className='ingredients'>
           <h1 className='header title'>Ingredients</h1>
           <h2 className='header contents'>Serving Size: {servingSize}</h2>
-          <IngredientsList ingredients={ingredients} className='contents'/>
+          <IngredientsList ingredients={ingredientsList} />
           {/* Ingredients Input Form Here */}
-          <div class="inputForm">
-            <h4 class="inputFormHeader">Add Ingredient</h4>
-            <div class="inputFormInput">
-              <label>Ingredient:</label>
-              <input class="inputBox" placeholder="Measurement+Ingredient"/>
-            </div>
-            <button class="inputButton">Add Ingredient</button>
-          </div>
+          <InputForm formType={"Ingredient"} newElement={ingredient} onChange={handleIngredientChange} onAdd={handleIngredientAdd} />
         </div>
         {/* Instruction Section */}
         <div class='ingredients'>
           <h1 class='header title'>Instructions</h1>
-          <InstructionsList instructions={instructions} className='contents' />
+          <InstructionsList instructions={instructionsList} />
           {/* Instruction Input Form Here */}
-          <div class="inputForm">
-            <h4 class="inputFormHeader">Add Instruction</h4>
-            <div class="inputFormInput">
-              <label>Instruction:</label>
-              <input class="inputBox" placeholder="Instruction"/>
-            </div>
-            <button class="inputButton">Add Instruction</button>
-          </div>
+          <InputForm formType={"Instruction"} newElement={instruction} onChange={handleInstructionChange} onAdd={handleInstructionAdd} />
         </div>
     </div>
-  );
-}
-
-function IngredientsList({ ingredients }) {
-  const ingredientList = ingredients.map((ingredient) =>
-    <li key={ingredient}>{ingredient}</li>
-  );
-  return (
-    <ul>{ingredientList}</ul>
-  );
-}
-
-function InstructionsList({ instructions }) {
-  const instructionList = instructions.map((instruction) =>
-    <li key={instruction}>{instruction}</li>
-  );
-  return (
-    <ol>{instructionList}</ol>
   );
 }

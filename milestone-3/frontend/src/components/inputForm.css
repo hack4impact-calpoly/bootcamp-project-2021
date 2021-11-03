@@ -1,0 +1,29 @@
+.inputForm {
+    border: 3px solid #CD212A;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+.inputFormHeader {
+    font-style: bold;
+    margin: 10px;
+    font-size: larger;
+}
+
+.inputFormInput {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputBox {
+    width: 300px;
+    margin-left: 10px;
+}
+
+.inputButton {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #CD212A;
+    color:#F4F5F0;
+}
