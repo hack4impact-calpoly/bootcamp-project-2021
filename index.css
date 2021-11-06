@@ -56,3 +56,16 @@
     flex-wrap: wrap;
 }
 
+.form-group {
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#ingredients {
+    color: black;
+}
+
+#instructions {
+    color: black;
+}
+

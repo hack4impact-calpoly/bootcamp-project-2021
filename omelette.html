@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Carter's Recipes</title>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body class="body-background">
 
@@ -32,30 +33,23 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ul>
-                            <li>
-                                2 large eggs
-                            </li>
-                            <li>
-                                Kosher salt
-                            </li>
-                            <li>
-                                Freshly ground black pepper
-                            </li>
-                            <li>
-                                Pinch red pepper flakes
-                            </li>
-                            <li>
-                                2 tbsp. butter
-                            </li>
-                            <li>
-                                1/4 c. shredded cheddar
-                            </li>
-                            <li>
-                                2 tbsp. freshly chopped chives
-                            </li>
+                        <ul id="ingredients">
+                            <li>2 large eggs</li>
+                            <li>Kosher salt</li>
+                            <li>Freshly ground black pepper</li>
+                            <li>Pinch red pepper flakes</li>
+                            <li>2 tbsp. butter</li>
+                            <li>1/4 c. shredded cheddar</li>
+                            <li>2 tbsp. freshly chopped chives</li>
                         </ul>
                     </p>
+                </div>
+                <div class="form-group">
+                    <label for="newIngredient">Ingredient: </label>
+                    <input id="newIngredient" placeholder="2 cups of spinach" value="">
+                    <br>
+                    <br>
+                    <button onclick="addIngredient()">Add Ingredient</button>
                 </div>
             </div>
 
@@ -65,7 +59,7 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ol>
+                        <ol id="instructions">
                             <li>
                                 In a medium bowl, beat eggs until no whites remain, then season with salt, pepper, and a pinch red pepper flakes.
                             </li>
@@ -77,6 +71,13 @@
                             </li>
                         </ol>
                     </p>
+                </div>
+                <div class="form-group">
+                    <label for="newInstruction">Instruction: </label>
+                    <textarea id="newInstruction" placeholder="Heat until boiling..." value=""></textarea>
+                    <br>
+                    <br>
+                    <button onclick="addInstruction()">Add Instruction</button>
                 </div>
             </div>
         </main>

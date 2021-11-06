@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Carter's Recipes</title>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body class="body-background">
 
@@ -32,7 +33,7 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ul>
+                        <ul id="ingredients">
                             <li>
                                 Chicken
                             </li>
@@ -57,6 +58,13 @@
                         </ul>
                     </p>
                 </div>
+                <div class="form-group">
+                    <label for="newIngredient">Ingredient: </label>
+                    <input id="newIngredient" placeholder="2 cups of spinach" value="">
+                    <br>
+                    <br>
+                    <button onclick="addIngredient()">Add Ingredient</button>
+                </div>
             </div>
 
             <div class="recipe">
@@ -65,7 +73,7 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ol>
+                        <ol id="instructions">
                             <li>
                                 Split chicken breast in half – so 2 breasts makes 4 pieces.
                             </li>
@@ -80,6 +88,13 @@
                             </li>
                         </ol>
                     </p>
+                </div>
+                <div class="form-group">
+                    <label for="newInstruction">Instruction: </label>
+                    <textarea id="newInstruction" placeholder="Heat until boiling..." value=""></textarea>
+                    <br>
+                    <br>
+                    <button onclick="addInstruction()">Add Instruction</button>
                 </div>
             </div>
         </main>

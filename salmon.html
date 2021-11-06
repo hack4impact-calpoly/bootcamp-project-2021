@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Carter's Recipes</title>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body class="body-background">
 
@@ -34,7 +35,7 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ul>
+                        <ul id="ingredients">
                             <li>
                                 2 tablespoons olive oil.
                             </li>
@@ -59,6 +60,13 @@
                         </ul>
                     </p>
                 </div>
+                <div class="form-group">
+                    <label for="newIngredient">Ingredient: </label>
+                    <input id="newIngredient" placeholder="2 cups of spinach" value="">
+                    <br>
+                    <br>
+                    <button onclick="addIngredient()">Add Ingredient</button>
+                </div>
             </div>
 
             <div class="recipe">
@@ -67,7 +75,7 @@
                 </div>
                 <div class="recipe-content">
                     <p class="recipe-description">
-                        <ol>
+                        <ol id="instructions">
                             <li>
                                 Heat oven to 400°F | 200°C. On a large rimmed baking sheet, toss together potatoes with the oil, 1/2 tablespoon of garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper. Spread out in an even layer and roast for 15 minutes until they're just starting to soften and brown.                            
                             </li>
@@ -86,6 +94,13 @@
                             
                         </ol>
                     </p>
+                </div>
+                <div class="form-group">
+                    <label for="newInstruction">Instruction: </label>
+                    <textarea id="newInstruction" placeholder="Heat until boiling..." value=""></textarea>
+                    <br>
+                    <br>
+                    <button onclick="addInstruction()">Add Instruction</button>
                 </div>
             </div>
         </main>
