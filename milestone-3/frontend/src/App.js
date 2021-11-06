@@ -2,6 +2,7 @@ import Navbar from "./navbar";
 import recipes from "./recipeData";
 import RecipeHome from "./components/recipeHome";
 import RecipePage from "./components/recipePage";
+import About from "./components/about";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
             />
           </Route>
         ))}
+        <Route path="/about">
+          <About />
+        </Route>
       </Switch>
     </Router>
   );

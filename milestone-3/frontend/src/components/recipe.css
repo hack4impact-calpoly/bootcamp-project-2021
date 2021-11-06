@@ -18,3 +18,40 @@ body {
   padding: 10px;
   margin: 10px;
 }
+
+.indiv-container {
+  display: flex;
+  padding: 10px;
+}
+
+.indiv-header {
+  width: 100%;
+}
+
+.indiv-img {
+  max-width: 300px;
+  max-height: 300px;
+  padding-top: 50px;
+}
+
+.sub-heading {
+  background-color: moccasin;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.input-container {
+  border: 2px solid salmon;
+  padding: 10px;
+  margin: 10px;
+}
+
+.add-btn {
+  background-color: lightpink;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: cornflowerblue;
+  cursor: pointer;
+}
