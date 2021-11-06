@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Roboto:wght@500&family=Sacramento&family=Satisfy&display=swap");
+
+body {
+  margin: auto;
+  padding: auto;
+  font-family: "Lato", sans-serif;
+  background-color: #f3f1f5;
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+}
+
+/* ----- general ----- */
+
+img {
+  max-width: 14em;
+}
+
+div {
+  margin: 1em;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+#ingredients ul {
+  list-style: circle;
+}
+
+#overview img {
+  max-width: 14em;
+  border-radius: 0px;
+}

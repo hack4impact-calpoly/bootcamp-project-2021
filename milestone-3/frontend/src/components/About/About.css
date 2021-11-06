@@ -1,0 +1,7 @@
+.about {
+  display: flex;
+}
+
+img {
+  max-width: 14em;
+}

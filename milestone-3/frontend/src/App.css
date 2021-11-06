@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+  background-color: #eae1eb;
+  padding: 2em;
+  border-radius: 10em;
+  margin: 2em;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: -5px;
+}
+
+header p {
+  font-size: 18px;
+  font-style: italic;
+}

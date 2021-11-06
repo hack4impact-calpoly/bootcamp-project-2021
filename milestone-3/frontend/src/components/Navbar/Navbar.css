@@ -1,0 +1,27 @@
+/* ----- nav ----- */
+
+nav {
+  padding: 0 4em;
+  justify-content: space-between;
+  display: flex;
+  background-color: #28252e;
+  color: rgb(216, 216, 216);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav h1 {
+  font-size: large;
+}
