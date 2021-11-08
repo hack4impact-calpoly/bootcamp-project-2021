@@ -3,14 +3,14 @@
 
 <head>
     <title>blt</title>
-    <script type="text/javascript" src="blt.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
 </head>
 <div class="box">
     <div class="recipe_page_title">
-        <h1>BLT</h1>
+        <h1 id="name">BLT</h1>
     </div>
 
     <ul class="nav_bar">
@@ -21,12 +21,12 @@
 
     <div class="image_text">
         <div class="welcome">
-            <h3>Speaking of an American classic. The BLT is the staple</h3>
-            <h3>sandwhich of the USA. The L in BLT aactually stands for</h3>
-            <h3>Liberty. I do not like to do anything fancy with this</h3>
-            <h3>recipe. It is perfect the way it is.</h3>
+            <h3 id="description">Speaking of an American classic. The BLT is the staple<br>
+            sandwhich of the USA. The L in BLT aactually stands for<br>
+            Liberty. I do not like to do anything fancy with this<br>
+            recipe. It is perfect the way it is.</h3>
         </div>
-        <img id="mac_page_img" src="blt.jpg" alt="mac" width="400">
+        <img id="rec_img" src="blt.jpg" alt="mac" width="400">
     </div>
 
     <button onclick="jsonify()">Convert Recipe to JSON!!</button>

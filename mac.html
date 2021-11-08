@@ -4,13 +4,13 @@
 <head>
     <title>mac and cheese</title>
     <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="mac.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
 </head>
 <div class="box">
     <div class="recipe_page_title">
-        <h1>Mac and Cheese</h1>
+        <h1 id="name">Mac and Cheese</h1>
     </div>
 
     
@@ -23,14 +23,14 @@
 
     <div class="image_text">
         <div class="welcome">
-            <h3>Here is my take on a American Classic. It is the perfect dish to</h3>
-            <h3>go with any entre.Heck, it can even serve as its own entre.</h3>
-            <h3>There are many different ways to make Mac and Cheese.</h3>
-            <h3>I like the make it the traditional way, which is what</h3>
-            <h3>my grandmother taught me. This recipe has been passed</h3>
-            <h3>down for generations in my family ever since the Civil War.</h3>
+            <h3 id="description">Here is my take on a American Classic. It is the perfect dish to<br>
+            go with any entre.Heck, it can even serve as its own entre.<br>
+            There are many different ways to make Mac and Cheese.<br>
+            I like the make it the traditional way, which is what<br>
+            my grandmother taught me. This recipe has been passed<br>
+            down for generations in my family ever since the Civil War.</h3>
         </div>
-        <img id="mac_page_img" src="mac and cheese.jpg" alt="mac" width="400">
+        <img id="rec_img" src="mac and cheese.jpg" alt="mac" width="400">
     </div>
     <button onclick="jsonify()">Convert Recipe to JSON!!</button>
     <div id="jsondiv"></div>
