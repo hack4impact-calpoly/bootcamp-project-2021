@@ -1,8 +1,8 @@
 import React from 'react';
 import './Overview.css';
-import '../../../images/blackberry-lime.jpg';
-import '../../../images/raspberry-coconut.jpg';
-import '../../../images/strawberry-banana.jpg';
+// import '../../../images/blackberry-lime.jpg';
+// import '../../../images/raspberry-coconut.jpg';
+// import '../../../images/strawberry-banana.jpg';
 
 export default function Overview({image, name, source, description}) {
   return (

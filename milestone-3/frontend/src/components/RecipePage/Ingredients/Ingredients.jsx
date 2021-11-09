@@ -9,7 +9,7 @@ export default function Ingredients({ingredients}) {
       <ul>
         {
           ingredients.map(function(ingredient){
-            return <li>{ingredient}</li>;
+            return <li key={ingredient}>{ingredient}</li>;
           })
         }
       </ul>

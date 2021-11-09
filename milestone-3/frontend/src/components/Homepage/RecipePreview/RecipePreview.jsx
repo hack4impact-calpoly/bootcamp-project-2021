@@ -1,9 +1,6 @@
 import React from 'react';
 import './RecipePreview.css';
-import { Link, Route, useParams} from 'react-router-dom';
-import RecipePage from '../../RecipePage/RecipePage';
-import recipeData from '../../../recipeData';
-import '../../../images/blackberry-lime.jpg';
+import { Link } from 'react-router-dom';
 
 export default function RecipePreview({name, desc, link, image}) {
   return (

@@ -4,7 +4,7 @@ import './About.css';
 export default function About() {
   return (
       <div className="about">
-        <img src="milestone-3/frontend/public/images/profile.png" alt="profile picture"/>
+        <img src="milestone-3/frontend/public/images/profile.png" alt="profile"/>
         <div>
             <h1>Hey, I'm Adelle!</h1>
             <p>
