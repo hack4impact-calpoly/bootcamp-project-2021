@@ -10,13 +10,16 @@ export default function Home() {
         <h1>Welcome to my recipe page!</h1>
         <p>Explore my site to find refreshing smoothie recipes perfect for any occasion 🍹</p>
       </header>
-      {recipes.map(recipe => 
+      <div className="recipes">
+        {recipes.map(recipe => 
           <RecipePreview 
-              name={recipe.recipeName}
-              desc={recipe.recipeDescription}
-              image={recipe.recipeImage}
+            name={recipe.recipeName}
+            desc={recipe.recipeDescription}
+            link={recipe.recipeLink}
+            image={recipe.recipeImage}
           /> 
-      )}
+        )}
+      </div>
     </div>
   );
 }
