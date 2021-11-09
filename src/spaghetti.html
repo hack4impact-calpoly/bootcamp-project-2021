@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="recipe.js"></script>
+    <title>Sebastien's Snacks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="name">Sebastien's Snacks</h1>
+      <nav>
+        <a id="home" href="index.html"><h3>Home</h3></a>
+        <a id="about" href="aboutme.html"><h3>About Me</h3></a>
+      </nav>
+    </header>
+    <br>
+
+    <div class="aboutMeBox">
+      <div class="aboutMeDesc">
+        <h1 id="spaghettiTitle">Spaghetti Bolognese:</h1>
+        <button onclick="convertToJSON('spaghettiTitle', 'spaghettiDesc', 'spaghettiPic', 'spaghettiIngredientList', 'spaghettiInstructionList')">Convert Page to JSON</button>
+        <pre id="JSONPre"><code id="JSONCode"></code></pre>
+        <h4 id="spaghettiDesc">Spaghetti bolognese is an Italian pasta dish from Bologna. It consists of spaghetti (long strings of pasta) with an Italian ragù (meat sauce) made with minced beef, pancetta and tomatoes, served with Parmesan cheese. Spaghetti bolognese is one of the most popular pasta dishes eaten outside of Italy.</h4>
+        <h2 id="ingredients">Ingredients</h2>
+        <div class="spaghettiIngredients">
+            <ul id="spaghettiIngredientList">
+                <li>1 tbsp olive oil</li>
+                <li>4 rashers smoked streaky bacon, finely chopped</li>
+                <li>2 medium onions, finely chopped</li>
+                <li>2 carrots, trimmed and finely chopped</li>
+                <li>2 celery sticks, finely chopped</li>
+                <li>2 plump garlic cloves, peeled and left whole</li>
+                <li>2 garlic cloves finely chopped</li>
+                <li>2-3 sprigs rosemary leaves picked and finely chopped</li>
+                <li>500g beef mince</li>
+                <li>75g parmesan greated, plus extra to serve</li>
+                <li>400g spaghetti</li>
+                <li><span style="font-weight:bold">Optional:</span> lightly toasted bread (or garlic bread)</li>
+            </ul>
+            <h4>Add an Ingredient:</h4>
+            <input id="newSpaghettiIngredient" placeholder="Ingredient" value=""/>
+            <button onclick="addIngredient('spaghettiIngredientList', 'newSpaghettiIngredient')">Add ingredient to list</button>
+        </div>
+        <h2 id="method">Instruction</h2>
+        <div class="spaghettiMethod">
+            <ol id="spaghettiInstructionList">
+                <li>STEP 1: Put a large saucepan on a medium heat and add 1 tbsp olive oil.</li>
+                <li>STEP 2: Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.</li>
+                <li>STEP 3: Reduce the heat and add the 2 onions, 2 carrots, 2 celery sticks, 2 garlic cloves and the leaves from 2-3 sprigs rosemary, all finely chopped, then fry for 10 mins. Stir the veg often until it softens.                </li>
+                <li>STEP 4: Increase the heat to medium-high, add 500g beef mince and cook stirring for 3-4 mins until the meat is browned all over.</li>
+                <li>STEP 5: Add 2 tins plum tomatoes, the finely chopped leaves from ¾ small pack basil, 1 tsp dried oregano, 2 bay leaves, 2 tbsp tomato purée, 1 beef stock cube, 1 deseeded and finely chopped red chilli (if using), 125ml red wine and 6 halved cherry tomatoes. Stir with a wooden spoon, breaking up the plum tomatoes.</li>
+                <li>STEP 6: Bring to the boil, reduce to a gentle simmer and cover with a lid. Cook for 1 hr 15 mins stirring occasionally, until you have a rich, thick sauce.</li>
+                <li>STEP 7: Add the 75g grated parmesan, check the seasoning and stir.</li>
+                <li>STEP 8: When the bolognese is nearly finished, cook 400g spaghetti following the pack instructions.</li>
+                <li>STEP 9: Drain the spaghetti and either stir into the bolognese sauce, or serve the sauce on top. Serve with more grated parmesan, the remaining basil leaves and crusty bread, if you like.</li>
+            </ol>
+            <h4>Add an Instruction:</h4>
+            <input id="newSpaghettiInstruction" placeholder="Instruction" value=""/>
+            <button onclick="addInstruction('spaghettiInstructionList', 'newSpaghettiInstruction')">Add instruction to list</button>
+        </div>
+      </div>
+      <img id="spaghettiPic" src="spaghetti.jpg" alt="Spaghetti Picture">
+    </div>
+  </body>
+</html>

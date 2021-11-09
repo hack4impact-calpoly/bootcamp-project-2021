@@ -1,0 +1,143 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+header{
+    background-color:rgb(113, 36, 151);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#name{
+    color: rgb(236, 236, 236);
+    font-weight: bolder;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none; /*Removes text underline*/
+    padding: 5px 10px 2px 10px;
+}
+
+#home_home, #about_about{
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+    text-align: right;
+    padding: 5px 20px 5px 20px; /*top, left, bottom, right*/
+    text-decoration: none; /*Removes text underline*/
+    /*color: gray;*/
+    border-color: white;
+    border-bottom-style: solid;
+}
+#home, #about{
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+    text-align: right;
+    padding: 5px 20px 5px 20px; /*top, left, bottom, right*/
+    text-decoration: none; /*Removes text underline*/
+}
+
+#home:hover, #home:active, #about:hover, #about:active{
+    /*color: gray;*/
+    border-color: gray; /*white*/
+    border-style: solid;
+    background-color: gray;
+}
+
+/*------------Home - Recipe Section Styling------------------*/
+.recipes{
+    border: 1px solid black;
+    background-color: bisque;
+    margin-top: 2px;
+    padding: 15px;
+    padding-top: 5px;
+}
+#snacks{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.carbonara, .spaghetti, .pestoPasta{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#carbonaraImg, #spaghettiImg, #pestoPastaImg{
+    margin: 7px;
+}
+
+#carbonara, #spaghetti, #pestoPasta{
+    display: flex;
+    background-color:rgb(113, 36, 151);
+    color: rgb(236, 236, 236);
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none; /*Removes text underline*/
+    align-items: center;
+}
+#carbonara:hover, #spaghetti:hover, #pestoPasta:hover, #carbonara:active, #spaghetti:active, #pestoPasta:active{
+    color: gray;
+    border-color: white;
+    border-bottom-style: solid;
+}
+
+#carbonaraDesc, #spaghettiDesc, #pestoPastaDec{
+    padding-left: 10px;
+}
+
+/*------------About Me Page Styling------------------*/
+#aboutMePicture, #carbonaraPic, #spaghettiPic, #pestoPic {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    height: 100%;
+    width: 60%;
+    border: 2px solid black;
+}
+
+#aboutMe{
+    align-self: top;
+    margin: 0px;
+}
+
+.aboutMeBox{
+    border: 1px solid black;
+    background-color: bisque;
+    margin: 15px;
+    margin-top: 10px;
+    padding: 5px;
+
+    display:flex;
+    flex-direction: row;
+}
+
+.aboutMeDesc{
+    display:flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+
+/*------------Recipe Page Styling------------------*/
+#carbonaraIngredients, #spaghettiIngredients, #pestoPastaIngredients, #JSONButton{
+    font-size: 15px;
+}
+
+
+#carbonaraMethod, #spaghettiMethod, #pestoPastaMethod{
+    font-size: 15px;
+}
+
+#carbonaraTitle, #spaghettiTitle, #pestoPastaTitle{
+    align-self: top;
+    margin: 0px 0px 4px 0px;
+}
