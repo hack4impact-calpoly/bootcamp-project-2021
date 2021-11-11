@@ -1,21 +1,23 @@
 <html lang="en-US">
   <head>
     <title> Megan's Liquid Meals</title>
-    <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="meals.js"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <header class="header-background">
         <h1 class="main-text"><a href="index.html" style="text-decoration:none">Megan's (Liquid) Meals</a></h1>
     </header>
     <main>
+      <pre id="pre-formatter"><code id="json"></code></pre>
       <section>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>Avocado Almond Butter Smoothie</h2>
-            <p>A healthy smoothie that tastes like a milkshake and is high in nutrition!</p>
+            <button class="cool-button" role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+            <h2 id="recipeName">Avocado Almond Butter Smoothie</h2>
+            <p id="recipeDescription">A healthy smoothie that tastes like a milkshake and is high in nutrition!</p>
           </div>
-          <img class="flex-image" src="imgs/avocado-smoothie.jpg">
+          <img id="recipeImage" class="flex-image" src="imgs/avocado-smoothie.jpg">
       </div>
         </section>
       <section>
@@ -24,7 +26,7 @@
           <section>
               <h3>Ingredients</h3>
               <p>Serves 1 Person</p>
-              <ul>
+              <ul id= "igList">
                   <li>1 avocado</li>
                   <li>2 cups of your choice of milk</li>
                   <li>2 tbsp almond butter</li>
@@ -46,7 +48,7 @@
           <section>
               <h3>Preparation</h3>
               <p>Prep Time: < 5 minutes</p>
-              <ol>
+              <ol id ='prep'>
                   <li>Turn on the blender.</li>
                   <li>Throw everything into the blender.</li>
                   <li>Blend!</li>

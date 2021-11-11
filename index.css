@@ -89,7 +89,7 @@
   }
   
   .flex-image {
-    border: 2px solid black;
+    border: 2px solid var(--cg-tan);
     max-width: 350px;
     max-height: 350px;
     align-items: flex-end;
@@ -133,4 +133,46 @@
     font-size: 14px;
     line-height: 24px;
     padding: 4px 12px;
+  }
+
+  .cool-button {
+    align-items: center;
+    background-color: var(--cg-tan);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--cg-whitesmoke);
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+  
+  }
+  
+  .cool-button:after {
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .cool-button:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .cool-button:active {
+    background-color: var(--cg-light-blue);
+    outline: 0;
   }

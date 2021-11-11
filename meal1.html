@@ -9,13 +9,15 @@
       <h1 class="main-text"><a href="index.html" style="text-decoration:none">Megan's (Liquid) Meals</a></h1>
     </header>
     <main>
+      <pre id="pre-formatter"><code id="json"></code></pre>
       <section>
         <div class="flex-container">
           <div class="flex-header">
-            <h2>Banana Peanut Butter Smoothie</h2>
-            <p>A quick, easy smoothie that is high in fiber, potassium, and vitamins B6 and C!</p>
+            <button class="cool-button" role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+            <h2 id="recipeName">Banana Peanut Butter Smoothie</h2>
+            <p id="recipeDescription">A quick, easy smoothie that is high in fiber, potassium, and vitamins B6 and C!</p>
           </div>
-          <img class="flex-image" src="imgs/banana-smoothie.jpg">
+          <img id="recipeImage" class="flex-image" src="imgs/banana-smoothie.jpg">
       </div>
         </section>
       <section>
