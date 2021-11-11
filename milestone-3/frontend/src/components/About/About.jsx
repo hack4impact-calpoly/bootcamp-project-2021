@@ -1,10 +1,11 @@
 import React from 'react';
 import './About.css';
+import profile from '../../images/profile.png';
 
 export default function About() {
   return (
       <div className="about">
-        <img src="milestone-3/frontend/public/images/profile.png" alt="profile"/>
+        <img src={profile} alt="profile"/>
         <div>
             <h1>Hey, I'm Adelle!</h1>
             <p>

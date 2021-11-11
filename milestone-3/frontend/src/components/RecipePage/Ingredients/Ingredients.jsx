@@ -2,6 +2,8 @@ import React from 'react';
 import './Ingredients.css';
 
 export default function Ingredients({ingredients}) {
+  const [newIngredient, setNewIngredient] = React.useState('');//add this
+
   return (
     <div>
       <hr/>
@@ -13,6 +15,16 @@ export default function Ingredients({ingredients}) {
           })
         }
       </ul>
+      <p><b>Add step</b></p>
+      <input 
+        id="newIngredient" 
+        className="form-element" 
+        placeholder="2 cups of spinach" 
+        value={newIngredient} // add newIngredient as the input's value
+        onChange={(e) => { // this event handler updates the value of newIngredient
+          setNewIngredient(e.target.value);
+        }}
+      />
     </div>
   );
 }
