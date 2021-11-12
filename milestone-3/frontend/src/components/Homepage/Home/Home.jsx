@@ -12,7 +12,7 @@ export default function Home() {
       </header>
       <div className="recipes">
         {recipes.map(recipe => 
-          <RecipePreview 
+          <RecipePreview key={recipe.recipeName}
             name={recipe.recipeName}
             desc={recipe.recipeDescription}
             link={recipe.recipeLink}
