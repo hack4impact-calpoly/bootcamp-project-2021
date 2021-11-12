@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="test.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="header-background">
+        <nav class = "navibar">
+            <a href= "<!DOCTYPE html>.html">HOME</a>
+            <a href = "aboutme.html"> ABOUT ME</a>
+        </nav>
+      </header>
+      <h1 id = "recipeName">French Toast</h1>
+      <img id = "recipeImage" class = "search-item" src = "https://mccormick.widen.net/content/z8hiapwdst/original/quick_and_easy_french_toast_new_800x800.webp">
+      <code id="json"></code>
+      <button onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+      <h2>Ingredients</h2>
+      <p>
+          <ul id = "ingredientList">
+              <li>Two slices of white bread</li>
+              <li>Two Eggs</li>
+              <li>Nutmeg</li>
+              <li>Cinnamon</li>
+              <li>Vanilla Extract</li>
+          </ul>
+          <div class="form-group"> 
+            <h2> Missing an Ingredient? Add here! </h2>
+              <input id="newIngredient" class="form-element" value="" /> <br /> <br />
+            <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+          </div>
+      </p>
+      <h2>Directions</h2>
+      <p>
+          <ol id = "instructionList">
+              <li>Crack eggs into medium sized bowl</li>
+              <li>add 3 teaspoons of Cinnamon</li>
+              <li>add a tablespoon of Nutmeg</li>
+              <li>add a teaspoon of Vanilla Extract</li>
+              <li>Cook on each side for 1-1 1/2 minutes </li>
+              <li>Serve with syrup and/or butter</li>
+            </ol>
+            <div class="form-group"> 
+              <h2> Missing an Instruction? Add here! </h2>
+                <input id="newInstruction" class="form-element" value="" /> <br /> <br />
+              <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+            </div>
+      </p>
+	<script src="index.js"></script>
+  </body>
+</html>

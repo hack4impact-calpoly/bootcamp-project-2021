@@ -1,0 +1,32 @@
+body{
+    background-color: blueviolet;
+}
+
+h1,h2,h4{
+  color: white;
+}
+code{
+    color:white;
+}
+button{
+    color: purple;
+}
+a{
+    color: white;
+}
+
+.pre{
+    color:white;
+}
+img{
+    width: 500px; 
+    height: 500px;
+}
+
+p{
+    color: white;
+}
+
+li{
+    color: white;
+}
