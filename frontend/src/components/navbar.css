@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--deep-space-sparkle);
+}
+
+#titleContainer {
+    text-decoration: none;
+}
+
+.Title {
+    color: var(--timberwolf);
+}
+
+.NavItem {
+    margin: 0px 10px;
+    color: var(--timberwolf);
+}

@@ -1,0 +1,23 @@
+:root {
+  --light-pink: #edafb8ff;
+  --champagne-pink: #f7e1d7ff;
+  --timberwolf: #dedbd2ff;
+  --cambridge-blue: #b0c4b1ff;
+  --deep-space-sparkle: #4a5759ff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--timberwolf);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+  padding: 0px 40px 10px;
+}

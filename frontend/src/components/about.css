@@ -1,0 +1,10 @@
+.ThumbsUp {
+    display: inline-block;
+    transition: 0.5s ease;
+    font-size: 400px;
+}
+
+.ThumbsUp:hover {
+    font-size: 600px;
+    transform: rotate(540deg);
+}
