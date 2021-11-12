@@ -1,0 +1,35 @@
+.recipeLink {
+  font-size: larger;
+  color: darkolivegreen;
+  margin-left: 5px;
+}
+
+.foodHeader {
+  display: flex;
+  background-color: beige;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.side2 {
+  flex: 12%;
+  background-color: white; /* Grey background color */
+  padding: 0px;
+}
+
+.main2 {
+  flex: 88%;
+  background-color: beige; /* White background color */
+  padding-left: 20px;
+  padding-right: 44%;
+}
+
+.image_size2 {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}

@@ -1,0 +1,22 @@
+.MyCookbook {
+  color: darkolivegreen;
+  margin-left: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+.linkDiv {
+  align-self: center;
+  margin-right: 20px;
+  font-size: large;
+}
+
+.homeLink {
+  margin-left: 10px;
+}

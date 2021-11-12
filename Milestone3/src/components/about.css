@@ -1,0 +1,33 @@
+h1 {
+  margin-left: 5px;
+  color: darkolivegreen;
+  background-color: beige;
+  margin-right: 55%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-around;
+}
+
+.side {
+  padding-right: 32%;
+}
+
+.main {
+  background-color: lightcyan;
+  padding-left: 5px;
+  padding-right: 10%;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.image_size {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
