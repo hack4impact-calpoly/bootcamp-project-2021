@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(246, 244, 210);
+    margin: 0;
+    padding: 0;
+    font-family: myFont;
+}
+
+@font-face {
+    font-family: myFont;
+    src: 
+        url('./argestadisplay-regular-webfont copy.ttf');
+}
+
+section.text {
+    padding: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 20px;
+}
+
+header a {
+    padding: 10px;
+}
+
+h1.home {
+    margin-left: 40px;
+}
+
+#important-text {
+    font-size: 50px;
+    margin-left: 40px;
+}
+
+#important-text2 {
+    font-size: 50px;
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.recipes {
+    font-size: 15px;
+    padding: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
