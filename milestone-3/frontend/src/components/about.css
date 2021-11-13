@@ -1,0 +1,32 @@
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    color: silver;
+    font-size: 35px;
+    background-color: green;
+    text-align: center;
+    width: 100%;
+    border: 10px solid maroon;
+    border-top: 20px solid maroon;
+    border-bottom: 20px solid maroon;
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.welcome {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 30px;
+    font-size: 20px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.image_text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

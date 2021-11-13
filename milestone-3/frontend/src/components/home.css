@@ -1,0 +1,54 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
+}
+
+body {
+    background-color: silver;
+    margin: 0px;
+    padding: 0px;
+    width: 94.4%;
+}
+
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    color: silver;
+    font-size: 35px;
+    background-color: green;
+    text-align: center;
+    width: 100%;
+    border: 10px solid maroon;
+    border-top: 20px solid maroon;
+    border-bottom: 20px solid maroon;
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.welcome {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 30px;
+    font-size: 20px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.middle_recipe {
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+.recipeBox {
+    width: 106%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    text-align: center;
+    justify-content: left;
+    background-color: maroon;
+}
