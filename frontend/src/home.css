@@ -1,0 +1,43 @@
+.banner {
+    margin-top: 5%;
+    text-align: center;
+}
+
+hr {
+    border: 3px dashed rgb(49, 221, 150);
+    width : 80%;
+    text-align: center;
+    margin: 5%;
+}
+
+a:link {
+    color:rgb(45, 199, 135);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(45, 199, 135);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+    color:rgb(45, 199, 135);
+    font-size: 30px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,0 +1,7 @@
+html, body {
+  margin: 0;
+  background-color: rgb(249, 254, 255);
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+ }

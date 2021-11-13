@@ -1,0 +1,32 @@
+.item {
+    margin: 5%;
+    margin-top: 1%;
+    width: 33%;
+    text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+}
+
+.menu-image {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 1%;  
+    border: 5px solid rgb(49, 221, 150);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#recipe-name {
+    color:rgb(45, 199, 135);
+    font-size: 30px;
+}
