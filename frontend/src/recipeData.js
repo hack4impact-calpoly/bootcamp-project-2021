@@ -1,48 +1,55 @@
-const recipes = [
-    {
-        "dishName": "Spaghetti all'Amatriciana",
-        "shortDescription": "Spaghetti all'Amatriciana is a traditional Italian dish from Amatrice, also in the Lazio region of Italy. The dish consists of a tomato sauce with guanciale (cured pork cheek, bacon can substitute), pecorino cheese, and, in some variations, onion or garlic.",
-        "description": "Spaghetti all'Amatriciana is a classic Italian dsh from the Lazio region, and with all its history comes a lot of disagreement about what makes up a true Amatriciana sauce. People argue whether it is made with onions, garlic, or neither, whether you use bacon or guanciale, and whether you eat it with spaghetti or bucatini. In this recipe, we will desribe how to make Spaghetti all'Amatriciana with the classic guanciale (cured pork cheek) along with a fresh chili pepper to add a depth of flavor!",
-        "photo": "https://www.petitchef.it/imgupl/recipe/bucatini-all-amatriciana-ricetta-rivisitata--452020p699744.jpg",
-        "ingredients": [
-          "0.7 lb Spaghetti",
-          "0.9 lb Peeled tomatoes",
-          "5 oz Guanciale",
-          "3/4 cup Pecorino Romano cheese (for grating)",
-          "Salt, to taste",
-          "Extra virgin olive oil, to taste",
-          "1 Fresh chili pepper",
-          "1/4 cup White wine",
-        ],
-        "instructions": [
-          "Boil water to cook the spaghetti in, then add salt + pasta when it comes to a boil. Cook the spaghetti al dente.",
-          "Take the guanciale and remove the pork rind (which can be saved for use in other recipes).",
-          "Cut the guaciale into 1cm thick slices and then into small strips about 1/2 cm wide",
-          "Heat a drizzle of oil in a pan and add the whole chili pepper.",
-          "Add the strips of guanciale and brown over low heat for 7-8 minutes, until the fat has melted and the meat is crunchy, stir often to prevent burning.",
-          "Once the fat is melted, pour in the white wine, turn up the heat and let the liquid evaporate. Transfer the guanciale to a plate.",
-          "Pour the peeled tomatoes into the same pan, breaking them up with your hands as you do so.",
-          "Continue cooking the sauce, now with the tomatoes, for about 10 minutes.",
-          "Add salt to taste and remove the whole chili pepper from the sauce",
-          "Add the guanciale strips to the pan and stir to mix.",
-          "Once the spaghetti is cooked, drain it and add it directly to the sauce in the pan.",
-          "Sauté the pasta very quickly to mix it with the sauce, If you like your pasta al dente you can turn off the heat, otherwise pour a little bit of the pasta water in to continue cooking.",
-          "To finish, top your pasta with grated Pecorino Romano cheese.",
-          "Enjoy your tasty Spaghetti all'Amatriciana!"
-        ]
-      },
+const recipes = 
+[
   {
-    "dishName": "Cacio e Pepe",
-    "shortDescription": "Cacio e Pepe is a traditional Italian dish from the Lazio region of Italy, where Rome is located. 'Cacio e Pepe' translates into cheese and pepper, which tells you all you need to know about the simple but tasty classic.",
-    "description": "Spaghetti Cacio e Pepe is a classic Italian pasta dish and one of my personal favorites. It's easy to understand why when you mix two of the best things in the world, cheese and pepper. The secret to this recipe is to use pecorino cheese, which won't lump up when making the sauce, and to use crushed whole peppercorns, for a strong peppery aroma! On top of this, we will use a slow whisking method when adding the cream so that we absorb all the flavor of the powerful pecorino cheese.",
-    "photo": "https://www.servirebencaldo.com/wp-content/uploads/2020/02/spaghetti-cacio-e-pepe2.jpg",
-    "ingredients": [
+    dishName: "Spaghetti all'Amatriciana",
+    shortDescription:
+      "Spaghetti all'Amatriciana is a traditional Italian dish from Amatrice, also in the Lazio region of Italy. The dish consists of a tomato sauce with guanciale (cured pork cheek, bacon can substitute), pecorino cheese, and, in some variations, onion or garlic.",
+    description:
+      "Spaghetti all'Amatriciana is a classic Italian dsh from the Lazio region, and with all its history comes a lot of disagreement about what makes up a true Amatriciana sauce. People argue whether it is made with onions, garlic, or neither, whether you use bacon or guanciale, and whether you eat it with spaghetti or bucatini. In this recipe, we will desribe how to make Spaghetti all'Amatriciana with the classic guanciale (cured pork cheek) along with a fresh chili pepper to add a depth of flavor!",
+    photo:
+      "https://www.petitchef.it/imgupl/recipe/bucatini-all-amatriciana-ricetta-rivisitata--452020p699744.jpg",
+    ingredients: [
+      "0.7 lb Spaghetti",
+      "0.9 lb Peeled tomatoes",
+      "5 oz Guanciale",
+      "3/4 cup Pecorino Romano cheese (for grating)",
+      "Salt, to taste",
+      "Extra virgin olive oil, to taste",
+      "1 Fresh chili pepper",
+      "1/4 cup White wine",
+    ],
+    instructions: [
+      "Boil water to cook the spaghetti in, then add salt + pasta when it comes to a boil. Cook the spaghetti al dente.",
+      "Take the guanciale and remove the pork rind (which can be saved for use in other recipes).",
+      "Cut the guaciale into 1cm thick slices and then into small strips about 1/2 cm wide",
+      "Heat a drizzle of oil in a pan and add the whole chili pepper.",
+      "Add the strips of guanciale and brown over low heat for 7-8 minutes, until the fat has melted and the meat is crunchy, stir often to prevent burning.",
+      "Once the fat is melted, pour in the white wine, turn up the heat and let the liquid evaporate. Transfer the guanciale to a plate.",
+      "Pour the peeled tomatoes into the same pan, breaking them up with your hands as you do so.",
+      "Continue cooking the sauce, now with the tomatoes, for about 10 minutes.",
+      "Add salt to taste and remove the whole chili pepper from the sauce",
+      "Add the guanciale strips to the pan and stir to mix.",
+      "Once the spaghetti is cooked, drain it and add it directly to the sauce in the pan.",
+      "Sauté the pasta very quickly to mix it with the sauce, If you like your pasta al dente you can turn off the heat, otherwise pour a little bit of the pasta water in to continue cooking.",
+      "To finish, top your pasta with grated Pecorino Romano cheese.",
+      "Enjoy your tasty Spaghetti all'Amatriciana!",
+    ],
+  },
+  {
+    dishName: "Cacio e Pepe",
+    shortDescription:
+      "Cacio e Pepe is a traditional Italian dish from the Lazio region of Italy, where Rome is located. 'Cacio e Pepe' translates into cheese and pepper, which tells you all you need to know about the simple but tasty classic.",
+    description:
+      "Spaghetti Cacio e Pepe is a classic Italian pasta dish and one of my personal favorites. It's easy to understand why when you mix two of the best things in the world, cheese and pepper. The secret to this recipe is to use pecorino cheese, which won't lump up when making the sauce, and to use crushed whole peppercorns, for a strong peppery aroma! On top of this, we will use a slow whisking method when adding the cream so that we absorb all the flavor of the powerful pecorino cheese.",
+    photo:
+      "https://www.servirebencaldo.com/wp-content/uploads/2020/02/spaghetti-cacio-e-pepe2.jpg",
+    ingredients: [
       "0.7 lb spaghetti",
       "Black pepper corns, to taste (make sure you have a good amount)",
       "7 oz Pecorino Romano cheese (to be grated)",
-      "Salt, to taste"
+      "Salt, to taste",
     ],
-    "instructions": [
+    instructions: [
       "Grate the pecorino cheese and move to the side for later.",
       "Boil water in a pan, half as much water as you would usually use to cook pasta because we want the starch for later. Once it reaches a boil you can add salt to taste. Cook the spaghetti very al dente and keep the water afterwards.",
       "In the meantime, place the peppercorns on a cutting board and crush them with a pestle or a grinder (or any other tool you want).",
@@ -58,15 +65,18 @@ const recipes = [
       "Turn the heat off in the pan and pour in the Pecorino cream, stirring continuously with the tongs. Also add the remaining grated pecorino that you put aside from earlier.",
       "Stir and sauté the pasta again, then move it to a plate.",
       "Top with grated Pecorino cheese and pepper.",
-      "Enjoy your creamy and peppery Cacio e Pepe!"
-    ]
+      "Enjoy your creamy and peppery Cacio e Pepe!",
+    ],
   },
   {
-    "dishName": "Supplì",
-    "shortDescription": "Supplì are Italian street food typical of Rome. A traditional supplì is a rice ball with tomato sauce and mozzarella cheese, which is soaked in egg, covered in bread crumbs, and deep fried until it gets a nice golden crust. While the traditional recipe will be showcased here, when walking around the streets of Rome you can often find different variations of supplì, such as a Cacio e Pepe supplì!",
-    "description": "Supplì are Italian street food typical of Roman cuisine. Traditionally supplì were made with a ball of rice, tomato sauce, and were often filled with chicken giblets, mincemeat or Provature, a cheese from Lazio, Italy. Today most supplì have a ball of mozzarella inside and are known for the string of mozzarella that comes when breaking the supplì apart. There are also many variations of supplì that can be found around the streets of Rome, many of which are based off of popular Roman/Italian pasta dishes. For example, one can find Cacio e Pepe, carbonara, and amatriciana supplì! In this recipe, we will desribe how to make the classic tomato and mozzarella supplì!",
-    "photo": "https://www.eatingeurope.com/wp-content/uploads/2018/08/trastevere-suppli-rome-food.jpg",
-    "ingredients": [
+    dishName: "Supplì",
+    shortDescription:
+      "Supplì are Italian street food typical of Rome. A traditional supplì is a rice ball with tomato sauce and mozzarella cheese, which is soaked in egg, covered in bread crumbs, and deep fried until it gets a nice golden crust. While the traditional recipe will be showcased here, when walking around the streets of Rome you can often find different variations of supplì, such as a Cacio e Pepe supplì!",
+    description:
+      "Supplì are Italian street food typical of Roman cuisine. Traditionally supplì were made with a ball of rice, tomato sauce, and were often filled with chicken giblets, mincemeat or Provature, a cheese from Lazio, Italy. Today most supplì have a ball of mozzarella inside and are known for the string of mozzarella that comes when breaking the supplì apart. There are also many variations of supplì that can be found around the streets of Rome, many of which are based off of popular Roman/Italian pasta dishes. For example, one can find Cacio e Pepe, carbonara, and amatriciana supplì! In this recipe, we will desribe how to make the classic tomato and mozzarella supplì!",
+    photo:
+      "https://www.eatingeurope.com/wp-content/uploads/2018/08/trastevere-suppli-rome-food.jpg",
+    ingredients: [
       "1 3/4 cup Carnaroli rice",
       "1 Yellow onion",
       "7 oz Tomato Puree",
@@ -78,9 +88,9 @@ const recipes = [
       "Black pepper, to taste",
       "3 eggs",
       "2 1/2 cups Breadcrumbs",
-      "Corn oil, for frying"
+      "Corn oil, for frying",
     ],
-    "instructions": [
+    instructions: [
       "Set your broth to heat up, bring it to around a boil.",
       "While you wait, Peel the onion and chop it roughly.",
       "Drizzle oil into a frying pan, add the onion and brown for about 3 minutes.",
@@ -101,9 +111,9 @@ const recipes = [
       "Repeat this process for the remaing supplì.",
       "Heat up plenty of corn oil to a temperature of arounf 329-338F, or 165-170C.",
       "Submerge two supplì at a time until they are golden brown, then take them out and drain the remaining oil from them.",
-      "Enjoy your hot and melty supplì!"
-    ]
+      "Enjoy your hot and melty supplì!",
+    ],
   },
-]
+];
 
 export default recipes;
