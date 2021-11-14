@@ -1,0 +1,59 @@
+.head{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(243, 243, 243);/*textcolor*/
+  background-color: rgb(10, 191, 223);
+  padding: 0 20px;
+}
+
+header a{
+  color:wheat;
+  margin: 0 12px;
+}
+#item{
+  color: rgb(243, 243, 243);
+ /*background-color: rgb(44, 255, 192);*//*textcolor*/
+  font-style:italic;
+}
+#title{
+  color: rgb(243, 243, 243);
+  background-color: rgb(10, 191, 223);/*textcolor*/
+}
+body{
+  background-color: rgb(153, 233, 129);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.description{
+  display: flex;
+  padding: 10 100 10 10;
+  
+}
+
+a:hover{
+  color:rgb(214, 74, 74);
+}
+#rice {
+  padding-right: 10px;
+  width: 200px;
+  height: 200px;
+
+}
+
+#qualifications{
+  color: rgb(243, 243, 243);
+  background-color: rgb(44, 255, 192);/*textcolor*/
+  font-style:italic;
+}
+
+#quallist{
+  color: rgb(0, 0, 0);
+}
+
+.meal{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}

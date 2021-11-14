@@ -1,0 +1,36 @@
+.head{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(243, 243, 243);/*textcolor*/
+    background-color: rgb(10, 191, 223);
+    padding: 0 20px;
+}
+
+header a{
+    color:wheat;
+    margin: 0 12px;
+}
+
+a:hover{
+    color:rgb(214, 74, 74);
+}
+
+
+body{
+    background-color: rgb(153, 233, 129);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.description{
+    text-align: justify;
+}
+
+
+#rice {
+    padding-right: 100px;
+}
+#ingredients, #instructions{
+    color: rgb(243, 243, 243);/*textcolor*/
+    background-color: rgb(10, 191, 223);
+}
