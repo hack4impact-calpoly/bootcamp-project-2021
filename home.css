@@ -1,0 +1,4 @@
+.flexx{
+    display: flex;
+    flex-direction: row;
+}
