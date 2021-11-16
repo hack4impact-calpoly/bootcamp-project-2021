@@ -1,0 +1,84 @@
+/*applly CSS to specific tags or classes ie background color, margin, flex*/
+/*site wide color scheme*/
+/*apply margins and padding*/
+/*navbar using flexbox*/
+
+.Recipes{
+   border: 3px solid rgb(0, 255, 149);
+   background-color: black;
+}
+
+#recipedesc{
+   color: white;
+   text-indent: 40px;
+   font-size: 18px;
+}
+
+.MyHeader{
+   background-color: rgb(0, 255, 149);
+   border: 10px solid rgb(0, 255, 149);
+}
+
+body{
+   margin: 0;
+}
+
+main{
+   margin: 10px;
+}
+
+.Nav{
+   text-align: right;
+}
+
+.Nav a{
+   margin-left: 20px;
+}
+
+.LinkedRecipes{
+   border: 3px solid  rgb(0, 255, 149);
+   background-color: black;
+
+   font-size: 40px;
+}
+
+a:link{
+   color:rgb(0, 255, 149);
+   background-color: transparent;
+   text-decoration: underline;
+}
+
+#tab{
+   margin-left: 30px;
+}
+
+.flexContainer{
+   display: flex;
+}
+
+#foodDesc{
+   color: black;
+   font-size: 18px;
+}
+
+#foodImage{
+   margin-left: 30px;
+}
+
+.Ingredients{
+   border: 3px solid  rgb(0, 255, 149);
+   background-color: black;
+
+   font-size: 14px;
+   color: white
+}
+
+#ingredientsList{
+   font-size: 18px;
+}
+
+.descContainer{
+   display: flex;
+   flex-direction: column;
+   margin-left: 40px;
+}
