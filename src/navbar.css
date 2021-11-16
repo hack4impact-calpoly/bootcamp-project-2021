@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    background-color: #faedcd;
+    justify-content: space-around;
+    padding: 5px;
+    margin: px;
+}
+
+Route{
+    text-decoration: none;
+    font-size: 19px;
+    display:inline;
+    clear:none;
+    color: black;
+}
+
