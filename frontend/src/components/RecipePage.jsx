@@ -63,7 +63,7 @@ export default function RecipePage({
         <RecipeInput
           name="Ingredient"
           onChange={ingredientOnChange}
-          adder={addIngredient}
+          addToList={addIngredient}
           newValue={newIngredient}
           placeholder="Why not garlic"
         />
@@ -80,7 +80,7 @@ export default function RecipePage({
         <RecipeInput
           name="Instruction"
           onChange={instructionOnChange}
-          adder={addInstruction}
+          addToList={addInstruction}
           newValue={newInstruction}
           placeholder="Make it again!"
         />

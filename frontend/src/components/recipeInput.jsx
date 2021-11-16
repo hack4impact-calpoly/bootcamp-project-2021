@@ -4,7 +4,7 @@ import React from "react";
 export default function RecipeInput({
   name, //the name of the list being added to, ie. Instructions
   onChange, //function that updates the newValue as characters are entered into the text field
-  adder, //function that adds the input to the list
+  addToList, //function that adds the input to the list
   newValue, //this is the value where the data from the text field is stored
   placeholder, //the unique text that is shown in the text field prior to any input
 }) {
@@ -17,7 +17,7 @@ export default function RecipeInput({
         value={newValue}
         onChange={onChange}
       />
-      <button onClick={adder}>Add {name} to the recipe</button>
+      <button onClick={addToList}>Add {name} to the recipe</button>
     </div>
   );
 }
