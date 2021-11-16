@@ -53,13 +53,9 @@ router.post("/", async (req, res) => {
 router.put("/:dishName/ingredient", async (req, res) => {
   const dishName = req.params.dishName;
   const ingredient = req.body.newIngredient;
-  const recipe = await Recipe.findOne({
-    dishName: dishName,
-  }).then(console.log("found it"));
-  recipe.ingredients.push(ingredient);
   await Recipe.findOneAndUpdate(
     { dishName: dishName },
-    { ingredients: recipe.ingredients }
+    { $push: { ingredients: ingredient } }
   ).then(console.log("updated list"));
   res.send(`ingredient ${ingredient} added to ingredients list!`);
 });
@@ -68,13 +64,9 @@ router.put("/:dishName/ingredient", async (req, res) => {
 router.put("/:dishName/instruction", async (req, res) => {
   const dishName = req.params.dishName;
   const instruction = req.body.newInstruction;
-  const recipe = await Recipe.findOne({
-    dishName: dishName,
-  }).then(console.log("found it"));
-  recipe.instructions.push(instruction);
   await Recipe.findOneAndUpdate(
     { dishName: dishName },
-    { instructions: recipe.instructions }
+    { $push: { instructions: instruction } }
   ).then(console.log("updated list"));
   res.send(`instruction '${instruction}' added to instructions list!`);
 });
