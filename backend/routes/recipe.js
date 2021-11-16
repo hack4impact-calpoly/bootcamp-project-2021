@@ -57,8 +57,6 @@ router.put("/:dishName/ingredient", async (req, res) => {
     dishName: dishName,
   }).then(console.log("found it"));
   recipe.ingredients.push(ingredient);
-  console.log("mid check");
-  console.log(recipe.ingredients);
   await Recipe.findOneAndUpdate(
     { dishName: dishName },
     { ingredients: recipe.ingredients }
