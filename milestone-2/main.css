@@ -1,6 +1,13 @@
+:root {
+   --body-font: 'Manrope-Regular', Arial, sans-serif;
+   --h1-font: 'Manrope-ExtraBold', Arial, sans-serif;
+   --h2-font: 'Manrope-Bold', Arial, sans-serif;
+   --h3-font: 'Manrope-Medium', Arial, sans-serif;
+}
+
 body {
-   background-color: #fffbf6;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color: #fafafa;
+   font-family: var(--body-font);
    max-width: 900px;
    margin: auto;
    padding: 32px;
@@ -8,19 +15,19 @@ body {
 }
 
 h1 {
+   font-family: var(--h1-font);
    font-size: 2.5rem;
-   font-weight: 700;
 }
 
 h2 {
+   font-family: var(--h2-font);
    font-size: 2rem;
-   font-weight: 700;
-   margin: 0 auto 2rem auto;
+   margin: 1em auto .5em auto;
 }
 
 h3 {
-   font-size: .8rem;
-   font-weight: 700;
+   font-family: var(--h3-font);
+   font-size: .9rem;
    margin: 0 auto 1.5rem auto;
 }
 
@@ -29,12 +36,52 @@ p, li {
    line-height: 1.4;
 }
 
+li {
+   margin: 0 auto 1.4em auto;
+}
+
+button {
+   display: block;
+   margin: 1rem auto 1rem 0;
+   background-color: #ffffff;
+   color: #000000;
+   border: 1px solid #eeeeee;
+   border-radius: 12px;
+   box-shadow:0 2px 8px rgba(0, 0, 0, 0.05);
+   font-family: var(--h3-font);
+   font-size: 1rem;
+   padding: .8em;
+   -webkit-transition: box-shadow 400ms ease-out;
+   -moz-transition: box-shadow 400ms ease-out;
+   -o-transition: box-shadow 400ms ease-out;
+   transition: box-shadow 400ms ease-out;
+}
+
+button:hover {
+   cursor: pointer;
+   box-shadow: 0 2px 8px rgba(97, 9, 9, 0.30);
+}
+
+input, textarea {
+   font-family: var(--body-font);
+   padding: .5em;
+   background-color: #ffffff;
+   border: 1px solid #dddddd;
+   border-radius: 8px;
+}
+
+textarea {
+   min-width: 30em;
+   min-height: 5em;
+}
+
 header {
-   background-color: #ddeeb4;
-   border: 1px solid #6b0404;
+   background-color: #ffffff;
+   border-radius: 12px;
    margin-bottom: 5rem;
    padding: 1em;
    text-align: center;
+   color: #000000;
    font-size: 2rem;
 }
 
@@ -58,12 +105,13 @@ a:visited {
 
 a:hover {
    background-color: #fff025;
+   transition: background-color 200ms ease-out;
 }
 
-#title {
-   color: black;
+#title a {
    text-decoration: none;
-   font-size: 2em;
+   font-size: 2rem;
+   color: #000000;
 }
 
 #catchphrase {
@@ -71,14 +119,29 @@ a:hover {
    text-align: left;
 }
 
+#recipeCards {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
 .recipeSample {
-   background-color: #f7f3ee;
+   background-color: #ffffff;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
    margin-bottom: 2rem;
    padding: 2rem;
+   max-width: 100%;
+}
+
+.recipeSample h2 {
+   margin-top: 0;
 }
 
 .recipeSample a {
-   font-size: .8em;
+   font-size: 1em;
+   font-style: italic;
 }
 
 .recipe-header {
@@ -87,8 +150,19 @@ a:hover {
    margin-bottom: 4rem;
 }
 
-li {
-   margin: 0 auto 2.2em auto;
+#jsonBlock {
+   overflow: auto;
+   white-space: pre-line;
+   background: #f5f5f5;
+   border-radius: 12px;
+}
+
+#jsonBlock.active {
+   padding: 1em;
+}
+
+#json {
+   white-space: pre;
 }
 
 @media screen and (min-width: 768px) {
@@ -106,4 +180,32 @@ li {
       font-size: 1em;
    }
 
+   .recipeSample {
+      max-width: 40%;
+   }
+
+}
+
+@font-face {
+   font-family: 'Manrope-Regular';
+   src:  url(./fonts/Manrope-Regular.woff2),
+         url(./fonts/Manrope-Regular.woff);
+}
+
+@font-face {
+   font-family: 'Manrope-Medium';
+   src:  url(./fonts/Manrope-Medium.woff2),
+         url(./fonts/Manrope-Medium.woff);
+}
+
+@font-face {
+   font-family: 'Manrope-Bold';
+   src:  url(./fonts/Manrope-Bold.woff2),
+         url(./fonts/Manrope-Bold.woff);
+}
+
+@font-face {
+   font-family: 'Manrope-ExtraBold';
+   src:  url(./fonts/Manrope-ExtraBold.woff2),
+         url(./fonts/Manrope-ExtraBold.woff);
 }
