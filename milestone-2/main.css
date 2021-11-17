@@ -1,0 +1,109 @@
+body {
+   background-color: #fffbf6;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   max-width: 900px;
+   margin: auto;
+   padding: 32px;
+   font-size: 1rem;
+}
+
+h1 {
+   font-size: 2.5rem;
+   font-weight: 700;
+}
+
+h2 {
+   font-size: 2rem;
+   font-weight: 700;
+   margin: 0 auto 2rem auto;
+}
+
+h3 {
+   font-size: .8rem;
+   font-weight: 700;
+   margin: 0 auto 1.5rem auto;
+}
+
+p, li {
+   font-size: 1rem;
+   line-height: 1.4;
+}
+
+header {
+   background-color: #ddeeb4;
+   border: 1px solid #6b0404;
+   margin-bottom: 5rem;
+   padding: 1em;
+   text-align: center;
+   font-size: 2rem;
+}
+
+nav {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 3.5em;
+   margin: auto;
+   padding: .5em;
+   font-size: 1.3em;
+}
+
+a {
+   color: #6b0404;
+}
+
+a:visited {
+   color: #6b0404;
+}
+
+a:hover {
+   background-color: #fff025;
+}
+
+#title {
+   color: black;
+   text-decoration: none;
+   font-size: 2em;
+}
+
+#catchphrase {
+   margin: 4rem auto;
+   text-align: left;
+}
+
+.recipeSample {
+   background-color: #f7f3ee;
+   margin-bottom: 2rem;
+   padding: 2rem;
+}
+
+.recipeSample a {
+   font-size: .8em;
+}
+
+.recipe-header {
+   width: 100%;
+   height: auto;
+   margin-bottom: 4rem;
+}
+
+li {
+   margin: 0 auto 2.2em auto;
+}
+
+@media screen and (min-width: 768px) {
+
+   header {
+      font-size: 1.25rem;
+   }
+
+   nav {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 3em;
+      height: auto;
+      width: 100%;
+      font-size: 1em;
+   }
+
+}

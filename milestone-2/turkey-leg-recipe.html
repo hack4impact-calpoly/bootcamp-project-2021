@@ -1,24 +1,30 @@
 <html>
    <head>
       <link rel="stylesheet" href="main.css">
+      <script type="text/javascript" src="formInputs.js"></script>
    </head>
    <header>
-      <h1 id="title"><a href="./index.html">Recipies From The 'Toon</a></h1>
-      <hr>
+      <a href="./index.html" id="title"><h1>Recipies From The 'Toon</h1></a>
       <nav>
          <a href="./index.html">Home/Recipies</a>
          <a href="./about.html">Meet the chef(s)</a>
       </nav>
    </header>
    <body>
-      <main>
-         <h1>Fire Nation Turkey Leg Recipe</h1>
-         <h3>From Avatar: The Last Airbender</h3>
+      <main id="main">
+         <pre id="jsonBlock">
+            <code id="json"></code>
+         </pre>
 
-         <img class="recipe-header" src="images/fire-nation-turkey-leg.jpg" alt="A homemade turkey leg on a plate">
+         <button onclick="recipeToJSON()">Convert recipe to JSON</button>
+
+         <h1 id="recipeName">Fire Nation Turkey Leg Recipe</h1>
+         <h3 id="recipeSubtitle">From Avatar: The Last Airbender</h3>
+
+         <img id="recipeImage" class="recipe-header" src="images/fire-nation-turkey-leg.jpg" alt="A homemade turkey leg on a plate">
 
          <h2>Ingredients</h2>
-         <ul>
+         <ul id="ingredientList">
             <li>3 large skin-on turkey legs</li>
             <li>6 Tbsps butter</li>
             <li>1 Tbsp olive oil</li>
@@ -32,14 +38,21 @@
             <li>2 Tbsps ghee or butter, melted</li>
          </ul>
 
+         <input type="text" id="inputIngredient" placeholder="e.g. 1/2 cup of flour">
+         <button onclick="addIngredient()">Add ingredient</button>
+
          <h2>Instructions</h2>
-         <ol>
+         <ol id="instructionList">
             <li>Combine all of the ingredients expect for the ghee/butter to form a sticky marinade. Gently oil the skin away from the meat and slide 3 tablespoons of butter under the skin.</li>
             <li>Pour the marinade over the turkey legs and chill for at least 1 hour or overnight. Reserve 3 tablespoons of marinade for basting.</li>
             <li>Preheat the oven to 375°F. Arrange vegetables in a roasting pan and place the turkey legs side-by-side on top of the veggies. Cover and roast for 20 minutes.</li>
             <li>Uncover the turkey legs and spread the remaining marinade over the tops of each leg, then brush the melted ghee over the legs. Return to the oven for an additional 20-30 minutes, or until the legs are cooked through and no longer pink.</li>
             <li>Serve alongside a cup of jasmine tea, Zuko’s honor, and enjoy!</li>
          </ol>
+
+         <textarea id="inputInstructions" spellcheck="true" placeholder="e.g. Put the sugar in the bowl"></textarea>
+         <button onclick="addInstruction()">Add instruction</button>
+
       </main>
    </body>
 </html>

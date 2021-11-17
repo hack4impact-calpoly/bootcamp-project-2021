@@ -1,24 +1,30 @@
 <html>
    <head>
       <link rel="stylesheet" href="main.css">
+      <script type="text/javascript" src="formInputs.js"></script>
    </head>
    <header>
-      <h1 id="title"><a href="./index.html">Recipies From The 'Toon</a></h1>
-      <hr>
+      <a href="./index.html" id="title"><h1>Recipies From The 'Toon</h1></a>
       <nav>
          <a href="./index.html">Home/Recipies</a>
          <a href="./about.html">Meet the chef(s)</a>
       </nav>
    </header>
    <body>
-      <main>
-         <h1>Naco Recipe</h1>
-         <h3>From Kim Possible</h3>
+      <main id="main">
+         <pre id="jsonBlock">
+            <code id="json"></code>
+         </pre>
 
-         <img class="recipe-header" src="images/Naco-Triangle.jpg" alt="A homemade Naco">
+         <button onclick="recipeToJSON()">Convert recipe to JSON</button>
+
+         <h1 id="recipeName">Naco Recipe</h1>
+         <h3 id="recipeSubtitle">From Kim Possible</h3>
+
+         <img id="recipeImage" class="recipe-header" src="images/Naco-Triangle.jpg" alt="A homemade Naco">
 
          <h2>Ingredients</h2>
-         <ul>
+         <ul id="ingredientList">
             <li>Burrito-Size Flour Tortillas</li>
             <li>1/4 Cup Butter, melted</li>
             <li>1 lb. Ground Beef</li>
@@ -31,12 +37,19 @@
             <li> Sour Cream (optional)</li>
          </ul>
 
+         <input type="text" id="inputIngredient" placeholder="e.g. 1/2 cup of flour">
+         <button onclick="addIngredient()">Add ingredient</button>
+
          <h2>Instructions</h2>
-         <ol>
+         <ol id="instructionList">
             <li>In a large pan brown the meat and prepare it according to the taco seasoning packet instructions (seasoning powder + water). When you're cooking the meat make sure to break it up really well with a spatula. In 2 medium pots, warm up the refried beans & nacho cheese (1 pot for beans, 1 pot for cheese). Dice up the tomato & break several chips into smaller pieces.</li>
             <li>Gathered Bowl Style: Preheat the oven to 350ºF. Lay a tortilla on a baking tray & lightly brush it with melted butter. Place a ramekin in the middle & then gather up the edges of the tortilla around it. Tie a bit of baking string around the top section of gathered tortilla to hold it in place, pulling it enough so that the tortilla isn't simply straight up & down but comes in a little bit at the top (see photo). Brush some butter in the folds of the tortilla & lift the whole thing up to brush butter underneath, on the tray. Slide it all into the oven & bake until the edges of the tortilla are golden brown & the tortilla is stiff, about 5-10 mins. Remove from the oven & untie the string. Carefully open the tortilla gathers just a little bit, enough to remove the ramekin (I used small tongs & lifted at an angle). Put a couple of small lettuce leaves in the tortilla & then layer the other filling ingredients how you'd like, plus the optional sour cream.</li>
             <li>Triangle Style: Heat a large pan on medium heat. Lay a tortilla on a flat surface & use kitchen scissors to trim the edges so that you have a sort-of triangle (see photo). Layer the fixings on the tortilla in whatever order you'd like (optional sour cream, no lettuce) & then fold 1 corner in to the center, butter it, fold in another corner, slightly overlapping the first as shown, brushing with more butter, & then fold over the 3rd corner to overlap like an envelope. Brush the whole side with butter & lay it in the pan, fold side down. Brush the top with more butter. Cook for a few minutes, until the folds stay closed, & then flip the triangle over. Cook for another couple minutes. Remove to a plate and enjoy! The tortilla cuttings can be brushed with butter & baked or fried 'til lightly golden brown.</li>
          </ol>
+
+         <textarea id="inputInstructions" spellcheck="true" placeholder="e.g. Put the sugar in the bowl"></textarea>
+         <button onclick="addInstruction()">Add instruction</button>
+
       </main>
    </body>
 </html>
