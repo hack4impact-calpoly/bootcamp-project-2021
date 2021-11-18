@@ -1,4 +1,4 @@
-root {
+:root {
   --colorWhite: white;
   --colorGray: gray;
 }
@@ -19,7 +19,7 @@ nav {
 
   background-color: var(--colorGray);
   color: var(--colorWhite);
-  padding: 0 30px;
+  padding: 0 30;
 }
 
 .recipesTitle {

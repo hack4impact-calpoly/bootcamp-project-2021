@@ -1,7 +1,8 @@
 const recipes = [{
     "name": "Traditional Grilled Cheese Sandwhich",
-    "info": "As stated by <a href=\"https://en.wikipedia.org/wiki/Grilled_cheese\">Wikipedia Grilled Cheese</a>, the dish is a toasted sandwich, grilled cheese sandwich, cheese toastie, or grilled cheese is a hot sandwich (toastie) made with one or more varieties of cheese (a cheese sandwich) on bread. It is typically prepared by heating one or more slices of cheese between slices of bread, with a cooking fat such as butter, on a frying pan, griddle, or sandwich toaster, until the bread browns and the cheese melts. A grilled cheese may contain ingredients besides the bread and cheese, as long as the latter is the main focus.",
-    "image": "file:///Users/ishaansathaye/GitHub/bootcamp-project-2021/milestone3/frontend/public/images/grilledCheese.jpeg",
+    "link": "grilledCheese",
+    "info": "The dish is a toasted sandwich, grilled cheese sandwich, cheese toastie, or grilled cheese is a hot sandwich (toastie) made with one or more varieties of cheese (a cheese sandwich) on bread. It is typically prepared by heating one or more slices of cheese between slices of bread, with a cooking fat such as butter, on a frying pan, griddle, or sandwich toaster, until the bread browns and the cheese melts. A grilled cheese may contain ingredients besides the bread and cheese, as long as the latter is the main focus.",
+    "image": "https://github.com/ishaansathaye/bootcamp-project-2021/blob/main/images/grilledCheese.jpeg?raw=true",
     "ingredients": [
      "4 slices of white bread",
      "3 tablespoons of butter",
@@ -18,8 +19,9 @@ const recipes = [{
     ]
    }, {
     "name": "Cheese Omelette",
-    "info": "As stated by <a href=\"https://en.wikipedia.org/wiki/Omelette\">Wikipedia Cheese Omelette</a>, an omelette or omelet is a dish made from beaten eggs, fried with butter or oil in a frying pan (without stirring as in scrambled egg). It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat (often ham or bacon), cheese, or some combination of the above. Whole eggs or egg whites are often beaten with a small amount of milk, cream, or water.",
-    "image": "file:///Users/ishaansathaye/GitHub/bootcamp-project-2021/milestone3/frontend/public/images/cheeseOmelette.jpg",
+    "link": "cheeseOmelette",
+    "info": "An omelette or omelet is a dish made from beaten eggs, fried with butter or oil in a frying pan (without stirring as in scrambled egg). It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat (often ham or bacon), cheese, or some combination of the above. Whole eggs or egg whites are often beaten with a small amount of milk, cream, or water.",
+    "image": "https://github.com/ishaansathaye/bootcamp-project-2021/blob/main/images/cheeseOmelette.jpg?raw=true",
     "ingredients": [
      "3 eggs",
      "1 tablespoon milk or as much needed",
@@ -42,8 +44,9 @@ const recipes = [{
     ]
    }, {
     "name": "The Classic Chicken Burger",
-    "info": "As stated by <a href=\"https://en.m.wikipedia.org/wiki/Chicken_sandwich\">Wikipedia Chicken Sandwhich</a>, a chicken sandwich is a sandwich that typically consists of boneless, skinless chicken breast served between slices of bread, on a bun, or on a roll. Variations on the \"chicken sandwich\" include the chicken burger or chicken on a bun, hot chicken, and chicken salad sandwich.",
-    "image": "file:///Users/ishaansathaye/GitHub/bootcamp-project-2021/milestone3/frontend/public/images/chickenBurger.jpg",
+    "link": "burger",
+    "info": "A chicken sandwich is a sandwich that typically consists of boneless, skinless chicken breast served between slices of bread, on a bun, or on a roll. Variations on the \"chicken sandwich\" include the chicken burger or chicken on a bun, hot chicken, and chicken salad sandwich.",
+    "image": "https://github.com/ishaansathaye/bootcamp-project-2021/blob/main/images/chickenBurger.jpg?raw=true",
     "ingredients": [
      "1 pound extra-lean ground chicken",
      "1/2 cup Italian-seasoned bread crubms",

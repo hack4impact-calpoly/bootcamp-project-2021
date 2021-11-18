@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './recipePage.css';
 
 export default function RecipePage({ name, desc, image, ingredients, steps}) {
@@ -8,20 +8,21 @@ export default function RecipePage({ name, desc, image, ingredients, steps}) {
 
   const addIngredient = () => {
     console.log(newIngredient)
-    var ul = document.getElementById("ingredientList");
+    var ul = document.getElementById("ingredients");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(newIngredient));
     ul.appendChild(li);
   }
   const addInstruction = () => {
     console.log(newInstruction)
-    var ul = document.getElementById("instructionList");
+    var ul = document.getElementById("instructions");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(newInstruction));
     ul.appendChild(li);
   }
 
   return (
+    <main>
     <div>
       <section>
         <div className="flex-container">
@@ -29,7 +30,7 @@ export default function RecipePage({ name, desc, image, ingredients, steps}) {
             <h2 id="name">{name}</h2>
             <p id="info">{desc}</p>
           </div>
-          <img id="image" className="flex-image" src={image} />
+          <img id="image" className="flex-image" src={image} alt="recipe pic" />
         </div>
       </section>
       <section >
@@ -79,5 +80,6 @@ export default function RecipePage({ name, desc, image, ingredients, steps}) {
         </div>
       </section>
     </div>
+    </main>
   );
 }

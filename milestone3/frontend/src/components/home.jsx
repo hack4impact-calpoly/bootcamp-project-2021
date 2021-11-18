@@ -5,15 +5,17 @@ import RecipePreview from './recipePreview';
 
 export default function Home() {
   return (
-    <div>
-      <h1> Ishaan's Kitchen </h1>
-      <h1> Recipes </h1>
-      {recipes.map(recipe => 
-      <RecipePreview
-        name={recipe.name}
-        desc={recipe.info}
-        image={recipe.image}
-      />)}
-    </div>
+    <main>
+      <div>
+        <h1 class="recipesTitle"> Recipes </h1>
+        {recipes.map(recipe => 
+        <RecipePreview
+          name={recipe.name}
+          desc={recipe.info}
+          image={recipe.image}
+          link = {recipe.link}
+        />)}
+      </div>
+    </main>
   );
 }
