@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, var(--cg-peach), var(--cg-yellow));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont;
+}
+
+.spacing {
+  padding: 0 20px 40px 20px;
+}
+
+.joke {
+  margin-left: 20px;
+}
+
