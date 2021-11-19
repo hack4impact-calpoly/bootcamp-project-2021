@@ -20,7 +20,7 @@ const App = () => (
           </Route>
           {recipes.map((recipe) => (
             <Route exact path={"/recipes/" + recipe.dishName}>
-              <RecipePage 
+              <RecipePage
                 dishName={recipe.dishName}
                 recipeDesc={recipe.description}
                 image={recipe.photo}
