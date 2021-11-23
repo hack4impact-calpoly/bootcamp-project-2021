@@ -49,13 +49,27 @@ app.get("/api/recipe", async (req, res) => {
     res.send(recipes)
 })
 
-app.get("/api/recipe/:name", async (req, res) => {
-    const recipes = Recipe.findOne({
-        name: req.params.name
+app.get("/api/recipe1/:name", async (req, res) => {
+    const recipes = await Recipe.findOne({
+        name: req.params.name,
     })
-    res.send("I found the recipe", name)
+    res.send(recipes)
 })
 
+app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
+    const recipes = await Recipe.findOneAndUpdate(
+        { name: req.params.recipeName},
+        { $push: {ingredientList: req.body.newIngredient } }
+    )
+    res.send(req.body.newIngredient + " was added to " + req.params.recipeName)
+})
 
+app.put("/api/recipe/:recipeName/instruction", async (req, res) => {
+    const recipes = await Recipe.findOneAndUpdate(
+        { name: req.params.recipeName},
+        { $push: {instructionList: req.body.newInstruction } }
+    )
+    res.send(req.body.newInstruction + " was added to " + req.params.recipeName)
+})
 
 app.listen(3001)
