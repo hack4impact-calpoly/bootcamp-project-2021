@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rachel J Show</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<header>
+    <div>
+        <img src="youngRachel.JPG" alt="alternatetext" width="150" style="float: right;">
+        <img src="rachelj.jpg" alt="alternatetext" width="400" style="float: left;">
+        <h1 class="header-check">The Rachel J Show</h1>
+    </div>
+</header>
+
+<body id="bgimage"
+    style="background-image: url('https://www.piesandtacos.com/wp-content/uploads/2018/05/Challah-Bread-18.jpg'); background-size: 10%;">
+    <script src="index.js"></script>
+    <div class="topMenu">
+        <a class="menuOption" href="main.html"> Homepage</a>
+        <a class="menuOption" href="aboutMe.html"> About the Chef</a>
+        <a class="menuOption" href="allRecipes.html"> Browse All Recipes</a>
+    </div>
+    <br>
+    <div>
+        <p id="recipeName" class="title"
+            style="background-color: lightslategrey; color:white; border: 2px solid black;">CHALLAH!</p>
+    </div>
+    <div class="boxes">
+        <div class="description">
+            <a style="font-size: x-large;font-weight: bold;"> Description/History </a>
+            <br>
+            <a id="description">Challah is a special bread of Ashkenazi Jewish origin, usually braided and typically
+                eaten
+                on ceremonial occasions such as Shabbat and major Jewish holidays (other than Passover).
+                For the past year or so my family has gotten into the tradition of baking challah each Friday.
+                Our system is I would make the dough in the early afternoon and hire my sisters to braid and bake it
+                so it is ready for dinner!</a>
+            <img id="personalImage" src="challah.jpeg" alt="alternatetext" width="80%">
+        </div>
+        <div class="ingredients">
+            <a style="font-size: x-large;font-weight: bold;"> Ingredients </a>
+            <br>
+            <ul id="list">
+                <li>1 ½ packages active dry yeast (about 3 1/2 teaspoons)</li>
+                <li> 1 tablespoon plus 1/2 cup sugar</li>
+                <li> ½ cup vegetable oil, more for greasing bowl</li>
+                <li> 5 large eggs</li>
+                <li> 1 tablespoon salt</li>
+                <li> 8 to 8 ½ cups all-purpose flour</li>
+                <li> Poppy or sesame seeds for sprinkling</li>
+            </ul>
+            <div class="addField">
+                <label> Add an ingredient! </label> <br />
+                <input id="newIngredient" placeholder="ex: chocolate chips" value="" />
+                <button onclick="addToList()" class="button"> Add </button>
+            </div>
+        </div>
+        <div class="recipe">
+            <a style="font-size: x-large;font-weight: bold;"> Recipe </a>
+            <a id="url" style="font-size: x-large;font-weight: bold;"
+                href="https://cooking.nytimes.com/recipes/7199-my-favorite-challah" target="_blank"> (courtesy of New
+                York Times) </a>
+            <br>
+            <ol id="instructionList">
+                <li> In a large bowl, dissolve yeast and 1 tablespoon sugar in 1 3/4 cups lukewarm water.</li>
+                <li> Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. Gradually
+                    add flour. When dough holds together, it is ready for kneading. (You can also use a mixer with a
+                    dough hook for both mixing and kneading.)</li>
+                <li> Turn dough onto a floured surface and knead until smooth. Clean out bowl and grease it, then return
+                    dough to bowl. Cover with plastic wrap, and let rise in a warm place for 1 hour, until almost
+                    doubled in size. Dough may also rise in an oven that has been warmed to 150 degrees then turned off.
+                    Punch down dough, cover and let rise again in a warm place for another half-hour.</li>
+                <li> To make a 6-braid challah, either straight or circular, take half the dough and form it into 6
+                    balls. With your hands, roll each ball into a strand about 12 inches long and 1 1/2 inches wide.
+                    Place the 6 in a row, parallel to one another. Pinch the tops of the strands together. Move the
+                    outside right strand over 2 strands. Then take the second strand from the left and move it to the
+                    far right. Take the outside left strand and move it over 2. Move second strand from the right over
+                    to the far left. Start over with the outside right strand. Continue this until all strands are
+                    braided. For a straight loaf, tuck ends underneath. For a circular loaf, twist into a circle,
+                    pinching ends together. Make a second loaf the same way. Place braided loaves on a greased cookie
+                    sheet with at least 2 inches in between.</li>
+                <li> Beat remaining egg and brush it on loaves. Either freeze breads or let rise another hour.</li>
+                <li> If baking immediately, preheat oven to 375 degrees and brush loaves again. If freezing, remove from
+                    freezer 5 hours before baking. Then dip your index finger in the egg wash, then into poppy or sesame
+                    seeds and then onto a mound of bread. Continue until bread is decorated with seeds.</li>
+                <li> Bake in middle of oven for 35 to 40 minutes, or until golden. Cool loaves on a rack.</li>
+            </ol>
+            <div class="addField">
+                <label> Add an instruction! </label> <br />
+                <input id="newInstruction" placeholder="ex: try it!" value="" />
+                <button onclick="addToListInstruction()" class="button"> Add </button>
+            </div>
+        </div>
+    </div>
+    <button id="JSONbutton" role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+    <pre id="pre-formatter"><code id="json"></code></pre>
+</body>
+
+</html>
