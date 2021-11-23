@@ -1,0 +1,41 @@
+.topBar{
+    text-align: center;
+    background-color: rgb(220, 127, 53);
+    border: solid black 5px;
+    font: xx-large bold;
+    background-image: -webkit-radial-gradient(rgb(238, 193, 38),rgb(220, 127, 53));
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.topMenu{
+    background-color: pink;
+    text-align-last: center;
+    font-size: 25px;
+    border-spacing: 50px;
+    padding: 10px;
+}
+
+.menuOption{
+    border-spacing: 100px;
+    color: blue ;
+    padding-left: 30px;
+    font-weight:normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.left{
+    float: left;
+    margin: 19px;
+}
+.right{
+    float: right;
+    margin: 19px;
+}
+
+.orderedList{
+    float: left;
+    width: 35%;
+    margin: 10px;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
