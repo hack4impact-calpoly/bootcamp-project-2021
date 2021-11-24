@@ -1,6 +1,6 @@
-import './navbar.css';
+import "./navbar.css";
 import rachelj from "./images/rachelj.jpg";
-import React from 'react';
+import React from "react";
 import youngRachel from "./images/youngRachel.JPG";
 
 export default function Navbar() {
@@ -13,9 +13,18 @@ export default function Navbar() {
       </div>
       <script src="recipe.js"></script>
       <div class="topMenu">
-        <a class="menuOption" href="main.html"> Homepage</a>
-        <a class="menuOption" href="aboutMe.html"> About the Chef</a>
-        <a class="menuOption" href="allRecipes.html"> Browse All Recipes</a>
+        <a class="menuOption" href="main.html">
+          {" "}
+          Homepage
+        </a>
+        <a class="menuOption" href="aboutMe.html">
+          {" "}
+          About the Chef
+        </a>
+        <a class="menuOption" href="allRecipes.html">
+          {" "}
+          Browse All Recipes
+        </a>
       </div>
     </header>
   );
