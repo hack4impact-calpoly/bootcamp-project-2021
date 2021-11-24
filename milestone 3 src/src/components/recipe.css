@@ -1,0 +1,25 @@
+h1{
+    margin: 20px;
+    margin-top: 15px;
+}
+
+.recipe-content{
+    display:flex;
+}
+
+.Ingredients_Steps{
+    display:flex;
+}
+
+.ingredients{
+    margin:20px;
+}
+
+.steps{
+    margin:20px;
+}
+
+.pic{
+    margin:20px;
+    margin-top:0;
+}

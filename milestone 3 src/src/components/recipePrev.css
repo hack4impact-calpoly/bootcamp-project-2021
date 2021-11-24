@@ -1,0 +1,32 @@
+#recipe_showcase{
+    display:flex;
+    justify-content:space-around;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    border:solid 3px #8d6a63;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 19px;
+    display:inline;
+    clear:none;
+    color: black;
+}
+
+p{
+    width:30%;
+}
+
+#recipe_header{
+    background-color: #936639;
+    margin: 20px;
+    padding:15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:solid 3px #8d6a63;
+}
