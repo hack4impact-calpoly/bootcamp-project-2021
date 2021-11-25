@@ -3,6 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <title>simple and sweet</title>
+        <script type="text/javascript" src="recipes.js"></script>
         <link rel = "stylesheet" href = "recipes.css" />
 
     </head>
@@ -15,25 +16,29 @@
             <a href = "aboutme.html">about the creator</a>
         </nav>
         <main>
+            <pre id="pre-formatter"><code id="json"></code></pre>
             <div class = "start">
-                <div class = "words">
-                    <h2>b a k l a v a</h2>
-                    <p> 
-                        <br> after he left his home in india, my father moved to dubai to find work. he doesn't always reflect fondly
-                        on his years in the middle east, but one aspect of dubai which he does hold dearly is the culinary tradition.
-                        years later, he's passed his love for these foods down to me. <br> <br>as a child, i shyed away from desserts. to me, they were repulsively sweet,
-                        and oftentimes monotonous. baklava from an authentic eatery or from my father baking in the kitchen helped me recognize
-                        the beauty of sweetness when used with subtlety and balance. <br> <br> this flaky middle eastern dessert not only connects me
-                        to my father, and his fondness for middle eastern cooking, but it also summons childhood memories of sticky hands and new realizations.
-                        <br>
-                    </p> 
+                <div class = "meat">
+                    <button class = "bigger-button" onClick = "recipeToJSON()"> convert recipe into JSON</button>
+                    <div class = "words">
+                        <h2 id = "rName">b a k l a v a</h2>
+                        <p id = "rDesc"> 
+                            <br> after he left his home in india, my father moved to dubai to find work. he doesn't always reflect fondly
+                            on his years in the middle east, but one aspect of dubai which he does hold dearly is the culinary tradition.
+                            years later, he's passed his love for these foods down to me. <br> <br>as a child, i shyed away from desserts. to me, they were repulsively sweet,
+                            and oftentimes monotonous. baklava from an authentic eatery or from my father baking in the kitchen helped me recognize
+                            the beauty of sweetness when used with subtlety and balance. <br> <br> this flaky middle eastern dessert not only connects me
+                            to my father, and his fondness for middle eastern cooking, but it also summons childhood memories of sticky hands and new realizations.
+                            <br>
+                        </p> 
+                    </div>
                 </div>
-                <img class="pic" src = "images/baklava.jpeg">
+                <img id ="pic" src = "images/baklava.jpeg">
             </div>
             <div>
                 <h2 class = "sectionh"> i n g r e d i e n t s</h2>
                 <p>30 pieces</p> 
-                <ul>
+                <ul id = "ingredients">
                     <li>16 oz thawed phyllo dough</li>
                     <li>1.25 cups melted unsalted butter </li>
                     <li>about 4 cups walnuts (or a nut of your choosing)</li>
@@ -44,10 +49,16 @@
                     <li>1/2 cup honey</li>
                     <li>garnishes: more nuts :D</li>
                 </ul>
+
+                <p>
+                <label> Add ingredient</label> <br />
+                <input id = "newIngredient" placeholder="enter ingredient here" value=""/>
+                <button class = "form-button" onclick="addIngredient()">Add ingredient to list</button>
+                </p>
             </div>
             <div>
                 <h2 class = "sectionh"> i n s t r u c t i o n s</h2>
-                <ol>
+                <ol id = "instructions">
                     <li>butter the bottom of a baking pan, and trim the phyllo to fit the pan (tip: keep the dough covered with a wet paper towel when it is out, to prevent drying)</li>
                     <li>combine the sugar, honey, lemon juice, and water in a saucepan, and bring it to a boil over med/high heat. stir until the sugar dissolves</li>
                     <li>once the sugar has dissolved, reduce the heat to med/low and boil for 4 more minutes without stirring</li>
@@ -65,6 +76,12 @@
                     <li>let it cool completely, uncovered, at room temperature (tip: i know its hard, but let it sit for 4-6 hours for the best results)</li>
                     <li>throw some more nuts on there, and share with someone you love</li>
                 </ol>
+
+                <p>
+                    <label> Add instruction</label> <br />
+                    <input id = "newInstruction" placeholder="enter instruction here" value=""/>
+                    <button class = "form-button" onclick="addInstruction()">Add instruction to list</button>
+                </p>
             </div>
         </main>
     </body>

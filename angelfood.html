@@ -3,6 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <title>simple and sweet</title>
+        <script type="text/javascript" src="recipes.js"></script>
         <link rel = "stylesheet" href = "recipes.css" />
 
     </head>
@@ -15,23 +16,27 @@
             <a href = "aboutme.html">about the creator</a>
         </nav>
         <main>
+            <pre id="pre-formatter"><code id="json"></code></pre>
             <div class = "start">
-                <div class = "words">
-                    <h2> a n g e l &nbsp;&nbsp; f o o d &nbsp;&nbsp; c a k e</h2>
-                    <p> 
-                        <br> yes, i know what the site title is, but this recipe is definitely one of the harder baking recipes. a lot of things can go wrong.
-                        my father works magic in the kitchen, cooks wonderfully, and loves the simple gracefulness of an angel food cake, but was never quite able to master this one.
-                        however, as i've begun exploring cooking and baking over the last few years, i've come to learn that while spontaneity and personalization are
-                        necessary for cooking, they have the ability to kill baking. <br> <br>if you attempt to create angel food cake, bring patience, decide on a recipe,
-                        and follow it down to the last detail. this pretty, airy white cake will make all your hard work worthwhile.
-                        <br>
-                    </p> 
+                <div class = "meat">
+                    <button class = "bigger-button" onClick = "recipeToJSON()"> convert recipe into JSON</button>
+                    <div class = "words">
+                        <h2 id = "rName"> a n g e l &nbsp;&nbsp; f o o d &nbsp;&nbsp; c a k e</h2>
+                        <p id = "rDesc"> 
+                            <br> yes, i know what the site title is, but this recipe is definitely one of the harder baking recipes. a lot of things can go wrong.
+                            my father works magic in the kitchen, cooks wonderfully, and loves the simple gracefulness of an angel food cake, but was never quite able to master this one.
+                            however, as i've begun exploring cooking and baking over the last few years, i've come to learn that while spontaneity and personalization are
+                            necessary for cooking, they have the ability to kill baking. <br> <br>if you attempt to create angel food cake, bring patience, decide on a recipe,
+                            and follow it down to the last detail. this pretty, airy white cake will make all your hard work worthwhile.
+                            <br>
+                        </p> 
+                    </div>
                 </div>
-                <img class="pic" src = "images/angelfoodcake.png">
+                <img id = "pic" src = "images/angelfoodcake.png">
             </div>
             <div>
                 <h2 class = "sectionh"> i n g r e d i e n t s</h2>
-                <ul>
+                <ul id = "ingredients">
                     <li>1.5 cups granulated sugar</li>
                     <li>1 cup and 2 tbsp cake flour</li>
                     <li>0.25 tsp salt</li>
@@ -40,10 +45,16 @@
                     <li>1.5 tsp vanilla extract</li>
                     <li>garnishes: powdered sugar, fresh whipped cream, fresh berries</li>
                 </ul>
+
+                <p>
+                    <label> Add ingredient</label> <br />
+                    <input id = "newIngredient" placeholder="enter ingredient here" value=""/>
+                    <button class = "form-button" onclick="addIngredient()">Add ingredient to list</button>
+                </p>
             </div>
             <div>
                 <h2 class = "sectionh"> i n s t r u c t i o n s</h2>
-                <ol>
+                <ol id = "instructions">
                     <li>place the oven rack at the lower middle position and preheat the oven to 325 degrees fahrehnheit</li>
                     <li>pulse the sugar in a food processor until powdery, and remove 1 cup and save for later. this is so the sugar acheives a consistency between granulated and powdered sugar</li>
                     <li> add the flour and salt to the sugar in the food processor, and pulse 5 - 10 times</li>
@@ -57,6 +68,12 @@
                     <li>run a knife along the edges of the pan and tap the pan against the counter to help the cake release</li>
                     <li>cut with a sharp serrated knife, serve with a dollop of cream and berries, and share with someone you love</li>
                 </ol>
+
+                <p>
+                    <label> Add instruction</label> <br />
+                    <input id = "newInstruction" placeholder="enter instruction here" value=""/>
+                    <button class = "form-button" onclick="addInstruction()">Add instruction to list</button>
+                </p>
             </div>
         </main>
     </body>
