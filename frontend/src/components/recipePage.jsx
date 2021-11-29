@@ -3,7 +3,7 @@ import './recipePage.css'
 
 export default function Recipe({name, image, ingredients, instructions}) {
 
-    // state variable that stores ingredient within RecipePage component    
+    // state variable that stores ingredient within RecipePage component
     const [newIngredient, setNewIngredient] = React.useState('');
     const [newInstruction, setNewInstruction] = React.useState('');
 
@@ -38,9 +38,9 @@ export default function Recipe({name, image, ingredients, instructions}) {
                             </ul>
                             <div className="form-group">
                                 <h4>Add Ingredient</h4>
-                                <input 
-                                    id="newIngredient" 
-                                    placeholder="New ingredient!" 
+                                <input
+                                    id="newIngredient"
+                                    placeholder="New ingredient!"
                                     value={newIngredient}   // add newIngredient as the input's value
                                     onChange={(e) => {
                                         setNewIngredient(e.target.value);
@@ -61,9 +61,9 @@ export default function Recipe({name, image, ingredients, instructions}) {
                         </ol>
                         <div className="form-group">
                             <h4>Add Instruction</h4>
-                            <textarea 
-                                id="newInstruction" 
-                                placeholder="New instruction!" 
+                            <textarea
+                                id="newInstruction"
+                                placeholder="New instruction!"
                                 value={newInstruction}  // add newInstruction as the text area's value
                                 onChange={(e) => {
                                     setNewInstruction(e.target.value);
