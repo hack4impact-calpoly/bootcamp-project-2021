@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    background-color: #faedcd;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 19px;
+    display:inline;
+    clear:none;
+    color: black;
+}
