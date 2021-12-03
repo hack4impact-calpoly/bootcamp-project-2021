@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RecipePage.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 const RecipePage = (props) => {
+  const [newIngredient, setNewIngredient] = useState("");
+  const [newInstruction, setNewInstruction] = useState("");
+
   return (
     <div>
       <head>
@@ -33,7 +36,12 @@ const RecipePage = (props) => {
           <label>Ingredient: </label>
           <input
             id="newIngredient"
+            className="form-element"
             placeholder="Ex: 2 cups spinach"
+            value={newIngredient}
+            onChange={(e) => {
+              setNewIngredient(e.target.value);
+            }}
             type="text"
           />
           <br />
@@ -78,7 +86,16 @@ const RecipePage = (props) => {
         <section class="form">
           <h2>Make It Your Own!</h2>
           <label>Instruction: </label>
-          <input id="newStep" placeholder="Ex: Preheat Oven" type="text" />
+          <input
+            id="newStep"
+            className="form-element"
+            placeholder="Ex: Preheat Oven"
+            value={newInstruction}
+            onChange={(e) => {
+              setNewInstruction(e.target.value);
+            }}
+            type="text"
+          />
           <br />
           <br />
           <button onclick="addStep()">Add Instruction</button>
