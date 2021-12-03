@@ -1,0 +1,25 @@
+.boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-pic {
+    border: 2px solid rgb(211, 190, 159);
+    width: 175px;
+    height: 200px;
+    flex-basis: 50px;
+    flex-grow: 5;
+    object-fit: cover;
+  }
+  
+  .meal {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+
+
+  
+  h3 {
+    background-color: var(--cg-offwhite);
+  }

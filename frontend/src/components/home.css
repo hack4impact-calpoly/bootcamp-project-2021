@@ -1,0 +1,29 @@
+.intro {
+    margin-left: 20px;
+  }
+
+  body {
+    background: linear-gradient(135deg, var(--light-peach), var(--cg-green));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bars{
+    background-color: var(--cg-offwhite);
+    padding: 8px 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    padding: 0 20px 40px 20px;
+  }

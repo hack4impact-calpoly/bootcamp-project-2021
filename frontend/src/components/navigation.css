@@ -1,0 +1,19 @@
+:root {
+    --cg-tan: #d6baa3;
+    --cg-light-tan: #dec7b5; 
+    --cg-offwhite: #f6efeb;
+    --cg-green: 	#c4cfb7;
+    --cg-peach: #f0eae3;
+    --cg-white: whitesmoke;
+  }
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cg-tan);
+    color: var(--cg-white);
+  }
+
+h1 {
+    color: (--cg-white);
+}
