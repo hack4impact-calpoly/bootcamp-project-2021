@@ -1,0 +1,34 @@
+[
+        {
+            "id": "001",
+            "carName": "BMW M5",
+            "year": "2018",
+            "briefDescription": "The 2018 BMW M5 has a range of special features and trims that make it arguably one of the best cars in the market. One of my dream cars and some of these specs, especially for a production 4 door car, should blow your mind!",
+            "imageID": "https://cdn1.mecum.com/auctions/fl0120/fl0120-397316/images/1-1570457461398@2x.jpg?1576795854000",
+            "carSpecs": [
+                "0-60 mph in 3.2 seconds",
+                "8 speed automatic transmission",
+                "4 door cars",
+                "4.4L twin-turbo DOHC 32-valve V-8/600 hp @ 6,600 rpm and 553 lb-ft @5,700 rpm"
+            ],
+            "carFacts": [
+                "Customers can opt for the M Driver's package which allows drivers to take car from 250 km/h to 305 km/h"
+            ]
+        },
+        {
+            "id": "002",
+            "carName": "BMW M3",
+            "year": "2021",
+            "briefDescription": "The 2021 BMW M3 may have an ugly grill, but that doesn't mean she isn't mean on the track!",
+            "imageID": "https://images.hgmsites.net/hug/2021-bmw-3-series_100762312_h.jpg",
+            "carSpecs": [
+                "0-60 mph in 3.5 seconds",
+                "8 speed automatic transmission or 6 speed manual :)",
+                "4 door cars",
+                "3.0 L 6-cylinder with 473 to 503 hp"
+            ],
+            "carFacts": [
+                "One of the few BMWs to come with a manual option"
+            ]
+        }
+]
