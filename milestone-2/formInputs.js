@@ -3,6 +3,7 @@ let recipeInJSON = {}
 let recipeToJSON = () => {
     recipeInJSON.recipeName = document.getElementById("recipeName").innerHTML;
     recipeInJSON.recipeSubtitle = document.getElementById("recipeSubtitle").innerHTML;
+    recipeInJSON.recipeDescription = document.getElementById("recipeDescription").innerHTML;
     recipeInJSON.recipeImage = document.getElementById("recipeImage").src;
 
     // ingredient list

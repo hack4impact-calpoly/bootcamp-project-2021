@@ -21,13 +21,14 @@
 
          <button onclick="recipeToJSON()">Convert recipe to JSON</button>
          
-         <h1 id="recipeName">Herring and Pumpking Pot Pie Recipe</h1>
+         <h1 id="recipeName">Herring and Pumpkin Pot Pie Recipe</h1>
          <h3 id="recipeSubtitle">From Kiki's Delivery Service</h3>
+         <p id="recipeDescription">This post we're up in the clouds, but first we've got some deliveries to make! Kiki's Delivery Service (魔女の宅急便) was released in 1989 and was based on the novel of the same name. The thing I most remember about this movie, was the bread.</p>
          
          <img id="recipeImage" class="recipe-header" src="images/herring-pumpkin-pot-pie.jpg" alt="Resulting herring and pumpkin pot pie">
 
          <h2>Ingredients</h2>
-         <ul>
+         <ul id="ingredientList">
             <li>5-6 fish filets (anywhere between 100 - 300g)</li>
             <li>200-250g Japanese pumpkin (skinned and cubed)</li>
             <li>2 small potatoes (skinned and cubed)</li>
@@ -37,6 +38,9 @@
             <li>11 olives (for decoration, not necessary for the recipe)</li>
             <li>Egg for egg wash</li>
          </ul>
+
+         <input type="text" id="inputIngredient" placeholder="e.g. 1/2 cup of flour">
+         <button onclick="addIngredient()">Add ingredient</button>
 
          <h3>For the white sauce</h3>
          <ul>
@@ -48,13 +52,6 @@
             <li>100g grated cheese</li>
             <li>50-100mL of white wine</li>
          </ul>
-
-         <h2>Your additions</h2>
-         <ul id="ingredientList">
-         </ul>
-
-         <input type="text" id="inputIngredient" placeholder="e.g. 1/2 cup of flour">
-         <button onclick="addIngredient()">Add ingredient</button>
 
          <h2>Instructions</h2>
          <ol id="instructionList">

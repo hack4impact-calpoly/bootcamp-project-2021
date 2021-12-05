@@ -1,0 +1,41 @@
+.recipeImage {
+   width: 100%;
+   height: auto;
+   margin-bottom: 4rem;
+}
+
+button {
+   display: block;
+   margin: 1rem auto 1rem 0;
+   background-color: #ffffff;
+   color: #000000;
+   border: 1px solid #eeeeee;
+   border-radius: 12px;
+   box-shadow:0 2px 8px rgba(0, 0, 0, 0.05);
+   font-family: var(--h3-font);
+   font-size: 1rem;
+   padding: .8em;
+   -webkit-transition: box-shadow 400ms ease-out;
+   -moz-transition: box-shadow 400ms ease-out;
+   -o-transition: box-shadow 400ms ease-out;
+   transition: box-shadow 400ms ease-out;
+}
+
+button:hover {
+   cursor: pointer;
+   box-shadow: 0 2px 8px rgba(97, 9, 9, 0.30);
+}
+
+input, textarea {
+   font-family: var(--body-font);
+   padding: .5em;
+   background-color: #ffffff;
+   border: 1px solid #dddddd;
+   border-radius: 8px;
+}
+
+textarea {
+   min-width: 30em;
+   min-height: 5em;
+}
+ 
