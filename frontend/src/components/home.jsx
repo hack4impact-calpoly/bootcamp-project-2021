@@ -1,10 +1,10 @@
 import React from "react";
-import recipes from "../recipeData.js";
+//import recipes from "../recipeData.js";
 import RecipePreview from "./recipePreview";
 
 //this is the main body of the home page, holds all of the recipe previews from the data
 //not sure if this was supposed to be abstracted as well
-export default function Home() {
+export default function Home( {recipes} ) {
   return (
     <header>
       {recipes.map((recipe) => (

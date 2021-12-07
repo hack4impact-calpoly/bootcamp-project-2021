@@ -19,12 +19,40 @@ export default function RecipePage({
 
   //adds newIngredient to the updatedIngredients list
   const addIngredient = () => {
+    const newPut = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        newIngredient: newIngredient,
+      }),
+    };
+    fetch(
+      "http://localhost:3001/api/recipe/" + dishName + "/ingredient",
+      newPut
+    )
+      .then((res) => res.json())
+      .then((response) => console.log(response));
+
     setIngredients([...updatedIngredients, newIngredient]);
     setNewIngredient("");
   };
 
   //adds newInstruction to the updatedInstructions list
   const addInstruction = () => {
+    const newPut = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        newInstruction: newInstruction,
+      }),
+    };
+    fetch(
+      "http://localhost:3001/api/recipe/" + dishName + "/instruction",
+      newPut
+    )
+      .then((res) => res.json())
+      .then((response) => console.log(response));
+
     setInstructions([...updatedInstructions, newInstruction]);
     setNewInstruction("");
   };
