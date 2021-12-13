@@ -48,8 +48,10 @@ app.post("/api/car", async (req, res) => {
 });
 
 router.put("/:carName/carSpecs", async (req, res) => {
-  const carz = Car.findOne({ carName: req.params.carName });
-  res.send(carz.carSpecs);
+  const carName = req.params.carName;
+  cont car = req.body.newCar;
+  const carz = await Car.findOne({carName: carName });
+  carz.carSpecs.push(car);
 });
 
 app.listen(3001);
