@@ -2,28 +2,20 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Data from "../carData.json";
-import carDetails from "./carDetails";
-import history from "./history";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+//the little cards that appear on the homepage that allow you to select which car you want to choose
+
 export default function CarPreview(props) {
-  const callNewPage = (props1) => {
-    console.log(history);
-    history.push("/carDetails", props1);
-    console.log(props1.carName);
-  };
   let [item, setItem] = useState();
 
   useEffect(() => {
     const loadItem = async () => {
-      let res = await fetch("http://localhost:3001/api/car");
+      let res = await fetch("http://localhost:3001/api/getCar");
       setItem(await res.json());
     };
-
     loadItem();
   }, []);
 

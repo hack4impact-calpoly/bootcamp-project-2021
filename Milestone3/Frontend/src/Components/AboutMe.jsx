@@ -1,10 +1,7 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import { renderMatches } from "react-router";
+
+// This page is the about page of the website. Used Material UI Typography here to help with formatting
 
 export default function AboutMe() {
   console.log("i am here");
