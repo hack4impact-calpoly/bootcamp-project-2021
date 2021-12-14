@@ -1,0 +1,42 @@
+/*------------CSS Home - Recipe Preview Section Styling ------------------*/
+.recipes{
+    border: 1px solid black;
+    background-color: bisque;
+    margin-top: 2px;
+    padding: 15px;
+    padding-top: 5px;
+}
+#snacks{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.dish{ /*Updated carbonara Class -> dish*/
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#recipeImg{
+    margin: 7px;
+}
+
+#dish{ /*Updated carbonara ID -> dish */
+    display: flex;
+    background-color:rgb(113, 36, 151);
+    color: rgb(236, 236, 236);
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none; /*Removes text underline*/
+    align-items: center;
+}
+#dish:hover, #dish:active{
+    color: gray;
+    border-color: white;
+    border-bottom-style: solid;
+}
+
+#recipeDesc{
+    padding-left: 10px;
+}

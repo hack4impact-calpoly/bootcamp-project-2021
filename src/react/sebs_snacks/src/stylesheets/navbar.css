@@ -1,0 +1,50 @@
+/*--------------CSS for Navbar/Header-------------------*/
+header{
+    background-color:rgb(113, 36, 151);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#name{
+    color: rgb(236, 236, 236);
+    font-weight: bolder;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none; /*Removes text underline*/
+    padding: 5px 10px 2px 10px;
+}
+
+#home_home, #about_about{
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+    text-align: right;
+    padding: 5px 20px 5px 20px; /*top, left, bottom, right*/
+    text-decoration: none; /*Removes text underline*/
+    border-color: white;
+    border-bottom-style: solid;
+}
+#home, #about{
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+    text-align: right;
+    padding: 5px 20px 5px 20px; /*top, left, bottom, right*/
+    text-decoration: none; /*Removes text underline*/
+}
+
+#home:hover, #home:active, #about:hover, #about:active{
+    font-size: 15px;
+    text-align: right;
+    padding: 5px 20px 5px 20px; /*top, left, bottom, right*/
+    text-decoration: none; /*Removes text underline*/
+    border-color: white;
+    border-bottom-style: solid;
+    background-color: gray;
+}
