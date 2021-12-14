@@ -1,0 +1,47 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/*------------About Me Page Styling------------------*/
+#carbonaraPic, #spaghettiPic, #pestoPic {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    height: 100%;
+    width: 60%;
+    border: 2px solid black;
+}
+
+/*------------Recipe Page Styling------------------*/
+.recipeBox{
+    border: 1px solid black;
+    background-color: bisque;
+    margin: 15px;
+    margin-top: 10px;
+    padding: 5px;
+
+    display:flex;
+    flex-direction: row;
+}
+
+.aboutMeDesc{
+    display:flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+#recipeIngredients{
+    font-size: 15px;
+}
+
+
+#carbonaraMethod, #spaghettiMethod, #pestoPastaMethod{
+    font-size: 15px;
+}
+
+#recipeTitle{
+    align-self: top;
+    margin: 0px 0px 4px 0px;
+}

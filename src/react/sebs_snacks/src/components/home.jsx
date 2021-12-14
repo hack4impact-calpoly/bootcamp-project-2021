@@ -1,6 +1,6 @@
 import React from "react";
 import "../stylesheets/home.css"
-import Recipe from "./recipe";
+import Recipe from "./recipePreview";
 import recipeInfo from "../recipeInfo";
 
 export default function Home() {

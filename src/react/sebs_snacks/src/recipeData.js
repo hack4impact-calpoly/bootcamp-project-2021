@@ -30,7 +30,8 @@ const recipeData = [
                     "Add extra pasta cooking water to keep it saucy (several tablespoons should do it). You don’t want it wet, just moist. Season with a little salt, if needed.",
                     "Use a long-pronged fork to twist the pasta on to the serving plate or bowl. Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper. If the dish does get a little dry before serving, splash in some more hot pasta water and the glossy sauciness will be revived."
                 ],
-        "recipePic": CarbonaraPic
+        "recipePic": CarbonaraPic,
+        "alt": "Carbonara Picture"
     }
 ,
     {
@@ -61,7 +62,8 @@ const recipeData = [
                     "STEP 8: When the bolognese is nearly finished, cook 400g spaghetti following the pack instructions.",
                     "STEP 9: Drain the spaghetti and either stir into the bolognese sauce, or serve the sauce on top. Serve with more grated parmesan, the remaining basil leaves and crusty bread, if you like."
                 ],
-        "recipePic": SpaghettiPic
+        "recipePic": SpaghettiPic,
+        "alt": "Spaghetti Picture"
     }
 ,
     {
@@ -85,7 +87,8 @@ const recipeData = [
                     "Drain the pasta. Put the hot pasta in a large bowl. Add the pesto (start with half of the recipe) and ¼ cup of the pasta water to the pasta and stir until pasta is well coated. Add additional pesto and pasta water, if necessary, until desired consistency and flavor is reached.",
                     "Season with salt and pepper, to taste. Garnish with crushed red pepper flakes and parmesan cheese, if desired. Serve warm."
                 ],
-        "recipePic": PestopastaPic
+        "recipePic": PestopastaPic,
+        "alt": "Pesto Pasta Picture"
     }
 ]
 
