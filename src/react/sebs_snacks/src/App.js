@@ -1,29 +1,28 @@
 import './App.css';
-import Home from "./components/home";
-//import Recipe from "./components/recipe";
+import HomePage from "./components/home";
 import Navbar from "./components/navbar";
 import AboutMePage from "./components/aboutme";
-//import recipeInfo from "./recipeInfo";
 import {BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 
 function App() {
   
   return (
-    
     <div className="App">
     {/*<Router>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="App" element={<HomePage />} />
         <Route exact path="aboutme" element={<AboutMePage />} />
         <Route exact path="carbonara" element={<CarbonaraPage />} />
         <Route exact path="spaghetti" element={<SpaghettiPage />} />
         <Route exact path="pestoPasta" element={<PestoPastaPage />} />
       </Routes>
+      <Link to="App" id="home_home"><h3>Home</h3></Link>
+      <Link to="aboutme" id="about"><h3>About</h3></Link>
     </Router>*/}
       <div className="outline" >
         <Navbar />
-        <Home />
+        <HomePage />
       </div>
     </div>
   );
