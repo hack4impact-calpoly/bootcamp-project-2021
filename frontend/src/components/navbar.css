@@ -1,0 +1,21 @@
+
+h1{
+    color: white;
+  }
+h3{
+    color:white;
+
+}
+
+.test{
+    color: white;
+}
+a{
+    color:white;
+}
+.background{
+    display: flex;
+    justify-content: space-between;
+    background-color:#56b4a6;
+}
+ 

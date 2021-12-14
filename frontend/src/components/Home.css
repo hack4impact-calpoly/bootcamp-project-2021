@@ -1,0 +1,36 @@
+body{
+    background-color: beige;
+}
+
+
+h2,h4{
+  color: #3d3131;
+}
+
+.h1{
+    color:#3d3131;
+}
+
+button{
+    color:#3d3131;
+}
+
+a{
+    color:#3d3131;
+}
+
+.pre{
+    color:#3d3131;
+}
+img{
+    width: 500px; 
+    height: 500px;
+}
+
+p{
+    color: #3d3131;
+}
+
+li{
+    color: #3d3131;
+}
