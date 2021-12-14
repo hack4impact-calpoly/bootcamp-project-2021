@@ -1,15 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import CarPreview from "./carPreview";
-import { menuItemClasses } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
-import { useState } from "react";
+//this is the page that shows up when you click on one of the cars on the home page. The same object of data is passed from the carPreview component
 
 export default function CarDetails() {
   const [newCarSpec, setNewCarSpec] = React.useState("");

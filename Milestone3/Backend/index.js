@@ -3,6 +3,15 @@ const mongoose = require("mongoose");
 const app = express();
 const router = express.Router();
 app.use(express.json());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS,DELETE,PUT");
+  next();
+});
 const connection_url =
   "mongodb+srv://newUser001:lifeis11@cluster0.rsqsa.mongodb.net/carBlogDB?retryWrites=true&w=majority";
 const Car = require("./models/CarSchema");
@@ -16,7 +25,7 @@ mongoose
     console.error("Could not connect due to ${error}", error.message)
   );
 
-app.get("/api/car", async (req, res) => {
+app.get("/api/getCar", async (req, res) => {
   const carz = await Car.find({});
   res.send(carz);
 });
@@ -26,7 +35,7 @@ app.get("/api/car/:carName", async (req, res) => {
   res.send(carz);
 });
 
-app.post("/api/car", async (req, res) => {
+app.post("/api/addCar", async (req, res) => {
   const { id, carName, year, briefDescription, imageID, carSpecs, carFacts } =
     req.body;
   let car = new Car({
@@ -47,11 +56,19 @@ app.post("/api/car", async (req, res) => {
   }
 });
 
-router.put("/:carName/carSpecs", async (req, res) => {
+router.put("/api/car/:carName/carSpecs", async (req, res) => {
   const carName = req.params.carName;
   const car = req.body.newCar;
-  const carz = await Car.findOne({carName: carName });
+  const carz = await Car.findOne({ carName: carName });
   carz.carSpecs.push(car);
-});
+
+  try {
+    car2 = await car2.save();
+    res.send("The ${carName} added");
+  } catch (error) {
+    res.status(500).send(error.message);
+    console.log("error is ${error.message}");
+  }
+
 
 app.listen(3001);
