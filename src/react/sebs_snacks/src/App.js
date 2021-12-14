@@ -1,29 +1,29 @@
 import './App.css';
-import Recipe from "./components/recipe";
+import Home from "./components/home";
+//import Recipe from "./components/recipe";
 import Navbar from "./components/navbar";
-import recipeInfo from "./recipeInfo";
+import AboutMePage from "./components/aboutme";
+//import recipeInfo from "./recipeInfo";
+import {BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+
 
 function App() {
   
   return (
+    
     <div className="App">
+    {/*<Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="aboutme" element={<AboutMePage />} />
+        <Route exact path="carbonara" element={<CarbonaraPage />} />
+        <Route exact path="spaghetti" element={<SpaghettiPage />} />
+        <Route exact path="pestoPasta" element={<PestoPastaPage />} />
+      </Routes>
+    </Router>*/}
       <div className="outline" >
         <Navbar />
-        <br/>
-        <p id="welcome"><h2>Welcome to Sebastien's Snacks</h2></p>
-        <p id="welcomeMessage"><h4>This is where I share some of my personal favorite snack and dinner recipes. Bon Apetito!</h4></p>
-        <br/>
-        <div class="recipes">
-          <h2 id="snacks">Snacks:</h2>
-          {recipeInfo.map(recipe => 
-            <Recipe 
-              name={recipe.name}
-              img={recipe.imgSrc}
-              desc={recipe.description}
-              alt = {recipe.alt}
-            />
-          )}
-        </div>
+        <Home />
       </div>
     </div>
   );
