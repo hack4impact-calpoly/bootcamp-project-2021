@@ -1,6 +1,5 @@
 import React from "react";
 import "../stylesheets/recipePreview.css";
-import RecipeData from "../recipeData";
 
 export default function RecipeData({title, desc, ingredientList, instructionList, recipePic, alt}){
     return (
@@ -12,7 +11,9 @@ export default function RecipeData({title, desc, ingredientList, instructionList
                     <h2 id="ingredients">Ingredients</h2>
                     <div className="recipeIngredients">
                         <ul id="recipeIngredientList">
-
+                        {ingredientList.map(function(currentValue, index) {
+                            return <li key={index}>{currentValue}</li>;
+                            })}
                         </ul>
                         <h4>Add an Ingredient:</h4>
                         <input id="newRecipeIngredient" placeholder="Ingredient" value=""/>
@@ -22,7 +23,9 @@ export default function RecipeData({title, desc, ingredientList, instructionList
                     <h2 id="method">Instructions</h2>
                     <div className="recipeMethod">
                         <ol id="recipeInstructionList">
-
+                        {instructionList.map(function(currentValue, index) {
+                            return <li key={index}>{currentValue}</li>;
+                            })}
                         </ol>
                         <h4>Add an Instruction:</h4>
                         <input id="newRecipeInstruction" placeholder="Instruction" value=""/>

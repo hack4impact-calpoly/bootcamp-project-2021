@@ -9,6 +9,7 @@ import {
 
 import App from './App';
 import AboutmePage from './components/aboutme';
+import RecipePage from './components/recipePage';
 //import SpaghettiPage from './components/spaghetti';
 
 const rootElement = document.getElementById("root");
@@ -18,10 +19,10 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="aboutme" element={<AboutmePage />} />
-      {/*<Route path="carbonara" element={<App />} />
-        <Route path="spaghetti" element={<App />} />
-    <Route path="pestoPasta" element={<App />} />*/}
-      <Route path="*" element={<App />} /> 
+      <Route path="carbonara" element={<RecipePage />} />
+      <Route path="spaghetti" element={<RecipePage />} />
+      <Route path="pestoPasta" element={<RecipePage />} />
+      <Route path="*" element={<App />} /> {/*In case the path does not catch anything */}
     </Routes>
   </BrowserRouter>,
   rootElement
