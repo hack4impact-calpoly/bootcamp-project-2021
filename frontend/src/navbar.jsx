@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
   <header>
     <h1 id="heading">Jonathan's Indonesian Specialties</h1>
-    <nav class="topnav">
+    <nav className="topnav">
       <Link to="/">Home</Link>
       <Link to="/nasi-goreng">Nasi Goreng</Link>
       <Link to="/bihun-goreng">Bihun goreng</Link>
