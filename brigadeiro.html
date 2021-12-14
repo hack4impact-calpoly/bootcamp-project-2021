@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Receitas da Hannah</title>
-        <link rel="stylesheet" href="brigadeiro.css">
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" href="pages.css">
     </head>
     <body>
         <h1>Receitas da Hannah</h1>
@@ -15,25 +16,39 @@
             <a id="tapioca" href="tapioca.html">Tapioca</a>
             <a id="pudim" href="pudim.html">Pudim</a>
         </div>
-        <h2>Brigadeiro</h2>
-        <img src="https://milestone-1.netlify.app/images/caprese.jpeg">
-        <p>Brigadeiro is every child's favorite treat at Brazilian birthday parties. This is a pretty quick and easy recipe and only requires two main ingredients. </p>
+        <h2 id="name">Brigadeiro</h2>
+        <img id="image" src="./images/Brigadeiro.jpg">
+        <p id="description">Brigadeiro is every child's favorite treat at Brazilian birthday parties. This is a pretty quick and easy recipe and only requires two main ingredients. </p>
         <h4>Ingredients</h4>
         <div>
-            <ul>
+            <ul id="ingredients">
                 <li>Condensed Milk</li>
                 <li>Chocolate of choice</li>
                 <li>Sprinkles of choice</li>
             </ul>
+        <label>Add Ingredient</label> </br>
+        <input id="newIngredient" placeholder="ex: apples" value=""/>
+        <button onclick="addIngredient()">Add ingredient to list</button> 
 
-            <ol>
+            <ol id="steps">
                 <li>Chop the chocolate into smaller pieces if necessary.</li>
                 <li>Pour the condensed milk and the chocolate into a pan and keep on medium high heat</li>
                 <li>Continuously stir, making sure that the contents don't stick to the bottom of the pan</li>
                 <li>When the paste stops sticking to the bottom of the pan, turn of the heat, and let the brigadeiro cool</li>
                 <li>Once cooled, mold into small spheres and roll them on sprinkles. Spread butter on hands to avoid sticking. </li>
             </ol>
+
+            <label>Add step</label> </br>
+            <input id="newStep" placeholder="ex: slice apples" value=""/>
+            <button onclick="addStep()">Add step to list</button> 
+            
         </div>
+    
+        <div>
+            <p id="json-form"></p>
+            <button onclick="transformIntoJson()">Convert into JSON</button> 
+        </div>
+
     </body>
 
 </html>

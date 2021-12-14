@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Receitas da Hannah</title>
-        <link rel="stylesheet" href="pudim.css">
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" href="pages.css">
     </head>
     <body>
         <h1>Receitas da Hannah</h1>
@@ -15,20 +16,23 @@
             <a id="tapioca" href="tapioca.html">Tapioca</a>
             <a id="pudim" href="a">Pudim</a>
         </div>
-        <h2>Pudim</h2>
-        <img src="https://milestone-1.netlify.app/images/caprese.jpeg">
-        <p>This is a simpler version of what many people know as flan.</p>
+        <h2 id="name">Pudim</h2>
+        <img id="image" src="./images/pudim.jpg">
+        <p id="description">This is a simpler version of what many people know as flan.</p>
         <h4>Ingredients</h4>
         <div>
-            <ul>
+            <ul id="ingredients">
                 <li>sugar</li>
                 <li>hot water</li>
                 <li>condensed milk</li>
                 <li>milk</li>
                 <li>eggs</li>
             </ul>
+        <label>Add Ingredient</label> </br>
+        <input id="newIngredient" placeholder="ex: apples" value=""/>
+        <button onclick="addIngredient()">Add ingredient to list</button> 
 
-            <ol>
+            <ol id="steps">
                 <li>Melt the sugar in a large pan and cook until golden.</li>
                 <li>Add the warm water and stir</li>
                 <li>Let the solution boil until the sugar is dissolved and the liquid thickens.</li>
@@ -38,7 +42,18 @@
                 <li>Once ready let cool and leave in the refrigerator for 6 hours.</li>
                 <li>It is ready to serve.</li>
             </ol>
+
+            <label>Add step</label> </br>
+            <input id="newStep" placeholder="ex: slice apples" value=""/>
+            <button onclick="addStep()">Add step to list</button> 
+            
         </div>
+    
+        <div>
+            <p id="json-form"></p>
+            <button onclick="transformIntoJson()">Convert into JSON</button> 
+        </div>
+
     </body>
 
 </html>
