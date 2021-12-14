@@ -21,7 +21,7 @@ render(
       {/*<Route path="carbonara" element={<App />} />
         <Route path="spaghetti" element={<App />} />
     <Route path="pestoPasta" element={<App />} />*/}
-      <Route path="*" element={<App />} />
+      <Route path="*" element={<App />} /> 
     </Routes>
   </BrowserRouter>,
   rootElement
