@@ -1,8 +1,11 @@
 import React from "react";
-import "../stylesheets/recipePreview.css"
+import RecipePage from "./recipePage";
+import RecipeData from "../recipeData";
+import "../stylesheets/recipePreview.css";
 
 //Only need to put default on the first or main component of a file
 export default function Recipe({name, img, desc, alt}) {
+    
     return (
         <div className="dish">
             <a id="dish" href="carbonara.html"><h3>{name}</h3></a>

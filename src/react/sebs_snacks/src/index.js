@@ -19,9 +19,7 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="aboutme" element={<AboutmePage />} />
-      <Route path="carbonara" element={<RecipePage />} />
-      <Route path="spaghetti" element={<RecipePage />} />
-      <Route path="pestoPasta" element={<RecipePage />} />
+      <Route path="recipe" element={<RecipePage />} />
       <Route path="*" element={<App />} /> {/*In case the path does not catch anything */}
     </Routes>
   </BrowserRouter>,
