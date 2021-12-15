@@ -1,8 +1,12 @@
 import React from "react";
 import Navbar from "./navbar";
+import { useParams } from "react-router-dom";
+import { getRecipe } from "../recipeData";
 import "../stylesheets/recipePreview.css";
 
 export default function RecipeData({title, desc, ingredientList, instructionList, recipePic, alt}){
+    let params = useParams();
+    let recipeSelected = getRecipe(params);
     return (
         <div>
             <Navbar />
