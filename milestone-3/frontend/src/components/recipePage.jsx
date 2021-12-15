@@ -6,6 +6,8 @@ import InputForm from './inputForm';
 
 export default function RecipePage({recipeName, recipeDesc, imageSrc, ingredients, servingSize, instructions}) {
 
+  // import each recipe object based on the recipe name
+
   const [ingredientsList, addIngredient] = React.useState(ingredients);
   const [ingredient, setIngredient] = React.useState('');
   const [instructionsList, addInstruction] = React.useState(instructions);

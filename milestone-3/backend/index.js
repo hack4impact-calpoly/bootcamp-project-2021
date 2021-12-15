@@ -10,6 +10,13 @@ mongoose.connect(connection_url)
     .then(() => console.log('Successfully connected'))
     .catch((error) => console.error(`Could not connect due to ${error}`))
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
+    next();
+    });
+
 app.get('/', (req, res) => {
     res.send('Hello, World!')
 })
@@ -18,8 +25,13 @@ app.get('/', (req, res) => {
 
 // route to get all recipes
 app.get("/api/recipe", async (req, res) => {
-    const recipes = await Recipe.find({})
-    res.send(recipes)
+    try {
+        const recipes = await Recipe.find({})
+        res.send(recipes)
+    } catch {
+        console.log("This shit broken")
+    }
+    
 })
 
 // route to get specific recipe
