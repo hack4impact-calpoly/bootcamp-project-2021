@@ -2,23 +2,24 @@ import React from "react";
 import Navbar from "./navbar";
 import { useParams } from "react-router-dom";
 import { getRecipe } from "../recipeData";
-import "../stylesheets/recipePreview.css";
+import "../stylesheets/recipePage.css";
 
 export default function RecipeData({title, desc, ingredientList, instructionList, recipePic, alt}){
     let params = useParams();
-    let recipeSelected = getRecipe(params);
+    let recipe = getRecipe(params);
     return (
         <div>
             <Navbar />
             <body>
+                <br/>
                 <div className="recipeBox">
                     <div className="aboutmeDesc">
-                        <h1 id="recipeTitle">{title}</h1>
-                        <h4 id="recipeDesc">{desc}</h4>
+                        <h1 id="recipeTitle">{recipe.title}</h1>
+                        <h4 id="recipeDesc">{recipe.desc}</h4>
                         <h2 id="ingredients">Ingredients</h2>
                         <div className="recipeIngredients">
                             <ul id="recipeIngredientList">
-                            {ingredientList.map(function(currentValue, index) {
+                            {recipe.ingredientList.map(function(currentValue, index) {
                                 return <li key={index}>{currentValue}</li>;
                                 })}
                             </ul>
@@ -30,7 +31,7 @@ export default function RecipeData({title, desc, ingredientList, instructionList
                         <h2 id="method">Instructions</h2>
                         <div className="recipeMethod">
                             <ol id="recipeInstructionList">
-                            {instructionList.map(function(currentValue, index) {
+                            {recipe.instructionList.map(function(currentValue, index) {
                                 return <li key={index}>{currentValue}</li>;
                                 })}
                             </ol>
@@ -39,7 +40,7 @@ export default function RecipeData({title, desc, ingredientList, instructionList
                             <button onclick="addInstruction('recipeInstructionList', 'newRecipeInstruction')">Add instruction to list</button>
                         </div>
                     </div>
-                    <img id="recipePic" src={recipePic} alt={alt}/>
+                    <img id="recipePic" src={recipe.recipePic} alt={recipe.alt}/>
                 </div>
             </body>
         </div>

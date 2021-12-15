@@ -5,7 +5,7 @@ body{
 }
 
 /*------------About Me Page Styling------------------*/
-#carbonaraPic, #spaghettiPic, #pestoPic {
+#recipePic {
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -37,7 +37,7 @@ body{
 }
 
 
-#carbonaraMethod, #spaghettiMethod, #pestoPastaMethod{
+#recipeMethod{
     font-size: 15px;
 }
 

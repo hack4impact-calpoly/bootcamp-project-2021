@@ -100,7 +100,5 @@ export function getRecipeData() {
 }
 
 export function getRecipe(name) { //Returns RecipeData object that matches
-    return recipeData.find(
-        recipeData => recipeData.id === name
-    );
+    return recipeData.find(dish => dish.id === name.recipeID);
 }

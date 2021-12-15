@@ -13,6 +13,7 @@ export default function Home() {
             <h2 id="snacks">Snacks:</h2>
             {recipeInfo.map(recipe => 
                 <Recipe 
+                id={recipe.id}
                 name={recipe.name}
                 img={recipe.imgSrc}
                 desc={recipe.description}
