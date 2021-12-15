@@ -2,20 +2,23 @@ import "./home.css";
 import Navbar from "./navBar";
 import React from "react";
 import RecipePreview from "./recipePreview";
-import recipes from "./recipeData";
 
-export default function Home() {
+export default function Home({
+  allRecipes
+}) {
   return (
     <div>
       <Navbar />
-      <div class="flexx">
-        {recipes.map((recipe) => (
+      <div className="flexx">
+        {allRecipes ? (allRecipes.map((recipe) => (
           <RecipePreview
             name={recipe.name}
             description={recipe.description}
             imageSrc={recipe.imageSrc}
           />
-        ))}
+        ))):(
+          <p>error!</p>
+        )}
       </div>
     </div>
   );

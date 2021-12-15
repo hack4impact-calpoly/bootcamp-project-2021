@@ -21,12 +21,12 @@ export default function AboutMe() {
           height="400"
           style={{ float: "left" }}
         />
-        <p class="orderedList">
+        <p className="orderedList">
           Hello! My name is Rachel and I am 3rd year Computer Science major at
           Cal Poly. Outside of school I love to go hiking, watch The Office and
           bake. Here are some fun facts about me:
         </p>
-        <div class="orderedList">
+        <div className="orderedList">
           <ol>
             <li>I am the youngest of three sisters</li>
             <li>I am from the Bay Area (from Foster City!)</li>

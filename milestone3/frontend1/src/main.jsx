@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Main() {
   return (
-    <div class="backgroundImage">
+    <div className="backgroundImage">
       <Navbar />
       <img
         src="https://logos.flamingtext.com/Name-Logos/Rachel-design-girls-name.png"

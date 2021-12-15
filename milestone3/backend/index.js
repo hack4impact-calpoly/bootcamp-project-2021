@@ -10,17 +10,13 @@ mongoose
   .then(() => console.log("successful connection"))
   .catch((error) => console.error("connection unsuccessful"));
 
-app.get("/", (req, res) => {
-  res.send("Hello world!");
-});
-
 const RecipeSchema = new mongoose.Schema(
   {
     name: String,
     description: String,
     imageSrc: String,
-    ingredientList: String,
-    instructionList: String,
+    ingredients: Array,
+    instructions: Array,
     link: String,
     courtesyOf: String,
   },
@@ -29,13 +25,21 @@ const RecipeSchema = new mongoose.Schema(
 
 const Recipe = mongoose.model("Recipes", RecipeSchema);
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Header", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  res.header('Access-Control-Allow-Methods', "*");
+  next();
+});
+
 app.post("/api/recipe", async (req, res) => {
   const {
     name,
     description,
     imageSrc,
-    ingredientList,
-    instructionList,
+    ingredients,
+    instructions,
     link,
     courtesyOf,
   } = req.body;
@@ -43,8 +47,8 @@ app.post("/api/recipe", async (req, res) => {
     name: name,
     description: description,
     imageSrc: imageSrc,
-    ingredientList: ingredientList,
-    instructionList: instructionList,
+    ingredients: ingredients,
+    instructions: instructions,
     link: link,
     courtesyOf: courtesyOf,
   });
@@ -55,6 +59,10 @@ app.post("/api/recipe", async (req, res) => {
     res.status(500).send(error.message);
     console.log(`error is ${error.message}`);
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello world!");
 });
 
 app.get("/api/recipe", async (req, res) => {
@@ -69,18 +77,19 @@ app.get("/api/recipe1/:name", async (req, res) => {
   res.send(recipes);
 });
 
-app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
+app.post("/api/recipe/:recipeName/ingredient", async (req, res) => {
   await Recipe.findOneAndUpdate(
     { name: req.params.recipeName },
-    { $push: { ingredientList: req.body.newIngredient } }
+    { $push: { ingredients: req.body.addIngredient } }
   );
-  res.send(req.body.newIngredient + " was added to " + req.params.recipeName);
+  res.send(req.body.addIngredient + " was added to " + req.params.recipeName);
+  console.log("i am here");
 });
 
-app.put("/api/recipe/:recipeName/instruction", async (req, res) => {
+app.post("/api/recipe/:recipeName/instruction", async (req, res) => {
   await Recipe.findOneAndUpdate(
     { name: req.params.recipeName },
-    { $push: { instructionList: req.body.newInstruction } }
+    { $push: { instructions: req.body.newInstruction } }
   );
   res.send(req.body.newInstruction + " was added to " + req.params.recipeName);
 });

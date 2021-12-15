@@ -1,5 +1,5 @@
 import "./recipePage.css";
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Navbar from "./navBar";
 
 export default function RecipePage({
@@ -7,29 +7,59 @@ export default function RecipePage({
   description,
   imageSrc,
   ingredientList,
-  instructionList,
+  instructions,
   link,
   courtesyOf,
 }) {
   const [newIngredient, setNewIngredient] = React.useState("");
+  const [addIngredient, setAddIngredient] = useState("");
   const [newInstruction, setNewInstruction] = React.useState("");
+  const [addInstruction, setAddInstrction] = useState("");
+
+  useEffect(() => {
+    if (addIngredient === '') return;
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ addIngredient: addIngredient })
+    };
+    const updateIngredients = async () => {
+      fetch(`http://localhost:3001/api/recipe/${name}/ingredient`, requestOptions)
+    }
+    updateIngredients();
+  }, [addIngredient])
+
+  useEffect(() => {
+    if (addInstruction === '') return;
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ newInstruction: addInstruction })
+    };
+    const updateInstrcutions = async () => {
+      fetch(`http://localhost:3001/api/recipe/${name}/instruction`, requestOptions)
+    }
+    updateInstrcutions();
+  }, [addInstruction])
 
   const addToList = () => {
-    console.log("made iT");
     var ul = document.getElementById("list");
     var li = document.createElement("li");
     var ingredient = document.getElementById("newIngredient").value;
     li.appendChild(document.createTextNode(ingredient));
     ul.appendChild(li);
+    setAddIngredient(newIngredient)
   };
 
   const addToListInstruction = () => {
-    console.log("made iT");
-    var ul = document.getElementById("instructionList");
+    var ul = document.getElementById("instructions");
     var li = document.createElement("li");
     var instruction = document.getElementById("newInstruction").value;
     li.appendChild(document.createTextNode(instruction));
     ul.appendChild(li);
+    setAddInstrction(newInstruction)
   };
 
   let recipeInfo = {};
@@ -47,14 +77,14 @@ export default function RecipePage({
     }
     recipeInfo.ingredients = ingredientList;
 
-    var instructionList = [];
-    var liTags = document
-      .getElementById("instructionList")
+    var instructions = [];
+    liTags = document
+      .getElementById("instructions")
       .getElementsByTagName("li");
-    for (var key of Object.keys(liTags)) {
-      instructionList.push(liTags[key].innerHTML);
+    for (key of Object.keys(liTags)) {
+      instructions.push(liTags[key].innerHTML);
     }
-    recipeInfo.instructions = instructionList;
+    recipeInfo.instructions = instructions;
 
     document.getElementById("json").textContent = JSON.stringify(
       recipeInfo,
@@ -73,13 +103,13 @@ export default function RecipePage({
       <Navbar />
       <script type="text/javascript" src="recipeJS.js"></script>
       <div>
-        <p id="recipeName" class="title">
+        <p id="recipeName" className="title">
           {name}
         </p>
       </div>
-      <div class="boxes">
-        <div class="description">
-          <a class="descriptionTag"> Description/History </a>
+      <div className="boxes">
+        <div className="description">
+          <a className="descriptionTag"> Description/History </a>
           <br />
           <a id="description">{description}</a>
           <img
@@ -89,15 +119,16 @@ export default function RecipePage({
             width="80%"
           />
         </div>
-        <div class="ingredients">
-          <a class="ingredient"> Ingredients </a>
+        <div className="ingredients">
+          <a className="ingredient"> Ingredients </a>
           <br />
           <ul id="list">
-            {ingredientList.map(function (name, index) {
+            {ingredientList ? (ingredientList.map(function (name, index) {
               return <li key={index}>{name}</li>;
-            })}
+            })) : (<p></p>)
+            }
           </ul>
-          <div class="addField">
+          <div className="addField">
             <label> Add an ingredient! </label> <br />
             <input
               id="newIngredient"
@@ -108,23 +139,22 @@ export default function RecipePage({
               }}
             />
             <button onClick={addToList} className="button">
-              {" "}
-              Add{" "}
+              {" "}Add{" "}
             </button>
           </div>
         </div>
-        <div class="recipe">
-          <a class="ingredient"> Recipe </a>
-          <a id="url" class="ingredient" href={link} target="_blank">
+        <div className="recipe">
+          <a className="ingredient"> Recipe </a>
+          <a id="url" className="ingredient" href={link} target="_blank">
             {courtesyOf}
           </a>
           <br />
-          <ol id="instructionList">
-            {instructionList.map(function (name, index) {
+          <ol id="instructions">
+            {instructions ? (instructions.map(function (name, index) {
               return <li key={index}>{name}</li>;
-            })}
+            })) : (<p>error!</p>)}
           </ol>
-          <div class="addField">
+          <div className="addField">
             <label> Add an instruction! </label> <br />
             <input
               id="newInstruction"
@@ -134,9 +164,8 @@ export default function RecipePage({
                 setNewInstruction(e.target.value);
               }}
             />
-            <button onClick={addToListInstruction} class="button">
-              {" "}
-              Add{" "}
+            <button onClick={addToListInstruction} className="button">
+              {" "}Add{" "}
             </button>
           </div>
         </div>
