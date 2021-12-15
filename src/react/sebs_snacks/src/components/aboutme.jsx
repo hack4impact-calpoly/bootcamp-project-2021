@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/aboutme.css";
 import Navbar from "./navbar";
-import AboutmePic from "../recipeImages/AboutMePicture.JPG"
+import AboutmePic from "../images/AboutMePicture.JPG"
  
 export default function Aboutme() {
     return (

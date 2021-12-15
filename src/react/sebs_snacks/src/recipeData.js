@@ -1,6 +1,6 @@
-import CarbonaraPic from "./recipeImages/carbonara.jpg";
-import SpaghettiPic from "./recipeImages/spaghetti.jpg";
-import PestopastaPic from "./recipeImages/pestoPasta.jpg";
+import CarbonaraPic from "./images/carbonara.jpg";
+import SpaghettiPic from "./images/spaghetti.jpg";
+import PestopastaPic from "./images/pestoPasta.jpg";
 
 let recipeData = [
     {
