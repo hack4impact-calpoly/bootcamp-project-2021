@@ -23,7 +23,7 @@ export default function Aboutme() {
                             abroad in Rome, Italy in the SE program. I love listening to music, hiking, climbing, exploring new
                             places, surfing, and pretty much any water sport you can think of.</p>
                     </div>
-                    <img id="aboutMePicture" src={AboutmePic} alt="About Me Picture"/>
+                    <img id="aboutMePicture" src={AboutmePic} alt="About Me"/>
                 </div>
             </body>
         </div>

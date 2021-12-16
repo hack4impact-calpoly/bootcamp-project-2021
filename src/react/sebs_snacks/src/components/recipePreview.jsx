@@ -1,6 +1,4 @@
 import React from "react";
-import RecipePage from "./recipePage";
-import RecipeData from "../recipeData";
 import "../stylesheets/recipePreview.css";
 import { Link, Outlet } from "react-router-dom";
 

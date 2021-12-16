@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./navbar";
 import { useParams } from "react-router-dom";
 import { getRecipe } from "../recipeData";
@@ -9,7 +9,7 @@ let recipe;
 
 export default function RecipeData(){
     let params = useParams();
-    recipe = getRecipe(params);
+    recipe = getRecipe(params); //Gets the recipe object from the routing URL, allows us to access object data to populate the page
     const [newIngredient, setNewIngredient] = React.useState('');
     const [newInstruction, setNewInstruction] = React.useState('');
     return (
@@ -37,7 +37,7 @@ export default function RecipeData(){
                                 value={newIngredient} 
                                 onChange={(e) => {
                                     setNewIngredient(e.target.value);}} />
-                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button>
+                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button> {/*Adds ingredient to lists, and clears input text field rerendering the component*/}
                         </div>
 
                         <h2 id="method">Instructions</h2>
