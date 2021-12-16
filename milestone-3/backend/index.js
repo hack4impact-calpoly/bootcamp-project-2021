@@ -29,9 +29,8 @@ app.get("/api/recipe", async (req, res) => {
         const recipes = await Recipe.find({})
         res.send(recipes)
     } catch {
-        console.log("This shit broken")
+        console.log("Could not fetch recipe")
     }
-    
 })
 
 // route to get specific recipe
