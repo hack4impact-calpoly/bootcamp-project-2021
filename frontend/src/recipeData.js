@@ -10,7 +10,7 @@ const recipes = [
 
   {
     "recipeName":"Strawberry Milk",
-    "link":"breastmilk",
+    "link":"strawberrymilk",
     "recipeDescription":"\n Who hasn't heard of strawberry milk before? A perfect combination of sweet tasting strawberrie combined with milk to make a sweet tasting drink anyone can enjoy.\n ",
     "recipeImage":"https://milkandpop.com/wp-content/uploads/2020/10/korean-strawberry-milk-1-2-720x720.jpg",
     "ingredientList":["14 strawberries","60g of sugar","1/2 liter of milk"],
@@ -19,7 +19,7 @@ const recipes = [
 
   {
     "recipeName":"Spam Musubi",
-    "link":"spam",
+    "link":"spammasubi",
     "recipeDescription":"\n An authentic Hawaiin dish comprised of grilled spam layed atop a block of rice and warpped with nori.\n ",
     "recipeImage":"https://sylviawakana.com/wp-content/uploads/2020/07/Spam-Musubi-2.jpg",
     "ingredientList":["1 can of spam","Oyster sauce","soy sauce","sugar","Nori -&gt; roasted seaweed used for sushi","Cooked sushi rice"],
