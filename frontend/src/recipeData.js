@@ -19,7 +19,7 @@ const recipes = [
 
   {
     "recipeName":"Spam Musubi",
-    "link":"spammasubi",
+    "link":"spam",
     "recipeDescription":"\n An authentic Hawaiin dish comprised of grilled spam layed atop a block of rice and warpped with nori.\n ",
     "recipeImage":"https://sylviawakana.com/wp-content/uploads/2020/07/Spam-Musubi-2.jpg",
     "ingredientList":["1 can of spam","Oyster sauce","soy sauce","sugar","Nori -&gt; roasted seaweed used for sushi","Cooked sushi rice"],
