@@ -1,0 +1,45 @@
+body {
+  background-color: #a0c4ff;
+  padding: 0;
+  margin: 20px;
+  font-family: monospace;
+}
+
+.main_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffd6a5;
+  padding: 0 30px;
+  margin: 10px;
+}
+
+.desc-img{
+  display: flex;
+  max-width: 200px;
+  max-height: 200px;
+  border: 3px solid white;
+  align-items: flex-start;
+  justify-content: end;
+}
+
+.intro{
+  border: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rec-img{
+  display: flex;
+  max-width: 350px;
+  max-height: 350px;
+  border: 3px solid white;
+
+}
+
+.epic-photo{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
