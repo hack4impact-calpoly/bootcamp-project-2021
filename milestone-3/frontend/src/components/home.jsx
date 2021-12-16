@@ -18,10 +18,10 @@ export default function Home() {
     }
     getRecipes();
   }, []);
-  // for each recipe, map the recipe name, description and image source to recipe preview component
 
   return (
     <div>
+      {/* // for each recipe, map the recipe name, description and image source to recipe preview component */}
       {recipes ? (recipes.map(recipe =>
         <RecipePreview 
           recipeName={recipe.recipeName} 
