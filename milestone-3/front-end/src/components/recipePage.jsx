@@ -3,6 +3,21 @@ import './recipePage.css';
 
 export default function RecipePage(props) {
    const [newIngredient, setNewIngredient] = useState('');
+   const [newInstruction, setNewInstruction] = useState('');
+
+   let addIngredient = (newIngredient) => {
+      let ingredientList = document.getElementById("ingredientList");
+      let newListItem = document.createElement("li");
+      newListItem.appendChild(document.createTextNode(newIngredient));
+      ingredientList.appendChild(newListItem);
+  }
+
+  let addInstruction = (newInstruction) => {
+   let instructionList = document.getElementById("instructionList");
+   let newListItem = document.createElement("li");
+   newListItem.appendChild(document.createTextNode(newInstruction));
+   instructionList.appendChild(newListItem);
+}
 
    return (
       <main id="main">
@@ -30,7 +45,7 @@ export default function RecipePage(props) {
                   setNewIngredient(e.target.value);
                }}
             />
-            <button type="button" onClick={ () => console.log(newIngredient) }>
+            <button type="button" onClick={ () => addIngredient(newIngredient) }>
                Add ingredient
             </button>
          </form>
@@ -44,8 +59,20 @@ export default function RecipePage(props) {
             }
          </ol>
 
-         <textarea id="inputInstructions" spellCheck="true" placeholder="e.g. Put the sugar in the bowl"></textarea>
-         <button onClick="addInstruction()">Add instruction</button>
+         <form>
+            <textarea
+               id="inputInstructions"
+               spellCheck="true"
+               placeholder="e.g. Put the sugar in the bowl"
+               value={newInstruction}
+               onChange={(e) => {
+                  setNewInstruction(e.target.value);
+               }}
+            />
+            <button type="button" onClick={ () => addInstruction(newInstruction) }>
+               Add instruction
+            </button>
+         </form>
       </main>
    );
 }

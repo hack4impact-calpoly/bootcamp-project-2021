@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import recipes from './recipeData';
 import Navbar from './components/navbar';
+import NotFound404 from './components/notFound404';
 import About from './components/about';
 import Home from './components/home';
 import RecipePage from './components/recipePage';
@@ -33,9 +34,7 @@ function App() {
             ))}
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
-            {/* <Route path="*">
-              <NotFound />
-            </Route> */}
+            <Route path="*" element={<NotFound404 />} />
           </Routes>
         
         </div>
