@@ -35,7 +35,19 @@ export default function RecipePage() {
     setIngredient(event.target.value);
   }
 
+  const addIngredient = async() => {
+    // add instruction to database
+    await fetch(`http://localhost:3001/api/recipe/${param.name}/ingredient`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ newIngredient: ingredient })
+    });
+  }
+
   function handleIngredientAdd() {
+    // add ingredient to database
+    addIngredient();
+    // update ingredients list on site
     const newIngredientsList = ingredientsList.concat(ingredient);
     setIngredients(newIngredientsList);
     setIngredient('');
@@ -45,7 +57,19 @@ export default function RecipePage() {
     setInstruction(event.target.value);
   }
 
+  const addInstruction = async() => {
+    // add instruction to database
+    await fetch(`http://localhost:3001/api/recipe/${param.name}/instruction`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ newInstruction: instruction })
+    });
+  }
+
   function handleInstructionAdd() {
+    // add instruction to database
+    addInstruction();
+    // update instruction list on site
     const newInstructionsList = instructionsList.concat(instruction);
     setInstructions(newInstructionsList);
     setInstruction('');
