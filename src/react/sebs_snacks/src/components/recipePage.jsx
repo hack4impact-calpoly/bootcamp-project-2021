@@ -10,7 +10,7 @@ let recipe;
 export default function RecipeData(){
     let params = useParams();
     recipe = getRecipe(params); //Gets the recipe object from the routing URL, allows us to access object data to populate the page
-    const [newIngredient, setNewIngredient] = React.useState('');
+    const [newIngredient, setNewIngredient] = React.useState(''); //rerenders page when adding items to list by updating states
     const [newInstruction, setNewInstruction] = React.useState('');
     return (
         <div>
@@ -66,12 +66,12 @@ export default function RecipeData(){
     )
 }
 
-function addIngredient (newIngredient) {
+function addIngredient (newIngredient) { //function adds "newIngredient" to ingredient array in recipeData 
     console.log(newIngredient);
     recipe.ingredientList.push(newIngredient);
 }
 
-function addInstruction(newInstruction) {
+function addInstruction(newInstruction) { //function adds "newInstruction" to instruction array in recipeData
     console.log(newInstruction);
     recipe.instructionList.push(newInstruction)
 }
