@@ -1,0 +1,67 @@
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid rgb(197, 139, 106);
+  border-radius: 50%;
+}
+
+body {
+  background-color: rgb(255, 232, 207);
+}
+
+h1 {
+  color: rgb(61, 32, 15);
+  text-align: center;
+  font-family: Arial Rounded MT Bold;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+h2 {
+  color: rgb(61, 32, 15);
+  font-family: Arial Rounded MT Bold;
+  padding-left: 10px;
+}
+
+h3 {
+  color: rgb(138, 81, 48);
+  font-family: Arial Rounded MT Bold;
+  padding-left: 10px;
+}
+
+p {
+  font-family: Helvetica;
+  padding-left: 10px;
+}
+
+a {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.description {
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.container {
+  display: flex;
+  background-color: rgb(255, 217, 177);
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(245, 191, 201);
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.nav {
+  display: flex;
+}
