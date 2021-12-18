@@ -64,8 +64,8 @@ app.put("/api/car/:carName/updatedCarSpec", async (req, res) => {
       { carName: carName },
       { $push: { carSpecs: updates } }
     );
-    const ret = await updatedCarSpec.save();
-    res.json(ret);
+    const val = await updatedCarSpec.save();
+    res.json(val);
   } catch (error) {
     res.status(500).send(error.message);
     console.log(`error is ${error.message}`);
