@@ -8,6 +8,13 @@ mongoose.connect(connection_url)
 .then(() => console.log("Successfully connected"))
 .catch((error) => console.error(`Could not connect due to ${error}`))
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
+    next();
+});
+
 // listens for a GET request to be made to the / path. It then executes a function that takes in a request and a response parameter
 app.get('/', (req, res) => {
     // sends 'Hello, world!' as a response to this request
@@ -26,12 +33,12 @@ app.get("/api/recipe", async (req, res) => {
     }
 })
 
-//#2 - get specific recipe given recipe namefindone 
+//#2 - get specific recipe given recipe name 
 // :recipeName indicates that we are expecting some dynamic data (not the literal string "recipeName") 
 // PM Testing: http://localhost:3001/api/recipe/Strawberry Banana Smoothie
-app.get("/api/recipe/:recipeName", async (req, res) => {
+app.get("/api/recipe/:recipeLink", async (req, res) => {
     try {
-        const recipe = await Recipe.findOne({recipeName: req.params.recipeName})
+        const recipe = await Recipe.findOne({recipeLink: req.params.recipeLink})
         res.send(recipe)
     } catch(error) {
         res.status(500).send(error.message)
@@ -59,14 +66,15 @@ app.post("/api/recipe", async (req, res) => {
 })
 
 // #4 - add an ingredient to a given recipe
-// PM Testing: http://localhost:3001/api/recipe/Strawberry Banana Smoothie/ingredient, paste new JSON obj in body 
-app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
+// PM Testing: http://localhost:3001/api/recipe/strawberry-banana/ingredient, paste new JSON obj in body 
+app.put("/api/recipe/:recipeLink/ingredient", async (req, res) => {
     try {
-        const recipeName = req.params.recipeName
+        const recipeLink = req.params.recipeLink
         const ingredient = req.body.newIngredient
         const updatedRecipe = await Recipe.findOneAndUpdate(
-            { recipeName: recipeName },
-            { $push: {ingredientList: ingredient} }
+            {recipeLink: recipeLink},
+            {$push: {ingredientList: ingredient}},
+            {new: true}
         )
         const ret = await updatedRecipe.save()
         res.json(ret)
@@ -77,15 +85,25 @@ app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
 })
 
 // #5 - add an instruction to a given recipe
-// PM Testing: http://localhost:3001/api/recipe/Strawberry Banana Smoothie/instruction, paste new JSON obj in body 
-app.put("/api/recipe/:recipeName/instruction", async (req, res) => {
+// PM Testing: http://localhost:3001/api/recipe/strawberry-banana/instruction, paste new JSON obj in body 
+app.put("/api/recipe/:recipeLink/instruction", async (req, res) => {
     try {
-        const recipeName = req.params.recipeName
+        const recipeLink = req.params.recipeLink
         const instruction = req.body.newInstruction
+        const position = String(parseInt(req.body.insertPosition)-1)
         const updatedRecipe = await Recipe.findOneAndUpdate(
-            { recipeName: recipeName },
-            { $push: {instructionList: instruction} }
+            {recipeLink: recipeLink},
+            {
+                $push: {
+                    instructionList: {
+                        $each: [instruction],
+                        $position: position
+                    }
+                }
+            },
+            {new: true}
         )
+        // console.log("Position: " + typeof position)
         const ret = await updatedRecipe.save()
         res.json(ret)
     } catch(error) {
