@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './recipe.css';
 
 export default function Recipe({ name, desc, image, ingredients, steps }) {
     const [newIngredient, setNewIngredient] = React.useState('');
+    const [postIngredient, setPostIngredient] = useState('');
     const [newStep, setNewStep] = React.useState('');
+    const [postStep, setPostStep] = useState('');
+
+    useEffect(() => {
+        if (postIngredient === '') return;
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ newIngredient: postIngredient })
+        };
+        const updateIngredient = async () => {
+            fetch('https://localhost:3001/api/recipe/${name}/ingredient', requestOptions)
+                .then(console.log('New Ingredient Added to DB'))
+                .catch(error => console.log(error));
+        }
+        updateIngredient();
+    }, [postIngredient])
+
+    useEffect(() => {
+        if (postStep === '') return;
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ newStep: postStep })
+        };
+        const updateSteps = async () => {
+            fetch('https://localhost:3001/api/recipe/${name}/step', requestOptions)
+                .then(console.log('New Step added to DB'))
+                .catch(error => console.log(error));
+        }
+        updateSteps();
+    }, [postStep])
 
     const addIngredient = () => {
         console.log(newIngredient);
@@ -11,6 +43,7 @@ export default function Recipe({ name, desc, image, ingredients, steps }) {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(newIngredient));
         ul.appendChild(li);
+        setPostIngredient(newIngredient);
     }
     const addStep = () => {
         console.log(newStep);
@@ -18,6 +51,7 @@ export default function Recipe({ name, desc, image, ingredients, steps }) {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(newStep));
         ul.appendChild(li);
+        setPostStep(newStep);
     }
 
     return (

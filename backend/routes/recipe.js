@@ -5,7 +5,8 @@ const router = express.Router()
 
 router.get("/", async (req, res) => {
     const recipe = await Recipe.find({})
-    res.send(recipe)
+    res.send(recipe);
+    return (res)
 })
 
 router.get('/:recipeName', async (req, res) => {
@@ -29,10 +30,10 @@ router.post("/", async (req, res) => {
     });
     try {
         recipe = await recipe.save();
-        res.send("${recipeName} added to collection");
+        res.send('${recipeName} added to collection');
     }
     catch (error) {
-        res.status(500).send(error.message);
+        res.status(error.code).send(error.message);
         console.log('error: ${error.message}');
     }
 });
@@ -46,7 +47,7 @@ router.put("/:recipeName/ingredient", async (req, res) => {
 
     try {
         recipe = await recipe.save();
-        res.send("${ingredient} added to ingredient list")
+        res.send('${ingredient} added to ingredient list')
     }
     catch (error) {
         res.status(500).send(error.message);
@@ -63,7 +64,7 @@ router.put("/:recipeName/step", async (req, res) => {
 
     try {
         recipe = await recipe.save();
-        res.send("${stept} added to step list")
+        res.send('${step} added to step list')
     }
     catch (error) {
         res.status(500).send(error.message);
