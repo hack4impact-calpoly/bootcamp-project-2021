@@ -7,27 +7,42 @@ export default function RecipePage({
   description,
   ingredients,
   directions,
+  updateRecipe
 }) {
   const [newIngredient, setNewIngredient] = useState("");
   const [newDirection, setNewDirection] = useState("");
 
-  function addIngredient() {
-    const ul = document.getElementById("ingredientList");
-    const ingredient = document.getElementById("ingredientInput").value;
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(ingredient));
-    ul.appendChild(li);
-    console.log(newIngredient);
-  }
+  const handleSubmitIngredient = async (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:3001/api/recipe/${name}/ingredient`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ [`newIngredient`]: newIngredient }),
+    }).then(() =>
+      fetch("http://localhost:3001/api/recipe")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+    ).then(() => updateRecipe());
+  };
 
-  function addDirection() {
-    const ol = document.getElementById("directionsList");
-    const directions = document.getElementById("directionsInput").value;
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(directions));
-    ol.appendChild(li);
-    console.log(newDirection);
-  }
+  const handleSubmitDirection = async (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:3001/api/recipe/${name}/direction`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ [`newDirection`]: newDirection }),
+    }).then(() =>
+      fetch("http://localhost:3001/api/recipe")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+    ).then(() => updateRecipe());
+  };
 
   return (
     <>
@@ -54,17 +69,15 @@ export default function RecipePage({
       </ul>
       <div className="input-container">
         <h4>Add an Ingredient</h4>
-        <input
-          id="ingredientInput"
-          value={newIngredient}
-          onChange={(e) => {
-            setNewIngredient(e.target.value);
-          }}
-        />
-        <br />
-        <button onClick={addIngredient} className="add-btn">
-          Add Ingredient
-        </button>
+        <form onSubmit={handleSubmitIngredient}>
+          <input
+            type="text"
+            value={newIngredient}
+            onChange={(e) => setNewIngredient(e.target.value)}
+          />
+          <br />
+          <input type="submit" value="Add Ingredient" className="add-btn" />
+        </form>
       </div>
       <h4 className="sub-heading">Directions</h4>
       <ol id="directionsList">
@@ -74,17 +87,15 @@ export default function RecipePage({
       </ol>
       <div className="input-container">
         <h4>Add a Direction</h4>
-        <textarea
-          id="directionsInput"
-          value={newDirection}
-          onChange={(e) => {
-            setNewDirection(e.target.value);
-          }}
-        ></textarea>
-        <br />
-        <button onClick={addDirection} className="add-btn">
-          Add Direction
-        </button>
+        <form onSubmit={handleSubmitDirection}>
+          <textarea
+            type="text"
+            value={newDirection}
+            onChange={(e) => setNewDirection(e.target.value)}
+          />
+          <br />
+          <input type="submit" value="Add Direction" className="add-btn" />
+        </form>
       </div>
     </>
   );

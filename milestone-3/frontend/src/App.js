@@ -1,11 +1,25 @@
+import { useState, useEffect } from "react";
+
 import Navbar from "./navbar";
-import recipes from "./recipeData";
-import RecipeHome from "./components/recipeHome";
+import RecipePreview from "./components/recipePreview";
 import RecipePage from "./components/recipePage";
 import About from "./components/about";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [recipes, setRecipes] = useState([]);
+  const [update, setUpdate] = useState(false)
+
+  useEffect(() => {
+    const allRecipes = async () => {
+      fetch("http://localhost:3001/api/recipe")
+        .then((res) => res.json())
+        .then((data) => setRecipes(data));
+    };
+    allRecipes();
+    setUpdate(false)
+  }, [update]);
+
   return (
     <Router>
       <Navbar />
@@ -16,7 +30,7 @@ function App() {
             Are you ready to cook some tasty meals, look no further!
           </p>
           {recipes.map((recipe) => (
-            <RecipeHome
+            <RecipePreview
               name={recipe.name}
               img={recipe.src}
               description={recipe.description}
@@ -31,6 +45,7 @@ function App() {
               description={recipe.description}
               ingredients={recipe.ingredients}
               directions={recipe.directions}
+              updateRecipe={() => setUpdate(true)}
             />
           </Route>
         ))}

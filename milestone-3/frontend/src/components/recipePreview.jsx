@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./recipe.css";
 
-export default function RecipeHome({ name, img, description }) {
+export default function RecipePreview({ name, img, description }) {
   return (
     <div>
       <h3 className="heading">
