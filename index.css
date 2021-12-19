@@ -99,8 +99,6 @@ header a, h3 a {
 }
 
 
-
-
 .food-image {
     width: 200px;
 }
@@ -113,6 +111,7 @@ header a, h3 a {
 .about-container {
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     margin: 25px 0px;
 }
@@ -135,5 +134,15 @@ header a, h3 a {
 .polaroid-image {
     display: flex;
     text-align: center;
-    width: 400px;
+    width: 300px;
+}
+
+.preparation-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient-container {
+    display: flex;
+    flex-direction: column;
 }

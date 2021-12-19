@@ -3,16 +3,23 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: gray;
-    margin: 50px 0px;
+    margin: 1em 0 1em 0;
+}
+
+#recipeTitle {
+    margin: 1em 0 1em .5em;
 }
 
 .ingredient-description {
     display: flex;
     flex: row;
+    justify-content: left;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.food-image {
+#foodImage {
+    width: 200px;
     border: 10px black;
 }
 
@@ -37,4 +44,8 @@
     width:max-content;
     font-family: Arial, Helvetica, sans-serif;
     align-items: space-evenly;
+}
+
+.ingredient-header-text {
+    margin: 1em 0 1em .5em;
 }

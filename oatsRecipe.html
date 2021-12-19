@@ -7,6 +7,7 @@
     <title>1 Minute Oats</title>
     <link rel = "stylesheet" href="index.css">
     <link rel="stylesheet" href="recipePages.css">
+    <script type="text/javascript" src="ingredients.js"></script>
   </head>
   <body>
 
@@ -22,15 +23,19 @@
           </div>
         </div>
         
-      </header>
+    </header>
+    <div class="json-button">
+        <button class="to-json-button" onClick="getRecipeJSON()">Click me to get this recipe in JSON format!</button>
+        <pre id="pre-formatter"><code id="json">JSON content will appear here!</code></pre>
+    </div>
 
     <div class="title-container">
-        <h2 class="recipe-title">One Minute Oats</h2>
+        <h2 id="recipeTitle">One Minute Oats</h2>
     </div>
 
     <div class="ingredient-description">
-        <img class="food-image" src="Blueberry-Banana-Oatmeal.jpg" alt="One Minute Oats">
-        <p class="descriptions">Perhaps the most convenient breakfast of the bunch, 1 minute oats!</p>
+        <img id="foodImage" src="Blueberry-Banana-Oatmeal.jpg" alt="One Minute Oats">
+        <p id="description">Perhaps the most convenient breakfast of the bunch, 1 minute oats!</p>
     </div>
 
 
@@ -42,7 +47,7 @@
 
 
         <div class="ingredient-list">
-            <ul>
+            <ul id="ingredientList">
                 <li>Oats</li>
                 <li>Milk</li>
                 <li>Peanut butter</li>
@@ -51,17 +56,21 @@
                 <li>Cinnamon</li>
             </ul>
         </div>
-
+        <div class="ingredient-form">
+            <h4>Add an Ingredient!</h4>
+            <i>Ingredient: </i>
+            <input id="newIngredient" class="ingredient-input" placeholder="Add your ingredient here" value="" />
+            <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+        </div>
     </div>
 
     <div class="title-container">
         <h3 class="ingredient-header-text">Preparation</h3>
     </div>
-
     <div class="preparation-container">
 
         <div class="preparation-steps">
-            <ol>
+            <ol id="stepList">
                 <li>Pour oats into bowl with milk.</li>
                 <li>Heat up oats and milk in microwave for 1 minute.</li>
                 <li>Scoop 1 tbsp of peanut butter into bowl.</li>
@@ -69,6 +78,13 @@
                 <li>Season with cinnamon while mixing oats and berries.</li>
                 <li>Voila, enjoy!</li>
             </ol>
+        </div>
+
+        <div class="step-form">
+            <h4>Add a Step!</h4>
+            <i>Step: </i>
+            <input id="newStep" class="step-input" placeholder="Add another step here" value="" />
+            <button class="form-button" onclick="addStep()">Add Step</button>
         </div>
 
   </body>
