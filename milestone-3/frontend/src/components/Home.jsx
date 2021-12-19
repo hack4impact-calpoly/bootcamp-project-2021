@@ -1,7 +1,6 @@
 import "../styles/Home.module.css";
 import RecipePreview from "./RecipePreview";
 import recipeData from "../recipeData";
-import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
           img={recipe.recipeImage}
         />
       ))}
-      <Outlet />
     </div>
   );
 }
