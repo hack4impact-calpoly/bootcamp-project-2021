@@ -1,6 +1,6 @@
 import React from "react";
 //import recipes from "../recipeData.js";
-import RecipePreview from "./recipePreview";
+import RecipePreview from "./RecipePreview";
 import RecipeForm from "./recipeForm";
 
 //this is the main body of the home page, holds all of the recipe previews from the data

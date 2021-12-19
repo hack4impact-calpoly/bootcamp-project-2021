@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css";
+import {
+  StyledNavbar,
+  Title,
+  LinkDiv,
+} from "./styles/Navbar.styled";
+
+import { StyledLink } from "./styles/Link.styled";
 
 export default function Navbar() {
   return (
-    <header>
-      <div class="header">
-        <h1 class="MyCookbook">Sam's Italian Recipebook</h1>
-        <div class="linkDiv">
-          <Link to="/about" class="homelink">
-            About Me!
-          </Link>
-          <Link to="/" class="homeLink">
-            Home
-          </Link>
-        </div>
-      </div>
-    </header>
+    <StyledNavbar>
+      <h1>Sam's Italian Recipebook</h1>
+      <LinkDiv>
+        <StyledLink ml="10px" to="/about">About Me!</StyledLink>
+        <StyledLink ml="10px" to="/">Home</StyledLink>
+      </LinkDiv>
+    </StyledNavbar>
   );
 }

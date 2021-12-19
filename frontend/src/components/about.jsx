@@ -1,21 +1,23 @@
 import React from "react";
 import pic from "../images/Michelin.jpg";
-import "./about.css";
+import { StyledAbout } from "./styles/About.styled";
+import { Flex, FlexContainer } from "./styles/Flex.styled";
+import { StyledImage } from "./styles/Image.styled";
 
-
-//all of this information is unique to this page so this is what we got. 
+//all of this information is unique to this page so this is what we got.
 export default function AboutMe() {
   return (
-    <header>
+    <StyledAbout>
       <h1>About me!</h1>
-      <div class="row">
+      <Flex>
         {/* main div holds my description and the list of my "qualifications" */}
-        <div class="main">
+        <FlexContainer pad="0px 100px 0px 10px">
           <p>
             After having studied abroad here in Rome these past few weeks I have
             become an expert in (eating) Authentic italian cuisine. Here's a
             picture of me at a (former) Michelin star restaurant.
           </p>
+          <br />
           <h2>My cooking qualifications:</h2>
           <ul>
             <li>
@@ -30,16 +32,17 @@ export default function AboutMe() {
             <li>I have never fried anything in my life but it seems fun</li>
             <li>I've watch an unnecessary amount of Food Network</li>
           </ul>
-        </div>
+        </FlexContainer>
         {/* side div holds the image */}
-        <div class="side">
-          <img
+        <FlexContainer>
+          <StyledImage
             src={pic}
             alt="Me sitting awkwardly in a chair at a nice restaurant"
-            class="image_size"
+            maxW="400px"
+            maxH="400px"
           />
-        </div>
-      </div>
-    </header>
+        </FlexContainer>
+      </Flex>
+    </StyledAbout>
   );
 }

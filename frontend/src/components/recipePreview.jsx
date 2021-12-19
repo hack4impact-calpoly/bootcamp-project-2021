@@ -1,24 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./recipePreview.css";
+import { StyledLink } from "./styles/Link.styled";
+import { Flex, FlexContainer } from "./styles/Flex.styled";
+import { StyledRecipePreview } from "./styles/RecipePreview.styled";
+import { StyledImage } from "./styles/Image.styled";
 
 export default function RecipePreview({ name, desc, image }) {
   return (
-    <div>
-      <h3 class="foodHeader">
-        <Link to={"/recipes/" + name} class="recipeLink">
+    <StyledRecipePreview>
+      <h3>
+        <StyledLink to={"/recipes/" + name} fs="Larger" ml="5px">
           {name}
-        </Link>
+        </StyledLink>
       </h3>
-      <div class="row2">
+      <Flex>
         {/* another side - main combo, the side holds the image and the main holds the short description of the recipe*/}
-        <div class="side2">
-          <img src={image} alt={name} class="image_size2" />
-        </div>
-        <div class="main2">
+        <FlexContainer flex="12%" pad="0px">
+          <StyledImage src={image} alt={name} maxW="200px" maxH="200px" />
+        </FlexContainer>
+        <FlexContainer flex="88%" pad="0px 10px 0px 20px">
           <p>{desc}</p>
-        </div>
-      </div>
-    </div>
+        </FlexContainer>
+      </Flex>
+    </StyledRecipePreview>
   );
 }

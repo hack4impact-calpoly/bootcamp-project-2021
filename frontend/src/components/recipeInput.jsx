@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./styles/Button.styled"
 
 //not sure whether it was necessary to abstract the input fields as a component but I figured it couldn't hurt
 export default function RecipeInput({
@@ -17,7 +18,7 @@ export default function RecipeInput({
         value={newValue}
         onChange={onChange}
       />
-      <button onClick={addToList}>Add {name} to the recipe</button>
+      <Button onClick={addToList} bg="blue">Add {name} to the recipe</Button>
     </div>
   );
 }

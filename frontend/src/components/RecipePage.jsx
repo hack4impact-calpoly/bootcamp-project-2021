@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import RecipeInput from "./recipeInput";
-import "./recipePage.css";
+import { StyledImage } from "./styles/Image.styled";
+import { Flex, FlexContainer } from "./styles/Flex.styled";
+import { StyledInfo, StyledRecipePage } from "./styles/RecipePage.styled"
 
 export default function RecipePage({
   dishName,
@@ -68,19 +70,19 @@ export default function RecipePage({
   };
 
   return (
-    <header>
+    <StyledRecipePage>
       {/*Dish description section*/}
-      <div class="row3">
-        <div class="main3">
+      <Flex>
+        <FlexContainer flex="80%">
           <h2 id="dishName">{dishName}</h2>
           <p id="dishDesc">{recipeDesc}</p>
-        </div>
-        <div class="side3">
-          <img src={image} alt={dishName} class="image_size3" id="dishPhoto" />
-        </div>
-      </div>
+        </FlexContainer>
+        <FlexContainer flex="20%">
+          <StyledImage src={image} alt={dishName} maxW="400px" maxH="400px" />
+        </FlexContainer>
+      </Flex>
       {/*Dish ingredients section*/}
-      <div>
+      <StyledInfo>
         <h2>Ingredients</h2>
         <ul id="ingredients">
           {updatedIngredients.map(function (name, index) {
@@ -95,9 +97,9 @@ export default function RecipePage({
           newValue={newIngredient}
           placeholder="Why not garlic"
         />
-      </div>
+      </StyledInfo>
       {/*Dish instructions section*/}
-      <div>
+      <StyledInfo>
         <h2>Preparation</h2>
         <ol id="instructions">
           {updatedInstructions.map(function (name, index) {
@@ -112,7 +114,7 @@ export default function RecipePage({
           newValue={newInstruction}
           placeholder="Make it again!"
         />
-      </div>
-    </header>
+      </StyledInfo>
+    </StyledRecipePage>
   );
 }
