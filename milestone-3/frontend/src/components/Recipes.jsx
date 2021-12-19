@@ -1,8 +1,13 @@
 import React from "react";
 import './recipes.css';
+import React, {useState, useEffect} from 'react';
 
 
 export default function Recipe(props) {
+    const [ingredient, setNewIngredient] = React.useState('');
+    const [instruction, setNewInstruction] = React.useState('');
+    const [ingredient, setNewIngredient] = useState('');
+    const [image, setImage] = useState('');
     return(
         <div className ="all">
             <div id = "item1">
