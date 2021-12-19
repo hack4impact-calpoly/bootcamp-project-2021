@@ -1,11 +1,11 @@
 import './recipepage.css';
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
   
 export default function Recipepage({name,  desc, image, ingredients,steps}){
   const [newIngredient, setNewIngredient] = React.useState('');
   const [newInstruction, setNewInstruction] = React.useState('');
-
+  
 
 const addIngredient = () => {
     var ul = document.getElementById("ingredientList");
@@ -20,6 +20,37 @@ const addIngredient = () => {
     li.appendChild(document.createTextNode(newInstruction));
     ol.appendChild(li);
   }
+
+  useEffect(() => {
+    if(addIngredient === '') return;
+
+    const requestOptions = {
+      method: 'POST',
+      body:JSON.stringify({addIngredient: addIngredient})
+    };
+
+    const updateIngredients = async () => {
+      fetch(`http://localhost:3001/api/recipe/${name}/ingredient`)
+    }
+    updateIngredients();
+
+  },[addIngredient])
+
+  
+  useEffect(() => {
+    if(addInstruction === '') return;
+
+    const requestOptions = {
+      method: 'POST',
+      body:JSON.stringify({addInstruction: addInstruction})
+    };
+
+    const updateInstruction = async () => {
+      fetch(`http://localhost:3001/api/recipe/${name}/instruction`)
+    }
+    updateInstruction();
+
+  },[addInstruction])
     return(
     <div>
      <h1 className = "recipe" id = "recipeName">{name}</h1>
@@ -48,9 +79,9 @@ const addIngredient = () => {
       <h2>Directions</h2>
       <p>
           <ol id = "instructionList">
-          {steps.map(function(name, index){
+          { steps? (steps.map(function(name, index){
             return <li key={index}>{name}</li>;
-          })}
+          })):(<p>error</p>)}
           </ol>
       </p>
       <div class="form-group"> 
