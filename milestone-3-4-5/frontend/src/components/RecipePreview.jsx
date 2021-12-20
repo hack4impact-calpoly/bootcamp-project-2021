@@ -7,7 +7,7 @@ export default function RecipePreview(props) {
     <div className={styles.container}>
       <img src={props.img} alt={props.name} />
       <div>
-        <Link to={`/recipePage/${props.name}`} key={props.name}>
+        <Link to={`/recipePage/${props.name.split(" ").join("-")}`}>
           {props.name}
         </Link>
         <p className={styles.description}>{props.desc}</p>

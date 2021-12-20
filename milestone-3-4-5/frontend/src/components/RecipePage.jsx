@@ -1,51 +1,45 @@
 import React, { useState } from "react";
 import styles from "../styles/RecipePage.module.css";
-import { useParams } from "react-router-dom";
-import { getRecipe } from "../recipeData";
 
-export default function RecipePage() {
-  let params = useParams();
-  let recipe = getRecipe(params.name);
+export default function RecipePage(props) {
+  const [ingredients, setIngredients] = useState(props.ingredients);
   const [newIngredient, setNewIngredient] = useState("");
+  const [instructions, setInstructions] = useState(props.instructions);
   const [newInstruction, setNewInstruction] = useState("");
 
-  function addIngredient() {
-    console.log(newIngredient);
-    let ul = document.getElementById("ingredients");
-    let li = document.createElement("li");
-    li.appendChild(document.createTextNode(newIngredient));
-    ul.appendChild(li);
-  }
+  const addIngredient = async () => {
+    if (newIngredient) {
+      await fetch(`http://localhost:3001/api/recipe/${props.name}/ingredient`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ newIngredient: newIngredient })
+      })
+        .then(setIngredients([...ingredients, newIngredient]))
+        .catch(error => console.log("Failed to add ingredient: ", error));
+    }
+  };
 
-  function addInstruction() {
-    console.log(newInstruction);
-    let ol = document.getElementById("instructions");
-    let li = document.createElement("li");
-    li.appendChild(document.createTextNode(newInstruction));
-    ol.appendChild(li);
-  }
-
-  function convertToJSON() {
-    let div = document.getElementById("jsonConverter");
-    let pre = document.createElement("pre");
-    let code = document.createElement("code");
-    code.appendChild(
-      document.createTextNode(JSON.stringify(recipe, null, " "))
-    );
-    pre.appendChild(code);
-    div.appendChild(pre);
-  }
+  const addInstruction = async () => {
+    if (newInstruction) {
+      await fetch(
+        `http://localhost:3001/api/recipe/${props.name}/instruction`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ newInstruction: newInstruction })
+        }
+      )
+        .then(setInstructions([...instructions, newInstruction]))
+        .catch(error => console.log("Failed to add instruction: ", error));
+    }
+  };
 
   return (
     <div>
       <div className={styles.descContainer}>
-        <img
-          className={styles.img}
-          src={`../${recipe.recipeImage}`}
-          alt={recipe.recipeName}
-        />
+        <img className={styles.img} src={`../${props.img}`} alt={props.name} />
         <div>
-          <p className={styles.description}>{recipe.recipeDescription}</p>
+          <p className={styles.description}>{props.desc}</p>
         </div>
       </div>
       <br />
@@ -53,7 +47,7 @@ export default function RecipePage() {
         <div>
           <h3>ingredients</h3>
           <ul id='ingredients'>
-            {recipe.ingredientList.map(ingredient => (
+            {ingredients.map(ingredient => (
               <li>{ingredient}</li>
             ))}
           </ul>
@@ -72,7 +66,7 @@ export default function RecipePage() {
       </div>
       <h3>instructions</h3>
       <ol id='instructions'>
-        {recipe.instructionList.map(instruction => (
+        {instructions.map(instruction => (
           <li>{instruction}</li>
         ))}
       </ol>
@@ -92,9 +86,6 @@ export default function RecipePage() {
           source if you're interested
         </a>
       </p>
-      <div id='jsonConverter'>
-        <button onClick={convertToJSON}>make page into JSON</button>
-      </div>
     </div>
   );
 }

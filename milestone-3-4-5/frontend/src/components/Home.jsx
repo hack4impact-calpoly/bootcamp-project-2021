@@ -1,14 +1,13 @@
 import "../styles/Home.module.css";
 import RecipePreview from "./RecipePreview";
-import recipeData from "../recipeData";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div>
       <h2>welcome to my bakery!</h2>
       <p>here are some recipes I like</p>
       <h3>recipes</h3>
-      {recipeData.map(recipe => (
+      {props.recipes.map(recipe => (
         <RecipePreview
           name={recipe.recipeName}
           desc={recipe.recipeDescription}
