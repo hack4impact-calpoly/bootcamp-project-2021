@@ -4,6 +4,7 @@ import '../stylesheets/navbar.css';
 import {BrowserRouter as Router, Link, Outlet} from 'react-router-dom';
 
 export default function Navbar() {
+    //Navbar component
     return(
     <header>
         <h1 id="name">Sebastien's Snacks</h1>

@@ -11,7 +11,7 @@ export default function Home() {
             <br/>
             <div class="recipes">
             <h2 id="snacks">Snacks:</h2>
-            {recipeInfo.map(recipe => 
+            {recipeInfo.map(recipe => //Populates the recipe previews using data from recipeInfo.js
                 <Recipe 
                 id={recipe.id}
                 name={recipe.name}

@@ -9,8 +9,8 @@ let recipe;
 
 export default function RecipeData(){
     let params = useParams();
-    recipe = getRecipe(params); //Gets the recipe object from the routing URL, allows us to access object data to populate the page
-    const [newIngredient, setNewIngredient] = React.useState(''); //rerenders page when adding items to list by updating states
+    recipe = getRecipe(params); //Gets the recipe object from the routing URL, allows us to match the object data to the page
+    const [newIngredient, setNewIngredient] = React.useState(''); //Stores information typed in input box
     const [newInstruction, setNewInstruction] = React.useState('');
     return (
         <div>
@@ -24,7 +24,7 @@ export default function RecipeData(){
                         <h2 id="ingredients">Ingredients</h2>
                         <div className="recipeIngredients">
                             <ul id="recipeIngredientList">
-                            {recipe.ingredientList.map(function(currentValue, index) {
+                            {recipe.ingredientList.map(function(currentValue, index) { {/* Builds ingredient list display from data*/}
                                 return <li key={index}>{currentValue}</li>;
                                 })}
                             </ul>
@@ -36,8 +36,8 @@ export default function RecipeData(){
                                 placholder="Ingredient" 
                                 value={newIngredient} 
                                 onChange={(e) => {
-                                    setNewIngredient(e.target.value);}} />
-                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button> {/*Adds ingredient to lists, and clears input text field also rerendering the component by updating state*/}
+                                    setNewIngredient(e.target.value);}} /> {/* Rerenders the page to display the character previously typed */}
+                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button> {/*Adds ingredient to lists, and clears input text field, updating the state, forcing the component to rerender*/}
                         </div>
 
                         <h2 id="method">Instructions</h2>

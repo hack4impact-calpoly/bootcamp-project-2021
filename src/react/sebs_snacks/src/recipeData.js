@@ -3,7 +3,9 @@ import SpaghettiPic from "./images/spaghetti.jpg";
 import PestopastaPic from "./images/pestoPasta.jpg";
 
 /* --- Array of Objects holding data for each recipe page----
-Format:{
+
+Recipe Object:
+{
     name - reference ID by name
     title - Recipe page title displayed on page
     desc - recipe description
