@@ -1,9 +1,8 @@
-import React from 'react';
-import recipes from '../recipeData';
+import React, { useState, useEffect } from 'react';
 import './home.css'
 import RecipeDisplay from './recipeDisplay'
 
-export default function Home () {
+export default function Home (props) {
     return (
         <div>
         <main>
@@ -13,7 +12,7 @@ export default function Home () {
              </p> 
             <h1 class = "bars">Recipes</h1>
             <div class = "boxes">
-                {recipes.map(recipe => 
+                {props.recipes.map(recipe => 
                 <RecipeDisplay key = {recipe.name}
                 name={recipe.name}
                 link = {recipe.link}

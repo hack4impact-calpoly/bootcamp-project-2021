@@ -1,21 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Recipe from './components/recipe'
 import NavBar from './components/navigation'
 import Home from './components/home';
-import RecipeDisplay from './components/recipeDisplay';
-import recipes from "./recipeData"
 
 function App() {
+  let [recipes, setRecipe] = useState([]);
+
+  useEffect(() => {
+    const loadRecipes = async () => {
+      let res = await fetch('http://localhost:3001/api/recipe')
+      setRecipe(await res.json())
+    }
+    loadRecipes([]);
+  }, []);
+
   return (
     <div>
-      <BrowserRouter>
+      <Router>
           <NavBar/>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            {recipes.map(recipe =>
+            <Route exact path="/" element={<Home recipes = {recipes}/>} />
+            {recipes ? (recipes.map(recipe =>
               <Route exact path={recipe.link} element={
                 <Recipe 
                   name={recipe.name} 
@@ -27,9 +36,11 @@ function App() {
                 />
               }
               />
+            )) :(            
+            <Route exact path="/" element={<Home/>} />
             )};
           </Routes>
-    </BrowserRouter>
+    </Router>
     </div>
   );
 }

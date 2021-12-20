@@ -2,38 +2,57 @@ import React, {useState} from "react";
 import './recipe.css'
 
 
-export default function Recipe({name, desc, image, ingredients, steps, size}) {
-    
+export default function Recipe(props) {
+    const [ingredients, setIngredients] = useState(props.ingredients);
+
     const [newIngredient, setNewIngredient] = React.useState('');
+
+    const [steps, setInstructions] = useState(props.steps);
+    
+    console.log(props.prep)
     const [newInstruction, setNewInstruction] = React.useState('');
 
-    const addIngredient = () => {
-        var ul = document.getElementById("igList");
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(newIngredient));
-        ul.appendChild(li);
-    }
-    const addInstruction = () => {
-        var ol = document.getElementById("prep");
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(newInstruction));
-        ol.appendChild(li);
-    }
+    const addIngredient = async () => {
+        if (newIngredient) {
+          await fetch(`http://localhost:3001/api/recipe/${props.name}/ingredient`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ newIngredient: newIngredient })
+          })
+            .then(setIngredients([...ingredients, newIngredient]))
+            .catch(error => console.log("Failed to add ingredient: ", error));
+        }
+      };
+    
+      const addInstruction = async () => {
+        if (newInstruction) {
+          await fetch(
+            `http://localhost:3001/api/recipe/${props.name}/instruction`,
+            {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ newInstruction: newInstruction })
+            }
+          )
+            .then(setInstructions([...steps, newInstruction]))
+            .catch(error => console.log("Failed to add instruction: ", error));
+        }
+      };
 
     return(
         <div>
             <section>
-                <div class="flex-container">
-                    <div class="flex-header">
-                        <h2 id="recipeName">{name}</h2>
-                        <p id="recipeDescription">{desc}</p>
+                <div className="flex-container">
+                    <div className="flex-header">
+                        <h2 id="recipeName">{props.name}</h2>
+                        <p id="recipeDescription">{props.desc}</p>
                     </div>
-                    <img id="recipeImage" class="flex-image" src={image}/>
+                    <img id="recipeImage" class="flex-image" src={props.image}/>
                 </div>
             </section>
             <section>
                 <h3>Ingredients</h3>
-                <p>Serves {size}</p>
+                <p>Serves {props.size}</p>
                 <ul id= "igList">
                     {ingredients.map(function(n, index){
                         return <li key={index}>{n}</li>;

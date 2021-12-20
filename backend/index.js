@@ -12,8 +12,17 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.send('Hello world!')
 })
-app.listen(3001)
 
+
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS,DELETE,PUT");
+    next();
+  });
 
 app.get("/api/recipe", async (req, res) => {
     const recipes = await Recipe.find({})
@@ -46,8 +55,8 @@ app.put("/api/recipe/:name/ingredient", async (req, res) => {
     const recipeName = req.params.name
     const ingredient = req.body.newIngredient
     try {
-        await Recipe.findOneAndUpdate({ name: recipeName }, { $push: { ingredients : ingredient } } )
-        res.send(`ingredient was added to ${recipeName}'s ingredient list`)
+        await Recipe.findOneAndUpdate({ name: req.params.name }, { $push: { ingredients : req.body.newIngredient } } )
+        res.send(`${req.body.newIngredient} was added to ${recipeName}'s ingredient list`)
     } catch (error) {
         console.log(`error is: ${error.message}`)
     }
@@ -63,3 +72,5 @@ app.put("/api/recipe/:name/instruction", async (req, res) => {
         console.log(`error is: ${error.message}`)
     }
 })
+
+app.listen(3001)
