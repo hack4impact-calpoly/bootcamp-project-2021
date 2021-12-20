@@ -37,7 +37,7 @@ catch(error){
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "*");
-  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Access-Control-Allow-Methods', "*");
   next();
   });
 
@@ -58,12 +58,12 @@ catch(error){
 
 app.put("//api/recipe/:recipeName/instruction", async (req, res) => {
   const recipeName = req.params.recipeName
-  const instruction = req.body.newInstruction
+  const ingredient = req.body.newIngredient
   const recipe = await Recipe.findOne({recipeName:recipeName})
  try{
-   recipe.instructionList.push(instruction)
+   recipe.ingredientList.push(ingredient)
    await recipe.save()
-   res.send('instruction sucessfully added')
+   res.send('ingredient sucessfully added')
  }
  catch(error){
    res.status(500).send(error)

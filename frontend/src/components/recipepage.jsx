@@ -2,7 +2,7 @@ import './recipepage.css';
 import React, {useState, useEffect} from "react";
 
   
-export default function Recipepage({name,  desc, image, ingredients,steps}){
+export default function Recipepage({name,  desc, image, ingredients,instructions}){
   const [newIngredient, setNewIngredient] = React.useState('');
   const [newInstruction, setNewInstruction] = React.useState('');
   
@@ -45,7 +45,7 @@ const addIngredient = () => {
     };
 
     const updateInstruction = async () => {
-      fetch(`http://localhost:3001/api/recipe/${name}/instruction`).catch((error) => console.error(`failed due to ${error}`))
+      fetch(`http://localhost:3001//api/recipe/${name}/instruction`).catch((error) => console.error(`failed due to ${error}`))
     }
     updateInstruction();
 
@@ -78,9 +78,9 @@ const addIngredient = () => {
       <h2>Directions</h2>
       <p>
           <ol id = "instructionList">
-          { steps? (steps.map(function(name, index){
+          {instructions.map(function(name, index){
             return <li key={index}>{name}</li>;
-          })):(<p>error</p>)}
+          })}
           </ol>
       </p>
       <div class="form-group"> 

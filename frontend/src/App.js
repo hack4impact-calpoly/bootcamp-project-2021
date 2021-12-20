@@ -31,7 +31,7 @@ function App() {
                   desc={recipe.previewDesc}
                   image={recipe.recipeImage}
                   ingredients={recipe.ingredientList}
-                  steps={recipe.instructionList}
+                  instructions ={recipe.steps}
                 />}/>
         )) :(<Route path="/" element={<Home />} />)}
         </Routes>
