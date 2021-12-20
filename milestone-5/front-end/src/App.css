@@ -1,0 +1,115 @@
+:root {
+  --body-font: 'Manrope-Regular', Arial, sans-serif;
+  --h1-font: 'Manrope-ExtraBold', Arial, sans-serif;
+  --h2-font: 'Manrope-Bold', Arial, sans-serif;
+  --h3-font: 'Manrope-Medium', Arial, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: var(--body-font);
+  max-width: 900px;
+  margin: auto;
+  padding: 32px;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: var(--h1-font);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--h2-font);
+  font-size: 2rem;
+  margin: 1em auto .5em auto;
+}
+
+h3 {
+  font-family: var(--h3-font);
+  font-size: .9rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+li {
+  margin: 0 auto 1.4em auto;
+}
+
+header {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 5rem;
+  padding: 1em;
+  text-align: center;
+  color: #000000;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 3.5em;
+  margin: auto;
+  padding: .5em;
+  font-size: 1.3em;
+}
+
+a {
+  color: #6b0404;
+}
+
+a:visited {
+  color: #6b0404;
+}
+
+a:hover {
+  background-color: #fff025;
+  transition: background-color 200ms ease-out;
+}
+
+@media screen and (min-width: 768px) {
+
+  header {
+     font-size: 1.25rem;
+  }
+
+  nav {
+     flex-direction: row;
+     justify-content: center;
+     column-gap: 3em;
+     height: auto;
+     width: 100%;
+     font-size: 1em;
+  }
+
+}
+
+@font-face {
+  font-family: 'Manrope-Regular';
+  src:  url(./fonts/Manrope-Regular.woff2),
+        url(./fonts/Manrope-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Manrope-Medium';
+  src:  url(./fonts/Manrope-Medium.woff2),
+        url(./fonts/Manrope-Medium.woff);
+}
+
+@font-face {
+  font-family: 'Manrope-Bold';
+  src:  url(./fonts/Manrope-Bold.woff2),
+        url(./fonts/Manrope-Bold.woff);
+}
+
+@font-face {
+  font-family: 'Manrope-ExtraBold';
+  src:  url(./fonts/Manrope-ExtraBold.woff2),
+        url(./fonts/Manrope-ExtraBold.woff);
+}

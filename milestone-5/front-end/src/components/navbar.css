@@ -1,0 +1,44 @@
+
+header {
+   background-color: #ffffff;
+   border-radius: 12px;
+   margin-bottom: 5rem;
+   padding: 1em;
+   text-align: center;
+   color: #000000;
+   font-size: 2rem;
+}
+
+nav {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 3.5em;
+   margin: auto;
+   padding: .5em;
+   font-size: 1.3em;
+}
+
+#title a {
+   text-decoration: none;
+   font-size: 2rem;
+   color: #000000;
+}
+
+
+@media screen and (min-width: 768px) {
+
+   header {
+      font-size: 1.25rem;
+   }
+
+   nav {
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 3em;
+      height: auto;
+      width: 100%;
+      font-size: 1em;
+   }
+
+}
