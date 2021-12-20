@@ -37,7 +37,7 @@ export default function RecipeData(){
                                 value={newIngredient} 
                                 onChange={(e) => {
                                     setNewIngredient(e.target.value);}} />
-                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button> {/*Adds ingredient to lists, and clears input text field rerendering the component*/}
+                            <button onClick={() => {addIngredient(newIngredient); setNewIngredient('')}}>Add ingredient to list</button> {/*Adds ingredient to lists, and clears input text field also rerendering the component by updating state*/}
                         </div>
 
                         <h2 id="method">Instructions</h2>
