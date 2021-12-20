@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eggs On Avocado Toast</title>
+    <link rel = "stylesheet" href="index.css">
+    <link rel="stylesheet" href="recipePages.css">
+    <script type="text/javascript" src="ingredients.js"></script>
+  </head>
+  <body>
+
+    <header>
+        <div class=header-container>
+  
+          <h1 class="header">Brandon's Breakfast Bonanza!</h1>
+          <div class="links">
+            <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About Me!</a>
+            </nav>
+          </div>
+        </div>
+        
+      </header>
+
+    <div class="json-button">
+        <button class="to-json-button" onClick="getRecipeJSON()">Click me to get this recipe in JSON format!</button>
+        <pre id="pre-formatter"><code id="json">JSON content will appear here!</code></pre>
+    </div>
+
+    <div class="title-container">
+        <h2 id="recipeTitle">Eggs On Avocado Toast</h2>
+    </div>
+
+    <div class="ingredient-description">
+        <img id="foodImage" src="Avocado-Toast-with-Egg.jpg" alt="Eggs On Avocado Toast">
+        <p id="description"> This tasty breakfast features the superfood, avocadoes, beneath some delicious eggs!</p>
+    </div>
+    <div class="title-container">
+        <h3 class="ingredient-header-text">Ingredients</h3>
+    </div>
+    <div class="ingredient-container">
+        <div class="ingredient-list">
+            <ul id="ingredientList">
+                <li>1 Avocado</li>
+                <li>2 Eggs</li>
+                <li>2 slices of bread of your choice</li>
+                <li>Butter/cooking oil</li>
+                <li>Salt and Pepper</li>
+            </ul>
+        </div>
+        <div class="ingredient-form">
+            <h4>Add an Ingredient!</h4>
+            <i>Ingredient: </i>
+            <input id="newIngredient" class="ingredient-input" placeholder="Add your ingredient here" value="" />
+            <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+        </div>
+    </div>
+
+    <div class="title-container">
+        <h3 class="ingredient-header-text">Preparation</h3>
+    </div>
+ 
+    <div class="preparation-container">
+
+        <div class="preparation-steps">
+            <ol id="stepList">
+                <li>Toast bread in toaster, we're going to aim for a nice golden brown to contrast the avocado we'll spread on top.</li>
+                <li>In a small/medium pan over medium heat, melt butter (or heat oil).</li>
+                <li>Crack two eggs and cook for 3 minutes, or until whites are set. Flip and cook other side for 1 minute.</li>
+                <li>Bread should be done toasting, spread avocado onto toast and season with salt and pepper.</li>
+                <li>Lay cooked eggs on avocado toast.</li>
+                <li>Voila, enjoy!</li>
+            </ol>
+        </div>
+        <div class="step-form">
+            <h4>Add a Step!</h4>
+            <i>Step: </i>
+            <input id="newStep" class="step-input" placeHolder="Add another step here" value="" />
+            <button class="form-button" onClick="addStep()">Add Step</button>
+        </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.title-container {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: gray;
+    margin: 1em 0 1em 0;
+}
+
+#recipeTitle {
+    margin: 1em 0 1em .5em;
+}
+
+.ingredient-description {
+    display: flex;
+    flex: row;
+    justify-content: left;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#foodImage {
+    width: 200px;
+    border: 10px black;
+}
+
+.ingredient-container {
+    display: flex;
+    flex: column;
+    width:max-content;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ingredient-list {
+    display: flex;
+    flex: column;
+    width:max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px;
+}
+
+.preparation-container {
+    display: flex;
+    flex: column;
+    width:max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: space-evenly;
+}
+
+.ingredient-header-text {
+    margin: 1em 0 1em .5em;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breakfast Burrito</title>
+    <link rel = "stylesheet" href="index.css">
+    <link rel="stylesheet" href="recipePages.css">
+    <script type="text/javascript" src="ingredients.js"></script>
+  </head>
+  <body>
+    <header>
+        <div class=header-container>
+          <h1 class="header">Brandon's Breakfast Bonanza!</h1>
+          <div class="links">
+            <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutMe.html">About Me!</a>
+            </nav>
+          </div>
+        </div>
+        
+    </header>
+    <div class="json-button">
+        <button class="to-json-button" onClick="getRecipeJSON()">Click me to get this recipe in JSON format!</button>
+        <pre id="pre-formatter"><code id="json">JSON content will appear here!</code></pre>
+    </div>
+
+    <div class="title-container">
+        <h2 id="recipeTitle">Breakfast Burrito</h2>
+    </div>
+
+    <div class="ingredient-description">
+        <div>
+            <img id="foodImage" src="Breakfast-Burrito-Recipe.jpg" alt="Breakfast Burrito">
+        </div>
+        <div>
+            <p id="description">An easy on the go breakfast to take with you to class or on the road!</p>
+        </div>
+
+    </div>
+
+    <div class="title-container">
+        <h3 class="ingredient-header-text">Ingredients</h3>
+    </div>
+
+    <div class="ingredient-container">
+        <div class="ingredient-list">
+            <ul id="ingredientList">
+                <li>2 Eggs</li>
+                <li>Chopped onions</li>
+                <li>1 breakfast sausage</li>
+                <li>Spinach</li>
+                <li>Butter/cooking oil</li>
+                <li>1 Tortilla</li>
+                <li>Salt and Pepper</li>
+            </ul>
+        </div>
+        <div class="ingredient-form">
+            <h4>Add an Ingredient!</h4>
+            <i>Ingredient: </i>
+            <input id="newIngredient" class="ingredient-input" placeholder="Add your ingredient here" value="" />
+            <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+        </div>
+    </div>
+
+    <div class="title-container">
+        <h3 class="ingredient-header-text">Preparation</h3>
+    </div>
+
+    <div class="preparation-container">
+
+        <div class="preparation-steps">
+            <ol id="stepList">
+                <li>In a small/medium pan over medium heat, melt butter (or heat oil).</li>
+                <li>Add chopped onions and chopped breakfast sausage to pan, cooking them for 5-7 minutes, or until they begin to brown</li>
+                <li>Crack 2 eggs into separate bowl, scrambling and seasoning with salt and pepper</li>
+                <li>Once onions and sausage are browned, add scrambled eggs.</li>
+                <li>Cook scrambled eggs for 2-3 minutes and add spinach. Continue scrambling until spinach is cooked down.</li>
+                <li>Add scramble onto tortilla and roll!</li>
+                <li>Voila, enjoy!</li>
+            </ol>
+        </div>
+        <div class="step-form">
+            <h4>Add a Step!</h4>
+            <i>Step: </i>
+            <input id="newStep" class="step-input" placeholder="Add another step here" value="" />
+            <button class="form-button" onclick="addStep()">Add Step</button>
+        </div>
+
+    </div>
+
+  </body>
+</html>
