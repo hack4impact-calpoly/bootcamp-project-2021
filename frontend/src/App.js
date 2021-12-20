@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
+import HomePage from './components/HomePage';
 
-import RecipePage from './pages/RecipePage';
+import RecipePage from './components/RecipePage';
 
-import AboutPage from './pages/AboutPage';
+import AboutPage from './components/AboutPage';
 
 function App() {
+
+    useEffect( () => console.log('Refresh'));
 
     return (
         <>

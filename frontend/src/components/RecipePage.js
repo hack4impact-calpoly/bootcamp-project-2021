@@ -1,43 +1,61 @@
-import recipes from '../recipeData';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../components/navbar';
+import Navbar from './navbar';
 import './pages.css';
 
 function RecipePage() {
 
-  let { id } = useParams();
+    let { id } = useParams();
     const [newIngredient, setNewIngredient] = useState('');//add this
     const [newStep, setNewStep] = useState('');//add this
-    const r = recipes.find(recipe => recipe.name === id);
+    const [recipe, setRecipe] = useState();
 
-    let addIngredient = () => {
-      let ul = document.getElementById("ingred-list");
-      let newElem = document.createElement("li");
+    async function addIngredient() {
       let ingredient = document.getElementById("newIngredient").value;
-      newElem.appendChild(document.createTextNode(ingredient));
-      ul.appendChild(newElem);
-  }
+      const rawResponse = await fetch('http://localhost:3001/api/recipe/' + id + '/ingredient', {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({newIngredient : ingredient})
+      });
+      setNewIngredient('');
+    }
 
-    let addStep = () => {
-      let ul = document.getElementById("step-list");
-      let newElem = document.createElement("li");
+    async function addStep() {
       let step = document.getElementById("newStep").value;
-      newElem.appendChild(document.createTextNode(step));
-      ul.appendChild(newElem);
-  }
+      const rawResponse = await fetch('http://localhost:3001/api/recipe/' + id + '/instruction', {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({newInstruction : step})
+      });
+      setNewStep('');
+    }
+
+  useEffect(() => {
+    const loadRecipe = () => {
+       fetch('http://localhost:3001/api/recipe/' + id)
+      .then(res => res.json())
+      .then(jsondata => setRecipe(jsondata));
+    }
+    loadRecipe();
+  }, [id, newIngredient, newStep])
 
   return (
     <>
     <div id="page">
     <Navbar/>
-    <h2 id="name">{r.name}</h2>
-        <img id="image" src={r.imgSrc} width="200px"></img>
-        <p id="description">{r.desc}</p>
+    {recipe ? (<h2 id="name">{recipe.recipeName}</h2>) : (<p>Loading</p>)}
+    {recipe ? (<img id="image" src={recipe.recipeImage} width="200px"></img>) : (<p>Loading</p>)}
+    {recipe ? (<p id="description">{recipe.previewDesc}</p>) : (<p>Loading</p>)}
         <div id="ingredients">
         <h4>Ingredients</h4>
             <ul id="ingred-list">
-                {(r.ingred).map(ing => <li>{ing}</li>)}
+                {recipe ? (recipe.ingredientList).map(ing => <li>{ing}</li>) : (<p>Loading</p>)}
             </ul>
             <input 
               id="newIngredient" 
@@ -53,7 +71,7 @@ function RecipePage() {
         <div id="steps">
         <h4>Steps</h4>
             <ol id="step-list">
-              {(r.steps).map(s => <li>{s}</li>)}
+              {recipe ?  (recipe.steps).map(s => <li>{s}</li>) : (<p>Loading</p>)}
             </ol>
             <input 
               id="newStep" 
