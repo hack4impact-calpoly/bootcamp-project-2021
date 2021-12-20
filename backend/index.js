@@ -34,6 +34,13 @@ catch(error){
 }
 })
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  res.header('Access-Control-Allow-Methods', '*');
+  next();
+  });
+
 app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
  const recipeName = req.params.recipeName
  const ingredient = req.body.newIngredient
@@ -51,12 +58,12 @@ catch(error){
 
 app.put("//api/recipe/:recipeName/instruction", async (req, res) => {
   const recipeName = req.params.recipeName
-  const ingredient = req.body.newIngredient
+  const instruction = req.body.newInstruction
   const recipe = await Recipe.findOne({recipeName:recipeName})
  try{
-   recipe.ingredientList.push(ingredient)
+   recipe.instructionList.push(instruction)
    await recipe.save()
-   res.send('ingredient sucessfully added')
+   res.send('instruction sucessfully added')
  }
  catch(error){
    res.status(500).send(error)

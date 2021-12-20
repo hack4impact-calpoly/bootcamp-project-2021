@@ -30,8 +30,7 @@ const addIngredient = () => {
     };
 
     const updateIngredients = async () => {
-      fetch(`http://localhost:3001/api/recipe/${name}/ingredient`)
-    }
+      fetch(`http://localhost:3001/api/recipe/${name}/ingredient`).catch((error) => console.error(`failed due to ${error}`))}
     updateIngredients();
 
   },[addIngredient])
@@ -46,7 +45,7 @@ const addIngredient = () => {
     };
 
     const updateInstruction = async () => {
-      fetch(`http://localhost:3001/api/recipe/${name}/instruction`)
+      fetch(`http://localhost:3001/api/recipe/${name}/instruction`).catch((error) => console.error(`failed due to ${error}`))
     }
     updateInstruction();
 
