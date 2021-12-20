@@ -128,7 +128,6 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-weight: lighter;
 }
 
 .recipe-name {
