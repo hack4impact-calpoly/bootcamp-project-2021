@@ -1,174 +1,240 @@
-:root { /* variables */
-    --cg-black: rgb(30, 32, 32);
-    --cg-blue: rgb(36, 94, 255);
-    --cg-grey: rgb(243, 243, 243);
-    --cg-white: rgb(255, 255, 255);
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-    background: var(--cg-grey);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-  }
-  
-  .header-background{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    background-color: var(--cg-black);
-    color: var(--cg-white);
-    padding: 0 20px;
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
 
-    font-family: Georgia;
-  }
-  
-  header a {
-    color: var(--cg-white);
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0 12px;
-    text-decoration: none;
-    
-    font-family: monospace;
-  }
-  header a:hover {
-    color: var(--cg-blue);
-    text-decoration: underline;
-  }
-  header a:active {
-    color: var(--cg-blue);
-  }
+html {
+  height: 100%;
+}
 
-  h3 a {
-    color: var(--cg-white);
-    text-decoration: none;
-  }
-  h3 a:hover{
-    color: var(--cg-blue);
-    text-decoration: underline;
-  }
-  h3 a:active {
-    color: var(--cg-blue);
-  }
+body {
+  background: var(--cg-grey);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
 
-  p a {
-    color: var(--cg-black);
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  p a:hover {
-    color: var(--cg-blue);
-    text-decoration: underline;
-  }
-  
-  p {
-    font-weight: lighter;
-  }
+.header-background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 
-  main {
-    padding: 0 20px 40px 20px;
-  }
-  
-  .intro {
-    display: flex;
-    margin-left: 20px;
-    justify-self: center;
-    text-align: center;
-  }
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
 
-  .welcome {
-    display: flex;
-    justify-content: center;
-  }
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  padding: 0px 20px;
 
-  .recipe {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-  }
-  
-  .recipe-name {
-    font-size: 20px;
-  }
-  
-  .search-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-  }
+  font-family: Georgia;
 
-  .item-link {
-    width: 70%;
-  }
-  
-  .search-item {
-    float: left;
-    object-fit: cover;
-    min-width: 100%;
-    height: 500px;
-    flex-basis: 50px;
-    flex-grow: 1;
+  /* border: solid red; */
+}
 
-    /* border: 2px solid black; */
-  }
-  
-  .search-item-2 {
-    display: flex;
-    background-color: var(--cg-white);
-    float: right;
-    max-width: 30%;
-    height: 500px;
-    flex-basis: 50px;
-    flex-grow: 1;
-    padding: 0 20px;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: hidden;
+.navbar {
+  /* border: solid blue; */
+  position: relative;
+  right: 30px
+}
 
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+header a {
+  color: var(--cg-white);
+  font-weight: bold;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
 
-    /* border: 2px solid blue */
-  }
+  font-family: monospace;
+}
+
+header a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+header a:active {
+  color: var(--cg-blue);
+}
+
+h3 a {
+  color: var(--cg-white);
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+h3 a:active {
+  color: var(--cg-blue);
+}
+
+p a, li a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+p a:hover, li a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+p {
+  font-weight: lighter;
+}
+
+section b {
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+}
+
+.intro {
+  display: flex;
+  margin-left: 20px;
+  justify-self: center;
+  text-align: center;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.recipe-name {
+  font-size: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  /* border: 2px solid blue; */
+}
+
+.item-link {
+  width: 70%;
+
+  /* border: 2px solid red; */
+}
+
+.search-item {
+  float: left;
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 1;
+
+  /* border: 2px solid black; */
+}
+
+.search-item-2 {
+  display: flex;
+  background-color: var(--cg-white);
+  float: right;
+  width: 30%;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: hidden;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  /* border: 2px solid green; */
+}
+
+.picture {
+  display: flex;
+  width: 20%;
+  height: auto;
+}
+
+.pic-of-me {
+  width: 100%;
+  height: 100%;
+}
+
+.pic-of-me:hover {
+  width: 150%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* border: solid red; */
+}
+
+.flex-img-ctn {
+  width: 30%;
+}
+
+.flex-image {
+  /* border: 2px solid black; */
+  float: right;
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
   
-  .pic-of-me:hover {
-    width: 500px;
-    height: 500px;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
-  }
-  
-  .flex-image {
-    border: 2px solid black;
-    max-width: 350px;
-    max-height: 350px;
-    align-items: flex-end;
-    justify-content: end;
-    flex-basis: 50px;
-    flex-grow: 1;
-  }
-  
-  .flex-header {
-    flex-basis: 50px;
-    padding-right: 20px;
-    flex-grow: 1;
-    margin: 0px;
-    line-height: 1.5;
-    overflow: hidden;
-  }
-  
+  align-items: flex-end;
+  justify-content: end;
+
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+.flex-header {
+  float: left;
+  flex-basis: 50px;
+  flex-grow: 1;
+
+  height: 300px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  margin: 0px;
+  line-height: 1.5;
+  overflow: hidden;
+
+  /* border: solid blue; */
+
+  background-color: var(--cg-white);
+}
+
+.tutorial {
+  display: flex;
+  justify-content: center;
+}
