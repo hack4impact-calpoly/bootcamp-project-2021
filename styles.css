@@ -18,6 +18,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: monospace;
+
 }
 
 .header-background {
@@ -31,14 +32,21 @@ body {
   top: 0;
   width: 100%;
   height: 7%;
+  z-index: 10;
 
   background-color: var(--cg-black);
   color: var(--cg-white);
   padding: 0px 20px;
 
-  font-family: Georgia;
-
   /* border: solid red; */
+}
+
+.main-text a {
+  font-family: Georgia;
+}
+
+.main-text a:hover {
+  text-decoration: None;
 }
 
 .navbar {
@@ -120,6 +128,7 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
+  font-weight: lighter;
 }
 
 .recipe-name {
@@ -162,7 +171,7 @@ main {
   padding: 0 20px;
   margin: 0px;
   line-height: 1.5;
-  overflow: hidden;
+  overflow: scroll;
 
   flex-direction: column;
   text-align: center;
@@ -185,6 +194,7 @@ main {
 .pic-of-me:hover {
   width: 150%;
   height: auto;
+  transition: all .2s ease-in-out;
 }
 
 .flex-container {
@@ -208,7 +218,7 @@ main {
   object-fit: cover;
   width: 100%;
   height: 300px;
-  
+
   align-items: flex-end;
   justify-content: end;
 
@@ -227,7 +237,7 @@ main {
 
   margin: 0px;
   line-height: 1.5;
-  overflow: hidden;
+  overflow: scroll;
 
   /* border: solid blue; */
 
@@ -237,4 +247,85 @@ main {
 .tutorial {
   display: flex;
   justify-content: center;
+}
+
+.form-button {
+  background-color: var(--cg-black);
+  border: none;
+  color: var(--cg-white);
+
+  font-family: monospace;
+
+  padding: 5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.form-button:hover {
+  background-color: var(--cg-blue);
+}
+
+.form-element {
+  font-family: monospace;
+}
+
+.vertical-align * {
+  vertical-align: middle;
+}
+
+iframe {
+  border: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+span {
+  position: relative;
+  display: inline-flex;
+  width: 90px;
+  height: 25px;
+  perspective: 1000px;
+  text-align: center;
+
+  /* border: solid blue; */
+}
+
+span a {
+  font-size: 15;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-12px);
+  transition: transform .25s;
+
+}
+
+span a:before,
+span a:after {
+  position: absolute;
+  content: "Convert to JSON";
+  height: 25;
+  width: 180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+span a:before {
+  color: var(--cg-white);
+  background: var(--cg-black);
+  transform: rotateY(0deg) translateZ(12px);
+}
+
+span a:after {
+  color: var(--cg-white);
+  background: var(--cg-blue);
+  transform: rotateX(90deg) translateZ(12px);
+}
+
+span a:hover {
+  transform: translateZ(-12px) rotateX(-90deg);
 }

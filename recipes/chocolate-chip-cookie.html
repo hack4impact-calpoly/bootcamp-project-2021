@@ -1,0 +1,126 @@
+<!DOCTYPE html lang="en-US">
+
+<head>
+  <title> mon appétit - chocolate chip cookies </title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript" src="interact.js"></script>
+</head>
+
+<body>
+  <header class="header-background">
+    <h1 class="main-text"> <a href="../index.html">mon appétit</a> </h1>
+    <nav class="navbar">
+      <a href="../index.html">HOME</a>
+      <a href="../about.html">ABOUT</a>
+    </nav>
+  </header>
+  <main>
+    <pre id="pre-formatter"><code id="json"></code></pre>
+    <section>
+      <div class="flex-container">
+        <div class="flex-header">
+          <h2 id="recipeName">Chocolate Chip Cookies</h2>
+          <p id="recipeDescription">Truly a classic, this <a href="https://en.wikipedia.org/wiki/Chocolate_chip_cookie"
+              target="_blank">chocolate chip cookie</a>
+            features high quality ingredients that will not only make this the best chocolate chip cookie you've ever
+            had,
+            but be a wonderful bookend desert to any meal in any occasion.
+            <br>
+            <br>
+            What makes this recipe deliver on that promise? Crispy edges, a chewy center, and a recipe that turns out
+            consistently delicious homemade chocolate chip cookies every single time—all without a mixer.
+            The browned butter is key to this recipe, helping it stay rooted in classic cookie flavor while also
+            contributing to that perfect balance of crisp-chewy textures—an ideal combo whether you dunk your cookies
+            in milk or not. The quality of the vanilla is also important here; we recommend
+            <a href="https://www.heilalavanilla.com/collections/vanilla-extract" target="_blank">Heilala</a>
+            or <a href="https://nielsenmassey.com/products/pure-vanilla-extract/" target="_blank">Neilsen-Massey</a>,
+            which both have enough heft to stand up to bitter chocolate and molasses-y dark brown sugar.
+            <br>
+            <br>
+            The recipe below is designed to act as a guide, and not something to be followed prescriptively. Play with
+            your food! Adjust amounts based on your tastes.
+          </p>
+          <span><a href="#" onclick="recipeToJSON()"></a></span>
+        </div>
+        <div class="flex-img-ctn">
+          <img id="recipeImage" class="flex-image" src="../images/chocolate-chip-cookie.jpg"
+            alt="A gooey, warm chocolate chip cookie.">
+        </div>
+      </div>
+    </section>
+    <section>
+    </section>
+    <article>
+      <section id="ing">
+        <h3>Ingredients</h3>
+        <p><mark>Makes 16</mark></p>
+        <ul id="ingredientList">
+          <li>1½ cups (200 g) all-purpose flour (spooning into measuring cups, then leveling)</li>
+          <li>1¼ tsp. (4 g) Diamond Crystal or ¾ tsp. (4 g) Morton kosher salt</li>
+          <li>¾ tsp. (4 g) baking soda</li>
+          <li>¾ cup (1½ sticks; 169 g) unsalted butter, divided</li>
+          <li>1 cup (200 g) (packed) dark brown sugar</li>
+          <li>¼ cup (50 g) granulated sugar</li>
+          <li>1 large egg</li>
+          <li>2 large egg yolks</li>
+          <li>2 tsp. vanilla extract</li>
+          <li>6 oz. (170 g) bittersweet chocolate (60%–70% cacao), coarsely chopped, or semisweet chocolate chips</li>
+        </ul>
+      </section>
+      <div class="form-group">
+        <h4> Add an Ingredient</h4>
+        <label for="newIngredient">Ingredient: </label>
+        <input id="newIngredient" class="form-element" placeholder="A pinch of love" value="" /> <br /> <br />
+        <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+      </div>
+      <section id="prep">
+        <h3>Preparation</h3>
+        <ol id="instructionList">
+          <li>Place racks in upper and lower thirds of oven; preheat to 375°.
+            Whisk flour, salt, and baking soda in a small bowl; set aside.</li>
+          <br>
+          <li>Cook ½ cup (1 stick; 113 g) butter in a large saucepan over medium heat, swirling often and scraping
+            bottom of pan with a heatproof rubber spatula, until butter foams, then browns, about 4 minutes.
+            Transfer butter to a large heatproof bowl and let cool 1 minute.
+            Cut remaining ¼ cup (½ stick; 56 g) butter into small pieces and add to brown butter (it should start to
+            melt but not foam and sizzle, so test with one piece before adding the rest).</li>
+          <br>
+          <li>Once butter is melted, add both sugars and whisk, breaking up any clumps, until sugar is incorporated and
+            no lumps remain.
+            Add egg and egg yolks and whisk until sugar dissolves and mixture is smooth, about 30 seconds.
+            Whisk in vanilla. Using rubber spatula, fold reserved dry ingredients into butter mixture just until no dry
+            spots remain, then fold in chocolate
+            (the dough will be soft but should hold its shape once scooped;
+            if it slumps or oozes after being scooped, stir dough back together several times and let rest 5–10 minutes
+            until scoops hold their shape as the flour hydrates).</li>
+          <br>
+          <li>Using a 1½-oz. scoop (3 Tbsp.), portion out 16 balls of dough and divide between 2 parchment-lined rimmed
+            baking sheets.
+            Bake cookies, rotating sheets if cookies are browning very unevenly (otherwise, just leave them alone),
+            until deep golden brown and firm around the edges, 8–10 minutes.
+            Let cool on baking sheets.</li>
+          <br>
+          <strong>Do Ahead</strong> Cookies can be made 3 days ahead. Store airtight at room temperature.
+        </ol>
+      </section>
+      <div class="form-group">
+        <h4> Add an Instruction</h4>
+        <div class="vertical-align">
+          <label for="newInstruction">Instruction: </label>
+          <textarea id="newInstruction" class="form-element" placeholder="Pour and Serve!" value="" rows="3"></textarea>
+          <br /> <br />
+        </div>
+        <button class="form-button" onclick="addInstruction()">Add Instruction</button>
+      </div>
+    </article>
+    <br>
+    <div class="tutorial">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/17lp_x27_RI"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </main>
+</body>
+
+</html>

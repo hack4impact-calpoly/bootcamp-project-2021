@@ -1,48 +1,55 @@
-<html lang="en-US">
+<!DOCTYPE html lang="en-US">
 
 <head>
-  <title> mon appétit - pasta bolognese </title>
+  <title> mon appétit - pasta bolognesex </title>
   <link rel="stylesheet" href="../styles.css">
+  <script type="text/javascript" src="interact.js"></script>
 </head>
 
 <body>
   <header class="header-background">
-    <h1 class="main-text"> mon appétit </h1>
+    <h1 class="main-text"> <a href="../index.html">mon appétit</a> </h1>
     <nav class="navbar">
       <a href="../index.html">HOME</a>
       <a href="../about.html">ABOUT</a>
     </nav>
   </header>
   <main>
+    <pre id="pre-formatter"><code id="json"></code></pre>
     <section>
       <div class="flex-container">
         <div class="flex-header">
-          <h2>Pasta Bolognese</h2>
-          <p>Warm, hearty, heavy, and homey. The classic <a href="https://en.wikipedia.org/wiki/Bolognese_sauce" target="_blank">pasta bolognese</a> with
-            some modern twists makes this recipe a must have for a cold winter's day. Or anytime of the
-            year! Take your time, be patient, and you'll be rewarded with the ultimate of comfort dishes.
-          </p>
-          <p>It doesn’t take a lot of ingredients (or a lot of money) to make a classic Bolognese recipe. 
-            What it does take, though, is patience for the sauce to achieve the ideal authentic texture. 
-            You’re going to go low and slow—it’ll take around 3 hours, but most of that cook time is hands-off.</p>
-          <p>
+          <h2 id="recipeName">Pasta Bolognese</h2>
+          <p id="recipeDescription">Warm, hearty, heavy, and homey. The classic <a
+              href="https://en.wikipedia.org/wiki/Bolognese_sauce" target="_blank">pasta bolognese</a> with some modern
+            twists makes this recipe a must have for a cold winter's day.
+            Or anytime of the year! Take your time, be patient, and you'll be rewarded with the ultimate of comfort
+            dishes.
+            <br>
+            <br>
+            It doesn’t take a lot of ingredients (or a lot of money) to make a classic Bolognese recipe.
+            What it does take, though, is patience for the sauce to achieve the ideal authentic texture.
+            You’re going to go low and slow—it’ll take around 3 hours, but most of that cook time is hands-off.
+            <br>
+            <br>
             The recipe below is designed to act as a guide, and not something to be followed prescriptively. Play with
-            your
-            food! Adjust amounts based on your tastes.
+            your food! Adjust amounts based on your tastes.
           </p>
+          <span><a href="#" onclick="recipeToJSON()"></a></span>
         </div>
         <div class="flex-img-ctn">
-        <img class="flex-image" src="../images/bolognese.jpg">
+          <img id="recipeImage" class="flex-image" src="../images/bolognese.jpg"
+            alt="A rustic plate of large, flat parppadelle pasta noodles and meaty bolognese sauce sprinkled with parmesan cheese.">
         </div>
       </div>
     </section>
     <section>
     </section>
     <article>
-      <section>
+      <section id="ing">
         <h3>Ingredients</h3>
-        <p>Serves 4</p>
-        <ul>
+        <p><mark>Serves 4</mark></p>
+        <ul id="ingredientList">
           <li>1 medium onion, chopped</li>
           <li>1 celery stalk, chopped</li>
           <li>1 small carrot, peeled, chopped</li>
@@ -60,52 +67,75 @@
           <li>2 oz. finely grated Parmesan (about ½ cup), plus more for serving</li>
         </ul>
       </section>
-      <section>
+      <div class="form-group">
+        <h4> Add an Ingredient</h4>
+        <label for="newIngredient">Ingredient: </label>
+        <input id="newIngredient" class="form-element" placeholder="Everything nice" value="" /> <br /> <br />
+        <button class="form-button" onclick="addIngredient()">Add Ingredient</button>
+      </div>
+      <section id="prep">
         <h3>Preparation</h3>
-        <ol>
-          <li>Pulse onion, celery, and carrot in a food processor until very finely chopped. Transfer to a small bowl.</li>
+        <ol id="instructionList">
+          <li>Pulse onion, celery, and carrot in a food processor until very finely chopped. Transfer to a small bowl.
+          </li>
           <br>
-          <li>Heat oil in a Dutch oven or other large pot over medium. 
-            Break beef into small clumps (about 1½") and add to pot; season lightly with salt. 
-            Cook, stirring occasionally but not breaking meat apart, until beef is lightly browned but not crisp, 
-            6–8 minutes. It may be gray in spots (that’s okay!) and still a little pink in the center. 
+          <li>Heat oil in a Dutch oven or other large pot over medium.
+            Break beef into small clumps (about 1½") and add to pot; season lightly with salt.
+            Cook, stirring occasionally but not breaking meat apart, until beef is lightly browned but not crisp, 6–8
+            minutes.
+            It may be gray in spots (that’s okay!) and still a little pink in the center.
             Using a slotted spoon, transfer beef to a medium bowl.</li>
           <br>
-          <li>Wipe out pot. Cook pancetta in pot over medium heat, stirring occasionally, until pancetta has released 
-            some of its fat and is crisp, 6–8 minutes. Add onion mixture to pot and cook, stirring occasionally, until 
-            vegetables are very soft and beginning to stick to surface, 6–8 minutes.</li>
+          <li>Wipe out pot. Cook pancetta in pot over medium heat, stirring occasionally, until pancetta has released
+            some of its fat and is crisp, 6–8 minutes.
+            Add onion mixture to pot and cook, stirring occasionally, until vegetables are very soft and beginning to
+            stick to surface, 6–8 minutes.</li>
           <br>
-          <li>Return beef to pot and pour in wine. Reduce heat to medium-low and cook, smashing down on beef with a 
-            wooden spoon, until wine is evaporated, surface of pot is almost dry, and meat is finely ground, 12–15 minutes. 
-            (The meat should be reduced to what looks like little bits. It takes a bit of effort, but you can take breaks.) 
-            Add tomato paste, bay leaf, and nutmeg and cook, stirring occasionally and still pressing down on meat, until 
-            tomato paste is slightly darkened, about 5 minutes.</li>
+          <li>Return beef to pot and pour in wine.
+            Reduce heat to medium-low and cook, smashing down on beef with a wooden spoon, until wine is evaporated,
+            surface of pot is almost dry, and meat is finely ground, 12–15 minutes.
+            (The meat should be reduced to what looks like little bits.
+            It takes a bit of effort, but you can take breaks.)
+            Add tomato paste, bay leaf, and nutmeg and cook, stirring occasionally and still pressing down on meat,
+            until tomato paste is slightly darkened, about 5 minutes.</li>
           <br>
-          <li>Pour stock and milk into pot; add a pinch of salt. Reduce heat to the lowest setting and cook, uncovered and 
-            stirring occasionally, until meat is very, very tender, 2–2½ hours. There shouldn’t be any rapid bubbles at this 
-            stage. Instead, the sauce should release the occasional small bubble or two. When finished, the sauce should have 
-            the texture of and look like a sloppy joe mixture. If the liquid reduces before the meat is completely tender, add 
-            an extra ½ cup stock and continue cooking. Discard bay leaf. Taste sauce and adjust seasoning with salt; keep warm.</li>
+          <li>Pour stock and milk into pot; add a pinch of salt. Reduce heat to the lowest setting and cook, uncovered
+            and stirring occasionally, until meat is very, very tender, 2–2½ hours.
+            There shouldn’t be any rapid bubbles at this stage.
+            Instead, the sauce should release the occasional small bubble or two.
+            When finished, the sauce should have the texture of and look like a sloppy joe mixture.
+            If the liquid reduces before the meat is completely tender, add an extra ½ cup stock and continue cooking.
+            Discard bay leaf. Taste sauce and adjust seasoning with salt; keep warm.</li>
           <br>
-          <li>Cook pasta in a large pot of boiling salted water. If using fresh pasta, cook about 3 minutes. If using dry, 
-            cook until very al dente, about 2 minutes less than package directions.</li>
+          <li>Cook pasta in a large pot of boiling salted water. If using fresh pasta, cook about 3 minutes.
+            If using dry, cook until very al dente, about 2 minutes less than package directions.</li>
           <br>
-          <li>Using tongs, transfer pasta to pot with sauce. Add 1 cup pasta cooking liquid and ½ cup Parmesan. Increase heat 
-            to medium, bring to a simmer, and cook, tossing constantly, until pasta is al dente and liquid is slightly thickened, 
-            about 2 minutes.</li>
+          <li>Using tongs, transfer pasta to pot with sauce. Add 1 cup pasta cooking liquid and ½ cup Parmesan.
+            Increase heat to medium, bring to a simmer, and cook, tossing constantly, until pasta is al dente and liquid
+            is slightly thickened, about 2 minutes.</li>
           <br>
           <li>Transfer pasta to a platter and top with more Parmesan.</li>
           <br>
-          <b>Do Ahead:</b> Sauce can be made 4 days ahead. Cover and chill.
+          <strong>Do Ahead:</strong> Sauce can be made 4 days ahead. Cover and chill.
         </ol>
       </section>
-      <div class="tutorial">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sUZbfaYyL-s"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="form-group">
+        <h4> Add an Instruction</h4>
+        <div class="vertical-align">
+          <label for="newInstruction">Instruction: </label>
+          <textarea id="newInstruction" class="form-element" placeholder="Pour and Serve!" value="" rows="3"></textarea>
+          <br /> <br />
+        </div>
+        <button class="form-button" onclick="addInstruction()">Add Instruction</button>
       </div>
     </article>
+    <br>
+    <div class="tutorial">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sUZbfaYyL-s"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
   </main>
 </body>
 
