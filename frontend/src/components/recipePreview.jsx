@@ -10,7 +10,7 @@ export default function RecipePreview({name, image}) {
                 <div className="grid-item">
                     <b><Link to={`/recipe/${name}`}>{name}</Link></b>
                     <br/>
-                    <img src={image} className="myimg" />
+                    <img src={image} className="myimg" alt={name}/>
                 </div>
         </div>
   );

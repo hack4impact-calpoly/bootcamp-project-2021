@@ -1,8 +1,19 @@
-import React from 'react';
-import recipes from '../recipeData.js';
-import RecipePreview from '../recipePreview.jsx'
+import React, { useState, useEffect } from 'react';
+import RecipePreview from './recipePreview.jsx';
 
 export default function Home() {
+
+    let [recipes, setRecipes] = useState();
+
+    useEffect(() => {
+        const loadRecipes = () => {
+            fetch("http://localhost:3001/api/recipe/")
+            .then(res => res.json())
+            .then(jsondata => setRecipes(jsondata))
+        }
+        loadRecipes()
+    }, []); // [] --> our code will only be ran once when our component is initially rendered
+
     return (
         <div>
             <p id="important-text">Welcome to Grandma's Lazy Susan!</p>
@@ -18,12 +29,16 @@ export default function Home() {
                 <br/>
             </section>
             <h1 className="home">The Lazy Susan</h1>
-            <div className="recipes" className="grid-container">
-                {recipes.map(recipe => 
+            <div className="recipesFormat" className="grid-container">
+                {recipes ? (
+                    recipes.map(recipe => 
                     <RecipePreview 
                         name = {recipe.recipeName}
                         image = {recipe.recipeImage}
-                    /> //how we call the component
+                    /> // calling the component
+                ))
+                : (
+                    <p>Loading...</p>
                 )}
             </div>
         </div>

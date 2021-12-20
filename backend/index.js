@@ -7,6 +7,13 @@ const mongoose = require('mongoose')
 const recipeEndpoints = require('./routes/recipe')
 const connection_url = "mongodb+srv://newUser:newPassword@cluster0.tnzfc.mongodb.net/RecipesDB?retryWrites=true&w=majority"
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
+  next();
+});
+
 app.use('/api/recipe', recipeEndpoints)
 
 mongoose.connect(connection_url)

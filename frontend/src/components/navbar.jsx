@@ -8,7 +8,7 @@ export default function Navbar() {
 // with your navbar code from your earlier milestones
     <header className = "top"> 
 	    <div className = "top">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/SurnameChen.svg/1200px-SurnameChen.svg.png" id="logo"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/SurnameChen.svg/1200px-SurnameChen.svg.png" id="logo" alt="Chinese character Chan"/>
           <h1 id="header-top">Grandma's Lazy Susan</h1>
         </div>
         <nav>

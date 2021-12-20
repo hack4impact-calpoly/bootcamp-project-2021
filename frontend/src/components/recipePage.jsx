@@ -3,30 +3,50 @@ import './recipePage.css'
 
 export default function Recipe({name, image, ingredients, instructions}) {
 
-    // state variable that stores ingredient within RecipePage component
-    const [newIngredient, setNewIngredient] = React.useState('');
-    const [newInstruction, setNewInstruction] = React.useState('');
+    // state variable that stores ingredient within RecipePage component    
+    const [newIngredient, setNewIngredient] = useState('');
+    const [newInstruction, setNewInstruction] = useState('');
 
-    const addIngredient = () => {
-        console.log(newIngredient)
+    let addIngredient = () => {
+        let Obj = {newIngredient: newIngredient}
+        fetch(`/api/recipe/${name}/ingredient`, {
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              method: 'PUT',
+              body: JSON.stringify(Obj)
+          }).then(response => response.json())
+          .then(jsondata => setNewIngredient(jsondata))
+        // updating frontend list of ingredients
         let ul = document.getElementById("ingredientList");
-        let random = document.createElement("li");
-        random.appendChild(document.createTextNode(newIngredient));
-        ul.appendChild(random);
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(newIngredient));
+        ul.appendChild(li);
     }
 
     const addInstruction = () => {
-        console.log(newInstruction)
+        let Obj = {newInstruction: newInstruction}
+        fetch(`/api/recipe/${name}/instruction`, {
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              method: 'PUT',
+              body: JSON.stringify(Obj)
+          }).then(response => response.json())
+          .then(jsondata => setNewInstruction(jsondata))
+        // updating frontend list of instructions
         let ol = document.getElementById("instructionList");
-        let random = document.createElement("li");
-        random.appendChild(document.createTextNode(newInstruction));
-        ol.appendChild(random);
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(newInstruction));
+        ol.appendChild(li);
     }
 
     return(
         <div>
             <div className="flex-container">
-                <img id="recipeImage" src={image} className="flex-image" />
+                <img id="recipeImage" src={image} className="flex-image" alt={name}/>
                     <div className="flex-header">
                         <div className="ingredients">
                             <h1 className="dish-size">{name}</h1>
@@ -38,14 +58,15 @@ export default function Recipe({name, image, ingredients, instructions}) {
                             </ul>
                             <div className="form-group">
                                 <h4>Add Ingredient</h4>
-                                <input
-                                    id="newIngredient"
-                                    placeholder="New ingredient!"
+                                <input 
+                                    id="newIngredient" 
+                                    placeholder="New ingredient!" 
                                     value={newIngredient}   // add newIngredient as the input's value
                                     onChange={(e) => {
                                         setNewIngredient(e.target.value);
                                     }}
                                 />
+                                {/* Check this here */}
                                 <button onClick={addIngredient}>Add ingredient to list</button>
                             </div>
                         </div>
@@ -61,9 +82,9 @@ export default function Recipe({name, image, ingredients, instructions}) {
                         </ol>
                         <div className="form-group">
                             <h4>Add Instruction</h4>
-                            <textarea
-                                id="newInstruction"
-                                placeholder="New instruction!"
+                            <textarea 
+                                id="newInstruction" 
+                                placeholder="New instruction!" 
                                 value={newInstruction}  // add newInstruction as the text area's value
                                 onChange={(e) => {
                                     setNewInstruction(e.target.value);

@@ -19,7 +19,7 @@ const recipes = [
             "In a wok over high heat, add the oil. Sear the meat until caramelized. Add the garlic and chili, turn down the heat to medium, and stir-fry for a minute, taking care not to burn the garlic.",
             "Add the cabbage, wine, soy sauce, sugar, and water.",
             "Turn up the heat to high, cover the lid and let the cabbage cook for 1-2 minutes.",
-            "Uncover the lid, and stir in the black vinegar, scallions, and salt to taste. The cabbage should be wilted, but still slightly crunchy and caramelized.",
+            "Uncover the lid, and stir in the black vinegar, scallions, and salt to taste. The cabbage should be wilted, but still slightly crunchy and caramelized."
         ]
     },
     {
