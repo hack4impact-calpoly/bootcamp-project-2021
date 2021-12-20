@@ -2,7 +2,18 @@ import CarbonaraPic from "./images/carbonara.jpg";
 import SpaghettiPic from "./images/spaghetti.jpg";
 import PestopastaPic from "./images/pestoPasta.jpg";
 
-let recipeData = [
+/* --- Array of Objects holding data for each recipe page----
+Format:{
+    name - reference ID by name
+    title - Recipe page title displayed on page
+    desc - recipe description
+    ingredientList - list of ingredients
+    instructionList - list of instructions (method of preparation)
+    recipePic - Link path to the recipe image
+    alt - text displayed in case image is unable to load
+}
+*/
+let recipeData = [ 
     {
         "name": "carbonara",
         "title": "Carbonara: ",
