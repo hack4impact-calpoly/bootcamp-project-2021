@@ -4,12 +4,8 @@ import './recipe.css'
 
 export default function Recipe(props) {
     const [ingredients, setIngredients] = useState(props.ingredients);
-
     const [newIngredient, setNewIngredient] = React.useState('');
-
     const [steps, setInstructions] = useState(props.steps);
-    
-    console.log(props.prep)
     const [newInstruction, setNewInstruction] = React.useState('');
 
     const addIngredient = async () => {
@@ -61,12 +57,11 @@ export default function Recipe(props) {
                 <div class="form-group"> 
                     <h4> Add an Ingredient</h4>
                     <label for="newIngredient">Ingredient: </label>
-                    <input 
-                    id="newIngredient" 
-                    class="form-element" 
-                    placeholder="yummy stuff" 
-                    value={newIngredient}
-                    onChange={(e) => {
+                    <input id="newIngredient" 
+                            class="form-element" 
+                            placeholder="yummy stuff" 
+                            value={newIngredient}
+                            onChange={(e) => {
                     setNewIngredient(e.target.value);
                     }}
                     /> <br /> <br />
