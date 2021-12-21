@@ -56,19 +56,35 @@ app.post("/api/addCar", async (req, res) => {
   }
 });
 
-router.put("/api/car/:carName/carSpecs", async (req, res) => {
-  const carName = req.params.carName;
-  const car = req.body.newCar;
-  const carz = await Car.findOne({ carName: carName });
-  carz.carSpecs.push(car);
-
+app.put("/api/car/:carName/updatedCarSpec", async (req, res) => {
   try {
-    car2 = await car2.save();
-    res.send("The ${carName} added");
+    const carName = req.params.carName;
+    const updates = req.body.newUpdate;
+    const updatedCarSpec = await Car.findOneAndUpdate(
+      { carName: carName },
+      { $push: { carSpecs: updates } }
+    );
+    const ret = await updatedCarSpec.save();
+    res.json(ret);
   } catch (error) {
     res.status(500).send(error.message);
-    console.log("error is ${error.message}");
+    console.log(`error is ${error.message}`);
   }
 });
 
+app.put("/api/car/:carName/updatedCarFact", async (req, res) => {
+  try {
+    const carName = req.params.carName;
+    const updates = req.body.newUpdate;
+    const updatedCarFact = await Car.findOneAndUpdate(
+      { carName: carName },
+      { $push: { carFacts: updates } }
+    );
+    const val = await updatedCarFact.save();
+    res.json(val);
+  } catch (error) {
+    res.status(500).send(error.message);
+    console.log(`error is ${error.message}`);
+  }
+});
 app.listen(3001);
