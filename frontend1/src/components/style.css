@@ -1,0 +1,135 @@
+body {
+    background: rgb(212, 241, 250);
+    background-color: rgb(212, 241, 250);
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 12px;
+}
+
+.header-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(130, 163, 173);
+    color: rgb(246, 246, 246);
+}
+
+#greeting {
+    text-align: center;
+}
+
+#description {
+    text-align: center;
+}
+
+.navbar {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.nav-list {
+    padding: 0 10px;
+}
+
+
+.recipe-entry {
+    flex-grow: 1;
+
+}
+
+.recipe-header {
+    display: flex;
+    background-color: rgb(130, 163, 173);
+    padding: 12px;
+    margin: 12px;
+}
+
+.recipe-text {
+    padding: 12px;
+    margin: 10px;
+    color: rgb(130, 163, 173)
+}
+
+.recipe-img {
+    width: 250px;
+    height: 250px;
+    object-fit: fill;
+    padding: 15px;
+}
+
+.about-me-image {
+    width: 350px;
+    height: 250px;
+    margin: 14px;
+    border: solid;
+}
+
+.about-me-container {
+    display:flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.recipe-page-image {
+    border: 2px solid;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.recipe-img, img {
+    border: 2px solid;
+    margin: 12px;
+    padding: 0;
+}
+
+
+.flex-item {
+    padding: 10px;
+}
+
+
+
+.list-element {
+    font-size: 23px;
+}
+
+.master-container {
+    display:flex;
+    flex-direction: column;
+}
+
+#procedure-head, #list-head {
+    background-color:rgb(130, 163, 173);
+    color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+}
+
+.procedure-list, .aboutme-list {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.instruction-add, .ingredient-add, .ingredient-list, .recipe-name {
+    margin: 10px;
+}
+
+.json-button {
+    margin: 10px;    
+}
+
+.header-text {
+    margin: 10px
+}
+
+
