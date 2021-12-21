@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px 100px;
+  margin: 0;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(223, 245, 252);
+}
+
+.navbar {
+  display: block;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 40px;
+  color: #82aa77;
+}
+
+.navbar a:hover {
+  color: rgb(69, 95, 48);
+  transition: ease-in-out 0.25s;
+}
+a {
+  text-decoration: none;
+}
+
+#title {
+  color: rgb(148, 125, 106);
+  text-decoration: none;
+}
+#ingredients {
+  padding: 60px;
+}
+
+#ingredients h2,
+#steps h2 {
+  color: #def1f8;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: rgb(109, 161, 165);
+}
+
+li {
+  font-size: 1.1rem;
+  color: rgb(172, 211, 223);
+  /* display: inline; */
+}
+
+ul {
+  float: left;
+  padding-bottom: 40px;
+}
+
+section {
+  contain: content;
+  display: block;
+  padding: 50px;
+  background-color: rgb(83, 137, 145);
+}
+.about-intro {
+  background-color: #75ad8d;
+}
+
+.about-intro,
+.friends {
+  display: block;
+  justify-content: left;
+  flex-wrap: wrap;
+  padding: 170px 100px;
+
+  contain: content;
+  /* border: 6px solid lightblue; */
+}
+
+.about-container img {
+  border-radius: 50%;
+  float: right;
+  margin-top: -70px;
+  max-width: 300px;
+  max-height: auto;
+  flex-basis: 50px;
+  flex-grow: 1;
+}
+
+.friends h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(99, 147, 161);
+}
+
+.about-intro h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(224, 255, 234);
+}
+
+.about-intro p,
+.friends p {
+  float: left;
+  color: rgb(224, 255, 247);
+  /* border: 3px solid lightblue; */
+  max-width: 600px;
+  margin-bottom: 80px;
+}
+
+.recipe {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  /* border: 6px solid #d0a47d; */
+}

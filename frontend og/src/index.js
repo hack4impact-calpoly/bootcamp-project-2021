@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
@@ -7,7 +6,6 @@ import RecipePage from "./components/RecipePage";
 import pageData from "./PageData";
 
 const rootElement = document.getElementById("root");
-
 render(
   <BrowserRouter>
     <Routes>
