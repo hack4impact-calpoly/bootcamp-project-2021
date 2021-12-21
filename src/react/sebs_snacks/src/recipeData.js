@@ -115,3 +115,8 @@ export function getRecipeData() {
 export function getRecipe(name) { //Each recipe has a unique name (an ID of sorts), returns the recipe object with the matching name
     return recipeData.find(dish => dish.name === name.recipeID); //Gets the "recipeID" URL component and matches it to the corresponding recipe by name"
 }
+
+export function convertToJSON() {
+    console.log(JSON.stringify(recipeData));
+    return JSON.stringify(recipeData);
+}
