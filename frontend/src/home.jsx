@@ -1,9 +1,28 @@
 import RecipePreview from './recipePreview';
-import recipes from './recipeData';
-import React from 'react';
+//import recipes from './recipeData';
 import './home.css';
+import React, {useState, useEffect} from "react"
 
 export default function Home() {
+
+
+  const [recipes, setRecipes] = React.useState()
+
+  useEffect(() => {
+    const loadRecipes = async () => {
+      fetch('http://localhost:3001/api/recipes')
+      .then(res => res.json())
+      .then(data => setRecipes(data))
+      .catch(error => console.log(error))
+      //console.log(res)
+    }
+
+    loadRecipes()
+    console.log("yo")
+    console.log(recipes)
+
+  }, [])
+
   return (
     <div>
       <br/>
@@ -15,14 +34,16 @@ export default function Home() {
       </p>
       <br/>
       <h1> Recipe List </h1>
-        {recipes.map(recipe =>
+        {recipes ? (recipes.map(recipe =>
           <RecipePreview
             name={recipe.recipeName}
             desc={recipe.recipeDescription}
             image={recipe.recipeImage}
             link={recipe.link}
 
-        />)}
+        />)):(
+          <p> loading ... </p>
+        )}
     </div>
 
 

@@ -10,13 +10,22 @@ mongoose.connect(connection_url)
 
 const Recipe = require("./models/recipeSchema")
 
-app.get('/api/recipe', async (req, res) => {
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
+  next();
+});
+
+app.get('/api/recipes', async (req, res) => {
+  console.log("get request")
   const recipe = await Recipe.find({})
   res.send(recipe)
+  console.log("done")
 })
 
 app.get('/api/recipes/:recipeName', async (req, res) => {
-  const recipeName = await Recipes.findOne({recipeName: req.params.recipeName})
+  const recipeName = await Recipe.findOne({recipeName: req.params.recipeName})
   res.send(recipeName)
 })
 
@@ -46,10 +55,10 @@ app.put('/api/recipe/:recipeName/ingredient', async (req, res) =>{
 
   try {
     const recipe = await Recipe.findOneAndUpdate({recipeName: recipeName}, {$push: {ingredientList: ingredient}})
-    res.send('New ingredient: ${ingredient} added to ${recipename}')
+    res.send(`New ingredient: ${ingredient} added to ${recipeName}`)
   } catch(error){
     res.status(500).send(error.message)
-    console.log('Could not add ${ingredient} because ${error.message}')
+    console.log(`Could not add ${ingredient} because ${error.message}`)
   }
 })
 
@@ -58,10 +67,10 @@ app.put('/api/recipe/:recipeName/instruction', async (req, res) =>{
   const instruction = req.body.newInstruction
   try {
     const recipe = await Recipe.findOneAndUpdate({recipeName: recipeName}, {$push: {steps: instruction}})
-    res.send('New instruction: ${instruction} added to ${recipename}')
+    res.send(`New instruction: ${instruction} added to ${recipeName}`)
   } catch(error){
     res.status(500).send(error.message)
-    console.log('Could not add ${instrcution} because ${error.message}')
+    console.log(`Could not add ${instruction} because ${error.message}`)
   }
 })
 

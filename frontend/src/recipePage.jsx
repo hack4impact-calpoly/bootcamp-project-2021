@@ -1,24 +1,30 @@
 import './recipePage.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function RecipePage({name, desc, image, ingredients, steps}) {
+  const [recipes, setRecipes] = React.useState();
+  const [ingredientList, setIngredientList] = React.useState('');
   const [anIngredient, setNewIngredient] = React.useState('');
+  const [step, setSteps] = React.useState(' ');
   const [anInstruction, setNewInstruction] = React.useState('');
 
-  const addIngredient = () => {
-    console.log(anIngredient)
-    var ul = document.getElementById("ingredientList");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(anIngredient));
-    ul.appendChild(li);
+
+
+  const addIngredient = async() => {
+    await fetch(`http://localhost:3001/api/recipe/${name}/ingredient`, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({newIngredient: anIngredient})
+    })
+
   }
 
-  const addInstruction = () => {
-    console.log(anInstruction)
-    var ol = document.getElementById("instructionList");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(anInstruction));
-    ol.appendChild(li);
+  const addInstruction = async() => {
+    await fetch(`http://localhost:3001/api/recipe/${name}/instruction`, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({newInstruction: anInstruction})
+    })
   }
 
   return (
