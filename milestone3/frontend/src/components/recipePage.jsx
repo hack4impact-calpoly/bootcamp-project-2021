@@ -1,24 +1,46 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import './recipePage.css';
 
-export default function RecipePage({ name, desc, image, ingredients, steps}) {
+export default function RecipePage({name, desc, image, ingredients, steps}) {
 
   const [newIngredient, setNewIngredient] = React.useState('');
+  // const [ingredientAdd, setIngredientAdd] = useState('');
   const [newInstruction, setNewInstruction] = React.useState('');
+  // const [instructionAdd, setInstructionAdd] = useState('');
 
-  const addIngredient = () => {
-    console.log(newIngredient)
-    var ul = document.getElementById("ingredients");
-    var li = document.createElement("li");
+  let addIngredient = () => {
+    fetch(`http://localhost:3001/api/recipe/${name}/ingredients`, {
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+        method: 'PUT',
+        body: JSON.stringify({newIngredient: newIngredient})
+      }).then(response => response.json())
+      .then(jsondata => setNewIngredient(jsondata))
+  
+    let ul = document.getElementById("ingredients");
+    let li = document.createElement("li");
     li.appendChild(document.createTextNode(newIngredient));
     ul.appendChild(li);
-  }
-  const addInstruction = () => {
-    console.log(newInstruction)
-    var ul = document.getElementById("instructions");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(newInstruction));
-    ul.appendChild(li);
+}
+
+  let addInstruction = () => {
+      fetch(`http://localhost:3001/api/recipe/${name}/instructions`, {
+          headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            method: 'PUT',
+            body: JSON.stringify({newInstruction: newInstruction})
+        }).then(response => response.json())
+        .then(jsondata => setNewInstruction(jsondata))
+      
+      let ol = document.getElementById("instructions");
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(newInstruction));
+      ol.appendChild(li);
   }
 
   return (

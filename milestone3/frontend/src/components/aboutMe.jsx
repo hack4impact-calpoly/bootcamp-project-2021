@@ -2,11 +2,10 @@ import './aboutMe.css'
 
 export default function AboutMe() {
   return (
-    <body>
       <main>
         <div>
           <h1>About the Chef</h1>
-          <div class="box">
+          <div className="box">
             <img className="myPicture" src="images/myPic.jpeg" height="250" alt="pic of me"/>
           </div>
             <section>
@@ -21,6 +20,5 @@ export default function AboutMe() {
             </section>
         </div>
       </main>
-    </body>
   );
 }

@@ -4,14 +4,12 @@ import './navbar.css'
 
 export default function Navbar() {
   return (
-    <body>
-      <header class="header-background">
-          <h1 class="main-text">Ishaan's Kitchen </h1>
-          <nav class="nav">
+      <header className="header-background">
+          <h1 className="main-text">Ishaan's Kitchen </h1>
+          <nav className="nav">
             <Link to="/"> Home</Link>
             <Link to="/aboutMe">About Me</Link>
           </nav>
       </header>
-    </body>
   );
 }
