@@ -64,6 +64,7 @@ app.put("/api/car/:carName/updatedCarSpec", async (req, res) => {
       { carName: carName },
       { $push: { carSpecs: updates } }
     );
+
     const val = await updatedCarSpec.save();
     res.json(val);
   } catch (error) {
