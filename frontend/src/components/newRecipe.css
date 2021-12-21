@@ -1,0 +1,19 @@
+.FormRow {
+	margin: 10px 0px;
+	max-width: 400px;
+}
+
+span {
+    color: red;
+}
+
+textarea {
+	width: 100%;
+    height: 100px;
+	max-width: 400px;
+	padding: 10px !important;
+	margin: 5px 0;
+	box-sizing: border-box;
+	border: 2px solid var(--deep-space-sparkle);
+	border-radius: 5px;
+}

@@ -37,7 +37,7 @@ ol li {
     background-color: var(--light-pink);
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 10px;
     transition: 0.4s ease;
     cursor: pointer;
@@ -52,6 +52,11 @@ ol li {
     transition: none;
 }
 
-input {
+.FormInput {
     margin-right: 5px;
+}
+
+.Center {
+    display: flex;
+    justify-content: center;
 }

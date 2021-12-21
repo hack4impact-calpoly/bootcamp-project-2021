@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 
 const RecipeSchema = new mongoose.Schema({
 	name: {
@@ -23,5 +24,6 @@ const RecipeSchema = new mongoose.Schema({
 		required: true
 	}
 }, {collection: 'Recipes'});
+RecipeSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

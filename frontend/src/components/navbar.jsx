@@ -8,6 +8,7 @@ export default function Navbar() {
             <Link to="/" id="titleContainer"><h1 className="Title">Hu's Chews</h1></Link>
             <nav>
                 <Link to="/" className="NavItem">Home</Link>
+                <Link to="/new" className="NavItem">New Recipe</Link>
                 <Link to="/about" className="NavItem">About Me</Link>
             </nav>
         </header>

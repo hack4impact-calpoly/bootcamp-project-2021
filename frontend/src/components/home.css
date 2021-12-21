@@ -1,38 +1,52 @@
 .Card {
-    background-color: var(--champagne-pink);
-    padding: 10px 20px;
-    margin: 20px 0px;
-    border-radius: 20px;
+	background-color: var(--champagne-pink);
+	padding: 10px 20px;
+	margin: 20px 0px;
+	border-radius: 20px;
 }
 
 h2 {
-    background-color: var(--cambridge-blue);
-    padding: 10px;
+	background-color: var(--cambridge-blue);
+	padding: 10px;
 }
 
 h2 a {
-    color: black;
+	color: black;
 }
 
 h2 a:hover {
-    color: var(--deep-space-sparkle);
+	color: var(--deep-space-sparkle);
+}
+
+.TopBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Welcome {
+    margin-top: 0px;
+}
+
+.Message {
+    text-align: center;
 }
 
 .CardBody {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
 }
 
 .CardText {
-    padding: 0px 20px;
-    flex-basis: 50px;
-    flex-grow: 1;
+	padding: 0px 20px;
+	flex-basis: 50px;
+	flex-grow: 1;
 }
 
 .CardImage {
-    width: 200px;
-    border: 5px solid;
-    border-color: var(--deep-space-sparkle);
-    border-radius: 10px;
+	width: 200px;
+	border: 5px solid;
+	border-color: var(--deep-space-sparkle);
+	border-radius: 10px;
 }

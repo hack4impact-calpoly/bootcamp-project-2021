@@ -8,9 +8,9 @@ router.get('/', async (req, res) => {
 	res.send(recipes);
 });
 
-// GET - /api/recipe/:name -> gets a specific recipe given the recipe name
+// GET - /api/recipe/:name -> gets the recipes that match a given recipe name
 router.get('/:name', async (req, res) => {
-	const recipe = await Recipe.findOne({ name: req.params.name });
+	const recipe = await Recipe.find({ name: new RegExp(req.params.name, 'i') });
 	res.send(recipe);
 });
 
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 
 		res.send(`Saved recipe "${recipe.name}"`);
 	} catch (e) {
-		res.send(e.message);
+		res.send('Error creating recipe');
 	}
 });
 
@@ -95,7 +95,7 @@ router.delete('/:name/:type/:index', async (req, res) => {
 			const index =
 				req.params.index > recipe[type].length - 1
 					? recipe[type].length - 1
-					: req.body.index;
+					: req.params.index;
 			recipe[type].splice(index, 1);
 
 			// save to db
