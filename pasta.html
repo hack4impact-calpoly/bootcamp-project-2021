@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script type="text/javascript" src="ingredients.js"></script>
 	<meta charset="utf-8">
 	<title>Michelle's Cookbook!</title>
     <link rel="Stylesheet" href="index.css">
   </head>
   <body>
-      <p id="title">Michelle's Cookbook!</p>
-      <p id="MealTitle"> Gigi Hadid Pasta </p>
-      <img src="https://media1.popsugar-assets.com/files/thumbor/BFZz8alIlnMOUmizTfzeGv1PnWo/0x679:3024x3703/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/05/04/594/n/42718227/e8ce48f65eb0156d6cc4e7.74784119_/i/gigi-hadid-spicy-vodka-pasta-sauce-recipe.jpg"width=300>
+      <p class="title">Michelle's Cookbook!</p>
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <button role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+      <p id="name" class="MealTitle"> Gigi Hadid Pasta </p>
+      <img id="image" src="https://media1.popsugar-assets.com/files/thumbor/BFZz8alIlnMOUmizTfzeGv1PnWo/0x679:3024x3703/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/05/04/594/n/42718227/e8ce48f65eb0156d6cc4e7.74784119_/i/gigi-hadid-spicy-vodka-pasta-sauce-recipe.jpg"width=300>
       <br />
-      <p id="GHInfo">The Gigi Hadid Pasta is nothing new, in fact it originated in Italy and is more commonly known as Spicy Vodka Pasta. It’s a creamy tomato-based sauce that starts off with cooking down some onions and garlic. Then tomato paste is caramelized in olive oil and heavy cream is added to turn it into a beautifully smooth sauce. And if that didn’t sound good enough, the final touches are butter, tons of freshly grated parmesan, and some pasta water. </p>
+      <p id="description" class="GHInfo">The Gigi Hadid Pasta is nothing new, in fact it originated in Italy and is more commonly known as Spicy Vodka Pasta. It’s a creamy tomato-based sauce that starts off with cooking down some onions and garlic. Then tomato paste is caramelized in olive oil and heavy cream is added to turn it into a beautifully smooth sauce. And if that didn’t sound good enough, the final touches are butter, tons of freshly grated parmesan, and some pasta water. </p>
       <br />
-      <p id="MealTitle"> Ingredients</p>
+      <p class="MealTitle"> Ingredients</p>
       <div>
-        <ul>
-            <li id="GHInfo">1/4 cup olive oil</li>
-            <li id="GHInfo">1 small clove of garlic</li>
-            <li id="GHInfo">1/4 green onion</li>
-            <li id="GHInfo">1/4 cup tomato paste</li>
-            <li id="GHInfo">1/2 cup heavy cream</li>
-            <li id="GHInfo">1 tablespoon vodka</li>
-            <li id="GHInfo">1 teaspoon red pepper flakes</li>
-            <li id="GHInfo">225 grams of shell pasta</li>
-            <li id="GHInfo">1 tablespoon butter</li>
-            <li id="GHInfo">1/4 cup parmesan cheese</li>
-            <li id="GHInfo">chopped basil</li>
-            <li id="GHInfo">salt and pepper</li>
+        <ul id="ingredientlist">
+            <li class="GHInfo">1/4 cup olive oil</li>
+            <li class="GHInfo">1 small clove of garlic</li>
+            <li class="GHInfo">1/4 green onion</li>
+            <li class="GHInfo">1/4 cup tomato paste</li>
+            <li class="GHInfo">1/2 cup heavy cream</li>
+            <li class="GHInfo">1 tablespoon vodka</li>
+            <li class="GHInfo">1 teaspoon red pepper flakes</li>
+            <li class="GHInfo">225 grams of shell pasta</li>
+            <li class="GHInfo">1 tablespoon butter</li>
+            <li class="GHInfo">1/4 cup parmesan cheese</li>
+            <li class="GHInfo">chopped basil</li>
+            <li class="GHInfo">salt and pepper</li>
         </ul>
+        <div class="Ingredient"> 
+          <h4> Add an Ingredient</h4>
+            <label for="newIngredient">Ingredient: </label>
+            <input id="newIngredient" placeholder="1 cup of mushrooms" value="" /> <br /> <br />
+          <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
         <br />
-        <p id="MealTitle"> Steps</p>
-        <ol>
-            <li id="GHInfo">In a large saucepan, heat the olive oil, garlic and onion. Cook until soft. Add tomato paste and cook until it appears “darker [in colour] / a bit caramelised”, says Hadid.</li>
-            <li id="GHInfo">Add in the heavy cream. Add in the vodka and cook through until evaporated.</li>
-            <li id="GHInfo">Add in the red pepper flakes.</li>
-            <li id="GHInfo">Keep stirring until combined. Season with salt and pepper. Remove sauce from the heat.</li>
-            <li id="GHInfo">Cook pasta separately. When the pasta is done, save ¼ of the pasta water before draining.</li>
-            <li id="GHInfo">Add in the butter. Stir over a medium heat til the butter has melted and the sauce is “sauccyyyy”, says Hadid.</li>
-            <li id="GHInfo">Add pasta – and the pasta water – to the sauce. Add parmesan cheese and stir. Add more salt and pepper to taste.</li>
-            <li id="GHInfo">Top with a sprinkling of parmesan cheese and basil to serve.</li>
+        <p class="MealTitle"> Steps</p>
+        <ol id="instructionlist">
+            <li class="GHInfo">In a large saucepan, heat the olive oil, garlic and onion. Cook until soft. Add tomato paste and cook until it appears “darker [in colour] / a bit caramelised”, says Hadid.</li>
+            <li class="GHInfo">Add in the heavy cream. Add in the vodka and cook through until evaporated.</li>
+            <li class="GHInfo">Add in the red pepper flakes.</li>
+            <li class="GHInfo">Keep stirring until combined. Season with salt and pepper. Remove sauce from the heat.</li>
+            <li class="GHInfo">Cook pasta separately. When the pasta is done, save ¼ of the pasta water before draining.</li>
+            <li class="GHInfo">Add in the butter. Stir over a medium heat til the butter has melted and the sauce is “sauccyyyy”, says Hadid.</li>
+            <li class="GHInfo">Add pasta – and the pasta water – to the sauce. Add parmesan cheese and stir. Add more salt and pepper to taste.</li>
+            <li class="GHInfo">Top with a sprinkling of parmesan cheese and basil to serve.</li>
         </ol>
+        <div class="Ingredient"> 
+          <h4> Add an Instruction</h4>
+            <label for="newInstruction">Instruction: </label>
+            <input id="newInstruction" placeholder="Add seasoning" value="" /> <br /> <br />
+          <button onclick="addInstruction()">Add Instruction</button>
+        </div>
       </div>
+  </body>
 </html>

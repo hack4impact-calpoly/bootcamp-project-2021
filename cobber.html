@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script type="text/javascript" src="ingredients.js"></script>
 	<meta charset="utf-8">
 	<title>Michelle's Cookbook!</title>
     <link rel="Stylesheet" href="index.css">
   </head>
   <body>
-      <p id="title">Michelle's Cookbook!</p>
-      <p id="MealTitle"> Apple Cobbler </p>
-      <img src="https://cdn.365daysofcrockpot.com/wp-content/uploads/2020/09/instant-pot-apple-cobbler-scaled.jpg"width=300 height=350>
+      <p class="title">Michelle's Cookbook!</p>
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <button role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+      <p id="name" class="MealTitle"> Apple Cobbler </p>
+      <img id="image" src="https://cdn.365daysofcrockpot.com/wp-content/uploads/2020/09/instant-pot-apple-cobbler-scaled.jpg"width=300 height=300>
       <br />
-      <p id="GHInfo">Apple Cobbler made with warm cinnamon apples and a golden cobbler crust. Top it with whipped topping or yogurt, the perfect fall dessert! </p>
-      <p id="GHInfo">One of my favorite autumn classics! </p>
+      <p id="description" class="GHInfo">Apple Cobbler made with warm cinnamon apples and a golden cobbler crust. Top it with whipped topping or yogurt, the perfect fall dessert! </p>
+      <p id="description" class="GHInfo">One of my favorite autumn classics! </p>
       <br />
-      <p id="MealTitle"> Ingredients</p>
+      <p class="MealTitle"> Ingredients</p>
       <div>
-        <ul>
-            <li id="GHInfo">1 1/2 sticks unsalted butter (3/4 cup), 1/2 stick cut into large pieces, remaining 1 stick cold and cut into small pieces</li>
-            <li id="GHInfo">3 pounds Granny Smith apples (6 to 7), peeled, cored, and cut into eighths</li>
-            <li id="GHInfo">1 tablespoon fresh lemon juice</li>
-            <li id="GHInfo">2 1/4 cup all-purpose flour</li>
-            <li id="GHInfo">1/2 cup plus 1 tablespoon granulated sugar</li>
-            <li id="GHInfo">1/2 cup packed light-brown sugar</li>
-            <li id="GHInfo">1 vanilla bean, seeds scraped</li>
-            <li id="GHInfo">2 teaspoons baking powder</li>
-            <li id="GHInfo">1 cup plus 2 tablespoons heavy cream</li>
-            <li id="GHInfo">sanding sugar, for sprinkling</li>
-            <li id="GHInfo">coarse salt</li>
+        <ul id="ingredientlist">
+            <li class="GHInfo">1 1/2 sticks unsalted butter</li>
+            <li class="GHInfo">3 pounds Granny Smith apples (6 to 7), peeled, cored, and cut into eighths</li>
+            <li class="GHInfo">1 tablespoon fresh lemon juice</li>
+            <li class="GHInfo">2 1/4 cup all-purpose flour</li>
+            <li class="GHInfo">1/2 cup plus 1 tablespoon granulated sugar</li>
+            <li class="GHInfo">1/2 cup packed light-brown sugar</li>
+            <li class="GHInfo">1 vanilla bean, seeds scraped</li>
+            <li class="GHInfo">2 teaspoons baking powder</li>
+            <li class="GHInfo">1 cup plus 2 tablespoons heavy cream</li>
+            <li class="GHInfo">sanding sugar, for sprinkling</li>
+            <li class="GHInfo">coarse salt</li>
         </ul>
+        <div class="Ingredient"> 
+          <h4> Add an Ingredient</h4>
+            <label for="newIngredient">Ingredient: </label>
+            <input id="newIngredient" placeholder="1 cup of mushrooms" value="" /> <br /> <br />
+          <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
         <br />
-        <p id="MealTitle"> Steps</p>
-        <ol>
-            <li id="GHInfo">Preheat oven to 375 degrees.</li>
-            <li id="GHInfo">Melt 1/2 stick butter in a small saucepan over medium-low heat and cook, swirling pan occasionally, until butter is golden brown and fragrant, about 8 minutes; let cool.</li>
-            <li id="GHInfo">Toss together apples and lemon juice in a large bowl.</li>
-            <li id="GHInfo">Combine 1/4 cup flour, 1/2 teaspoon salt, 1/3 cup granulated sugar, brown sugar, and vanilla-bean seeds in another bowl, breaking up clumps and combining with a fork or fingers.</li>
-            <li id="GHInfo">Add browned butter to apples. Stir in flour mixture.</li>
-            <li id="GHInfo">Transfer apple mixture to a 9-by-13-inch baking dish, cover tightly with parchment-lined foil. </li>
-            <li id="GHInfo">Bake apples on middle rack directly over the baking sheet, 10 minutes. </li>
-            <li id="GHInfo">Whisk remaining 2 cups flour, baking powder, 1/2 teaspoon salt, and remaining 1/4 cup granulated sugar in a medium bowl.</li>
-            <li id="GHInfo">Cut remaining 1 stick butter into flour mixture using a pastry blender or 2 knives to form clumps that are no larger than small peas.</li>
-            <li id="GHInfo">Add cream to flour mixture; stir until a soft, sticky dough forms.</li>
-            <li id="GHInfo">Divide dough into 10 equal pieces; arrange over filling.</li>
-            <li id="GHInfo">Brush dough with cream, and sprinkle with sanding sugar.</li>
-            <li id="GHInfo">Return cobbler to oven on middle rack directly over the baking sheet until topping is golden brown and juices are bubbling, about 55 to 65 minutes. </li>
-            <li id="GHInfo">Let cool 20 minutes on a wire rack before serving.</li>
+        <p class="MealTitle"> Steps</p>
+        <ol id="instructionlist">
+            <li class="GHInfo">Preheat oven to 375 degrees.</li>
+            <li class="GHInfo">Melt 1/2 stick butter in a small saucepan over medium-low heat and cook, swirling pan occasionally, until butter is golden brown and fragrant, about 8 minutes; let cool.</li>
+            <li class="GHInfo">Toss together apples and lemon juice in a large bowl.</li>
+            <li class="GHInfo">Combine 1/4 cup flour, 1/2 teaspoon salt, 1/3 cup granulated sugar, brown sugar, and vanilla-bean seeds in another bowl, breaking up clumps and combining with a fork or fingers.</li>
+            <li class="GHInfo">Add browned butter to apples. Stir in flour mixture.</li>
+            <li class="GHInfo">Transfer apple mixture to a 9-by-13-inch baking dish, cover tightly with parchment-lined foil. </li>
+            <li class="GHInfo">Bake apples on middle rack directly over the baking sheet, 10 minutes. </li>
+            <li class="GHInfo">Whisk remaining 2 cups flour, baking powder, 1/2 teaspoon salt, and remaining 1/4 cup granulated sugar in a medium bowl.</li>
+            <li class="GHInfo">Cut remaining 1 stick butter into flour mixture using a pastry blender or 2 knives to form clumps that are no larger than small peas.</li>
+            <li class="GHInfo">Add cream to flour mixture; stir until a soft, sticky dough forms.</li>
+            <li class="GHInfo">Divide dough into 10 equal pieces; arrange over filling.</li>
+            <li class="GHInfo">Brush dough with cream, and sprinkle with sanding sugar.</li>
+            <li class="GHInfo">Return cobbler to oven on middle rack directly over the baking sheet until topping is golden brown and juices are bubbling, about 55 to 65 minutes. </li>
+            <li class="GHInfo">Let cool 20 minutes on a wire rack before serving.</li>
         </ol>
+        <div class="Ingredient"> 
+          <h4> Add an Instruction</h4>
+            <label for="newInstruction">Instruction: </label>
+            <input id="newInstruction" placeholder="Add seasoning" value="" /> <br /> <br />
+          <button onclick="addInstruction()">Add Instruction</button>
+        </div>
       </div>
+  </body>
 </html>

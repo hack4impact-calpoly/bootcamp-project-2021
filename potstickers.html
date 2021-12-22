@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script type="text/javascript" src="ingredients.js"></script>
 	<meta charset="utf-8">
 	<title>Michelle's Cookbook!</title>
     <link rel="Stylesheet" href="index.css">
   </head>
   <body>
-      <p id="title">Michelle's Cookbook!</p>
-      <p id="MealTitle"> Pork Potstickers </p>
-      <img src="https://www.spoonforkbacon.com/wp-content/uploads/2020/07/potsticker-recipe-card.jpg"width=300>
+      <p class="title">Michelle's Cookbook!</p>
+      <pre id="pre-formatter"><code id="json"></code></pre>
+      <button role="button" onClick="recipeToJSON()"> Convert Recipe into JSON!</button>
+      <p id="name" class="MealTitle"> Pork Potstickers </p>
+      <img id="image" src="https://www.spoonforkbacon.com/wp-content/uploads/2020/07/potsticker-recipe-card.jpg"width=300>
       <br />
-      <p id="GHInfo">Pork potstickers are one of my all time favorite dishes! The perfect amount of flavor goes into a dish that thrills your taste buds!</p>
-      <p id="GHInfo">Super fast and easy to make, yet super delicious!</p>
+      <p id="description" class="GHInfo">Pork potstickers are one of my all time favorite dishes! The perfect amount of flavor goes into a dish that thrills your taste buds!</p>
+      <p id="description" class="GHInfo">Super fast and easy to make, yet super delicious!</p>
       <br />
-      <p id="MealTitle"> Ingredients</p>
+      <p class="MealTitle"> Ingredients</p>
       <div>
-        <ul>
-            <li id="GHInfo">3/4 pound ground pork</li>
-            <li id="GHInfo">1 cup minced cabbage</li>
-            <li id="GHInfo">2 tablespoons minced ginger</li>
-            <li id="GHInfo">1 tablespoon minced garlic</li>
-            <li id="GHInfo">6 minced scallions</li>
-            <li id="GHInfo">1/2 cup plus 2 tablespoons soy sauce</li>
-            <li id="GHInfo">48 dumpling wrappers</li>
-            <li id="GHInfo">1 egg, lightly beaten in a bowl</li>
-            <li id="GHInfo">4 tablespoons peanut oil or vegetable oil</li>
-            <li id="GHInfo">1/4 cup rice vinegar or white vinegar</li>
+        <ul id="ingredientlist">
+            <li class="GHInfo">3/4 pound ground pork</li>
+            <li class="GHInfo">1 cup minced cabbage</li>
+            <li class="GHInfo">2 tablespoons minced ginger</li>
+            <li class="GHInfo">1 tablespoon minced garlic</li>
+            <li class="GHInfo">6 minced scallions</li>
+            <li class="GHInfo">1/2 cup plus 2 tablespoons soy sauce</li>
+            <li class="GHInfo">48 dumpling wrappers</li>
+            <li class="GHInfo">1 egg, lightly beaten in a bowl</li>
+            <li class="GHInfo">4 tablespoons peanut oil or vegetable oil</li>
+            <li class="GHInfo">1/4 cup rice vinegar or white vinegar</li>
         </ul>
+        <div class="Ingredient"> 
+          <h4> Add an Ingredient</h4>
+            <label for="newIngredient">Ingredient: </label>
+            <input id="newIngredient" placeholder="1 cup of mushrooms" value="" /> <br /> <br />
+          <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
         <br />
-        <p id="MealTitle"> Steps</p>
-        <ol>
-            <li id="GHInfo">Combine meat, cabbage, ginger, garlic, scallion whites and 2 tablespoons soy sauce in a bowl with 1/4 cup water.</li>
-            <li id="GHInfo">Lay a wrapper on a clean, dry surface, and using your finger or a brush, spread a bit of egg along half of it.</li>
-            <li id="GHInfo">Place a rounded teaspoon of filling in center, fold over and seal by pinching edges together. </li>
-            <li id="GHInfo">Place dumplings on a plate; if you want to wait a few hours before cooking, cover plate with plastic wrap and refrigerate. </li>
-            <li id="GHInfo">To cook, put about 2 tablespoons oil in a large nonstick skillet and turn heat to medium-high.</li>
-            <li id="GHInfo">A minute later, add dumplings, one at a time; they can touch one another, but should still sit flat in one layer. Cook about 2 minutes, or until bottoms are lightly browned and most of the oil has been absorbed.</li>
-            <li id="GHInfo">Add 1/4 cup water per dozen dumplings to pan, and cover. Let simmer for 3 minutes.</li>
-            <li id="GHInfo">To make the dipping sauce, combine remaining soy sauce, green parts of scallions and vinegar.</li>
-            <li id="GHInfo">Uncover dumplings, return heat to medium-high and cook another minute or two, until bottoms are dark brown and crisp and water evaporates.</li>
-            <li id="GHInfo">Serve hot, with sauce.</li>
+        <p class="MealTitle"> Steps</p>
+        <ol id="instructionlist">
+            <li class="GHInfo">Combine meat, cabbage, ginger, garlic, scallion whites and 2 tablespoons soy sauce in a bowl with 1/4 cup water.</li>
+            <li class="GHInfo">Lay a wrapper on a clean, dry surface, and using your finger or a brush, spread a bit of egg along half of it.</li>
+            <li class="GHInfo">Place a rounded teaspoon of filling in center, fold over and seal by pinching edges together. </li>
+            <li class="GHInfo">Place dumplings on a plate; if you want to wait a few hours before cooking, cover plate with plastic wrap and refrigerate. </li>
+            <li class="GHInfo">To cook, put about 2 tablespoons oil in a large nonstick skillet and turn heat to medium-high.</li>
+            <li class="GHInfo">A minute later, add dumplings, one at a time; they can touch one another, but should still sit flat in one layer. Cook about 2 minutes, or until bottoms are lightly browned and most of the oil has been absorbed.</li>
+            <li class="GHInfo">Add 1/4 cup water per dozen dumplings to pan, and cover. Let simmer for 3 minutes.</li>
+            <li class="GHInfo">To make the dipping sauce, combine remaining soy sauce, green parts of scallions and vinegar.</li>
+            <li class="GHInfo">Uncover dumplings, return heat to medium-high and cook another minute or two, until bottoms are dark brown and crisp and water evaporates.</li>
+            <li class="GHInfo">Serve hot, with sauce.</li>
         </ol>
+        <div class="Ingredient"> 
+          <h4> Add an Instruction</h4>
+            <label for="newInstruction">Instruction: </label>
+            <input id="newInstruction" placeholder="Add seasoning" value="" /> <br /> <br />
+          <button onclick="addInstruction()">Add Instruction</button>
+        </div>
       </div>
+  </body>
 </html>
