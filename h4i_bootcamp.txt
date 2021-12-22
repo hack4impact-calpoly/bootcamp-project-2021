@@ -1,0 +1,43 @@
+The Box Model
+
+Everyblock level HTML Element has 4 Layers
+
+Content: Text exists
+Padding: Wraps around content, doesn't include text but is colored by background color
+Border: Thin rim spearating padding from margin
+Margin: Outermost layer, keeps separation between boxes
+
+<div? is a regular HTML Element
+    Used to group together elements and format them together
+    Can use css: flex to style divs together
+
+
+Flex boxes used to style content / divs on page - not the only way of positioning stuff
+
+
+Git -
+git clone <url>
+git add . - Stages to local branch
+git commit - Do before push
+git push - Push to GitHub repository
+git pull
+
+git commit -m "Message" - Commits to local branch
+
+Using Git in software teams
+Branches allow multiple programmers to work on multiple features
+Everytime you work on a new feature, create a new branch so that not everything is in the master repository
+
+Workflow:
+Pull to make sure local repo is up to date
+Create a new bracnh with git checkout -b <branch name>
+Save, stage, and commit as normal
+Then make a pull request on GitHub
+
+Pull request is code-reviewed and then fixed, repeat, etc
+
+If merge conflicts occur:
+Pull changes into your local master repository
+Call git merge master
+Then fix conflicts in your include
+Commit and then push those changes

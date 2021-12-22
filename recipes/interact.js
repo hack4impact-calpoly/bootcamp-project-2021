@@ -3,33 +3,33 @@ let insSet = false;
 let recipeInfo = {};
 
 function recipeToJSON() {
-    recipeInfo.recipeName = document.getElementById('recipeName').innerHTML;
-    recipeInfo.recipeDescription = document.getElementById('recipeDescription').innerHTML;
+    recipeInfo.recipeName = document.getElementById('recipeName').innerText;
+    recipeInfo.recipeDescription = document.getElementById('recipeDescription').innerText;
     recipeInfo.recipeImage = document.getElementById('recipeImage').src;
 
-    var ingredientList = [];
-    var ulTags = document.getElementById('ing').getElementsByTagName('ul');
+    let ingredientList = [];
+    let ulTags = document.getElementById('ing').getElementsByTagName('ul');
 
-    for (var key of Object.keys(ulTags)) {
-        var ul = ulTags[key];
-        var liTags = ul.getElementsByTagName('li');
+    for (let key of Object.keys(ulTags)) {
+        let ul = ulTags[key];
+        let liTags = ul.getElementsByTagName('li');
 
-        for (var key2 of Object.keys(liTags)) {
-            ingredientList.push(liTags[key2].innerHTML);
+        for (let key2 of Object.keys(liTags)) {
+            ingredientList.push(liTags[key2].innerText);
         }
     }
     recipeInfo.ingredientList = ingredientList;
 
-    var instructionList = []
-    var liTags = document.getElementById('instructionList').getElementsByTagName('li');
-    var olTags = document.getElementById('prep').getElementsByTagName('ol');
+    let instructionList = []
+    let liTags = document.getElementById('instructionList').getElementsByTagName('li');
+    let olTags = document.getElementById('prep').getElementsByTagName('ol');
 
-    for (var key of Object.keys(olTags)) {
-        var ol = olTags[key];
-        var liTags = ol.getElementsByTagName('li');
+    for (let key of Object.keys(olTags)) {
+        let ol = olTags[key];
+        let liTags = ol.getElementsByTagName('li');
 
-        for (var key2 of Object.keys(liTags)) {
-            instructionList.push(liTags[key2].innerHTML);
+        for (let key2 of Object.keys(liTags)) {
+            instructionList.push(liTags[key2].innerText);
         }
     }
     recipeInfo.steps = instructionList;
@@ -47,16 +47,16 @@ function outputJSON(recipeInfo) {
 }
 
 function addIngredient() {
-    var br = document.createElement("br");
-    var li = document.createElement("li");
+    let br = document.createElement("br");
+    let li = document.createElement("li");
 
     if (!ingSet) {
-        var ul = document.createElement("ul");
+        let ul = document.createElement("ul");
         ul.setAttribute("id", "newIngredients");
 
-        var section = document.getElementById("ing");
+        let section = document.getElementById("ing");
 
-        var b = document.createElement("b");
+        let b = document.createElement("b");
         b.appendChild(document.createTextNode("New Ingredients"));
 
         section.appendChild(b);
@@ -65,23 +65,23 @@ function addIngredient() {
 
         ingSet = true;
     }
-    var ul = document.getElementById("newIngredients");
-    var ingredient = document.getElementById("newIngredient").value;
+    let ul = document.getElementById("newIngredients");
+    let ingredient = document.getElementById("newIngredient").value;
     li.appendChild(document.createTextNode(ingredient));
     ul.appendChild(li);
 }
 
 function addInstruction() {
-    var br = document.createElement("br");
-    var li = document.createElement("li");
+    let br = document.createElement("br");
+    let li = document.createElement("li");
 
     if (!insSet) {
-        var ol = document.createElement("ol");
+        let ol = document.createElement("ol");
         ol.setAttribute("id", "newInstructions");
 
-        var section = document.getElementById("prep");
+        let section = document.getElementById("prep");
 
-        var b = document.createElement("b");
+        let b = document.createElement("b");
         b.appendChild(document.createTextNode("New Instructions"));
 
         section.appendChild(b);
@@ -90,8 +90,8 @@ function addInstruction() {
 
         insSet = true;
     }
-    var ol = document.getElementById("newInstructions");
-    var ingredient = document.getElementById("newInstruction").value;
+    let ol = document.getElementById("newInstructions");
+    let ingredient = document.getElementById("newInstruction").value;
     li.appendChild(document.createTextNode(ingredient));
     ol.appendChild(li);
     ol.appendChild(br);

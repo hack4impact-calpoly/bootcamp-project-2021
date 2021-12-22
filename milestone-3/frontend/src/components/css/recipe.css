@@ -1,0 +1,84 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* border: solid red; */
+}
+
+.flex-img-ctn {
+    width: 30%;
+}
+
+.flex-image {
+    /* border: 2px solid black; */
+    float: right;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+
+    align-items: flex-end;
+    justify-content: end;
+
+    flex-basis: 50px;
+    flex-grow: 1;
+}
+
+.flex-header {
+    float: left;
+    flex-basis: 50px;
+    flex-grow: 1;
+
+    height: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    margin: 0px;
+    line-height: 1.5;
+    overflow: scroll;
+
+    /* border: solid blue; */
+
+    background-color: var(--cg-white);
+}
+
+.tutorial {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button {
+    background-color: var(--cg-black);
+    border: none;
+    color: var(--cg-white);
+
+    font-family: monospace;
+
+    padding: 5px 7px;
+    text-align: center;
+
+    border-radius: 2px;
+}
+
+.form-button:hover {
+    background-color: var(--cg-blue);
+}
+
+.form-element {
+    font-family: monospace;
+}
+
+.vertical-align * {
+    vertical-align: middle;
+}
+
+iframe {
+    border: none;
+}
+
+.display-linebreak {
+    white-space: pre-line;
+}

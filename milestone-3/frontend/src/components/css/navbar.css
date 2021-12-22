@@ -1,0 +1,60 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+.header-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 57px;
+    z-index: 10;
+  
+    background-color: var(--cg-black);
+    color: var(--cg-white);
+    padding: 0px 0px;
+  
+    /* border: solid red; */
+  }
+  
+  .main-text a {
+    font-family: Georgia;
+  }
+  
+  .main-text a:hover {
+    text-decoration: None;
+  }
+  
+  .navbar {
+    /* border: solid blue; */
+    position: relative;
+    right: 30px
+  }
+  
+  header a {
+    color: var(--cg-white);
+    font-weight: bold;
+    margin: 0 12px;
+    text-decoration: none;
+    letter-spacing: 2px;
+  
+    font-family: monospace;
+  }
+  
+  header a:hover {
+    color: var(--cg-blue);
+    text-decoration: underline;
+  }
+  
+  header a:active {
+    color: var(--cg-blue);
+  }

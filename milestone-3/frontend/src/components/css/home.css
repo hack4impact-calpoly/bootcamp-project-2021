@@ -1,0 +1,21 @@
+p {
+    font-weight: lighter;
+}
+
+.intro {
+    display: flex;
+    margin-left: 20px;
+    justify-self: center;
+    text-align: center;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}

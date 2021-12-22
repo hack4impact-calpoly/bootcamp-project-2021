@@ -1,0 +1,26 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--cg-grey);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+
+}
+
+main {
+  padding: 0 20px 40px 20px;
+}

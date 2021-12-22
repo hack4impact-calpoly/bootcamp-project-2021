@@ -1,0 +1,60 @@
+p a, li a {
+    color: var(--cg-black);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+p a:hover, li a:hover {
+    color: var(--cg-blue);
+    text-decoration: underline;
+}
+
+.recipe-name {
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+    /* border: 2px solid blue; */
+}
+
+.item-link {
+    width: 70%;
+
+    /* border: 2px solid red; */
+}
+
+.search-item {
+    float: left;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 1;
+
+    /*border: 1px solid black;*/
+}
+
+.search-item-2 {
+    display: flex;
+    background-color: var(--cg-white);
+    float: right;
+    width: 30%;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 1;
+    padding: 0 20px;
+    margin: 0px;
+    line-height: 1.5;
+    overflow: scroll;
+
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    /* border: 2px solid green; */
+}
