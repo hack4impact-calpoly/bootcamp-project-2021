@@ -5,11 +5,12 @@ const mongoose = require('mongoose');
 const app = express()   //creates express object
 app.use(express.json()) //Allows us to interpret the body of any request
 
-//-------------Connection URL to mongoDB cluster-------------
+//-------------Connects mongoose to mongoDB cluster via URL-------------
 const connection_url = "mongodb+srv://Sebastien:mongodb@cluster0.35yk7.mongodb.net/RecipesDB?retryWrites=true&w=majority"
 mongoose.connect(connection_url)
   .then(() => console.log("Succesful connection to mongoDB"))
   .catch((error) => console.error(`Could not connect due to ${error}`))
+
 
 //------------------Define Recipe Schema and Model-----------------
 const recipeSchema = new mongoose.Schema({
@@ -25,92 +26,123 @@ const recipeSchema = new mongoose.Schema({
 //mongoose.model(Name of mongo DB collection, schema)
 const Recipe = mongoose.model("Recipes", recipeSchema);
 
-//-------------------End of Schema and Model Section -----------------
 
+//-------------------API Routes---------------------------------
+
+//Test Route (No functional purpose)
 app.get('/', (req, res) => { //listens for a GET request to be made to the / path, and then executes a function that takes in a request and a response parameter
   res.send('Hello world!')   //Sends hello world as a response to the request
 })
 
-/*******Note: Routes are created when building personal mongoDB API, subject to change */
-
-//Get Query
+//Gets all recipes from DB
 app.get('/api/recipe', async (req, res) => {
-  const recipes = await Recipe.find({});
-  res.send(recipes);
+  try{
+    const recipes = await Recipe.find({});
+    res.send(recipes);
+    console.log("Success: recipes found");
+  }
+  catch (error){
+    console.error(error);
+    res.send(`An error has occured while retrieving recipes: ${error}`)
+  }
 })
 
-//Get Query Look Up
-app.get('api/recipe/:name', async (req, res) => { //Alternate url 'api/recipe/?name=###'
-  const specificRecipe = await Recipe.findOne({name: req.params.name});
-  res.send("Recipe was removed: ", specificRecipe);
+//Get single recipe by name param
+app.get('/api/recipe/:name', async (req, res) => { 
+  try{
+    const specificRecipe = await Recipe.findOne({ name: req.params.name });
+    res.send(specificRecipe);
+    console.log("Success: recipe found");
+  }
+  catch(error){
+    console.error({error});
+    res.send(`An error has occured while finding recipe: ${error}`);
+  }
 });
 
-//Post Query
-app.post("api/recipe", async (req, res) => {
-  const { name, title, desc, ingredientList, instructionList, recipePic, alt} = req.body;
-  let recipe = new Recipe({
-    name,
-    title,
-    desc,
-    ingredientList,
-    instructionList,
-    recipePic,
-    alt
-  })
+//Add New Recipe to DB
+app.post("/api/recipe", async (req, res) => {
+  try{
+    //Another way: "const name = req.body.name;"" etc.
+    const { name, title, desc, ingredientList, instructionList, recipePic, alt} = req.body;
+    let recipe = new Recipe({
+      name,
+      title,
+      desc,
+      ingredientList,
+      instructionList,
+      recipePic,
+      alt
+    });
 
-  recipe.save(function(err, recipe) { //Writes code into database
-    if (err) {  //Error handling for request
-      console.log(err);
-      return next(err);
-    }
-    res.send(`Recipe ${name} added to collection`)
-  })
+    recipe.save(function(err, recipe) { //Writes code into database
+      if (err) {  //Error handling for save request
+        console.log(`An error has occured while adding recipe to DB: ${err}`);
+        return next(err);
+      }
+      res.send(`Success: Recipe ${name} added to collection`);
+      console.log(`Success: Recipe ${name} added to collection`);
+    })
+  }
+  catch(error){
+      console.error(error);
+      res.send(`An error has occured while creating new recipe: ${error}`)
+  }
 });
 
-router.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
-  const recipeName = req.params.recipeName;
-  const ingredient = req.body.newIngredient;
-  const wantedRecipe = await Recipe.findOne(recipeName);
-  wantedRecipe.ingredientList.addToSet(ingredient);
-	// You now should have access to recipeName and ingredient assuming your 
-	// request URL and body are correct. 
-  wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
-    if (err) {  //Error handling for request
-      console.log(err);
-      return next(err);
-    }
-    res.send(`Recipe ${recipeName} added to collection`)
-  })
+//Add new ingredient to a recipe
+app.put("/api/recipe/:name/ingredient", async (req, res) => {
+  try{
+    //Gets recipe name and new ingredient
+    const recipeName = req.params.name;
+    const newIngredient = req.body.newIngredient;
+    
+    //Updates ingredient list
+    let wantedRecipe = await Recipe.findOne({ name : recipeName}); //Finds the recipe to update from the params
+    wantedRecipe.ingredientList.addToSet(newIngredient); //Gets access to newIngredient JSON from body and adds to ingredient list
+
+    //Changes recipe in DB
+    wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
+      if (err) {  //Error handling for request
+        console.log(`An error has occured while adding ingredient to DB: ${err}`);
+        return next(err);
+      }
+      res.send(`Success: "${newIngredient}" added to ${recipeName} ingredient list`)
+      console.log(`Success: "${newIngredient}" added to ${recipeName} ingredient list`)
+    })
+  }
+  catch(error){
+    console.error(error);
+    res.send(`An error has occured while updating ingredient list: ${error}`)
+  }
 });
 
-router.put("/api/recipe/:recipeName/instruction", async (req, res) => {
-  const recipeName = req.params.recipeName;
-  const instruction = req.body.newInstruction;
-  const wantedRecipe = await Recipe.findOne(recipeName);
-  wantedRecipe.instructionList.addToSet(instruction);
-	// You now should have access to recipeName and ingredient assuming your 
-	// request URL and body are correct. 
-  wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
-    if (err) {  //Error handling for request
-      console.log(err);
-      return next(err);
-    }
-    res.send(`Recipe ${recipeName} added to collection`)
-  })
-});
+//Add new instruction to a recipe
+app.put("/api/recipe/:name/instruction", async (req, res) => {
+  try{
+    //Gets recipe name and new instruction
+    const recipeName = req.params.name;
+    const newInstruction = req.body.newInstruction;
 
-//Delete Query
-app.delete("api/recipe", (req, res) => {
-  //"Recipe" gets schema and tells us what schema to use
-  Recipe.findByIdAndRemove(req.body.id, (err, recipe) => {
-    if (err) { //error handling
-      console.log(err);
-      res.send(err.message);
-    }
-    res.send(`Recipe with id ${req.body.id} was deleted`)
-  });
-});
+    //Updates instruction list
+    let  wantedRecipe = await Recipe.findOne({ name : recipeName}); //Finds the recipe to update from the params
+    wantedRecipe.instructionList.addToSet(newInstruction); //Gets access to newInstruction JSON from body and adds to ingredient list
 
+    //Changes recipe in DB
+    wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
+      if (err) {  //Error handling for request
+        console.log(`An error has occured while adding instruction to DB: ${err}`);
+        return next(err);
+      }
+      res.send(`Success: "${newInstruction}" added to ${recipeName} instruction list`)
+      console.log(`Success: "${newInstruction}" added to ${recipeName} instruction list`)
+    })
+  }
+  catch(error){
+    console.error(error);
+    res.send(`An error has occured while updating instruction list: ${error}`)
+  }
+});
 
 app.listen(3001)  //Tells the server to listen for requests made on port 3001
 
@@ -120,4 +152,41 @@ app.listen(3001)  //Tells the server to listen for requests made on port 3001
   -> Can also add id directly into function "id: 32535532"
 -START SERVER: 'npm run dev'  from backend/ directory
 
+  -Add error handling
+  -Use "res" to send confirmation/failure message
+
+ -CRUD Operation: Create <- Alternate ways
+    1.  await Event.create({
+          name: "Bootcamp 7",
+          topic: "MongoDB",
+          date: Date.now(),
+        });
+
+    2.  const bootcamp = new Event({
+          name: "Bootcamp 7",
+          topic: "MongoDB",
+          date: Date.now(),
+        });
+        await bootcamp.save();
+  -CRUD Operation: Read 
+        -> find() - Zero or More
+        -> findOne() - Zero or One
+        -> findById() - Zero or One
+  -CRUD Operation: Update
+        -> findByIdAndUpdate()
+        -> findOneAndUpdate()
+        Example:
+        const updatedEvent =
+          await Event.findOneAndUpdate(
+            { topic: "MongoDB" },
+            { date: new Date(2021, 10, 8)}
+          )'
+  -CRUD Operation: Delete
+        -> findByIdAndDelete()
+        -> findOneAndDelete()
+        Example:
+        const removedEvent =
+            await Event.findByIdAndDelete(
+              "6187324a38ea5815a2cbb222"
+            );
 */
