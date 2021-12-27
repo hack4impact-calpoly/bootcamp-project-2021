@@ -1,0 +1,18 @@
+.background {
+    object-fit: cover;
+    background-color: rgb(233, 183, 233);
+
+}
+
+.bleh {
+    background: linear-gradient(90deg, #fff, rgb(129, 74, 190) 100%);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    margin: 20px;
+    color:black;
+}
+
+.img {
+    border-radius: 20px;
+    object-fit: cover;
+}
