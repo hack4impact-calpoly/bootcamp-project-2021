@@ -1,6 +1,6 @@
 const recipes = [
     {
-        "name": " Gigi Hadid Pasta ",
+        "name": "Gigi Hadid Pasta",
         "description": "The Gigi Hadid Pasta is nothing new, in fact it originated in Italy and is more commonly known as Spicy Vodka Pasta. It’s a creamy tomato-based sauce that starts off with cooking down some onions and garlic. Then tomato paste is caramelized in olive oil and heavy cream is added to turn it into a beautifully smooth sauce. And if that didn’t sound good enough, the final touches are butter, tons of freshly grated parmesan, and some pasta water. ",
         "image": "https://media1.popsugar-assets.com/files/thumbor/BFZz8alIlnMOUmizTfzeGv1PnWo/0x679:3024x3703/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/05/04/594/n/42718227/e8ce48f65eb0156d6cc4e7.74784119_/i/gigi-hadid-spicy-vodka-pasta-sauce-recipe.jpg",
         "link": "pasta.html",
@@ -30,7 +30,7 @@ const recipes = [
           ]
     },
     {
-        "name": " Apple Cobbler ",
+        "name": "Apple Cobbler",
         "description": "Apple Cobbler made with warm cinnamon apples and a golden cobbler crust. Top it with whipped topping or yogurt, the perfect fall dessert! ",
         "image": "https://cdn.365daysofcrockpot.com/wp-content/uploads/2020/09/instant-pot-apple-cobbler-scaled.jpg",
         "link": "cobber.html",
@@ -65,7 +65,7 @@ const recipes = [
           ]
     },
     {
-        "name": " Pork Potstickers ",
+        "name": "Pork Potstickers",
         "description": "Pork potstickers are one of my all time favorite dishes! The perfect amount of flavor goes into a dish that thrills your taste buds!",
         "image": "https://www.spoonforkbacon.com/wp-content/uploads/2020/07/potsticker-recipe-card.jpg",
         "link": "potstickers.html",
