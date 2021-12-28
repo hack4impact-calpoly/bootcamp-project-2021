@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import "./aboutme.css"
+import aboutme from './aboutme.png';
 
 function AboutMe() {
     return (
         <div>
-            <p class="title">Michelle's Cookbook!</p>
             <p class="MealTitle"> About Me </p>
-            <img src="file:///Users/michelletan/Desktop/Screen%20Shot%202021-10-24%20at%208.18.56%20PM.png" width= "300"/>
+            <img class="pic" src={aboutme} width= "300" height="300"/>
             <br />
             <p class="GHInfo">Here's a picture of me and my best friends!</p>
             <p class="MealTitle"> Some Qualities of Mine </p>

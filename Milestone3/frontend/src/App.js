@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './home';
-import Template from './template';
+import Template from './components/template';
+import NavBar from './components/navbar';
 import recipes from './recipeData';
 import AboutMe from './aboutme';
 
 function App() {
     return (
         <Router>
+            <NavBar />
             <Routes>
                 <Route path="/aboutme" element={<AboutMe />} />
                 <Route path="/" element={<Home />} />
