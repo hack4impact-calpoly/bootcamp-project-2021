@@ -43,7 +43,7 @@ app.get('/api/recipe', async (req, res) => {
   }
   catch (error){
     console.error(error);
-    res.send(`An error has occured while retrieving recipes: ${error}`)
+    res.send(`An error has occured while finding recipes: ${error}`)
   }
 })
 
@@ -99,7 +99,7 @@ app.put("/api/recipe/:name/ingredient", async (req, res) => {
     
     //Updates ingredient list
     let wantedRecipe = await Recipe.findOne({ name : recipeName}); //Finds the recipe to update from the params
-    wantedRecipe.ingredientList.addToSet(newIngredient); //Gets access to newIngredient JSON from body and adds to ingredient list
+    wantedRecipe.ingredientList.addToSet(newIngredient); //Gets access to newIngredient JSON from body and adds to ingredient list (If not already in the list)
 
     //Changes recipe in DB
     wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
@@ -126,7 +126,7 @@ app.put("/api/recipe/:name/instruction", async (req, res) => {
 
     //Updates instruction list
     let  wantedRecipe = await Recipe.findOne({ name : recipeName}); //Finds the recipe to update from the params
-    wantedRecipe.instructionList.addToSet(newInstruction); //Gets access to newInstruction JSON from body and adds to ingredient list
+    wantedRecipe.instructionList.addToSet(newInstruction); //Gets access to newInstruction JSON from body and adds to ingredient list (if not already in the list)
 
     //Changes recipe in DB
     wantedRecipe.save(function(err, wantedRecipe) { //Writes code into database
