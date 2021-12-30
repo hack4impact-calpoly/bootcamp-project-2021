@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect("mongodb+srv://newDBUser:J^TY5^$v6&WoRuy*@h4i.gfmh7.mongodb.net/RecipesDB?retryWrites=true&w=majority")
   .then(() => console.log("Successfully connected"))
   .catch((error) => console.error(`Could not connect due to ${error}`));
 
