@@ -15,17 +15,17 @@ app.get('/', (req, res) => {
   res.send('Hello world!')
 })
 
-app.get('/api/recipe', async (req, res) => {
+app.get('/api/Recipe', async (req, res) => {
   const recipes = await Recipe.find({})
   res.send(recipes)
 })
 
-app.get('/api/recipe/:name', async (req, res) => {
-  const name = await Recipe.find({name: req.params.name})
-  res.send(name)
+app.get('/api/Recipe/:name', async (req, res) => {
+  const finalName = await Recipe.find({name: req.params.name})
+  res.send(finalName)
 })
 
-app.post('/api/recipe', async (req, res) => {
+app.post('/api/Recipe', async (req, res) => {
   const { name, description, image, link, ingredientlist, steps } = req.body;
   let recipe =  new Recipe({
     name,
@@ -46,7 +46,7 @@ app.post('/api/recipe', async (req, res) => {
   }
 })
 
-app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
+app.put("/api/Recipe/:recipeName/ingredient", async (req, res) => {
   const name = Recipe.findOne({name: req.params.name});
   const ingredient = Recipe.findOne({ingredientlist: req.body.newIngredient});
   try {
@@ -55,11 +55,11 @@ app.put("/api/recipe/:recipeName/ingredient", async (req, res) => {
   )}
   catch (err) {
     res.status(500).send(err.message);
-    console.log(`${err.message} made recipe addition unsuccessful`)
+    console.log(`${err.message} made ingredient addition unsuccessful`)
   }
 })
 
-app.put("/api/recipe/:recipeName/instruction", async (req, res) => {
+app.put("/api/Recipe/:recipeName/instruction", async (req, res) => {
   const name = Recipe.findOne({name: req.params.name});
   const instruction = Recipe.findOne({steps: req.body.newInstruction});
   try {
@@ -68,7 +68,7 @@ app.put("/api/recipe/:recipeName/instruction", async (req, res) => {
   )}
   catch (err) {
     res.status(500).send(err.message);
-    console.log(`${err.message} made recipe addition unsuccessful`)
+    console.log(`${err.message} made instruction addition unsuccessful`)
   }
 })
 

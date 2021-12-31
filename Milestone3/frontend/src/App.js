@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './home';
@@ -8,6 +9,18 @@ import recipes from './recipeData';
 import AboutMe from './aboutme';
 
 function App() {
+    /*
+    let [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        const receiveRecipes = () => {
+            fetch('http://localhost:3001/api/recipes')
+            .then(res => res.json())
+            .then(jsondata => setRecipes(jsondata))
+        }
+        receiveRecipes()
+    })
+    */
     return (
         <Router>
             <NavBar />
