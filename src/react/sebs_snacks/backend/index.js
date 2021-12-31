@@ -4,6 +4,12 @@ const mongoose = require('mongoose');
 
 const app = express()   //creates express object
 app.use(express.json()) //Allows us to interpret the body of any request
+app.use((req, res, next) => { //Allows us to bypass CORS Error with React
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
+  next();
+});
 
 //-------------Connects mongoose to mongoDB cluster via URL-------------
 const connection_url = "mongodb+srv://Sebastien:mongodb@cluster0.35yk7.mongodb.net/RecipesDB?retryWrites=true&w=majority"
@@ -52,7 +58,7 @@ app.get('/api/recipe/:name', async (req, res) => {
   try{
     const specificRecipe = await Recipe.findOne({ name: req.params.name });
     res.send(specificRecipe);
-    console.log("Success: recipe found");
+    console.log(`Success: recipe ${specificRecipe.name} found`);
   }
   catch(error){
     console.error({error});

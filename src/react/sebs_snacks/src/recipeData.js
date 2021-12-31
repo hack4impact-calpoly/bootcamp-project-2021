@@ -1,6 +1,7 @@
 import CarbonaraPic from "./images/carbonara.jpg";
 import SpaghettiPic from "./images/spaghetti.jpg";
 import PestopastaPic from "./images/pestoPasta.jpg";
+import React, { useState, useEffect} from 'react';
 
 /* --- Array of Objects holding data for each recipe page----
 
@@ -113,10 +114,28 @@ export function getRecipeData() {
 }
 
 export function getRecipe(name) { //Each recipe has a unique name (an ID of sorts), returns the recipe object with the matching name
-    return recipeData.find(dish => dish.name === name.recipeID); //Gets the "recipeID" URL component and matches it to the corresponding recipe by name"
+    let [recipe, setRecipe] = React.useState();
+
+    useEffect(() => {
+        const loadRecipe = () => {
+            fetch(`http://localhost:3001/api/recipe/${name}`) 
+            .then(res => res.json())
+            .then(jsondata => setRecipe(jsondata))           
+        }
+        loadRecipe();
+    },  []) //Empty brackets means run when page first loads
+    return recipe; //Gets the "recipeID" URL component and matches it to the corresponding recipe by name"
 }
 
 export function convertToJSON() {
     console.log(JSON.stringify(recipeData));
     return JSON.stringify(recipeData);
 }
+
+
+
+/*
+export function getRecipe(name) { //Each recipe has a unique name (an ID of sorts), returns the recipe object with the matching name
+    return recipeData.find(dish => dish.name === name.recipeID); //Gets the "recipeID" URL component and matches it to the corresponding recipe by name"
+}
+*/
