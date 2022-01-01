@@ -86,10 +86,10 @@ export default function RecipeData(){
                     )
                         : (
                             <div>
+                                {console.log("Loading...")}
                                 <div className="recipeBox">
                                     <p> Loading.... </p>
                                 </div>
-                                {console.log("Loading...")}
                             </div>
                         )}
             </body>
@@ -98,11 +98,25 @@ export default function RecipeData(){
 }
 
 function addIngredient (recipe, newIngredient) { //function adds "newIngredient" to ingredient array in recipeData 
-    console.log(newIngredient);
+    console.log(JSON.stringify({'newIngredient': newIngredient}));
     recipe.ingredientList.push(newIngredient);
+    fetch(`http://localhost:3001/api/recipe/${recipe.name}/ingredient`, {
+                method: 'PUT',
+                body: JSON.stringify(
+                {
+                    "newIngredient": newIngredient
+                })
+            })
 }
 
 function addInstruction(recipe, newInstruction) { //function adds "newInstruction" to instruction array in recipeData
     console.log(newInstruction);
     recipe.instructionList.push(newInstruction)
+    fetch(`http://localhost:3001/api/recipe/${recipe.name}/instruction`, {
+                method: 'PUT',
+                body: JSON.stringify(
+                    { 
+                        "newInstruction": newInstruction
+                    })
+            })
 }
