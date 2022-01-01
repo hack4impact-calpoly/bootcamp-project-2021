@@ -110,7 +110,7 @@ function addIngredient (recipe, newIngredient) { //function adds "newIngredient"
 }
 
 function addInstruction(recipe, newInstruction) { //function adds "newInstruction" to instruction array in recipeData
-    console.log(newInstruction);
+    console.log(JSON.stringify({'newInstruction': newInstruction}));
     recipe.instructionList.push(newInstruction)
     fetch(`http://localhost:3001/api/recipe/${recipe.name}/instruction`, {
                 method: 'PUT',
