@@ -1,0 +1,9 @@
+.header-background {
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    border: 3px solid black;
+}

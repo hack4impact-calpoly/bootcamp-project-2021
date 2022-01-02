@@ -1,0 +1,29 @@
+.recipe {
+     
+}
+
+.recipe-title {
+    background-color: lightblue;
+    border: 3px solid black;
+    padding-left: 12px;
+}
+
+.recipe-content {
+    display: flex;
+    padding: 12px;
+}
+
+.recipe-display-picture {
+    border: 3px solid black;
+    width:150px;
+    height:150px;
+}
+
+.recipe-description {
+    padding-left: 15px;
+}
+
+.recipe-page-description {
+    display: flex;
+    flex-wrap: wrap;
+}
