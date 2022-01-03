@@ -1,0 +1,95 @@
+{
+   "recipes": [
+      {
+         "Route": "/salmon",
+         "Name": "Creamy Tuscan Salmon",
+         "Description": "Need an easy and delicious dish to impress the in-laws? Look no further than this delectible salmon recipe.",
+         "Introduction": "\n               An absolutely exquisite salmon dish. Serves 3 \n               Salmon can sometimes be intimidating to cook trying to find the perfect blend between too pink and overdone. However, with this simple recipe, your salmon is guaranteed to come out perfect every single time.\n               The well cooked salmon basted in the delicious sauce is sure to satisfy even the pickiest of palates. If you are looking for a good salmon dish, look no further.\n            ",
+         "Image": "https://www.eatwell101.com/wp-content/uploads/2019/08/tuscan-salmon-recipe-600x400.jpg",
+         "Ingredients": [
+            "3 salmon fillets",
+            "2 tsp olive oil",
+            "2 tbsp butter",
+            "5 cloves garlic, diced",
+            "1 small yellow onion, diced",
+            "1/3 cup vegetable broth",
+            "5 oz jarred sun dried tomato in oil",
+            "1 3/4 cups heavy cream",
+            "Salt and Pepper to taste",
+            "3 cups baby spinach leaves",
+            "1/2 cup grated Parmesan",
+            "1 tbsp fresh parsley, chopped"
+         ],
+         "Instructions": [
+            "Heat oil in large skillet over medium-high heat. Season salmon filets on both sides with salt and pepper and sear in hot pan for 5 minutes on each side",
+            "In same pan, melt the butter in the cooking juices. Add in garlic and onion and stir fry until translucent",
+            "Add sun dried tomatoes and let fry for 2 minutes and then pour in vegetable broth, allowing sauce to reduce slightly",
+            "Reduce heat to low, add heavy cream, and brimg to gentle simmer. Add salt and pepper to taste",
+            "Add in baby spinach until cooked and add parmesan cheese. Cook for another minute",
+            "Add the grilled salmon fillet back into pan, sprinkle with parsley, and baste",
+            "Serve and enjoy!"
+         ]
+      },
+      {
+         "Route": "/pizza",
+         "Name": "Combo 'za",
+         "Description": "My go to recipe for any Friday night at home either alone or with family and friends. This is a pizza dish that is sure to impress.",
+         "Introduction": "\n               The most delicious pizza I've ever eaten. Serves 2 hungry people \n               Pizza is one of the most sought after Italian dishes and is one you can easily prepare at home for you and all your guests to enjoy. While making the perfect pizza can sometimes be intimidating, this recipe offers you step by step details to ensure the most delicious, fresh pizza base.\n               The fresh pizza base topped with perfectly baked mushrooms, peppers, tomatoes, and onions molded in with a healthy heap of gooey cheese makes this one of my favorite dishes - and it'll soon be yours too!\n            ",
+         "Image": "https://static.toiimg.com/thumb/56933159.cms?width=1200&height=900",
+         "Ingredients": [
+            "2 cups all purpose flour",
+            "100 mL tomato ketchup",
+            "1 tomato",
+            "2 onions",
+            "1 tsp chili flakes",
+            "1 tsp baking powder",
+            "1 tsp sugar",
+            "100g processed cheese",
+            "4 mushrooms",
+            "1/2 green pepper",
+            "1 tsp oregano",
+            "1/2 cup mozzarella",
+            "1 tbsp dry yeast",
+            "water as required"
+         ],
+         "Instructions": [
+            "Add all purpose flour, salt, baking powder, 1 tsp oil to a dough kneading plate",
+            "Take a little warm water, add the yeast and sugar to it and set aside for 10-15 minutes to let yeast rise",
+            "Once the yeast has risen, add it to the dough with some water and set aside for 4-6 hours",
+            "Preheat oven to 355 degrees Farenheit. Dust space using dry flour and roll dough into circular base. Add to oven for 10 minutes",
+            "Wash the green peppers and slice it thinly. Peel and cut thin slices of onions and add both to bowl",
+            "In the same bowl, add chopped tomatoes and mushrooms and grate processed and mozzarella cheese in",
+            "Spread tomato ketchup all over the pizza base, evenly put veggies all around, and add a thick layer of cheese",
+            "Set oven to 480 degrees Farenheit and bake for 10 minutes. Add oregano and chili flakes to taste and enjoy!"
+         ]
+      },
+      {
+         "Route": "/pie",
+         "Name": "Blueberry Pie",
+         "Description": "Even after a big meal where you physically can't eat anymore, all your guests will always find room for some more of this pie.",
+         "Introduction": "\n               Everybody's favorite pie done right. Yields 8 servings if you can stand the idea of sharing!\n               This household favorite blueberry pie acts as the perfect dessert. Serve topped with vanilla ice cream or eat on its own.\n               The perfectly delicious, not too sweet filling stuffed into a beautifully baked crispy, laticed pie satisfies your eyes before it ever even reaches your mouth.\n            ",
+         "Image": "https://shewearsmanyhats.com/wp-content/uploads/2014/07/blueberry-pie-3.jpg",
+         "Ingredients": [
+            "pie dough for double 9 inch pie crust, chilled",
+            "5 cups fresh blueberries",
+            "1 tbsp freshly squeezed lemon juice",
+            "2 tbsp milk or cream",
+            "4 tbsp all purpose flour",
+            "1/2 cup brown sugar",
+            "1/4 tsp ground cinnamon",
+            "1 3/4 cups heavy cream",
+            "1 large egg, beaten with 1 tbsp water to make egg wash"
+         ],
+         "Instructions": [
+            "Butter a 9 inch pie pan. On a lighly floured surface, roll out half of dough to 1/8 inch thick circle. Fit into buttered pie pan and trim",
+            "For lattice top, roll remaining half of dough 1/8 inch thick into rectangles approximately 11x14 inches. Cover with plastic wrap and let chill",
+            "Preheat oven to 400 degrees Farenheit. Place baking sheet on bottom rack",
+            "In a large bowl, whisk together lemon juice, milk, and flour, whisking until smooth. Stir in brown sugar and cinnamon and add blueberries. Let sit for 5 minutes",
+            "Brush the rim of the crust with the egg wash, place the top crust on, trim to 1/2 inch larger than size of pan and weave strips of dough to create lattice top. Crimp edges to seal",
+            "Brush crust with egg wash, sprinkle lightly with sugar and place pie on baking sheet and bake for 20 minutes",
+            "Reduce heat to 375 degrees Farenheit and transfer baking sheet to center rack. Cover rim of pie crust with foil. Bake for 35 minutes.",
+            "Let cool to set and thicken before serving"
+         ]
+      }
+   ]
+}
