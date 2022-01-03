@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import { useParams } from "react-router-dom";
 
-import "../images/carbonara.jpg";
-import "../images/spaghetti.jpg";
-import "../images/pestoPasta.jpg";
-
+/*
+import "./images/carbonara.jpg";
+import "./images/spaghetti.jpg";
+import "./images/pestoPasta.jpg";
+*/
 import "../stylesheets/recipePage.css";
 
 export default function RecipeData(){
