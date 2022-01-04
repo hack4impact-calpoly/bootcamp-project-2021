@@ -14,7 +14,7 @@ import "../stylesheets/recipePage.css";
 export default function RecipeData(){
     let params = useParams(); //Gets the recipe from the routing URL, allows us to match the object data to the page
     let recipeName = params.recipeID;
-    console.log(recipeName);
+    console.log(`Loaded Recipe:${recipeName}`);
 
     //Handles the states for adding new Ingredient/Instruction
     const [newIngredient, setNewIngredient] = React.useState(''); //Stores information typed in input box
@@ -83,7 +83,7 @@ export default function RecipeData(){
                                         <button onClick={() => {addInstruction(recipe, newInstruction); setNewInstruction('')}}>Add instruction to list</button>
                                     </div>
                                 </div>
-                                <img id="recipePic" src={recipe.recipePic} alt={recipe.alt}/>
+                                <img id="recipePic" src={`/images/${recipe.recipePic}`} alt={recipe.alt}/>
                             </div>
                         </div>
                     )
