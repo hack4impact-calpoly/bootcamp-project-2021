@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import { useParams } from "react-router-dom";
 
+//ADD CONTEXT WHEN WRITING CONSOLE LOGS. Ex: 'New Ingredient Object: { "newIngredient": "pepper" }'
+
 /*
 import "./images/carbonara.jpg";
 import "./images/spaghetti.jpg";
@@ -102,6 +104,9 @@ function addIngredient (recipe, newIngredient) { //function adds "newIngredient"
     console.log(JSON.stringify({'newIngredient': newIngredient}));
     recipe.ingredientList.push(newIngredient);
     fetch(`http://localhost:3001/api/recipe/${recipe.name}/ingredient`, {
+                headers : { 
+                    'Content-Type': 'application/json'
+                },
                 method: 'PUT',
                 body: JSON.stringify(
                 {
@@ -112,8 +117,11 @@ function addIngredient (recipe, newIngredient) { //function adds "newIngredient"
 
 function addInstruction(recipe, newInstruction) { //function adds "newInstruction" to instruction array in recipeData
     console.log(JSON.stringify({'newInstruction': newInstruction}));
-    recipe.instructionList.push(newInstruction)
+    recipe.instructionList.push(newInstruction);
     fetch(`http://localhost:3001/api/recipe/${recipe.name}/instruction`, {
+                headers : {
+                    'Content-Type' : 'application/json'
+                },
                 method: 'PUT',
                 body: JSON.stringify(
                     { 
