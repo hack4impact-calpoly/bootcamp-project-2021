@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import './recipePage.css';
 
 export default function RecipePage({ image, name, desc, ingredients, steps}) {
@@ -7,21 +7,37 @@ export default function RecipePage({ image, name, desc, ingredients, steps}) {
   const [newInstruction, setNewInstruction] = React.useState('');
 
   const addIngredient = () => {
+    fetch(`http://localhost:3001/api/recipe/${name}/ingredients`, {
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+        method: 'PUT',
+        body: JSON.stringify({newIngredient: newIngredient})
+      }).then(response => response.json())
+      .then(jsondata => setNewIngredient(jsondata))
+  
     let ul = document.getElementById("ingredients");
     let li = document.createElement("li");
-    let ingredient = document.getElementById("newIngredient").value;
-    console.log(ingredient);
-    li.appendChild(document.createTextNode(ingredient));
+    li.appendChild(document.createTextNode(newIngredient));
     ul.appendChild(li);
 }
 
   const addInstruction = () => {
-    let ul = document.getElementById("instructions");
-    let li = document.createElement("li");
-    let ingredient = document.getElementById("newInstruction").value;
-    console.log(ingredient);
-    li.appendChild(document.createTextNode(ingredient));
-    ul.appendChild(li);
+    fetch(`http://localhost:3001/api/recipe/${name}/instructions`, {
+          headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            method: 'PUT',
+            body: JSON.stringify({newInstruction: newInstruction})
+        }).then(response => response.json())
+        .then(jsondata => setNewInstruction(jsondata))
+      
+      let ol = document.getElementById("instructions");
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(newInstruction));
+      ol.appendChild(li);
   }
 
   return (
