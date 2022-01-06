@@ -1,0 +1,31 @@
+.container {
+    padding: 45px 45px;
+}
+
+.outline {
+    display: flex;
+    flex: 1 1 0px;
+    margin: 20px;
+    flex-flow: column nowrap;
+    align-items: center;
+    /*background-color: yellow;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.food-desc {
+    text-align: right;
+    padding: 0 6px;
+}
+
+.food-img {
+    width: 200px;
+    height: 200px;
+}

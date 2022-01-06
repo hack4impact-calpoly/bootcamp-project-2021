@@ -1,0 +1,25 @@
+.bar-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 0 30px;
+}
+
+.nav-container {
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.17em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+header a {
+    margin: 0 10px;
+}

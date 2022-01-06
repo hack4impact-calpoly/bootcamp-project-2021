@@ -1,0 +1,23 @@
+.recipes-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-hook {
+    display: flex;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-text {
+    display: flex;
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
